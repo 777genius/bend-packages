@@ -14,6 +14,7 @@ const headers = {
 };
 
 for (const pkg of catalog.packages) {
+  if (!pkg.repo || !pkg.repo.includes("/")) continue;
   const res = await fetch(`https://api.github.com/repos/${pkg.repo}`, { headers });
   if (!res.ok) {
     console.warn(`skip ${pkg.repo}: ${res.status}`);

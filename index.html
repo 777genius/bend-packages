@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=11" />
   </head>
   <body>
     <div class="site">
@@ -33,27 +33,27 @@
             <a href="#use">how it works</a>
             <a href="#faq">faq</a>
             <a href="https://github.com/777genius/awesome-bend">awesome</a>
+            <a
+              class="header-github"
+              href="https://github.com/777genius/bend-packages"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.2 9.2 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+                />
+              </svg>
+              GitHub
+            </a>
           </nav>
-          <a
-            class="header-github"
-            href="https://github.com/777genius/bend-packages"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.2 9.2 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
-            GitHub
-          </a>
         </div>
       </header>
 
       <main>
         <section class="container hero">
           <div class="hero__copy">
-            <h1>Find a library.<br /><span class="gradient">Copy the import.</span><span class="caret" aria-hidden="true"></span></h1>
+            <h1>Nameless hub<br /><span class="hero-title-line"><span class="gradient">This catalog does</span><span class="caret" aria-hidden="true"></span></span></h1>
             <p class="lede">
               The Bend hub has no names or search — packages are content hashes.
               This catalog lists libraries published to the hub for current Bend
@@ -67,7 +67,10 @@
           <aside class="hero__window" aria-label="Use a package">
             <div class="hero__window-body">
               <div class="hero-quick-start__header">
-                <h2>Use bend-codec</h2>
+                <div>
+                  <p class="hero-quick-start__kicker">Example</p>
+                  <h2>Use bend-codec</h2>
+                </div>
                 <a href="https://hub.bend-lang.com">hub ↗</a>
               </div>
               <ol class="hero-quick-start__steps">
@@ -85,7 +88,7 @@
                   </div>
                 </li>
                 <li class="hero-quick-start__step">
-                  <div class="hero-quick-start__number hero-quick-start__number--run">2</div>
+                  <div class="hero-quick-start__number">2</div>
                   <div class="hero-quick-start__label">
                     <strong>Paste the import</strong>
                     <small>compiler fetches the hash</small>
@@ -98,9 +101,6 @@
                   </div>
                 </li>
               </ol>
-              <div class="hero-quick-start__footer">
-                <p><span>✓</span> Then run <span class="mono">bend your.bend</span>. No registry name, no extra install step.</p>
-              </div>
             </div>
           </aside>
         </section>
@@ -134,7 +134,7 @@
                 <span aria-hidden="true">＋</span><span>Add package</span>
               </a>
             </div>
-            <p>Search by name or owner. Default view is packages that are live on the hub. Git clones are behind the source filter.</p>
+            <p>Search by name or owner. Default view is packages live on the hub. Git clones such as toon_bend sit behind the source filter.</p>
           </div>
 
           <div class="catalog-controls" role="search" aria-label="Filter packages">
@@ -174,7 +174,7 @@
             </details>
             <details>
               <summary>How does a package get listed?<span aria-hidden="true">+</span></summary>
-              <p>A listing is <strong>Hub</strong> only if the import path is a <span class="mono">.bend</span> file in that same repo <em>and</em> <span class="mono">https://hub.bend-lang.com/0x…/file.bend</span> returns that file. A README that imports someone else’s hash does not count. Authors can also opt in with <span class="mono">pack.json</span>.</p>
+              <p>Hub listings come from <span class="mono">hub.bend-lang.com/index.json</span>. We attach GitHub when a repo README or the published file names that hash. Git clones without a live hash sit behind the source filter.</p>
             </details>
             <details>
               <summary>What is Nix doing in some tools?<span aria-hidden="true">+</span></summary>
@@ -197,10 +197,9 @@
             <a href="https://hub.bend-lang.com">hub</a>
           </nav>
         </div>
-        <p class="container site-footer__legal">Listings are community-maintained. Hub packages remain content hashes; this site only indexes them.</p>
       </footer>
     </div>
     <div class="toast" id="toast">Copied</div>
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js?v=11" type="module"></script>
   </body>
 </html>

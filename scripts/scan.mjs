@@ -139,6 +139,93 @@ async function inspect(fullName, defaultBranch) {
   return { importLine, pack, bendFiles: treePaths.length };
 }
 
+function importHash(line) {
+  const match = String(line || "").match(/0x[0-9a-fA-F]{16,}/);
+  return match ? match[0].toLowerCase() : "";
+}
+
+function pickHubEntry(files) {
+  const paths = Object.keys(files || {});
+  const prefs = [
+    "lib.bend",
+    "main.bend",
+    "json.bend",
+    "sha256.bend",
+    "keccak.bend",
+    "i64.bend",
+    "u64.bend",
+    "http.bend",
+    "dns.bend",
+    "bend_ml.bend",
+    "fixed.bend",
+    "air.bend",
+    "cachet.bend",
+    "tinygrad.bend",
+    "bolt/main.bend",
+    "package.bend",
+  ];
+  for (const path of prefs) {
+    if (paths.includes(path)) return path;
+  }
+  return paths.find((path) => {
+    const base = path.split("/").pop();
+    return path.endsWith(".bend") && !/^(LAWS|PROOF|CORRECTNESS)\.bend$/i.test(base);
+  }) ?? null;
+}
+
+function githubReposIn(text) {
+  const out = [];
+  for (const match of String(text || "").matchAll(/https?:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/g)) {
+    const repo = match[1].replace(/\.git$/i, "");
+    if (!skip.has(repo)) out.push(repo);
+  }
+  return [...new Set(out)];
+}
+
+function titleFromHubFile(text) {
+  const line = String(text || "")
+    .split("\n")
+    .find((row) => /^#\s+\S/.test(row) && !/^#\s*MIT /i.test(row));
+  if (!line) return "";
+  return line.replace(/^#+\s*/, "").split("—")[0].split("--")[0].trim();
+}
+
+function nameFromHub(desc, title, entry) {
+  const fromDesc = String(desc || "").match(/^([A-Za-z0-9._-]+)(?:\.bend)?\s*:/);
+  if (fromDesc) return fromDesc[1].replace(/\.bend$/, "");
+  const fromTitle = title.match(/^([A-Za-z0-9._-]+)\b/);
+  if (fromTitle && fromTitle[1].length > 1) return fromTitle[1];
+  if (/^dns:/i.test(desc || "")) return "dns";
+  if (/fixed-point/i.test(desc || "")) return "fixed";
+  if (/web framework/i.test(title) || /^air$/i.test(title.split(/\s/)[0] || "")) return "air";
+  return (entry || "package").replace(/\.bend$/, "").split("/").pop();
+}
+
+function skipHubPackage(desc, title, bytes) {
+  const blob = `${desc} ${title}`.toLowerCase();
+  if (/minesweeper|tinychess|glider|lorem ipsum|tile set|hello\b|nested \+ foreign/.test(blob)) return true;
+  if (/definitional laws|executable laws|^laws\.bend/.test(blob)) return true;
+  if ((bytes || 0) < 4000) return true;
+  return false;
+}
+
+async function hubFile(hash, file) {
+  const res = await fetch(`https://hub.bend-lang.com/${hash}/${file}`);
+  if (!res.ok) return "";
+  return res.text();
+}
+
+async function repoMeta(fullName) {
+  const res = await github(`https://api.github.com/repos/${fullName}`);
+  if (!res) return null;
+  return res.json();
+}
+
+function aliasFromEntry(entry) {
+  const base = entry.split("/").pop().replace(/\.bend$/, "");
+  return base.replace(/(^|[-_])(\w)/g, (_, __, char) => char.toUpperCase()).replaceAll("-", "");
+}
+
 const found = [];
 const seenSearch = new Set();
 for (const item of [
@@ -146,13 +233,21 @@ for (const item of [
   ...(await search("topic:bend2")),
   ...(await search('"Bend 2" in:description')),
   ...(await search("filename:pack.json bend")),
+  ...(await search("hub.bend-lang.com")),
+  ...(await search("user:Giulio2002 bend")),
+  ...(await search("user:phenomenon0")),
+  ...(await search("user:rootagi bend")),
+  ...(await search("user:naoeosavio bend")),
+  ...(await search("user:LVTD-LLC bend")),
+  ...(await search("user:developerRafu cachet")),
+  ...(await search("user:KapioKai bend")),
 ]) {
   if (seenSearch.has(item.full_name)) continue;
   seenSearch.add(item.full_name);
   found.push(item);
 }
 
-const byRepo = new Map(catalog.packages.map((pkg) => [pkg.repo, pkg]));
+const byRepo = new Map(catalog.packages.filter((pkg) => pkg.repo).map((pkg) => [pkg.repo, pkg]));
 let added = 0;
 let backfilled = 0;
 
@@ -197,6 +292,94 @@ for (const item of found) {
   catalog.packages.push(pkg);
   byRepo.set(repo, pkg);
   added += 1;
+}
+
+try {
+  const index = await fetch("https://hub.bend-lang.com/index.json").then((res) => {
+    if (!res.ok) throw new Error(`index.json → ${res.status}`);
+    return res.json();
+  });
+  const byHash = new Map();
+  const byName = new Set(catalog.packages.map((pkg) => pkg.name.toLowerCase()));
+  for (const pkg of catalog.packages) {
+    const hash = importHash(pkg.import);
+    if (hash) byHash.set(hash, pkg);
+  }
+  const newestFirst = [...index].sort((a, b) => (b.bytes || 0) - (a.bytes || 0));
+  for (const entry of newestFirst) {
+    const hash = String(entry.hash || "").toLowerCase();
+    const file = pickHubEntry(entry.files);
+    if (!file) continue;
+    const line = `import ${hash}/${file} as ${aliasFromEntry(file)}`;
+    const existing = byHash.get(hash);
+    if (existing) {
+      if (!existing.import) {
+        existing.import = line;
+        existing.source = "hub";
+        backfilled += 1;
+      }
+      continue;
+    }
+
+    let text = "";
+    try {
+      text = await hubFile(hash, file);
+    } catch (error) {
+      console.warn(`hub file ${hash}/${file}: ${error.message}`);
+    }
+    const title = titleFromHubFile(text);
+    const desc = entry.desc || title || "Published on the Bend hub.";
+    if (skipHubPackage(desc, title, entry.bytes)) continue;
+
+    const name = nameFromHub(desc, title, file);
+    if (byName.has(name.toLowerCase())) continue;
+
+    let repo = githubReposIn(text)[0] || "";
+    let url = `https://hub.bend-lang.com/${hash}/${file}`;
+    let stars = 0;
+    let description = String(desc).split("\n")[0].slice(0, 180);
+    if (repo) {
+      try {
+        const meta = await repoMeta(repo);
+        if (meta) {
+          url = meta.html_url;
+          stars = meta.stargazers_count ?? 0;
+          description = meta.description || description;
+        }
+      } catch (error) {
+        console.warn(`repo ${repo}: ${error.message}`);
+      }
+    } else {
+      const named = await search(name);
+      const hit = named.find((item) => item.name.toLowerCase() === name.toLowerCase() || item.full_name.toLowerCase().endsWith(`/${name.toLowerCase()}`));
+      if (hit && !skip.has(hit.full_name) && !byRepo.has(hit.full_name)) {
+        repo = hit.full_name;
+        url = hit.html_url;
+        stars = hit.stargazers_count ?? 0;
+        description = hit.description || description;
+      }
+    }
+
+    const pkg = {
+      id: repo ? repo.toLowerCase().replace(/[^a-z0-9]+/g, "-") : `hub-${hash.slice(2, 10)}`,
+      name,
+      repo,
+      url,
+      description,
+      category: guessCategory({ name, description }, null),
+      source: "hub",
+      stars,
+      import: line,
+      discovered: true,
+    };
+    catalog.packages.push(pkg);
+    byHash.set(hash, pkg);
+    byName.add(name.toLowerCase());
+    if (repo) byRepo.set(repo, pkg);
+    added += 1;
+  }
+} catch (error) {
+  console.warn(`hub index: ${error.message}`);
 }
 
 catalog.generated_at = new Date().toISOString();

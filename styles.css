@@ -199,27 +199,21 @@ code,
 .header-github {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  height: 32px;
-  padding: 0 12px;
-  border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--line));
-  border-radius: 8px;
-  color: var(--primary);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  flex: none;
+  gap: 5px;
+  margin-left: 6px;
+  color: var(--subtle);
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .header-github svg {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   fill: currentColor;
 }
 
 .header-github:hover {
-  background: color-mix(in srgb, var(--primary) 8%, transparent);
-  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .hero {
@@ -235,6 +229,10 @@ code,
   max-width: 36rem;
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+.hero-title-line {
+  white-space: nowrap;
 }
 
 .gradient {
@@ -329,6 +327,15 @@ code,
   font-size: 1.05rem;
 }
 
+.hero-quick-start__kicker {
+  margin: 0 0 3px;
+  color: var(--primary);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .hero-quick-start__header a {
   color: var(--primary);
   font-size: 0.68rem;
@@ -348,6 +355,11 @@ code,
   gap: 12px;
   align-items: center;
   border-bottom: 1px solid var(--line);
+}
+
+.hero-quick-start__step:last-child {
+  border-bottom: 0;
+  padding-bottom: 4px;
 }
 
 .hero-quick-start__number {
@@ -380,22 +392,6 @@ code,
   margin-top: 2px;
   color: var(--subtle);
   font-size: 0.6rem;
-}
-
-.hero-quick-start__footer {
-  padding: 13px 0 0 152px;
-}
-
-.hero-quick-start__footer p {
-  margin: 0;
-  color: var(--subtle);
-  font-size: 0.68rem;
-}
-
-.hero-quick-start__footer span:first-child {
-  margin-right: 5px;
-  color: var(--green);
-  font-weight: 800;
 }
 
 .command-snippet {
@@ -788,6 +784,7 @@ code,
 
 .plugin-card__identity {
   min-height: 40px;
+  padding-right: 58px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -825,16 +822,38 @@ code,
 
 .plugin-card__source-label {
   margin: 4px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
   color: var(--subtle);
   font-size: 0.66rem;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plugin-card__source-label svg {
+  flex: none;
+  width: 12px;
+  height: 12px;
+}
+
+.plugin-card__source-label:hover {
+  color: var(--primary);
 }
 
 .plugin-card__popularity {
-  margin: 10px 0 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  margin: 0;
   color: var(--ora);
   font-size: 0.7rem;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .plugin-card__description {
@@ -902,16 +921,6 @@ code,
 .plugin-card__install-toggle:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
-}
-
-.plugin-card__github {
-  color: var(--subtle);
-  font-size: 0.68rem;
-  font-weight: 700;
-}
-
-.plugin-card__github:hover {
-  color: var(--primary);
 }
 
 .plugin-card__install-panel {
@@ -1012,14 +1021,6 @@ code,
   color: var(--text);
 }
 
-.site-footer__legal {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  color: var(--subtle);
-  font-size: 0.65rem;
-}
-
 .toast {
   position: fixed;
   right: 18px;
@@ -1045,10 +1046,6 @@ code,
   .hero,
   .strip {
     grid-template-columns: 1fr;
-  }
-
-  .hero-quick-start__footer {
-    padding-left: 0;
   }
 
   .plugin-grid {

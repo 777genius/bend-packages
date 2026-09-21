@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T08:27:07.246Z",
+  "generated_at": "2026-09-21T09:41:40.655Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -119,9 +119,9 @@
       "url": "https://github.com/Emerging-Patterns/shake",
       "description": "CLI argument parser for flags, options, and nested commands.",
       "category": "packages",
-      "source": "git",
+      "source": "hub",
       "stars": 0,
-      "import": null
+      "import": "import 0xebdf72b20ad527103f6efc0d2aa8f1ec/main.bend as Shake"
     },
     {
       "id": "bend-tui",
@@ -152,9 +152,9 @@
       "url": "https://github.com/Emerging-Patterns/bolt",
       "description": "Linter, checker, and LSP written in Bend, with a VS Code extension.",
       "category": "editors",
-      "source": "git",
+      "source": "hub",
       "stars": 0,
-      "import": null
+      "import": "import 0x729eecea86ea5a2cdba3a2856a313bca/bolt/main.bend as Bolt"
     },
     {
       "id": "tree-sitter-bend2",
@@ -251,9 +251,9 @@
       "url": "https://github.com/gouveags/bend-init",
       "description": "CLI that scaffolds a law-backed starter project.",
       "category": "tools",
-      "source": "git",
+      "source": "hub",
       "stars": 0,
-      "import": null
+      "import": "import 0x1e0cc3677d46304c29af14dfd5553385/main.bend as Init"
     },
     {
       "id": "fire-bend",
@@ -529,6 +529,193 @@
       "source": "git",
       "stars": 0,
       "import": null
+    },
+    {
+      "id": "bend-sha256",
+      "name": "bend-sha256",
+      "repo": "Giulio2002/bend-sha256",
+      "url": "https://github.com/Giulio2002/bend-sha256",
+      "description": "SHA-256 with machine-checked proofs against FIPS 180-4.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 18,
+      "import": "import 0xda83506fb9f059ead7afcfa2f498df5f/sha256.bend as SHA"
+    },
+    {
+      "id": "bend-keccak",
+      "name": "bend-keccak",
+      "repo": "Giulio2002/bend-keccak",
+      "url": "https://github.com/Giulio2002/bend-keccak",
+      "description": "Ethereum Keccak-256 with packed arrays and sponge proofs.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x48cee57f42dae6ba4c727fbf982cdd4d/keccak.bend as Keccak"
+    },
+    {
+      "id": "bend-json",
+      "name": "bend-json",
+      "repo": "rootagi/bend-json",
+      "url": "https://github.com/rootagi/bend-json",
+      "description": "JSON parser and serializer with formal proofs.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x1f4d6c03caf955232d0b0dc6e6f36cf4/json.bend as Json"
+    },
+    {
+      "id": "bend-i64",
+      "name": "bend-i64",
+      "repo": "phenomenon0/bend-i64",
+      "url": "https://github.com/phenomenon0/bend-i64",
+      "description": "Signed 64-bit integers as two's complement over Word(64n).",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5a02f49892413b8561a33a7642d823e2/i64.bend as I64"
+    },
+    {
+      "id": "bend-u64",
+      "name": "bend-u64",
+      "repo": "phenomenon0/bend-u64",
+      "url": "https://github.com/phenomenon0/bend-u64",
+      "description": "Unsigned 64-bit integers as one Word(64n).",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x464866dd0fbd191e9b4adc04f0fb781f/u64.bend as U64"
+    },
+    {
+      "id": "bend-ml",
+      "name": "bend-ml",
+      "repo": "LVTD-LLC/bend-ml",
+      "url": "https://github.com/LVTD-LLC/bend-ml",
+      "description": "Parallel linear regression, batches, and statistics.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x53dde92df75268075f1bc6c33ecbb079/bend_ml.bend as BendMl"
+    },
+    {
+      "id": "bend-net",
+      "name": "bend-net",
+      "repo": "naoeosavio/bend-net",
+      "url": "https://github.com/naoeosavio/bend-net",
+      "description": "HTTP/1.1 and WebSocket over TCP, plus Base64 and SHA-1.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 1,
+      "import": "import 0xd66ee682d4ce8c656782ca9e0e4634cb/http.bend as HTTP"
+    },
+    {
+      "id": "bend-dns",
+      "name": "dns",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf45a7ca0255c5a863fba26e24971a8e0/dns.bend",
+      "description": "One IPv4 dotted quad via getaddrinfo.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf45a7ca0255c5a863fba26e24971a8e0/dns.bend as Dns"
+    },
+    {
+      "id": "bend-fixed",
+      "name": "fixed",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4e6a6615b0feb5ac27adea952228511e/fixed.bend",
+      "description": "The bend.how fixed-point library.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4e6a6615b0feb5ac27adea952228511e/fixed.bend as Fixed"
+    },
+    {
+      "id": "cachet",
+      "name": "cachet",
+      "repo": "developerRafu/cachet",
+      "url": "https://github.com/developerRafu/cachet",
+      "description": "JWT authentication library for Bend (HS256).",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xac19a5c9b4cef01e72dcbe9e5b881fc7/cachet.bend as Cachet"
+    },
+    {
+      "id": "selah-bend",
+      "name": "selah",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x2a08fdaf2b3aa16ae55ed9f5bb4a08ba/main.bend",
+      "description": "Bible parse, share, and linkify for route.bible.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x2a08fdaf2b3aa16ae55ed9f5bb4a08ba/main.bend as Selah"
+    },
+    {
+      "id": "air",
+      "name": "air",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x1efee7e6292e6267db2ca5c7e267456a/air.bend",
+      "description": "Small web framework: routes, handlers, and Air.serve.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x1efee7e6292e6267db2ca5c7e267456a/air.bend as Air"
+    },
+    {
+      "id": "hashes",
+      "name": "hashes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xfcfaebefd5553d7c2403dcd5c4130b80/main.bend",
+      "description": "MD5, SHA-1/2/3, RIPEMD-160, SM3, BLAKE2, and BLAKE3.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xfcfaebefd5553d7c2403dcd5c4130b80/main.bend as Hashes"
+    },
+    {
+      "id": "parse-combinators",
+      "name": "parse",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd395e827d4f2e55365bfb5173c04c4ee/lib.bend",
+      "description": "Tiny String parser combinators.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd395e827d4f2e55365bfb5173c04c4ee/lib.bend as Parse"
+    },
+    {
+      "id": "path-helpers",
+      "name": "path",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4281bc413bf6e8133778749c9d315cbb/lib.bend",
+      "description": "Unix-style path helpers.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4281bc413bf6e8133778749c9d315cbb/lib.bend as Path"
+    },
+    {
+      "id": "color",
+      "name": "color",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xc6ecb72f45a1b2f83318765698582f7f/lib.bend",
+      "description": "Rgb/Hsl types, conversion, and string show.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xc6ecb72f45a1b2f83318765698582f7f/lib.bend as Color"
+    },
+    {
+      "id": "tinygrad-bend",
+      "name": "tinygrad",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xe6b82fa6c4c459c7023adf4b12a3ac46/tinygrad.bend",
+      "description": "tinygrad port: shapes, tensors, and lazy backward.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xe6b82fa6c4c459c7023adf4b12a3ac46/tinygrad.bend as Tinygrad"
     }
   ]
 }
