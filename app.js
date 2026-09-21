@@ -8,7 +8,6 @@ const filtersHost = document.getElementById("catalog-advanced-filters");
 const filterToggle = document.getElementById("filter-toggle");
 
 const CATEGORY_LABELS = {
-  official: "Official",
   packages: "Libraries",
   tools: "Tools",
   editors: "Editors",
@@ -27,9 +26,9 @@ const FILTERS = {
     })),
   ],
   source: [
-    { value: "all", label: "All sources", icon: "source" },
-    { value: "hub", label: "On the hub", icon: "source" },
-    { value: "git", label: "Git clone", icon: "source" },
+    { value: "hub", label: "Hub", icon: "source" },
+    { value: "git", label: "Git", icon: "source" },
+    { value: "all", label: "Hub + Git", icon: "source" },
   ],
   sort: [
     { value: "stars", label: "Most stars", icon: "trust" },
@@ -37,7 +36,7 @@ const FILTERS = {
   ],
 };
 
-const state = { packages: [], query: "", category: "all", source: "all", sort: "stars" };
+const state = { packages: [], query: "", category: "all", source: "hub", sort: "stars" };
 
 const ICONS = {
   category:
@@ -179,7 +178,7 @@ function card(pkg) {
 
   const tags = el("ul", "tag-list");
   tags.append(el("li", "", CATEGORY_LABELS[pkg.category] ?? pkg.category));
-  const source = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "on the hub" : "git");
+  const source = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "Hub" : "Git");
   tags.append(source);
 
   const bottom = el("div", "plugin-card__bottom");
@@ -227,7 +226,7 @@ function activeChips() {
   const items = [];
   if (state.query.trim()) items.push({ key: "query", label: `Search: ${state.query.trim()}` });
   if (state.category !== "all") items.push({ key: "category", label: `Category: ${optionLabel("category", state.category)}` });
-  if (state.source !== "all") items.push({ key: "source", label: `Source: ${optionLabel("source", state.source)}` });
+  if (state.source !== "hub") items.push({ key: "source", label: `Source: ${optionLabel("source", state.source)}` });
   if (state.sort !== "stars") items.push({ key: "sort", label: `Sort: ${optionLabel("sort", state.sort)}` });
   return items;
 }
@@ -235,7 +234,7 @@ function activeChips() {
 function resetFilters() {
   state.query = "";
   state.category = "all";
-  state.source = "all";
+  state.source = "hub";
   state.sort = "stars";
   q.value = "";
   closeSelects();
@@ -268,7 +267,7 @@ function render() {
         state.query = "";
         q.value = "";
       } else {
-        state[chip.key] = chip.key === "sort" ? "stars" : "all";
+        state[chip.key] = chip.key === "sort" ? "stars" : chip.key === "source" ? "hub" : "all";
         filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
       }
       render();
@@ -292,7 +291,11 @@ function render() {
   } else {
     rows.forEach((pkg) => grid.append(card(pkg)));
   }
-  summary.textContent = `${rows.length} of ${state.packages.length} listings`;
+  const hubTotal = state.packages.filter((pkg) => pkg.source === "hub").length;
+  summary.textContent =
+    state.source === "hub" && !query && state.category === "all"
+      ? `${rows.length} published packages`
+      : `${rows.length} of ${state.packages.length} listings · ${hubTotal} on the hub`;
 }
 
 document.body.addEventListener("click", (event) => {

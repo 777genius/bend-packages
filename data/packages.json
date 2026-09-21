@@ -3,17 +3,6 @@
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
-      "id": "bendlang-bend",
-      "name": "Bend",
-      "repo": "bendlang/bend",
-      "url": "https://github.com/bendlang/bend",
-      "description": "Compiler, Base library, guide, demos, and papers.",
-      "category": "official",
-      "source": "git",
-      "stars": 22206,
-      "import": null
-    },
-    {
       "id": "gauss",
       "name": "gauss",
       "repo": "pjdotson/gauss",

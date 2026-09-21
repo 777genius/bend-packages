@@ -2,15 +2,14 @@
 /**
  * Discover Bend 2 packages from GitHub.
  *
- * A repo is Bend if any of these hold:
- *   1. pack.json / bend-pack.json at the repo root (opt-in catalog manifest)
- *   2. README contains `import 0x…/file.bend` (published on the hub)
- *   3. the git tree has at least one .bend file, and the repo is tagged
- *      bend / bend2 or describes itself as Bend 2
+ * A repo is listed as Hub only if:
+ *   - README or pack.json has `import 0xHASH/file.bend`
+ *   - `file.bend` exists in THIS repo (not a dependency of another package)
+ *   - https://hub.bend-lang.com/0xHASH/file.bend returns 200
  *
- * Topics alone are not enough (too many false positives).
- * Curated rows in data/packages.json always win by repo key; scan only
- * backfills a missing import line on those.
+ * pack.json at the repo root is an opt-in manifest; its import still has to
+ * pass the same file-in-repo + hub live checks.
+ * Curated rows in data/packages.json always win by repo key.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -27,7 +26,7 @@ const headers = {
 };
 
 const IMPORT_RE =
-  /import\s+(0x[0-9a-fA-F]{16,}\/[A-Za-z0-9_./-]+\.bend(?:\s+as\s+[A-Za-z_][A-Za-z0-9_]*)?)/;
+  /import\s+(0x[0-9a-fA-F]{16,})\/([A-Za-z0-9_./-]+\.bend)(\s+as\s+[A-Za-z_][A-Za-z0-9_]*)?/g;
 const PACK_FILES = ["pack.json", "bend-pack.json"];
 
 const skip = new Set([
@@ -53,11 +52,47 @@ function guessCategory(repo, pack) {
   return "packages";
 }
 
+function parseImports(text) {
+  const out = [];
+  if (!text) return out;
+  for (const match of text.matchAll(IMPORT_RE)) {
+    out.push({
+      hash: match[1],
+      file: match[2],
+      line: `import ${match[1]}/${match[2]}${match[3] ?? ""}`,
+    });
+  }
+  return out;
+}
+
+function fileInTree(file, paths) {
+  const want = file.toLowerCase();
+  const base = want.split("/").pop();
+  return paths.some((entry) => {
+    const name = entry.toLowerCase();
+    return name === want || name.endsWith(`/${want}`) || name.split("/").pop() === base;
+  });
+}
+
 async function github(url, extra = {}) {
   const res = await fetch(url, { headers: { ...headers, ...extra } });
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`${url} → ${res.status}`);
   return res;
+}
+
+async function hubHas(hash, file) {
+  const res = await fetch(`https://hub.bend-lang.com/${hash}/${file}`, { method: "HEAD" });
+  return res.ok;
+}
+
+async function ownHubImport(candidates, treePaths) {
+  for (const item of candidates) {
+    if (!fileInTree(item.file, treePaths)) continue;
+    if (!(await hubHas(item.hash, item.file))) continue;
+    return item.line;
+  }
+  return null;
 }
 
 async function search(q) {
@@ -73,41 +108,35 @@ async function inspect(fullName, defaultBranch) {
     Accept: "application/vnd.github.raw",
   });
   const readme = readmeRes ? await readmeRes.text() : "";
-  const importMatch = readme.match(IMPORT_RE);
-  const importLine = importMatch ? `import ${importMatch[1]}` : null;
 
   let pack = null;
+  let packText = "";
   for (const file of PACK_FILES) {
     const res = await github(`https://api.github.com/repos/${fullName}/contents/${file}`, {
       Accept: "application/vnd.github.raw",
     });
     if (!res) continue;
+    packText = await res.text();
     try {
-      pack = JSON.parse(await res.text());
-      break;
+      pack = JSON.parse(packText);
     } catch {
       pack = { name: fullName };
     }
+    break;
   }
 
   const treeRes = await github(
     `https://api.github.com/repos/${fullName}/git/trees/${encodeURIComponent(defaultBranch)}?recursive=1`,
   );
   const tree = treeRes ? await treeRes.json() : { tree: [] };
-  const bendFiles = (tree.tree ?? []).filter(
-    (entry) => entry.type === "blob" && entry.path.endsWith(".bend"),
-  ).length;
+  const treePaths = (tree.tree ?? [])
+    .filter((entry) => entry.type === "blob" && entry.path.endsWith(".bend"))
+    .map((entry) => entry.path);
 
-  return { importLine: pack?.import || importLine, pack, bendFiles };
-}
+  const candidates = [...parseImports(pack?.import || packText), ...parseImports(readme)];
+  const importLine = await ownHubImport(candidates, treePaths);
 
-function isBend(item, inspection) {
-  if (inspection.pack) return true;
-  if (inspection.importLine) return true;
-  if (inspection.bendFiles < 1) return false;
-  const topics = new Set(item.topics ?? []);
-  const blob = `${item.description ?? ""} ${item.name}`.toLowerCase();
-  return topics.has("bend") || topics.has("bend2") || topics.has("bend-lang") || blob.includes("bend 2");
+  return { importLine, pack, bendFiles: treePaths.length };
 }
 
 const found = [];
@@ -151,24 +180,19 @@ for (const item of found) {
     continue;
   }
 
-  if (!isBend(item, inspection)) continue;
+  if (!inspection.importLine) continue;
 
   const pkg = {
     id: repo.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
     name: inspection.pack?.name || item.name,
     repo,
     url: item.html_url,
-    description: inspection.pack?.description || item.description || "Bend 2 project discovered from GitHub.",
+    description: inspection.pack?.description || item.description || "Bend 2 package published to the hub.",
     category: guessCategory(item, inspection.pack),
-    source: inspection.importLine ? "hub" : "git",
+    source: "hub",
     stars: item.stargazers_count ?? 0,
     import: inspection.importLine,
     discovered: true,
-    signals: {
-      pack: Boolean(inspection.pack),
-      hubImport: Boolean(inspection.importLine),
-      bendFiles: inspection.bendFiles,
-    },
   };
   catalog.packages.push(pkg);
   byRepo.set(repo, pkg);
@@ -177,4 +201,4 @@ for (const item of found) {
 
 catalog.generated_at = new Date().toISOString();
 writeFileSync(path, `${JSON.stringify(catalog, null, 2)}\n`);
-console.log(`scan added ${added} repos, backfilled ${backfilled} imports; catalog now ${catalog.packages.length}`);
+console.log(`scan added ${added} hub packages, backfilled ${backfilled} imports; catalog now ${catalog.packages.length}`);

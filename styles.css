@@ -187,6 +187,7 @@ code,
   display: flex;
   align-items: center;
   gap: 22px;
+  margin-left: auto;
   color: var(--subtle);
   font-size: 0.8rem;
 }
@@ -195,16 +196,30 @@ code,
   color: var(--primary);
 }
 
-.nav-github {
-  padding: 0.15em 0.85em;
-  border-radius: 999px;
-  background: var(--primary);
-  color: var(--on-primary) !important;
+.header-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--line));
+  border-radius: 8px;
+  color: var(--primary);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex: none;
 }
 
-.nav-github:hover {
-  color: var(--on-primary) !important;
-  filter: brightness(1.06);
+.header-github svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.header-github:hover {
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  border-color: var(--primary);
 }
 
 .hero {
