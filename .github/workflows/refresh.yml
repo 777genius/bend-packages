@@ -19,6 +19,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/refresh-stars.mjs
+      - name: Discover packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/scan.mjs
       - name: Commit if the catalog changed
         run: |
           git config user.name "github-actions[bot]"

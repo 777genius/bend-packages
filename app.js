@@ -2,12 +2,64 @@ const toast = document.getElementById("toast");
 const grid = document.getElementById("grid");
 const summary = document.getElementById("summary");
 const q = document.getElementById("q");
-const category = document.getElementById("category");
-const source = document.getElementById("source");
-const sort = document.getElementById("sort");
-const reset = document.getElementById("reset");
+const clearSearch = document.getElementById("clear-search");
+const chips = document.getElementById("chips");
+const filtersHost = document.getElementById("catalog-advanced-filters");
+const filterToggle = document.getElementById("filter-toggle");
+
+const CATEGORY_LABELS = {
+  official: "Official",
+  packages: "Libraries",
+  tools: "Tools",
+  editors: "Editors",
+  packaging: "Packaging",
+  learning: "Learning",
+  demos: "Demos",
+};
+
+const FILTERS = {
+  category: [
+    { value: "all", label: "All categories", icon: "category" },
+    ...Object.entries(CATEGORY_LABELS).map(([value, label]) => ({
+      value,
+      label,
+      icon: "category",
+    })),
+  ],
+  source: [
+    { value: "all", label: "All sources", icon: "source" },
+    { value: "hub", label: "On the hub", icon: "source" },
+    { value: "git", label: "Git clone", icon: "source" },
+  ],
+  sort: [
+    { value: "stars", label: "Most stars", icon: "trust" },
+    { value: "name", label: "Name", icon: "owner" },
+  ],
+};
 
 const state = { packages: [], query: "", category: "all", source: "all", sort: "stars" };
+
+const ICONS = {
+  category:
+    '<path d="M4 7.5V5a1 1 0 0 1 1-1h2.5l11.25 11.25a1.5 1.5 0 0 1 0 2.12l-1.38 1.38a1.5 1.5 0 0 1-2.12 0L4 7.5Z"/><circle cx="7.4" cy="7.4" r="1"/>',
+  source:
+    '<circle cx="6" cy="5" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v10M8 9c2.5 0 3 4 6 4h2"/>',
+  trust:
+    '<path d="M12 3.5 19 6v5.5c0 4.5-2.75 7.25-7 9-4.25-1.75-7-4.5-7-9V6l7-2.5Z"/><path d="m9 12 2 2 4-4"/>',
+  owner:
+    '<circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-4 3-6 7-6s6.4 2 7 6"/>',
+  chevron: '<path d="m6 9 6 6 6-6"/>',
+};
+
+function svg(name, className) {
+  const node = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  node.setAttribute("viewBox", "0 0 24 24");
+  node.setAttribute("fill", "none");
+  node.setAttribute("aria-hidden", "true");
+  if (className) node.setAttribute("class", className);
+  node.innerHTML = ICONS[name];
+  return node;
+}
 
 function showToast(text) {
   toast.textContent = text;
@@ -20,8 +72,18 @@ async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
     showToast("Copied");
+    return;
   } catch {
-    showToast("Copy failed");
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.append(area);
+    area.select();
+    const ok = document.execCommand("copy");
+    area.remove();
+    showToast(ok ? "Copied" : "Copy failed");
   }
 }
 
@@ -37,44 +99,153 @@ function el(tag, className, text) {
   return node;
 }
 
+function optionLabel(key, value) {
+  return FILTERS[key].find((item) => item.value === value)?.label ?? value;
+}
+
+function closeSelects(except) {
+  document.querySelectorAll(".app-select").forEach((select) => {
+    if (select === except) return;
+    const trigger = select.querySelector(".app-select__trigger");
+    const content = select.querySelector(".app-select__content");
+    trigger.dataset.state = "closed";
+    content.hidden = true;
+  });
+}
+
+function mountSelect(key) {
+  const wrap = el("div", "app-select");
+  wrap.dataset.filter = key;
+  const trigger = el("button", "app-select__trigger");
+  trigger.type = "button";
+  trigger.dataset.state = "closed";
+  trigger.setAttribute("aria-haspopup", "listbox");
+  const value = el("span", "app-select__value");
+  value.append(svg(FILTERS[key][0].icon, "filter-icon"), el("span", "", optionLabel(key, state[key])));
+  trigger.append(value, svg("chevron", "app-select__chevron"));
+  const content = el("div", "app-select__content");
+  content.hidden = true;
+  content.setAttribute("role", "listbox");
+
+  function paint() {
+    value.lastChild.textContent = optionLabel(key, state[key]);
+    content.replaceChildren(
+      ...FILTERS[key].map((option) => {
+        const item = el("button", "app-select__item", option.label);
+        item.type = "button";
+        item.dataset.state = option.value === state[key] ? "checked" : "";
+        if (option.value === state[key]) item.append(el("span", "app-select__indicator", "✓"));
+        item.addEventListener("click", () => {
+          state[key] = option.value;
+          closeSelects();
+          paint();
+          render();
+        });
+        return item;
+      }),
+    );
+  }
+
+  trigger.addEventListener("click", () => {
+    const open = trigger.dataset.state !== "open";
+    closeSelects(wrap);
+    trigger.dataset.state = open ? "open" : "closed";
+    content.hidden = !open;
+  });
+
+  wrap.append(trigger, content);
+  paint();
+  return wrap;
+}
+
 function card(pkg) {
-  const article = el("article", "card");
-  const top = el("div", "card-top");
-  const titleWrap = el("div");
+  const article = el("article", "plugin-card");
+  const identity = el("div", "plugin-card__identity");
+  const icon = el("span", "plugin-card__icon");
+  const img = document.createElement("img");
+  img.src = "./logo.png";
+  img.alt = "";
+  img.width = 32;
+  img.height = 32;
+  icon.append(img);
+  const copy = el("div");
   const h3 = el("h3");
-  const name = el("a");
+  const name = el("a", "plugin-card__title-link");
   name.href = pkg.url;
   name.textContent = pkg.name;
   h3.append(name);
-  titleWrap.append(h3, el("div", "meta", pkg.repo));
-  top.append(titleWrap, el("div", "stars", `★ ${formatStars(pkg.stars ?? 0)}`));
+  copy.append(h3, el("p", "plugin-card__source-label", pkg.repo));
+  identity.append(icon, copy);
 
-  const tags = el("div", "tags");
-  tags.append(el("span", "tag", pkg.category));
-  const sourceTag = el("span", pkg.source === "hub" ? "tag hub" : "tag", pkg.source === "hub" ? "on the hub" : "git");
-  tags.append(sourceTag);
+  const tags = el("ul", "tag-list");
+  tags.append(el("li", "", CATEGORY_LABELS[pkg.category] ?? pkg.category));
+  const source = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "on the hub" : "git");
+  tags.append(source);
 
-  const actions = el("div", "card-actions");
+  const bottom = el("div", "plugin-card__bottom");
   if (pkg.import) {
-    const copy = el("button", "btn btn-primary", "Copy import");
-    copy.type = "button";
-    copy.addEventListener("click", () => copyText(pkg.import));
-    actions.append(copy);
+    const install = el("button", "plugin-card__install-toggle", "Copy import");
+    install.type = "button";
+    const panel = el("div", "plugin-card__install-panel");
+    panel.hidden = true;
+    const snippet = el("div", "command-snippet command-snippet--inline command-snippet--add");
+    const pre = document.createElement("pre");
+    pre.append(el("code", "", pkg.import));
+    const header = el("div", "command-snippet__header");
+    const copyBtn = el("button", "", "Copy");
+    copyBtn.type = "button";
+    copyBtn.addEventListener("click", () => copyText(pkg.import));
+    header.append(copyBtn);
+    snippet.append(pre, header);
+    panel.append(snippet);
+    install.addEventListener("click", () => {
+      copyText(pkg.import);
+      panel.hidden = !panel.hidden;
+      install.setAttribute("aria-expanded", String(!panel.hidden));
+    });
+    bottom.append(install, panel);
   } else {
-    const clone = el("a", "btn btn-ghost", "Clone repo");
+    const clone = el("a", "plugin-card__install-toggle", "Clone repo");
     clone.href = pkg.url;
-    actions.append(clone);
+    bottom.append(clone);
   }
-  const github = el("a", "btn btn-ghost", "GitHub");
+  const github = el("a", "plugin-card__github", "GitHub ↗");
   github.href = pkg.url;
-  actions.append(github);
+  bottom.append(github);
 
-  article.append(top, el("p", "desc", pkg.description), tags, actions);
+  article.append(
+    identity,
+    el("p", "plugin-card__popularity", `★ ${formatStars(pkg.stars ?? 0)}`),
+    el("p", "plugin-card__description", pkg.description),
+    tags,
+    bottom,
+  );
   return article;
+}
+
+function activeChips() {
+  const items = [];
+  if (state.query.trim()) items.push({ key: "query", label: `Search: ${state.query.trim()}` });
+  if (state.category !== "all") items.push({ key: "category", label: `Category: ${optionLabel("category", state.category)}` });
+  if (state.source !== "all") items.push({ key: "source", label: `Source: ${optionLabel("source", state.source)}` });
+  if (state.sort !== "stars") items.push({ key: "sort", label: `Sort: ${optionLabel("sort", state.sort)}` });
+  return items;
+}
+
+function resetFilters() {
+  state.query = "";
+  state.category = "all";
+  state.source = "all";
+  state.sort = "stars";
+  q.value = "";
+  closeSelects();
+  filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
+  render();
 }
 
 function render() {
   const query = state.query.trim().toLowerCase();
+  clearSearch.hidden = !state.query;
   let rows = state.packages.filter((pkg) => {
     const hay = `${pkg.name} ${pkg.repo} ${pkg.description}`.toLowerCase();
     return (
@@ -86,48 +257,70 @@ function render() {
   rows = [...rows].sort((a, b) =>
     state.sort === "name" ? a.name.localeCompare(b.name) : (b.stars ?? 0) - (a.stars ?? 0),
   );
+
+  chips.replaceChildren();
+  const active = activeChips();
+  active.forEach((chip) => {
+    const button = el("button", "catalog-filter-chip", `${chip.label} ×`);
+    button.type = "button";
+    button.addEventListener("click", () => {
+      if (chip.key === "query") {
+        state.query = "";
+        q.value = "";
+      } else {
+        state[chip.key] = chip.key === "sort" ? "stars" : "all";
+        filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
+      }
+      render();
+    });
+    chips.append(button);
+  });
+  const reset = el("button", "catalog-filter-reset", "Reset filters");
+  reset.type = "button";
+  reset.disabled = !active.length;
+  reset.addEventListener("click", resetFilters);
+  chips.append(reset);
+
   grid.replaceChildren();
   if (!rows.length) {
-    grid.append(el("p", "empty", "No matching packages. Try a broader search or reset filters."));
+    const empty = el("div", "empty-state");
+    empty.append(
+      el("h3", "", "No matching packages"),
+      el("p", "", "Try a broader search or clear one of the filters."),
+    );
+    grid.append(empty);
   } else {
     rows.forEach((pkg) => grid.append(card(pkg)));
   }
-  summary.textContent = `${rows.length} of ${state.packages.length} listings. Hub packages copy an import 0x… line; others are git clones.`;
+  summary.textContent = `${rows.length} of ${state.packages.length} listings`;
 }
 
 document.body.addEventListener("click", (event) => {
   const button = event.target.closest("[data-copy]");
-  if (!button) return;
-  copyText(button.getAttribute("data-copy") ?? "");
+  if (button) copyText(button.getAttribute("data-copy") ?? "");
+  if (!event.target.closest(".app-select")) closeSelects();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeSelects();
 });
 
 q.addEventListener("input", () => {
   state.query = q.value;
   render();
 });
-category.addEventListener("change", () => {
-  state.category = category.value;
-  render();
-});
-source.addEventListener("change", () => {
-  state.source = source.value;
-  render();
-});
-sort.addEventListener("change", () => {
-  state.sort = sort.value;
-  render();
-});
-reset.addEventListener("click", () => {
+clearSearch.addEventListener("click", () => {
   state.query = "";
-  state.category = "all";
-  state.source = "all";
-  state.sort = "stars";
   q.value = "";
-  category.value = "all";
-  source.value = "all";
-  sort.value = "stars";
   render();
 });
+filterToggle.addEventListener("click", () => {
+  const open = filterToggle.getAttribute("aria-expanded") !== "true";
+  filterToggle.setAttribute("aria-expanded", String(open));
+  filtersHost.classList.toggle("catalog-advanced-filters--open", open);
+});
+
+filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
 
 const catalog = await fetch("./data/packages.json").then((r) => r.json());
 state.packages = catalog.packages;

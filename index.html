@@ -22,66 +22,81 @@
       <header class="header">
         <div class="container header-inner">
           <a class="brand" href="./" aria-label="Bend Packages home">
-            <img src="./logo.png" alt="" width="40" height="40" />
+            <img src="./logo.png" alt="" width="28" height="28" />
             <span class="brand-copy">
               <strong>Bend Packages</strong>
               <span>Community catalog</span>
             </span>
           </a>
           <nav class="nav">
-            <a href="#catalog">Packages</a>
-            <a href="#use">How it works</a>
-            <a href="#faq">FAQ</a>
-            <a href="https://github.com/777genius/awesome-bend">Awesome list</a>
-            <a href="https://github.com/bendlang/bend">Compiler</a>
+            <a href="#catalog">packages</a>
+            <a href="#use">how it works</a>
+            <a href="#faq">faq</a>
+            <a href="https://github.com/777genius/awesome-bend">awesome</a>
+            <a class="nav-github" href="https://github.com/777genius/bend-packages">github</a>
           </nav>
         </div>
       </header>
 
       <main>
         <section class="container hero">
-          <div>
-            <h1>Find a library.<br /><span class="gradient">Copy the import.</span></h1>
+          <div class="hero__copy">
+            <h1>Find a library.<br /><span class="gradient">Copy the import.</span><span class="caret" aria-hidden="true"></span></h1>
             <p class="lede">
               The Bend hub has no names or search — packages are content hashes.
               This catalog indexes libraries, tools, and demos for current Bend
               (<span class="mono">bendlang/bend</span>, 2.0.x).
             </p>
             <div class="actions">
-              <a class="btn btn-primary" href="#catalog">Explore packages →</a>
-              <a class="btn btn-ghost" href="https://bend-lang.com">Install Bend</a>
+              <a class="button button--primary" href="#catalog">Explore packages →</a>
+              <a class="button button--secondary" href="https://bend-lang.com">Get Bend</a>
             </div>
           </div>
-          <aside class="panel" aria-label="Use a package">
-            <h2>Use bend-codec</h2>
-            <div class="step">
-              <div class="step-n">1</div>
-              <div>
-                <strong>Install Bend</strong>
-                <div class="snippet">
-                  <code>curl -fsSL https://bend-lang.com/install.sh | sh</code>
-                  <button type="button" data-copy="curl -fsSL https://bend-lang.com/install.sh | sh">Copy</button>
-                </div>
+          <aside class="hero__window" aria-label="Use a package">
+            <div class="hero__window-body">
+              <div class="hero-quick-start__header">
+                <h2>Use bend-codec</h2>
+                <a href="https://hub.bend-lang.com">hub ↗</a>
+              </div>
+              <ol class="hero-quick-start__steps">
+                <li class="hero-quick-start__step">
+                  <div class="hero-quick-start__number">1</div>
+                  <div class="hero-quick-start__label">
+                    <strong>Install Bend</strong>
+                    <small>official installer</small>
+                  </div>
+                  <div class="command-snippet command-snippet--inline">
+                    <pre><code>curl -fsSL https://bend-lang.com/install.sh | sh</code></pre>
+                    <div class="command-snippet__header">
+                      <button type="button" data-copy="curl -fsSL https://bend-lang.com/install.sh | sh">Copy</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="hero-quick-start__step">
+                  <div class="hero-quick-start__number hero-quick-start__number--run">2</div>
+                  <div class="hero-quick-start__label">
+                    <strong>Paste the import</strong>
+                    <small>compiler fetches the hash</small>
+                  </div>
+                  <div class="command-snippet command-snippet--inline command-snippet--add">
+                    <pre><code>import 0x888714bde93f46c139372bb9fdc57a19/hex.bend as Hex</code></pre>
+                    <div class="command-snippet__header">
+                      <button type="button" data-copy="import 0x888714bde93f46c139372bb9fdc57a19/hex.bend as Hex">Copy</button>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+              <div class="hero-quick-start__footer">
+                <p><span>✓</span> Then run <span class="mono">bend your.bend</span>. No registry name, no extra install step.</p>
               </div>
             </div>
-            <div class="step">
-              <div class="step-n">2</div>
-              <div>
-                <strong>Paste the hub import</strong>
-                <div class="snippet">
-                  <code>import 0x888714bde93f46c139372bb9fdc57a19/hex.bend as Hex</code>
-                  <button type="button" data-copy="import 0x888714bde93f46c139372bb9fdc57a19/hex.bend as Hex">Copy</button>
-                </div>
-              </div>
-            </div>
-            <p class="meta">Then run <span class="mono">bend your.bend</span>. The compiler fetches the hash from the hub.</p>
           </aside>
         </section>
 
         <section class="container strip" id="use">
           <article>
-            <h3>No npm install</h3>
-            <p>The import line is the install. Hub packages are verified by content hash.</p>
+            <h3>Import is the install</h3>
+            <p>Paste <span class="mono">import 0x…/file.bend</span>. The compiler fetches that hash from the hub and verifies it.</p>
           </article>
           <article>
             <h3>Git until it publishes</h3>
@@ -94,63 +109,83 @@
         </section>
 
         <section class="container catalog" id="catalog">
-          <p class="kicker">Package directory</p>
-          <h2>Find your package</h2>
-          <p class="muted" id="summary">Loading catalog…</p>
-          <div class="filters">
-            <label class="sr-only" for="q">Search packages</label>
-            <input id="q" type="search" placeholder="Search by name, owner, or capability…" />
-            <select id="category" aria-label="Filter by category">
-              <option value="all">All categories</option>
-              <option value="official">Official</option>
-              <option value="packages">Libraries</option>
-              <option value="tools">Tools</option>
-              <option value="editors">Editors</option>
-              <option value="packaging">Packaging</option>
-              <option value="learning">Learning</option>
-              <option value="demos">Demos</option>
-            </select>
-            <select id="source" aria-label="Filter by source">
-              <option value="all">All sources</option>
-              <option value="hub">On the hub</option>
-              <option value="git">Git clone</option>
-            </select>
-            <select id="sort" aria-label="Sort">
-              <option value="stars">Most stars</option>
-              <option value="name">Name</option>
-            </select>
-            <button class="btn btn-ghost" id="reset" type="button">Reset</button>
+          <div class="section-heading">
+            <p class="eyebrow">Package directory</p>
+            <div class="catalog-heading-row">
+              <h2>Find your package</h2>
+              <a
+                class="catalog-add-button"
+                href="https://github.com/777genius/bend-packages/issues/new"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span aria-hidden="true">＋</span><span>Add package</span>
+              </a>
+            </div>
+            <p>Search by name, owner, or capability. Hub packages copy an import line; others are git clones.</p>
           </div>
-          <div class="grid" id="grid"></div>
+
+          <div class="catalog-controls" role="search" aria-label="Filter packages">
+            <label class="search-field">
+              <span class="sr-only">Search packages</span>
+              <svg class="search-field__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="6.5" />
+                <path d="m16 16 4 4" />
+              </svg>
+              <input id="q" type="search" placeholder="Search by name, owner, or capability…" />
+              <button class="search-field__clear" id="clear-search" type="button" hidden aria-label="Clear search">
+                <span aria-hidden="true">×</span>
+              </button>
+            </label>
+            <button class="catalog-filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="catalog-advanced-filters">
+              More filters
+              <span class="catalog-filter-toggle__chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div id="catalog-advanced-filters" class="catalog-advanced-filters"></div>
+          </div>
+          <div class="catalog-active-filters" id="chips" aria-label="Active filters"></div>
+          <p class="catalog-count" id="summary">Loading catalog…</p>
+          <div class="plugin-grid" id="grid"></div>
         </section>
 
-        <section class="container faq" id="faq">
-          <p class="kicker">FAQ</p>
+        <section class="container registry-faq" id="faq">
+          <p class="eyebrow">FAQ</p>
           <h2>Common questions</h2>
-          <details open>
-            <summary>How do I install a package?</summary>
-            <p>There is no <span class="mono">bend install</span>. Copy the <span class="mono">import 0x…/file.bend</span> line into your program. <span class="mono">bend</span> fetches it from the hub when you check or run.</p>
-          </details>
-          <details>
-            <summary>Is this the official Bend registry?</summary>
-            <p>No. Official surfaces are <a href="https://bend-lang.com">bend-lang.com</a>, the <a href="https://hub.bend-lang.com">hub</a>, and <a href="https://github.com/bendlang/bend">bendlang/bend</a>. This is a community catalog.</p>
-          </details>
-          <details>
-            <summary>What is Nix doing in some tools?</summary>
-            <p>Nix pins a whole toolchain (compiler, clang, optional CUDA) so a machine rebuilds the same way. It is not how you add a Bend library. For libraries you paste an import hash, or clone git.</p>
-          </details>
+          <div class="registry-faq__list">
+            <details open>
+              <summary>How do I use a package?<span aria-hidden="true">+</span></summary>
+              <p>There is no <span class="mono">bend install</span> yet. Copy the <span class="mono">import 0x…/file.bend</span> line into your program. <span class="mono">bend</span> fetches it from the hub when you check or run.</p>
+            </details>
+            <details>
+              <summary>Is this the official Bend registry?<span aria-hidden="true">+</span></summary>
+              <p>No. Official surfaces are <a href="https://bend-lang.com">bend-lang.com</a>, the <a href="https://hub.bend-lang.com">hub</a>, and <a href="https://github.com/bendlang/bend">bendlang/bend</a>. This is a community catalog.</p>
+            </details>
+            <details>
+              <summary>How does a package get listed?<span aria-hidden="true">+</span></summary>
+              <p>Curated rows always win. Discovery also looks for <span class="mono">pack.json</span>, an <span class="mono">import 0x…</span> line in the README, or <span class="mono">.bend</span> files in a repo tagged <span class="mono">bend</span> / <span class="mono">bend2</span>.</p>
+            </details>
+            <details>
+              <summary>What is Nix doing in some tools?<span aria-hidden="true">+</span></summary>
+              <p>Nix pins a whole toolchain (compiler, clang, optional CUDA) so a machine rebuilds the same way. It is not how you add a Bend library. For libraries you paste an import hash, or clone git.</p>
+            </details>
+          </div>
         </section>
       </main>
 
-      <footer class="container footer">
-        <p>Community catalog for Bend 2. Not affiliated with bendlang or HigherOrderCO.</p>
-        <p>
-          <a href="https://github.com/777genius/bend-packages">GitHub</a>
-          ·
-          <a href="https://github.com/777genius/awesome-bend">Awesome Bend</a>
-          ·
-          <a href="https://bend-lang.com">bend-lang.com</a>
-        </p>
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div>
+            <strong>Bend Packages</strong>
+            <p>Community catalog for Bend 2. Not affiliated with bendlang or HigherOrderCO.</p>
+          </div>
+          <nav>
+            <a href="https://github.com/777genius/bend-packages">GitHub</a>
+            <a href="https://github.com/777genius/awesome-bend">Awesome Bend</a>
+            <a href="https://bend-lang.com">bend-lang.com</a>
+            <a href="https://hub.bend-lang.com">hub</a>
+          </nav>
+        </div>
+        <p class="container site-footer__legal">Listings are community-maintained. Hub packages remain content hashes; this site only indexes them.</p>
       </footer>
     </div>
     <div class="toast" id="toast">Copied</div>
