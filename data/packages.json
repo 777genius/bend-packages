@@ -106,11 +106,11 @@
       "name": "bend-time",
       "repo": "777genius/bend-time",
       "url": "https://github.com/777genius/bend-time",
-      "description": "Gregorian dates, RFC 3339 subset, and unix seconds.",
+      "description": "Gregorian dates, Instant, Duration, Period, ISO week, P/PT, and RFC 3339 subset.",
       "category": "packages",
       "source": "hub",
       "stars": 0,
-      "import": "import 0xa2203fa800985a49e0255336bb562c81/format.bend as Time"
+      "import": "import 0x9b6a4fc7ceea91864a75396e1b8365e5/date.bend as D"
     },
     {
       "id": "shake",
