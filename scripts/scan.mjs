@@ -37,7 +37,56 @@ const skip = new Set([
   "777genius/awesome-bend",
   "777genius/bend-packages",
   "naoeosavio/awesome-bend",
+  "boostorg/decimal",
 ]);
+
+const GENERIC_HUB_NAMES = new Set([
+  "main",
+  "test",
+  "package",
+  "core",
+  "hub",
+  "lib",
+  "app",
+  "text",
+  "json",
+  "decimal",
+  "exact",
+  "consumer",
+  "posix_at",
+  "range",
+  "queue",
+  "stack",
+  "tree",
+  "bytes",
+  "csv",
+  "url",
+  "deque",
+  "bitset",
+  "base64",
+  "semver",
+  "nonempty",
+  "prio",
+  "ringbuf",
+]);
+
+const FOREIGN_LANG = new Set(["C++", "TypeScript", "Go", "Rust", "Java", "PHP", "Ruby", "Swift", "C#", "Kotlin"]);
+
+function looksLikeBendRepo(item) {
+  const topics = (item.topics || []).map((t) => String(t).toLowerCase());
+  if (topics.includes("bend") || topics.includes("bend2")) return true;
+  const blob = `${item.full_name || ""} ${item.description || ""}`.toLowerCase();
+  return /\bbend(\s*2)?\b/.test(blob) || blob.includes("bend-lang") || blob.includes("bend-powered");
+}
+
+function rejectForeignRepo(item) {
+  if (!item) return true;
+  if (skip.has(item.full_name)) return true;
+  if (FOREIGN_LANG.has(item.language) && !looksLikeBendRepo(item)) return true;
+  const blob = `${item.full_name || ""} ${item.description || ""}`.toLowerCase();
+  if (/boostorg|ecko-lang|c\+\+14|ieee 754 decimal/.test(blob) && !looksLikeBendRepo(item)) return true;
+  return !looksLikeBendRepo(item) && FOREIGN_LANG.has(item.language || "");
+}
 
 function guessCategory(repo, pack) {
   if (pack?.category) return pack.category;
@@ -146,24 +195,7 @@ function importHash(line) {
 
 function pickHubEntry(files) {
   const paths = Object.keys(files || {});
-  const prefs = [
-    "lib.bend",
-    "main.bend",
-    "json.bend",
-    "sha256.bend",
-    "keccak.bend",
-    "i64.bend",
-    "u64.bend",
-    "http.bend",
-    "dns.bend",
-    "bend_ml.bend",
-    "fixed.bend",
-    "air.bend",
-    "cachet.bend",
-    "tinygrad.bend",
-    "bolt/main.bend",
-    "package.bend",
-  ];
+  const prefs = ["lib.bend", "main.bend", "package.bend"];
   for (const path of prefs) {
     if (paths.includes(path)) return path;
   }
@@ -201,11 +233,14 @@ function nameFromHub(desc, title, entry) {
   return (entry || "package").replace(/\.bend$/, "").split("/").pop();
 }
 
-function skipHubPackage(desc, title, bytes) {
-  const blob = `${desc} ${title}`.toLowerCase();
+function skipHubPackage(desc, title, bytes, name) {
+  const blob = `${desc} ${title} ${name}`.toLowerCase();
   if (/minesweeper|tinychess|glider|lorem ipsum|tile set|hello\b|nested \+ foreign/.test(blob)) return true;
-  if (/definitional laws|executable laws|^laws\.bend/.test(blob)) return true;
+  if (/definitional laws|executable laws|^laws\.bend|hub entry:/.test(blob)) return true;
   if ((bytes || 0) < 4000) return true;
+  const key = String(name || "").toLowerCase();
+  if (GENERIC_HUB_NAMES.has(key) && /^published on the bend hub\.?$/i.test(String(desc || "").trim())) return true;
+  if (GENERIC_HUB_NAMES.has(key) && !/\bbend\b/.test(blob)) return true;
   return false;
 }
 
@@ -333,6 +368,7 @@ try {
 
     const name = nameFromHub(desc, title, file);
     if (byName.has(name.toLowerCase())) continue;
+    if (skipHubPackage(desc, title, entry.bytes, name)) continue;
 
     let repo = githubReposIn(text)[0] || "";
     let url = `https://hub.bend-lang.com/${hash}/${file}`;
@@ -341,18 +377,24 @@ try {
     if (repo) {
       try {
         const meta = await repoMeta(repo);
-        if (meta) {
+        if (meta && !rejectForeignRepo(meta) && looksLikeBendRepo(meta)) {
           url = meta.html_url;
           stars = meta.stargazers_count ?? 0;
           description = meta.description || description;
+        } else {
+          repo = "";
         }
       } catch (error) {
         console.warn(`repo ${repo}: ${error.message}`);
+        repo = "";
       }
-    } else {
-      const named = await search(name);
-      const hit = named.find((item) => item.name.toLowerCase() === name.toLowerCase() || item.full_name.toLowerCase().endsWith(`/${name.toLowerCase()}`));
-      if (hit && !skip.has(hit.full_name) && !byRepo.has(hit.full_name)) {
+    } else if (!GENERIC_HUB_NAMES.has(name.toLowerCase())) {
+      const named = await search(`${name} bend`);
+      const hit = named.find((item) => {
+        const same = item.name.toLowerCase() === name.toLowerCase() || item.full_name.toLowerCase().endsWith(`/${name.toLowerCase()}`);
+        return same && looksLikeBendRepo(item) && !rejectForeignRepo(item) && !skip.has(item.full_name) && !byRepo.has(item.full_name);
+      });
+      if (hit) {
         repo = hit.full_name;
         url = hit.html_url;
         stars = hit.stargazers_count ?? 0;
