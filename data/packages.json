@@ -227,8 +227,8 @@
       "name": "ez",
       "repo": "Emerging-Patterns/ez",
       "url": "https://github.com/Emerging-Patterns/ez",
-      "description": "Lockfile, ledger, and vendorer for hub hashes and unpublished trees.",
-      "category": "tools",
+      "description": "Project management for Bend.",
+      "category": "packaging",
       "source": "git",
       "stars": 0,
       "import": null
