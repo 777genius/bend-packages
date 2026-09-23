@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T06:57:39.146Z",
+  "generated_at": "2026-09-23T07:40:00.000Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -22,7 +22,7 @@
       "category": "packages",
       "source": "hub",
       "stars": 1,
-      "import": "import 0xcd07e24a626a62e74603d48f436cd679/lib.bend as Unsga3"
+      "import": "import 0x527a2a4fa91b05a0250d7be0e11d232a/lib.bend as Unsga3"
     },
     {
       "id": "bend-lemmas",
@@ -121,7 +121,7 @@
       "category": "packages",
       "source": "hub",
       "stars": 0,
-      "import": "import 0xebdf72b20ad527103f6efc0d2aa8f1ec/main.bend as Shake"
+      "import": "import 0xba6940aab8a335b70bf79944bd9b53c4/main.bend as Shake"
     },
     {
       "id": "bend-tui",
@@ -601,7 +601,7 @@
       "name": "bend-net",
       "repo": "naoeosavio/bend-net",
       "url": "https://github.com/naoeosavio/bend-net",
-      "description": "HTTP/1.1 and WebSocket over TCP, plus Base64 and SHA-1.",
+      "description": "HTTP/1.1, HTTP/2, HTTPS, DNS, TLS, and WebSockets.",
       "category": "packages",
       "source": "hub",
       "stars": 1,
@@ -751,171 +751,92 @@
       "import": "import 0xa3c2445eb44c5d8406e6229be518fccb/main.bend as Ezjson"
     },
     {
-      "id": "developerrafu-lapine",
-      "name": "lapine",
-      "repo": "developerRafu/lapine",
-      "url": "https://github.com/developerRafu/lapine",
-      "description": "AMQP consumer SDK for Bend-powered services.",
+      "id": "emerging-patterns-ezhttp",
+      "name": "ezhttp",
+      "repo": "Emerging-Patterns/ezhttp",
+      "url": "https://github.com/Emerging-Patterns/ezhttp",
+      "description": "HTTP client and server with RFC 9110/9112/3986 laws.",
       "category": "packages",
-      "source": "hub",
-      "stars": 1,
-      "import": "import 0xe135341ec9c8609f01ad79493ae16612/lapine.bend as Lapine"
-    },
-    {
-      "id": "hub-0bf236f7",
-      "name": "selah-bend",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend",
-      "description": "selah-bend",
-      "category": "packages",
-      "source": "hub",
+      "source": "git",
       "stars": 0,
-      "import": "import 0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend as Main",
-      "discovered": true
+      "import": null
     },
     {
-      "id": "hub-d5e93625",
-      "name": "euclid",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0xd5e9362591c1667c9894b781190e1ac9/euclid.bend",
-      "description": "===========================================================================",
+      "id": "emerging-patterns-ezaudio",
+      "name": "ezaudio",
+      "repo": "Emerging-Patterns/ezaudio",
+      "url": "https://github.com/Emerging-Patterns/ezaudio",
+      "description": "PCM audio clips for Bend 2.",
+      "category": "packages",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "emerging-patterns-ezimg",
+      "name": "ezimg",
+      "repo": "Emerging-Patterns/ezimg",
+      "url": "https://github.com/Emerging-Patterns/ezimg",
+      "description": "Raster images for Bend 2.",
+      "category": "packages",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "kaz9487-bend-conv",
+      "name": "bend-conv",
+      "repo": "Kaz9487/bend-conv",
+      "url": "https://github.com/Kaz9487/bend-conv",
+      "description": "FP32 convolution with proofs and a pretrained YOLOv5n example.",
+      "category": "packages",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "lulzx-bendc",
+      "name": "bendc",
+      "repo": "Lulzx/bendc",
+      "url": "https://github.com/Lulzx/bendc",
+      "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0xd5e9362591c1667c9894b781190e1ac9/euclid.bend as Euclid",
-      "discovered": true
+      "source": "git",
+      "stars": 14,
+      "import": null
     },
     {
-      "id": "hub-871fbaa3",
-      "name": "grab-bcv",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x871fbaa34668931fc27fda009a9da24e/main.bend",
-      "description": "grab-bcv",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x871fbaa34668931fc27fda009a9da24e/main.bend as Main",
-      "discovered": true
+      "id": "don2e4-bend2-lsp",
+      "name": "bend2-lsp",
+      "repo": "don2e4/bend2-lsp",
+      "url": "https://github.com/don2e4/bend2-lsp",
+      "description": "Standalone language server: diagnostics, hover, go-to-definition, and formatting.",
+      "category": "editors",
+      "source": "git",
+      "stars": 3,
+      "import": null
     },
     {
-      "id": "hub-6bcc5639",
-      "name": "json",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x6bcc5639f884b922a3ea766a6acc017c/json.bend",
-      "description": "json.bend: A production-grade, highly reusable JSON library for Bend 2.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x6bcc5639f884b922a3ea766a6acc017c/json.bend as Json",
-      "discovered": true
+      "id": "giulio2002-bend-vscode",
+      "name": "bend-vscode",
+      "repo": "Giulio2002/bend-vscode",
+      "url": "https://github.com/Giulio2002/bend-vscode",
+      "description": "VS Code highlighting, autocomplete, compiler diagnostics, and .bend file icons.",
+      "category": "editors",
+      "source": "git",
+      "stars": 4,
+      "import": null
     },
     {
-      "id": "gouveags-openai-bend",
-      "name": "docs",
-      "repo": "gouveags/openai-bend",
-      "url": "https://github.com/gouveags/openai-bend",
-      "description": "An unofficial OpenAI SDK for Bend, with typed requests, streaming, and tool calling.",
-      "category": "packages",
-      "source": "hub",
+      "id": "kitevi-homebrew-bend",
+      "name": "homebrew-bend",
+      "repo": "kitevi/homebrew-bend",
+      "url": "https://github.com/kitevi/homebrew-bend",
+      "description": "Unofficial Homebrew tap for Bend 2 on macOS.",
+      "category": "packaging",
+      "source": "git",
       "stars": 0,
-      "import": "import 0xda004b6e25aca0ce4a1c90a4af87bee0/docs.bend as Docs",
-      "discovered": true
-    },
-    {
-      "id": "hub-f6096dc9",
-      "name": "anthropic",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0xf6096dc904e6bf39c5e2b709dd75eabe/anthropic.bend",
-      "description": "Published on the Bend hub.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0xf6096dc904e6bf39c5e2b709dd75eabe/anthropic.bend as Anthropic",
-      "discovered": true
-    },
-    {
-      "id": "hub-60e7edc5",
-      "name": "Socket",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x60e7edc53d00f69422a2eae5eb5a80e7/wire.bend",
-      "description": "Socket IO on octets: one Char per byte (0..255). Base's TCP/UDP effects",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x60e7edc53d00f69422a2eae5eb5a80e7/wire.bend as Wire",
-      "discovered": true
-    },
-    {
-      "id": "hub-9c7a61e0",
-      "name": "HTTP",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x9c7a61e05d37da832cbd93dd7ae504d9/http.bend",
-      "description": "HTTP/1.1 codec (RFC 9112). No TLS, no DNS yet.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x9c7a61e05d37da832cbd93dd7ae504d9/http.bend as Http",
-      "discovered": true
-    },
-    {
-      "id": "hub-18480396",
-      "name": "auth",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x184803968dae9580005e472b803ca2f1/auth.bend",
-      "description": "Published on the Bend hub.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x184803968dae9580005e472b803ca2f1/auth.bend as Auth",
-      "discovered": true
-    },
-    {
-      "id": "hub-5a0b4c61",
-      "name": "origin-form",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x5a0b4c611cf9941b168cfd98c67ef15c/url.bend",
-      "description": "origin-form /path[?k=v] with RFC 3986 percent-encoding.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x5a0b4c611cf9941b168cfd98c67ef15c/url.bend as Url",
-      "discovered": true
-    },
-    {
-      "id": "hub-caf87330",
-      "name": "Hex",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0xcaf87330c1ce7eab5a1056378519aed8/encoding.bend",
-      "description": "Hex of each char as two nibbles. ASCII-oriented.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0xcaf87330c1ce7eab5a1056378519aed8/encoding.bend as Encoding",
-      "discovered": true
-    },
-    {
-      "id": "hub-085d89db",
-      "name": "List.append",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x085d89db9ee8a21865e959816bb20e5b/list.bend",
-      "description": "List.append, List.reverse and List.length — the lemmas Base does not ship.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x085d89db9ee8a21865e959816bb20e5b/list.bend as List",
-      "discovered": true
-    },
-    {
-      "id": "hub-87443356",
-      "name": "Graph",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x87443356945470112b78ad5f17a0cfb9/lib.bend",
-      "description": "Graph",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x87443356945470112b78ad5f17a0cfb9/lib.bend as Lib",
-      "discovered": true
+      "import": null
     }
   ]
 }
