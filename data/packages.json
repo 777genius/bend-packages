@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T07:15:00.000Z",
+  "generated_at": "2026-09-23T06:57:39.146Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -208,7 +208,7 @@
       "description": "Disk-usage analyzer with a parallel scan and a zoomable treemap.",
       "category": "tools",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -219,7 +219,7 @@
       "description": "Independent Rust implementation of a Bend 2 subset.",
       "category": "tools",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -340,7 +340,7 @@
       "description": "Local-first issue tracker port, still early.",
       "category": "tools",
       "source": "git",
-      "stars": 4,
+      "stars": 5,
       "import": null
     },
     {
@@ -373,7 +373,7 @@
       "description": "From-scratch tutorial, including probes that are supposed to fail.",
       "category": "learning",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -494,7 +494,7 @@
       "description": "Doom that reads a WAD at runtime, with laws and a Nix flake.",
       "category": "demos",
       "source": "git",
-      "stars": 0,
+      "stars": 7,
       "import": null
     },
     {
@@ -538,7 +538,7 @@
       "description": "SHA-256 with machine-checked proofs against FIPS 180-4.",
       "category": "packages",
       "source": "hub",
-      "stars": 19,
+      "stars": 20,
       "import": "import 0xda83506fb9f059ead7afcfa2f498df5f/sha256.bend as SHA"
     },
     {
@@ -760,6 +760,162 @@
       "source": "hub",
       "stars": 1,
       "import": "import 0xe135341ec9c8609f01ad79493ae16612/lapine.bend as Lapine"
+    },
+    {
+      "id": "hub-0bf236f7",
+      "name": "selah-bend",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend",
+      "description": "selah-bend",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-d5e93625",
+      "name": "euclid",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd5e9362591c1667c9894b781190e1ac9/euclid.bend",
+      "description": "===========================================================================",
+      "category": "tools",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd5e9362591c1667c9894b781190e1ac9/euclid.bend as Euclid",
+      "discovered": true
+    },
+    {
+      "id": "hub-871fbaa3",
+      "name": "grab-bcv",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x871fbaa34668931fc27fda009a9da24e/main.bend",
+      "description": "grab-bcv",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x871fbaa34668931fc27fda009a9da24e/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-6bcc5639",
+      "name": "json",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x6bcc5639f884b922a3ea766a6acc017c/json.bend",
+      "description": "json.bend: A production-grade, highly reusable JSON library for Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x6bcc5639f884b922a3ea766a6acc017c/json.bend as Json",
+      "discovered": true
+    },
+    {
+      "id": "gouveags-openai-bend",
+      "name": "docs",
+      "repo": "gouveags/openai-bend",
+      "url": "https://github.com/gouveags/openai-bend",
+      "description": "An unofficial OpenAI SDK for Bend, with typed requests, streaming, and tool calling.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xda004b6e25aca0ce4a1c90a4af87bee0/docs.bend as Docs",
+      "discovered": true
+    },
+    {
+      "id": "hub-f6096dc9",
+      "name": "anthropic",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf6096dc904e6bf39c5e2b709dd75eabe/anthropic.bend",
+      "description": "Published on the Bend hub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf6096dc904e6bf39c5e2b709dd75eabe/anthropic.bend as Anthropic",
+      "discovered": true
+    },
+    {
+      "id": "hub-60e7edc5",
+      "name": "Socket",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x60e7edc53d00f69422a2eae5eb5a80e7/wire.bend",
+      "description": "Socket IO on octets: one Char per byte (0..255). Base's TCP/UDP effects",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x60e7edc53d00f69422a2eae5eb5a80e7/wire.bend as Wire",
+      "discovered": true
+    },
+    {
+      "id": "hub-9c7a61e0",
+      "name": "HTTP",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9c7a61e05d37da832cbd93dd7ae504d9/http.bend",
+      "description": "HTTP/1.1 codec (RFC 9112). No TLS, no DNS yet.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9c7a61e05d37da832cbd93dd7ae504d9/http.bend as Http",
+      "discovered": true
+    },
+    {
+      "id": "hub-18480396",
+      "name": "auth",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x184803968dae9580005e472b803ca2f1/auth.bend",
+      "description": "Published on the Bend hub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x184803968dae9580005e472b803ca2f1/auth.bend as Auth",
+      "discovered": true
+    },
+    {
+      "id": "hub-5a0b4c61",
+      "name": "origin-form",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5a0b4c611cf9941b168cfd98c67ef15c/url.bend",
+      "description": "origin-form /path[?k=v] with RFC 3986 percent-encoding.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5a0b4c611cf9941b168cfd98c67ef15c/url.bend as Url",
+      "discovered": true
+    },
+    {
+      "id": "hub-caf87330",
+      "name": "Hex",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xcaf87330c1ce7eab5a1056378519aed8/encoding.bend",
+      "description": "Hex of each char as two nibbles. ASCII-oriented.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xcaf87330c1ce7eab5a1056378519aed8/encoding.bend as Encoding",
+      "discovered": true
+    },
+    {
+      "id": "hub-085d89db",
+      "name": "List.append",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x085d89db9ee8a21865e959816bb20e5b/list.bend",
+      "description": "List.append, List.reverse and List.length — the lemmas Base does not ship.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x085d89db9ee8a21865e959816bb20e5b/list.bend as List",
+      "discovered": true
+    },
+    {
+      "id": "hub-87443356",
+      "name": "Graph",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x87443356945470112b78ad5f17a0cfb9/lib.bend",
+      "description": "Graph",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x87443356945470112b78ad5f17a0cfb9/lib.bend as Lib",
+      "discovered": true
     }
   ]
 }
