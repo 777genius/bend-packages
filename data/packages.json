@@ -88,7 +88,7 @@
       "category": "packages",
       "source": "hub",
       "stars": 0,
-      "import": "import 0x888714bde93f46c139372bb9fdc57a19/hex.bend as Hex"
+      "import": "import bend-codec-lib@0.2.0.0/hex.bend as Hex"
     },
     {
       "id": "bend-parse",
@@ -99,7 +99,7 @@
       "category": "packages",
       "source": "hub",
       "stars": 0,
-      "import": "import 0xe49a3e6521e1b71e55654a885f27bcc1/parse.bend as Parse"
+      "import": "import bend-parse-lib@0.1.0.0/parse.bend as Parse"
     },
     {
       "id": "bend-time",
@@ -110,7 +110,7 @@
       "category": "packages",
       "source": "hub",
       "stars": 1,
-      "import": "import 0x9b6a4fc7ceea91864a75396e1b8365e5/date.bend as D"
+      "import": "import bend-time-lib@0.4.0.0/date.bend as D"
     },
     {
       "id": "shake",
