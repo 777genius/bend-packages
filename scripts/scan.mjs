@@ -248,12 +248,12 @@ function skipHubPackage(desc, title, bytes, name) {
   const blob = `${desc} ${title} ${name}`.toLowerCase();
   if (/minesweeper|tinychess|glider|lorem ipsum|tile set|hello\b|nested \+ foreign/.test(blob)) return true;
   if (/definitional laws|executable laws|^laws\.bend|hub entry:/.test(blob)) return true;
+  if (/grab-bcv|byte-exact tcp|selah-bend/.test(blob)) return true;
   if (/^=+$/.test(String(desc || "").trim())) return true;
   if (/^published on the bend hub\.?$/i.test(String(desc || "").trim())) return true;
   if ((bytes || 0) < 4000) return true;
   const key = String(name || "").toLowerCase();
-  if (GENERIC_HUB_NAMES.has(key) && /^published on the bend hub\.?$/i.test(String(desc || "").trim())) return true;
-  if (GENERIC_HUB_NAMES.has(key) && !/\bbend\b/.test(blob)) return true;
+  if (GENERIC_HUB_NAMES.has(key)) return true;
   if (key.includes(".")) return true;
   return false;
 }

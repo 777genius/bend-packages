@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T06:48:15.163Z",
+  "generated_at": "2026-09-24T09:30:00.000Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -494,7 +494,7 @@
       "description": "Doom that reads a WAD at runtime, with laws and a Nix flake.",
       "category": "demos",
       "source": "git",
-      "stars": 11,
+      "stars": 12,
       "import": null
     },
     {
@@ -843,23 +843,11 @@
       "name": "bend-collections",
       "repo": "Giulio2002/bend-collections",
       "url": "https://github.com/Giulio2002/bend-collections",
-      "description": "Bend 2 package published to the hub.",
+      "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 26,
+      "stars": 29,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
-      "discovered": true
-    },
-    {
-      "id": "hub-0bf236f7",
-      "name": "selah-bend",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend",
-      "description": "selah-bend",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend as Main",
       "discovered": true
     },
     {
@@ -867,7 +855,7 @@
       "name": "bend_tensors",
       "repo": "",
       "url": "https://hub.bend-lang.com/0x39d8166231e68361eb37e8bef9287b8a/bend_tensors.bend",
-      "description": "bend_tensors: dense linear algebra with shapes in the types.",
+      "description": "Dense linear algebra with shapes in the types.",
       "category": "packages",
       "source": "hub",
       "stars": 0,
@@ -875,51 +863,15 @@
       "discovered": true
     },
     {
-      "id": "hub-871fbaa3",
-      "name": "grab-bcv",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x871fbaa34668931fc27fda009a9da24e/main.bend",
-      "description": "grab-bcv",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x871fbaa34668931fc27fda009a9da24e/main.bend as Main",
-      "discovered": true
-    },
-    {
-      "id": "hub-6bcc5639",
-      "name": "json",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0x6bcc5639f884b922a3ea766a6acc017c/json.bend",
-      "description": "json.bend: A production-grade, highly reusable JSON library for Bend 2.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0x6bcc5639f884b922a3ea766a6acc017c/json.bend as Json",
-      "discovered": true
-    },
-    {
-      "id": "hub-a7a8d455",
-      "name": "Byte-exact",
-      "repo": "",
-      "url": "https://hub.bend-lang.com/0xa7a8d455821acb4ae1a00161dc00129d/wire.bend",
-      "description": "Byte-exact TCP, UDP, and TLS sockets.",
-      "category": "packages",
-      "source": "hub",
-      "stars": 0,
-      "import": "import 0xa7a8d455821acb4ae1a00161dc00129d/wire.bend as Wire",
-      "discovered": true
-    },
-    {
       "id": "hub-9fc0cec7",
       "name": "bend-machines",
       "repo": "",
       "url": "https://hub.bend-lang.com/0x9fc0cec754888f0fecabce899ddf2ee5/main.bend",
-      "description": "bend-machines: Root-of-Lisp, Core, STG and STG->C, one package.",
+      "description": "Root-of-Lisp, Core, STG, and STG to C in one package.",
       "category": "packages",
       "source": "hub",
       "stars": 0,
-      "import": "import 0x9fc0cec754888f0fecabce899ddf2ee5/main.bend as Main",
+      "import": "import 0x9fc0cec754888f0fecabce899ddf2ee5/main.bend as Machines",
       "discovered": true
     },
     {
@@ -927,12 +879,133 @@
       "name": "BendSR",
       "repo": "k3ybladewielder/BendSR",
       "url": "https://github.com/k3ybladewielder/BendSR",
-      "description": "Symbolic Regression implementation in Bend.",
+      "description": "Parallel symbolic regression engine in Bend 2.",
       "category": "packages",
       "source": "hub",
       "stars": 12,
       "import": "import 0xb1a81026c64fbbc00a8570155d77383d/BendSR.bend as BendSR",
       "discovered": true
+    },
+    {
+      "id": "bendlib-bendlib",
+      "name": "bend-mathlib",
+      "repo": "bendlib/bendlib",
+      "url": "https://github.com/bendlib/bendlib",
+      "description": "Machine-checked Nat, Bool, List, and equality lemmas.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xafc61ca8b7738a6df7f28eddf80168f8/nat.bend as Nat"
+    },
+    {
+      "id": "fraylabs-stiff",
+      "name": "stiff",
+      "repo": "fraylabs/stiff",
+      "url": "https://github.com/fraylabs/stiff",
+      "description": "Experimental HTTP, routing, streaming, and SQLite-backed local state.",
+      "category": "packages",
+      "source": "git",
+      "stars": 1,
+      "import": null
+    },
+    {
+      "id": "kapiokai-bendygrad",
+      "name": "bendygrad",
+      "repo": "KapioKai/bendygrad",
+      "url": "https://github.com/KapioKai/bendygrad",
+      "description": "Tinygrad front-end in Bend 2: views, buffers, autodiff, and SGD.",
+      "category": "packages",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "lukaszsamson-bendler",
+      "name": "bendler",
+      "repo": "lukaszsamson/bendler",
+      "url": "https://github.com/lukaszsamson/bendler",
+      "description": "Call Bend from Elixir through a supervised port or an experimental NIF.",
+      "category": "tools",
+      "source": "git",
+      "stars": 1,
+      "import": null
+    },
+    {
+      "id": "dearlordylord-bend-idea",
+      "name": "bend-idea",
+      "repo": "dearlordylord/bend-idea",
+      "url": "https://github.com/dearlordylord/bend-idea",
+      "description": "IntelliJ IDEA plugin: highlighting, completion, and optional compiler diagnostics.",
+      "category": "editors",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "ind-igo-bend-frontend",
+      "name": "bend-frontend",
+      "repo": "ind-igo/bend-frontend",
+      "url": "https://github.com/ind-igo/bend-frontend",
+      "description": "Checks full Bend and exports a typed Core.Program for backends.",
+      "category": "tools",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "ind-igo-bend-evm",
+      "name": "bend-evm",
+      "repo": "ind-igo/bend-evm",
+      "url": "https://github.com/ind-igo/bend-evm",
+      "description": "EVM backend: contracts in Bend, certified IR, and Yul lowering.",
+      "category": "tools",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "fabianvegaa-tree-sitter-bend",
+      "name": "tree-sitter-bend",
+      "repo": "FabianVegaA/tree-sitter-bend",
+      "url": "https://github.com/FabianVegaA/tree-sitter-bend",
+      "description": "Tree-sitter grammar for Bend 2 syntax.",
+      "category": "editors",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "aivv73-bend-voxel",
+      "name": "bend-voxel",
+      "repo": "aivv73/bend-voxel",
+      "url": "https://github.com/aivv73/bend-voxel",
+      "description": "Destructible voxel demo with a native Vulkan renderer.",
+      "category": "demos",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "lennix1337-bend2craft",
+      "name": "bend2craft",
+      "repo": "lennix1337/bend2craft",
+      "url": "https://github.com/lennix1337/bend2craft",
+      "description": "Minecraft-inspired voxel sandbox with seeded terrain and WebGL.",
+      "category": "demos",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "lvtd-built-with-bend",
+      "name": "built-with-bend",
+      "repo": "LVTD-LLC/built-with-bend",
+      "url": "https://github.com/LVTD-LLC/built-with-bend",
+      "description": "Human-reviewed directory of Bend 2 apps and demos.",
+      "category": "learning",
+      "source": "git",
+      "stars": 1,
+      "import": null
     }
   ]
 }
