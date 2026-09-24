@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T07:40:00.000Z",
+  "generated_at": "2026-09-24T06:48:15.163Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -494,7 +494,7 @@
       "description": "Doom that reads a WAD at runtime, with laws and a Nix flake.",
       "category": "demos",
       "source": "git",
-      "stars": 7,
+      "stars": 11,
       "import": null
     },
     {
@@ -538,7 +538,7 @@
       "description": "SHA-256 with machine-checked proofs against FIPS 180-4.",
       "category": "packages",
       "source": "hub",
-      "stars": 20,
+      "stars": 21,
       "import": "import 0xda83506fb9f059ead7afcfa2f498df5f/sha256.bend as SHA"
     },
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 14,
+      "stars": 20,
       "import": null
     },
     {
@@ -824,7 +824,7 @@
       "description": "VS Code highlighting, autocomplete, compiler diagnostics, and .bend file icons.",
       "category": "editors",
       "source": "git",
-      "stars": 4,
+      "stars": 5,
       "import": null
     },
     {
@@ -837,6 +837,102 @@
       "source": "git",
       "stars": 0,
       "import": null
+    },
+    {
+      "id": "giulio2002-bend-collections",
+      "name": "bend-collections",
+      "repo": "Giulio2002/bend-collections",
+      "url": "https://github.com/Giulio2002/bend-collections",
+      "description": "Bend 2 package published to the hub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 26,
+      "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
+      "discovered": true
+    },
+    {
+      "id": "hub-0bf236f7",
+      "name": "selah-bend",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend",
+      "description": "selah-bend",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0bf236f7bc3ba21b1b36cad3c0ecfa7c/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-39d81662",
+      "name": "bend_tensors",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x39d8166231e68361eb37e8bef9287b8a/bend_tensors.bend",
+      "description": "bend_tensors: dense linear algebra with shapes in the types.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x39d8166231e68361eb37e8bef9287b8a/bend_tensors.bend as BendTensors",
+      "discovered": true
+    },
+    {
+      "id": "hub-871fbaa3",
+      "name": "grab-bcv",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x871fbaa34668931fc27fda009a9da24e/main.bend",
+      "description": "grab-bcv",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x871fbaa34668931fc27fda009a9da24e/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-6bcc5639",
+      "name": "json",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x6bcc5639f884b922a3ea766a6acc017c/json.bend",
+      "description": "json.bend: A production-grade, highly reusable JSON library for Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x6bcc5639f884b922a3ea766a6acc017c/json.bend as Json",
+      "discovered": true
+    },
+    {
+      "id": "hub-a7a8d455",
+      "name": "Byte-exact",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xa7a8d455821acb4ae1a00161dc00129d/wire.bend",
+      "description": "Byte-exact TCP, UDP, and TLS sockets.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xa7a8d455821acb4ae1a00161dc00129d/wire.bend as Wire",
+      "discovered": true
+    },
+    {
+      "id": "hub-9fc0cec7",
+      "name": "bend-machines",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9fc0cec754888f0fecabce899ddf2ee5/main.bend",
+      "description": "bend-machines: Root-of-Lisp, Core, STG and STG->C, one package.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9fc0cec754888f0fecabce899ddf2ee5/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "k3ybladewielder-bendsr",
+      "name": "BendSR",
+      "repo": "k3ybladewielder/BendSR",
+      "url": "https://github.com/k3ybladewielder/BendSR",
+      "description": "Symbolic Regression implementation in Bend.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 12,
+      "import": "import 0xb1a81026c64fbbc00a8570155d77383d/BendSR.bend as BendSR",
+      "discovered": true
     }
   ]
 }
