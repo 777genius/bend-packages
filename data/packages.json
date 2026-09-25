@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T09:30:00.000Z",
+  "generated_at": "2026-09-25T06:49:32.124Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -274,7 +274,7 @@
       "description": "Syntax highlighting for Zed.",
       "category": "editors",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -560,7 +560,7 @@
       "description": "JSON parser and serializer with formal proofs.",
       "category": "packages",
       "source": "hub",
-      "stars": 0,
+      "stars": 1,
       "import": "import 0x1f4d6c03caf955232d0b0dc6e6f36cf4/json.bend as Json"
     },
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 20,
+      "stars": 22,
       "import": null
     },
     {
@@ -846,7 +846,7 @@
       "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 29,
+      "stars": 37,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
       "discovered": true
     },
@@ -927,7 +927,7 @@
       "description": "Call Bend from Elixir through a supervised port or an experimental NIF.",
       "category": "tools",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -1006,6 +1006,90 @@
       "source": "git",
       "stars": 1,
       "import": null
+    },
+    {
+      "id": "hub-5f97f469",
+      "name": "class",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5f97f469d15c04a181dae0e4e64e1d3d/src/class.bend",
+      "description": "class.bend: operations bundled with their laws, passed as one template",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5f97f469d15c04a181dae0e4e64e1d3d/src/class.bend as Class",
+      "discovered": true
+    },
+    {
+      "id": "hub-da09635d",
+      "name": "SPDX-License-Identifier",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xda09635d9d188749939d77eb0a5769b8/json.bend",
+      "description": "SPDX-License-Identifier: Apache-2.0",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xda09635d9d188749939d77eb0a5769b8/json.bend as Json",
+      "discovered": true
+    },
+    {
+      "id": "hub-0bc665d2",
+      "name": "An",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0bc665d2ca2b4a7f7df0c8b32cfaa356/anthropic.bend",
+      "description": "An unofficial Anthropic SDK for Bend, with typed requests, streaming, and tool calling.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0bc665d2ca2b4a7f7df0c8b32cfaa356/anthropic.bend as Anthropic",
+      "discovered": true
+    },
+    {
+      "id": "paymog-bend-kit",
+      "name": "DEFLATE",
+      "repo": "paymog/bend-kit",
+      "url": "https://github.com/paymog/bend-kit",
+      "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-kit/tree/main/zlib",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xe01785b64266bf3ba0068183b9f9f5e3/zlib.bend as Zlib",
+      "discovered": true
+    },
+    {
+      "id": "hub-058cb36f",
+      "name": "Arc",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x058cb36f12f8bf8302ca243efd6d78dc/arc.bend",
+      "description": "Arc: a system's architecture as types, in two hierarchies over the same containers.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x058cb36f12f8bf8302ca243efd6d78dc/arc.bend as Arc",
+      "discovered": true
+    },
+    {
+      "id": "paymog-bend-net",
+      "name": "Byte",
+      "repo": "paymog/bend-net",
+      "url": "https://github.com/paymog/bend-kit",
+      "description": "Byte buffers packed four bytes to a U32, with bounds-checked access. Source: https://github.com/paymog/bend-net/tree/main/bytes",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xdcce81c809e7aeb2e2c2fb775d28e0dc/bytes.bend as Bytes",
+      "discovered": true
+    },
+    {
+      "id": "hub-d3297201",
+      "name": "UTF-8",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd32972012bf211e458b8725704c0a3d2/encoding.bend",
+      "description": "UTF-8 and hex encoding for byte strings.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd32972012bf211e458b8725704c0a3d2/encoding.bend as Encoding",
+      "discovered": true
     }
   ]
 }
