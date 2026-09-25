@@ -338,6 +338,6 @@ filterToggle.addEventListener("click", () => {
 
 filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
 
-const catalog = await fetch("./data/packages.json?v=17").then((r) => r.json());
+const catalog = await fetch("./data/packages.json?v=18").then((r) => r.json());
 state.packages = catalog.packages;
 render();

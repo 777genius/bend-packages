@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
     />
-    <link rel="stylesheet" href="./styles.css?v=17" />
+    <link rel="stylesheet" href="./styles.css?v=18" />
   </head>
   <body>
     <div class="site">
@@ -94,9 +94,9 @@
                     <small>compiler fetches the named package</small>
                   </div>
                   <div class="command-snippet command-snippet--inline command-snippet--add">
-                    <pre><code>import bend-codec-lib@0.2.0.0/hex.bend as Hex</code></pre>
+                    <pre><code>import bend-encoding@0.2.0.0/hex.bend as Hex</code></pre>
                     <div class="command-snippet__header">
-                      <button type="button" data-copy="import bend-codec-lib@0.2.0.0/hex.bend as Hex">Copy</button>
+                      <button type="button" data-copy="import bend-encoding@0.2.0.0/hex.bend as Hex">Copy</button>
                     </div>
                   </div>
                 </li>
@@ -166,7 +166,7 @@
           <div class="registry-faq__list">
             <details open>
               <summary>How do I use a package?<span aria-hidden="true">+</span></summary>
-              <p>There is no <span class="mono">bend install</span> yet. Copy the import line into your program: a claimed hub name (<span class="mono">import bend-codec-lib@0.2.0.0/hex.bend</span>) or a content hash (<span class="mono">import 0x…/file.bend</span>). <span class="mono">bend</span> fetches it from the hub when you check or run.</p>
+              <p>There is no <span class="mono">bend install</span> yet. Copy the import line into your program: a claimed hub name (<span class="mono">import bend-encoding@0.2.0.0/hex.bend</span>) or a content hash (<span class="mono">import 0x…/file.bend</span>). <span class="mono">bend</span> fetches it from the hub when you check or run.</p>
             </details>
             <details>
               <summary>Is this the official Bend registry?<span aria-hidden="true">+</span></summary>
@@ -200,6 +200,6 @@
       </footer>
     </div>
     <div class="toast" id="toast">Copied</div>
-    <script src="./app.js?v=17" type="module"></script>
+    <script src="./app.js?v=18" type="module"></script>
   </body>
 </html>

@@ -41,7 +41,7 @@ Authors can opt in with a tiny manifest. The `import` still has to pass the file
 {
   "name": "codec",
   "description": "RFC 4648 hex, Base64, and UTF-8.",
-  "import": "import bend-codec-lib@0.2.0.0/hex.bend as Hex",
+  "import": "import bend-encoding@0.2.0.0/hex.bend as Hex",
   "category": "packages"
 }
 ```
