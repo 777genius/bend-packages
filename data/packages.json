@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T06:45:01.792Z",
+  "generated_at": "2026-09-27T06:46:58.934Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -87,7 +87,7 @@
       "description": "RFC 4648 hex, Base64, and UTF-8.",
       "category": "packages",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import bend-encoding@0.2.0.0/hex.bend as Hex"
     },
     {
@@ -109,7 +109,7 @@
       "description": "Gregorian dates, Instant, Duration, Period, ISO week, P/PT, RFC 3339 subset, IANA zones, and RFC 9557.",
       "category": "packages",
       "source": "hub",
-      "stars": 2,
+      "stars": 3,
       "import": "import bend-datetime@0.4.0.0/date.bend as D"
     },
     {
@@ -494,7 +494,7 @@
       "description": "Doom that reads a WAD at runtime, with laws and a Nix flake.",
       "category": "demos",
       "source": "git",
-      "stars": 12,
+      "stars": 13,
       "import": null
     },
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 23,
+      "stars": 24,
       "import": null
     },
     {
@@ -846,7 +846,7 @@
       "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 38,
+      "stars": 39,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
       "discovered": true
     },
@@ -894,7 +894,7 @@
       "description": "Machine-checked Nat, Bool, List, and equality lemmas.",
       "category": "packages",
       "source": "hub",
-      "stars": 0,
+      "stars": 1,
       "import": "import 0xafc61ca8b7738a6df7f28eddf80168f8/nat.bend as Nat"
     },
     {
@@ -916,7 +916,7 @@
       "description": "Tinygrad front-end in Bend 2: views, buffers, autodiff, and SGD.",
       "category": "packages",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -982,7 +982,7 @@
       "description": "Destructible voxel demo with a native Vulkan renderer.",
       "category": "demos",
       "source": "git",
-      "stars": 0,
+      "stars": 4,
       "import": null
     },
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 0,
+      "stars": 2,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 0,
+      "stars": 2,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -1263,6 +1263,90 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x9ed9d2a83d17c8cb5d268ff52c77412d/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-785d1b07",
+      "name": "Public",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x785d1b078f7f99a4ee2b9c7798398bc9/ber.bend",
+      "description": "Public API of ber-core. Single import for consumers; Store carries the",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x785d1b078f7f99a4ee2b9c7798398bc9/ber.bend as Ber",
+      "discovered": true
+    },
+    {
+      "id": "hub-b840f3ee",
+      "name": "SQLite",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xb840f3eebe5e51739a9b3b4be210b968/sqlite.bend",
+      "description": "SQLite connections, typed values, prepared statements and transactions for C and Wasm.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xb840f3eebe5e51739a9b3b4be210b968/sqlite.bend as Sqlite",
+      "discovered": true
+    },
+    {
+      "id": "hub-ce7bfa94",
+      "name": "Pure",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xce7bfa94c40ded8493cdb39d330add0c/main.bend",
+      "description": "Pure public transition kernel. Rejection always returns the original cell.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xce7bfa94c40ded8493cdb39d330add0c/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-88d5b48c",
+      "name": "Buffer",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x88d5b48c03f82f217d3a2aa0656744f4/main.bend",
+      "description": "Buffer and helpers are representation-private by API convention.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x88d5b48c03f82f217d3a2aa0656744f4/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-0c38aaf5",
+      "name": "Fixed-width",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0c38aaf55cb892078ec5d3c0609798a9/int.bend",
+      "description": "Fixed-width integers U8, U16, U64, I32 and I64: wrapping, checked and saturating arithmetic.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0c38aaf55cb892078ec5d3c0609798a9/int.bend as Int",
+      "discovered": true
+    },
+    {
+      "id": "hub-d684886d",
+      "name": "This",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd684886d10b431b9dce6c3b2d1ef1980/main.bend",
+      "description": "This plan is bounded by 24 doublings; caller checks minimum <= maximum.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd684886d10b431b9dce6c3b2d1ef1980/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-c409b77d",
+      "name": "Internal",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xc409b77d3230ca33374caf6b0993f0cb/main.bend",
+      "description": "Internal suffix traversal. Copies each fragment exactly once.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xc409b77d3230ca33374caf6b0993f0cb/main.bend as Main",
       "discovered": true
     }
   ]
