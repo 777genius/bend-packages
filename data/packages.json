@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T06:46:58.934Z",
+  "generated_at": "2026-09-28T07:04:43.870Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1347,6 +1347,126 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xc409b77d3230ca33374caf6b0993f0cb/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-64e1b9e0",
+      "name": "every",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x64e1b9e0466cf913fa57e70aeb11c176/grounds.bend",
+      "description": "every grounds package in one bundle. A module's identity is its bundle's",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x64e1b9e0466cf913fa57e70aeb11c176/grounds.bend as Grounds",
+      "discovered": true
+    },
+    {
+      "id": "hub-75e7d19d",
+      "name": "RFC",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x75e7d19d0e4887c8e9651d356bafc276/hpack.bend",
+      "description": "RFC 7541 HPACK header blocks with a bounded dynamic table.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x75e7d19d0e4887c8e9651d356bafc276/hpack.bend as Hpack",
+      "discovered": true
+    },
+    {
+      "id": "hub-33fa1e8e",
+      "name": "header",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x33fa1e8e9ce79cb0b4983b81c36ecdd3/http/headers.bend",
+      "description": "header fields in the order they came (RFC 9110 §5); a name may repeat,",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x33fa1e8e9ce79cb0b4983b81c36ecdd3/http/headers.bend as Headers",
+      "discovered": true
+    },
+    {
+      "id": "hub-8b91ddb6",
+      "name": "Model",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x8b91ddb61d8feadeb79809e42245b488/json/json.bend",
+      "description": "Model",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x8b91ddb61d8feadeb79809e42245b488/json/json.bend as Json",
+      "discovered": true
+    },
+    {
+      "id": "hub-9c5a51d7",
+      "name": "Parallel",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9c5a51d7f05acfc6ef075fa6810ffa30/concurrency.bend",
+      "description": "Parallel map and reduce over lists and arrays, a worker pool, select over channels, and timeouts.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9c5a51d7f05acfc6ef075fa6810ffa30/concurrency.bend as Concurrency",
+      "discovered": true
+    },
+    {
+      "id": "hub-f33f70af",
+      "name": "grounds-wire",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf33f70afa849b331f76f524b6d1629ec/wire.bend",
+      "description": "grounds-wire: TCP on bytes. Base's TCP.send and TCP.recv decode and",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf33f70afa849b331f76f524b6d1629ec/wire.bend as Wire",
+      "discovered": true
+    },
+    {
+      "id": "hub-0fab7442",
+      "name": "Seeded",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0fab7442f5a423ac9ee7dc17899842b0/random.bend",
+      "description": "Seeded pseudo-random numbers: xoshiro128**, unbiased ranges, floats and shuffles. Not for cryptography.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0fab7442f5a423ac9ee7dc17899842b0/random.bend as Random",
+      "discovered": true
+    },
+    {
+      "id": "hub-3161253b",
+      "name": "grounds-utf8",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x3161253b0faa968bcbea78a196fb0a67/utf8.bend",
+      "description": "grounds-utf8: strict UTF-8 decoding of raw bytes (RFC 3629).",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x3161253b0faa968bcbea78a196fb0a67/utf8.bend as Utf8",
+      "discovered": true
+    },
+    {
+      "id": "hub-b936378d",
+      "name": "bend-open-under",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xb936378d6b717a2f9e6b5ff568004d36/package.bend",
+      "description": "bend-open-under: package entry for BendHub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xb936378d6b717a2f9e6b5ff568004d36/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-9c94dd62",
+      "name": "bend-sendfile",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9c94dd62a275a2a52aba6d0315b7bb60/package.bend",
+      "description": "bend-sendfile: package entry for BendHub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9c94dd62a275a2a52aba6d0315b7bb60/package.bend as Package",
       "discovered": true
     }
   ]
