@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T07:04:43.870Z",
+  "generated_at": "2026-09-29T06:51:57.184Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -813,7 +813,7 @@
       "description": "Standalone language server: diagnostics, hover, go-to-definition, and formatting.",
       "category": "editors",
       "source": "git",
-      "stars": 3,
+      "stars": 4,
       "import": null
     },
     {
@@ -846,7 +846,7 @@
       "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 39,
+      "stars": 40,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
       "discovered": true
     },
@@ -982,7 +982,7 @@
       "description": "Destructible voxel demo with a native Vulkan renderer.",
       "category": "demos",
       "source": "git",
-      "stars": 4,
+      "stars": 5,
       "import": null
     },
     {
@@ -1467,6 +1467,54 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x9c94dd62a275a2a52aba6d0315b7bb60/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-f090bec5",
+      "name": "bend-blas",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf090bec5d73bd2d01f26c93f586673b1/bend_blas.bend",
+      "description": "bend-blas: BLAS, LAPACK and cuBLAS for Bend 2, as one def per routine",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf090bec5d73bd2d01f26c93f586673b1/bend_blas.bend as BendBlas",
+      "discovered": true
+    },
+    {
+      "id": "lucasgois1-bend-trace-context",
+      "name": "W3C",
+      "repo": "LucasGois1/bend-trace-context",
+      "url": "https://github.com/LucasGois1/bend-trace-context",
+      "description": "W3C Trace Context package for Bend: typed codecs, formal proofs, and interoperability.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x67c024a0cb5f9d3903b7fec903b53e68/entropy.bend as Entropy",
+      "discovered": true
+    },
+    {
+      "id": "hub-b6eebf62",
+      "name": "Host",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xb6eebf6253ee268a21f3e308b12cacba/entropy.bend",
+      "description": "Host entropy",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xb6eebf6253ee268a21f3e308b12cacba/entropy.bend as Entropy",
+      "discovered": true
+    },
+    {
+      "id": "hub-4a157af9",
+      "name": "Postgres",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4a157af9bb54efff1723341b7254fc4a/codec.bend",
+      "description": "Postgres frontend/backend protocol 3.0 messages over Bytes, and an incremental reader of backend messages.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4a157af9bb54efff1723341b7254fc4a/codec.bend as Codec",
       "discovered": true
     }
   ]
