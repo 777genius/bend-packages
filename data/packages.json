@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T06:51:57.184Z",
+  "generated_at": "2026-09-30T06:53:29.106Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -230,7 +230,7 @@
       "description": "Project management for Bend.",
       "category": "packaging",
       "source": "hub",
-      "stars": 0,
+      "stars": 1,
       "import": "import 0xb618c7a3b7cc335880c0ff4267b5bd98/ledger/manifest.bend as Ledger"
     },
     {
@@ -351,7 +351,7 @@
       "description": "Nix flake that builds Bend from pinned upstream source.",
       "category": "packaging",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -494,7 +494,7 @@
       "description": "Doom that reads a WAD at runtime, with laws and a Nix flake.",
       "category": "demos",
       "source": "git",
-      "stars": 13,
+      "stars": 15,
       "import": null
     },
     {
@@ -538,7 +538,7 @@
       "description": "SHA-256 with machine-checked proofs against FIPS 180-4.",
       "category": "packages",
       "source": "hub",
-      "stars": 21,
+      "stars": 20,
       "import": "import 0xda83506fb9f059ead7afcfa2f498df5f/sha256.bend as SHA"
     },
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 24,
+      "stars": 26,
       "import": null
     },
     {
@@ -1515,6 +1515,54 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x4a157af9bb54efff1723341b7254fc4a/codec.bend as Codec",
+      "discovered": true
+    },
+    {
+      "id": "hub-74799d3f",
+      "name": "ezx",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x74799d3f846634a3d7461d4336d7c9d4/main.bend",
+      "description": "ezx: ez, the package manager for Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x74799d3f846634a3d7461d4336d7c9d4/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-bf5d8bf0",
+      "name": "Arbitrary-precision",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xbf5d8bf07d7411858acb5142889fc4d7/bigint.bend",
+      "description": "Arbitrary-precision signed integers: add, sub, mul, divmod, pow, modpow, gcd and decimal text.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xbf5d8bf07d7411858acb5142889fc4d7/bigint.bend as Bigint",
+      "discovered": true
+    },
+    {
+      "id": "hub-64aa7934",
+      "name": "Fast",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x64aa7934c3659ee6a818595494b38921/core.bend",
+      "description": "Fast CSV parser with proofs",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x64aa7934c3659ee6a818595494b38921/core.bend as Core",
+      "discovered": true
+    },
+    {
+      "id": "hub-65fa10d5",
+      "name": "Records",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x65fa10d55c6f03218f714e3b19c26baf/core.bend",
+      "description": "Records: every LF (or CRLF) ends a record, so a blank line is a record of one",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x65fa10d55c6f03218f714e3b19c26baf/core.bend as Core",
       "discovered": true
     }
   ]
