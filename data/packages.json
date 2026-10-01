@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T06:53:29.106Z",
+  "generated_at": "2026-10-01T06:53:17.009Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -87,7 +87,7 @@
       "description": "RFC 4648 hex, Base64, and UTF-8.",
       "category": "packages",
       "source": "hub",
-      "stars": 2,
+      "stars": 1,
       "import": "import bend-encoding@0.2.0.0/hex.bend as Hex"
     },
     {
@@ -109,7 +109,7 @@
       "description": "Gregorian dates, Instant, Duration, Period, ISO week, P/PT, RFC 3339 subset, IANA zones, and RFC 9557.",
       "category": "packages",
       "source": "hub",
-      "stars": 3,
+      "stars": 2,
       "import": "import bend-datetime@0.4.0.0/date.bend as D"
     },
     {
@@ -373,7 +373,7 @@
       "description": "From-scratch tutorial, including probes that are supposed to fail.",
       "category": "learning",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 26,
+      "stars": 27,
       "import": null
     },
     {
@@ -949,7 +949,7 @@
       "description": "Checks full Bend and exports a typed Core.Program for backends.",
       "category": "tools",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -1059,7 +1059,7 @@
       "description": "Web3Signer-compatible Ethereum consensus remote signer.",
       "category": "tools",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -1563,6 +1563,54 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x65fa10d55c6f03218f714e3b19c26baf/core.bend as Core",
+      "discovered": true
+    },
+    {
+      "id": "hub-5c489f5d",
+      "name": "bend-collections-laws-containers",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5c489f5d9646d7cc9aa3dd8137e9dc07/laws_containers.bend",
+      "description": "bend-collections-laws-containers: the proved laws of bend-collections' containers, the shared proof library and the whole-library roots (END_TO_END, PROOF).",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5c489f5d9646d7cc9aa3dd8137e9dc07/laws_containers.bend as LawsContainers",
+      "discovered": true
+    },
+    {
+      "id": "hub-a7e654f9",
+      "name": "bend-collections-laws-crypto",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xa7e654f9780078ca65bf9e187da99d3e/laws_crypto.bend",
+      "description": "bend-collections-laws-crypto: the proved laws of bend-collections' crypto and random: hashes, MAC, KDF, AEAD, password hashing, X25519, Ed25519, secp256k1, CSPRNG.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xa7e654f9780078ca65bf9e187da99d3e/laws_crypto.bend as LawsCrypto",
+      "discovered": true
+    },
+    {
+      "id": "hub-f86f5f1d",
+      "name": "bend-collections-laws-math",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf86f5f1d9a594d5a5cff999100e01d03/laws_math.bend",
+      "description": "bend-collections-laws-math: the proved laws of bend-collections' math: integer math, per-type math, software binary64, 64-bit words, number theory.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf86f5f1d9a594d5a5cff999100e01d03/laws_math.bend as LawsMath",
+      "discovered": true
+    },
+    {
+      "id": "hub-5d1df91c",
+      "name": "Bounded",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5d1df91c572021ceb1e6a56e51680028/stream.bend",
+      "description": "Bounded packed-byte transfers between files and TCP/TLS sockets.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5d1df91c572021ceb1e6a56e51680028/stream.bend as Stream",
       "discovered": true
     }
   ]
