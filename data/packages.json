@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T06:53:17.009Z",
+  "generated_at": "2026-10-02T06:51:38.316Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -560,7 +560,7 @@
       "description": "JSON parser and serializer with formal proofs.",
       "category": "packages",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import 0x1f4d6c03caf955232d0b0dc6e6f36cf4/json.bend as Json"
     },
     {
@@ -949,7 +949,7 @@
       "description": "Checks full Bend and exports a typed Core.Program for backends.",
       "category": "tools",
       "source": "git",
-      "stars": 1,
+      "stars": 38,
       "import": null
     },
     {
@@ -960,7 +960,7 @@
       "description": "EVM backend: contracts in Bend, certified IR, and Yul lowering.",
       "category": "tools",
       "source": "git",
-      "stars": 0,
+      "stars": 3,
       "import": null
     },
     {
@@ -1611,6 +1611,30 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x5d1df91c572021ceb1e6a56e51680028/stream.bend as Stream",
+      "discovered": true
+    },
+    {
+      "id": "hub-3d214765",
+      "name": "bend_libs",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x3d2147650fe101ae3c3e4a95333b4238/bend_libs.bend",
+      "description": "Library correctness laws and integration obligations.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x3d2147650fe101ae3c3e4a95333b4238/bend_libs.bend as BendLibs",
+      "discovered": true
+    },
+    {
+      "id": "hub-c517d5d3",
+      "name": "Block",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xc517d5d3635f5bc3ec47170caccaebf0/blocks.bend",
+      "description": "Block IDs: 0 air, 1 grass, 2 dirt, 3 stone, 4 wood_log,",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xc517d5d3635f5bc3ec47170caccaebf0/blocks.bend as Blocks",
       "discovered": true
     }
   ]
