@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T06:57:00.545Z",
+  "generated_at": "2026-10-04T08:28:04.949Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -230,7 +230,7 @@
       "description": "Project management for Bend.",
       "category": "packaging",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import 0xb618c7a3b7cc335880c0ff4267b5bd98/ledger/manifest.bend as Ledger"
     },
     {
@@ -894,7 +894,7 @@
       "description": "Machine-checked Nat, Bool, List, and equality lemmas.",
       "category": "packages",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import 0xafc61ca8b7738a6df7f28eddf80168f8/nat.bend as Nat"
     },
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 2,
+      "stars": 4,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 2,
+      "stars": 4,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -1635,6 +1635,78 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xc517d5d3635f5bc3ec47170caccaebf0/blocks.bend as Blocks",
+      "discovered": true
+    },
+    {
+      "id": "hub-8c8d90d5",
+      "name": "Private",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x8c8d90d5c08f57bf4aa756aa551bd63c/admission.bend",
+      "description": "Private bounded transport accounting. Replies contain copied data, never resources.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x8c8d90d5c08f57bf4aa756aa551bd63c/admission.bend as Admission",
+      "discovered": true
+    },
+    {
+      "id": "hub-bce52aed",
+      "name": "bend-ml-bpe-tokenizer",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xbce52aed55d81f3c75dfd6518c9bcbdd/main.bend",
+      "description": "bend-ml-bpe-tokenizer: BPE byte-level com roundtrip provado.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xbce52aed55d81f3c75dfd6518c9bcbdd/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-52546eab",
+      "name": "bend-ml-tensor-array",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x52546eabfdaff99acd3ccd759c45cd9f/main.bend",
+      "description": "bend-ml-tensor-array: tensores sobre Array<F32> plano, com a shape no tipo.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x52546eabfdaff99acd3ccd759c45cd9f/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-dbe1000e",
+      "name": "bend-ml-tensor",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xdbe1000ee6707b4d38c0ad7eb1287363/main.bend",
+      "description": "bend-ml-tensor: tensores com a shape no TIPO. Erro de shape é erro de tipo.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xdbe1000ee6707b4d38c0ad7eb1287363/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-0ed88269",
+      "name": "bend-ml-autograd",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0ed882696c6c048c64c66242a999a426/main.bend",
+      "description": "bend-ml-autograd: automatic differentiation with a proved law.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0ed882696c6c048c64c66242a999a426/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-2bbe4207",
+      "name": "bend-ml-nat-lemmas",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x2bbe4207657ea8b1158567d930651411/main.bend",
+      "description": "bend-ml-nat-lemmas: Nat and List lemmas, proved, that Bend's Base does not have.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x2bbe4207657ea8b1158567d930651411/main.bend as Main",
       "discovered": true
     }
   ]
