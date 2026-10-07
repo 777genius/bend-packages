@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T06:54:32.752Z",
+  "generated_at": "2026-10-07T06:52:03.503Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1743,6 +1743,30 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xfd64aefef43747d3eaeea50c10a112e5/addr.bend as Addr",
+      "discovered": true
+    },
+    {
+      "id": "kbrianps-bend-stream",
+      "name": "bend-stream",
+      "repo": "kbrianps/bend-stream",
+      "url": "https://github.com/kbrianps/bend-stream",
+      "description": "RTSP and RTMP clients in Bend 2: sessions that give frames (H.264, H.265, AAC, G.711), MPEG-TS and FLV recording, with laws proven by the compiler",
+      "category": "tools",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x549ec15ed24ab103abe18a252f491fa4/rtsp.bend as S",
+      "discovered": true
+    },
+    {
+      "id": "hub-d6fc55bf",
+      "name": "AMF0",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd6fc55bf65b187fec4175f80d08c165a/amf.bend",
+      "description": "AMF0, the encoding of RTMP's commands (connect, play, _result...): a",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd6fc55bf65b187fec4175f80d08c165a/amf.bend as Amf",
       "discovered": true
     }
   ]
