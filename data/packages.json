@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T06:52:03.503Z",
+  "generated_at": "2026-10-08T06:54:03.550Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1037,7 +1037,7 @@
       "description": "Graphics and game-programming library working toward raylib compatibility.",
       "category": "packages",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
