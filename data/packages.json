@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T06:54:03.550Z",
+  "generated_at": "2026-10-09T06:54:18.706Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -340,7 +340,7 @@
       "description": "Local-first issue tracker port, still early.",
       "category": "tools",
       "source": "git",
-      "stars": 5,
+      "stars": 6,
       "import": null
     },
     {
@@ -938,7 +938,7 @@
       "description": "IntelliJ IDEA plugin: highlighting, completion, and optional compiler diagnostics.",
       "category": "editors",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
