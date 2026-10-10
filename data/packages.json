@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T06:54:18.706Z",
+  "generated_at": "2026-10-10T06:49:31.441Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -846,7 +846,7 @@
       "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 49,
+      "stars": 48,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
       "discovered": true
     },
@@ -1767,6 +1767,18 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xd6fc55bf65b187fec4175f80d08c165a/amf.bend as Amf",
+      "discovered": true
+    },
+    {
+      "id": "hub-492532af",
+      "name": "Shape",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x492532af6deb895462a134d016a53dfe/spec_tree.bend",
+      "description": "Shape specialisation: a non-tail binary recursion on a Nat depth that the leaf gives as a literal. WGSL has no",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x492532af6deb895462a134d016a53dfe/spec_tree.bend as SpecTree",
       "discovered": true
     }
   ]
