@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T06:49:31.441Z",
+  "generated_at": "2026-10-11T06:50:47.194Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1779,6 +1779,18 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x492532af6deb895462a134d016a53dfe/spec_tree.bend as SpecTree",
+      "discovered": true
+    },
+    {
+      "id": "hub-9be3b13b",
+      "name": "One",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9be3b13bf249759bc81e1958bcd1a4c0/default_kernel_cost.bend",
+      "description": "One clock assumption, 2.5 GHz (0.4 ns per cycle), prices both vector MACs",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9be3b13bf249759bc81e1958bcd1a4c0/default_kernel_cost.bend as DefaultKernelCost",
       "discovered": true
     }
   ]
