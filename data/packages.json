@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T06:50:47.194Z",
+  "generated_at": "2026-10-12T07:12:24.178Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -846,7 +846,7 @@
       "description": "Verified containers (hash map, tree map, heap, deque, LRU) and SHA-256.",
       "category": "packages",
       "source": "hub",
-      "stars": 48,
+      "stars": 47,
       "import": "import 0x9ee2e9a299991dcc089fe22c7f3ceb5f/src/containers/hash_table.bend as HashMap",
       "discovered": true
     },
@@ -1791,6 +1791,30 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x9be3b13bf249759bc81e1958bcd1a4c0/default_kernel_cost.bend as DefaultKernelCost",
+      "discovered": true
+    },
+    {
+      "id": "hub-d5d0bc53",
+      "name": "Monotonic",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd5d0bc5368c1bc2a6fbc863a812e64a1/clock.bend",
+      "description": "Pure deadline queues and bounded fixed-rate/fixed-delay recurrence over exact clock ticks.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd5d0bc5368c1bc2a6fbc863a812e64a1/clock.bend as Clock",
+      "discovered": true
+    },
+    {
+      "id": "hub-12d3bb9b",
+      "name": "Retry",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x12d3bb9bb57264f1d5e2fcf763dbe13b/retry.bend",
+      "description": "Retry policy: a shared attempt budget, an operation deadline, bounded backoff, and a circuit breaker.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x12d3bb9bb57264f1d5e2fcf763dbe13b/retry.bend as Retry",
       "discovered": true
     }
   ]
