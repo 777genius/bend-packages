@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T06:58:02.382Z",
+  "generated_at": "2026-10-14T06:50:05.099Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -938,7 +938,7 @@
       "description": "IntelliJ IDEA plugin: highlighting, completion, and optional compiler diagnostics.",
       "category": "editors",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -1815,6 +1815,18 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x12d3bb9bb57264f1d5e2fcf763dbe13b/retry.bend as Retry",
+      "discovered": true
+    },
+    {
+      "id": "hub-60692cfe",
+      "name": "bend-ml-llama",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x60692cfeaba1e21c25f3b68061e41fea/main.bend",
+      "description": "bend-ml-llama: Llama-architecture language models (SmolLM2 and the rest of the family) in Bend 2, with the",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x60692cfeaba1e21c25f3b68061e41fea/main.bend as Main",
       "discovered": true
     }
   ]
