@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T06:50:05.099Z",
+  "generated_at": "2026-10-15T06:50:11.413Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1827,6 +1827,42 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x60692cfeaba1e21c25f3b68061e41fea/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-5f2737ee",
+      "name": "language",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5f2737ee4ecbd87b3f07a0b779aafea9/language/decreasing_call.bend",
+      "description": "language/decreasing_call: a call of a definition to itself that Bend cannot prove smaller, so the check",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5f2737ee4ecbd87b3f07a0b779aafea9/language/decreasing_call.bend as DecreasingCall",
+      "discovered": true
+    },
+    {
+      "id": "hub-fdc8da25",
+      "name": "Read",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xfdc8da256837fef81553ec8530fb7431/capture.bend",
+      "description": "Read a Bend-owned X11 window's client pixels into an affine RGB array.",
+      "category": "tools",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xfdc8da256837fef81553ec8530fb7431/capture.bend as Capture",
+      "discovered": true
+    },
+    {
+      "id": "aivv73-bend",
+      "name": "Export",
+      "repo": "aivv73/bend",
+      "url": "https://github.com/aivv73/bend",
+      "description": "Bend 2: a fast language that blocks AI mistakes via proof. Install: curl -fsSL https://bend-lang.com/install.sh | sh",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x8cc463a65f479c5af6b3080035eb0836/winref.bend as Winref",
       "discovered": true
     }
   ]
