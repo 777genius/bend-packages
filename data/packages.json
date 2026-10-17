@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T06:50:08.823Z",
+  "generated_at": "2026-10-17T06:45:10.633Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 5,
+      "stars": 6,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 5,
+      "stars": 6,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -1863,6 +1863,126 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x8cc463a65f479c5af6b3080035eb0836/winref.bend as Winref",
+      "discovered": true
+    },
+    {
+      "id": "hub-6f51b031",
+      "name": "gralha-bendquest",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x6f51b0319916bc200dd5f3949f31668e/game.bend",
+      "description": "gralha-bendquest: the proof-carrying rules kernel of BendQuest, a",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x6f51b0319916bc200dd5f3949f31668e/game.bend as Game",
+      "discovered": true
+    },
+    {
+      "id": "hub-867d2f2a",
+      "name": "gralha-deflate",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x867d2f2af29ba5bf6de13bf733d2397c/deflate.bend",
+      "description": "gralha-deflate: RFC 1951 DEFLATE over gralha-byte-words packed arrays.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x867d2f2af29ba5bf6de13bf733d2397c/deflate.bend as Deflate",
+      "discovered": true
+    },
+    {
+      "id": "hub-8ba6f756",
+      "name": "Analytic",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x8ba6f756b9429dce8795c1d22eb97549/cover.bend",
+      "description": "Analytic coverage: line lists in pixel space are scan-converted with a winding",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x8ba6f756b9429dce8795c1d22eb97549/cover.bend as Cover",
+      "discovered": true
+    },
+    {
+      "id": "hub-365c6031",
+      "name": "gralha-byte-words",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x365c60316ea66a6c80658fc03b4eeac5/words.bend",
+      "description": "gralha-byte-words: bytes packed four to a U32 word, little-endian, in an",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x365c60316ea66a6c80658fc03b4eeac5/words.bend as Words",
+      "discovered": true
+    },
+    {
+      "id": "hub-823f0d97",
+      "name": "XML",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x823f0d97991344accc44fe457a33356a/xml.bend",
+      "description": "XML: tokens, element tree, entities, attributes and serialization.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x823f0d97991344accc44fe457a33356a/xml.bend as Xml",
+      "discovered": true
+    },
+    {
+      "id": "hub-33e0e44d",
+      "name": "gralha-raylib",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x33e0e44d7df77b6181b6b022ee4d6634/raylib.bend",
+      "description": "gralha-raylib: a raylib window for Bend programs, driven by command lists.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x33e0e44d7df77b6181b6b022ee4d6634/raylib.bend as Raylib",
+      "discovered": true
+    },
+    {
+      "id": "hub-9ba47907",
+      "name": "gralha-ustar",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9ba47907befd07cbb90e20f7807542f3/ustar.bend",
+      "description": "gralha-ustar: POSIX ustar archives over gralha-byte-words. header builds",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9ba47907befd07cbb90e20f7807542f3/ustar.bend as Ustar",
+      "discovered": true
+    },
+    {
+      "id": "hub-d8eb8357",
+      "name": "bend-ml-tensor-fork",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd8eb8357f30e6c7a242507aee97fab7e/main.bend",
+      "description": "bend-ml-tensor-fork: bend-ml-tensor-array's products, with the parallel blocks sharing their operands.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd8eb8357f30e6c7a242507aee97fab7e/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-64ec50e0",
+      "name": "gralha-crc32",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x64ec50e0e95dc751f989341bb3e39c4a/crc32.bend",
+      "description": "gralha-crc32: the IEEE CRC-32 (gzip's, zip's, PNG's) over bytes packed",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x64ec50e0e95dc751f989341bb3e39c4a/crc32.bend as Crc32",
+      "discovered": true
+    },
+    {
+      "id": "hub-90859c4c",
+      "name": "bend-ml-binary-read",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x90859c4c8057ca356750f70618fd2ed4/main.bend",
+      "description": "bend-ml-binary-read: little-endian F32 numbers from a file, read straight into an Array<F32>.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x90859c4c8057ca356750f70618fd2ed4/main.bend as Main",
       "discovered": true
     }
   ]
