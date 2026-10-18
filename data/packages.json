@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T06:45:10.633Z",
+  "generated_at": "2026-10-18T06:45:32.672Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 6,
+      "stars": 7,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 6,
+      "stars": 7,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -1983,6 +1983,18 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x90859c4c8057ca356750f70618fd2ed4/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "aaaxn-bendtorch",
+      "name": "bendtorch",
+      "repo": "aaaxn/bendtorch",
+      "url": "https://github.com/aaaxn/bendtorch",
+      "description": "A PyTorch-like tensor library written in Bend2, with machine-checked laws",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x1689e5deb278c16abd3bd45eac101ef3/bendtorch.bend as Bendtorch",
       "discovered": true
     }
   ]
