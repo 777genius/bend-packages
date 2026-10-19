@@ -902,11 +902,11 @@
       "name": "stiff",
       "repo": "fraylabs/stiff",
       "url": "https://github.com/fraylabs/stiff",
-      "description": "Experimental HTTP, routing, streaming, and SQLite-backed local state.",
+      "description": "Experimental native Bend 2 web framework with HTTP, routing, schemas, SSE, SQLite and compiler-checked API contract laws; 0.6.1 targets Bend 2.0.36.",
       "category": "packages",
-      "source": "git",
+      "source": "hub",
       "stars": 1,
-      "import": null
+      "import": "import 0x600981079d65a285d008308db02b846c/stiff.bend as Stiff"
     },
     {
       "id": "kapiokai-bendygrad",
