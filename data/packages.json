@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T06:45:32.672Z",
+  "generated_at": "2026-10-19T07:03:21.374Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -802,7 +802,7 @@
       "description": "Self-hosting Bend 2 compiler, written in Bend 2, targeting C.",
       "category": "tools",
       "source": "git",
-      "stars": 28,
+      "stars": 29,
       "import": null
     },
     {
@@ -1995,6 +1995,90 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x1689e5deb278c16abd3bd45eac101ef3/bendtorch.bend as Bendtorch",
+      "discovered": true
+    },
+    {
+      "id": "hub-2b280a28",
+      "name": "bend-osdev-apparmor",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x2b280a281d356b8e5cd7b338ab267df1/package.bend",
+      "description": "bend-osdev-apparmor: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x2b280a281d356b8e5cd7b338ab267df1/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-29fa0aa6",
+      "name": "bend-osdev-acpi",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x29fa0aa629b7afe02bc50bfd713bc39b/package.bend",
+      "description": "bend-osdev-acpi: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x29fa0aa629b7afe02bc50bfd713bc39b/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-9fae2d11",
+      "name": "bend-osdev-bpf",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9fae2d11be141cc220d6a37e498b4020/package.bend",
+      "description": "bend-osdev-bpf: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9fae2d11be141cc220d6a37e498b4020/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-aedcbedc",
+      "name": "bend-osdev-caps",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xaedcbedcbe1c3df31795343ff6f64678/package.bend",
+      "description": "bend-osdev-caps: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xaedcbedcbe1c3df31795343ff6f64678/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-9df7f917",
+      "name": "bend-osdev-bytes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x9df7f91779a4a1c215bfa96cd0864601/package.bend",
+      "description": "bend-osdev-bytes: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9df7f91779a4a1c215bfa96cd0864601/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-454d8eb5",
+      "name": "bend-ml-tensor-gpu",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x454d8eb5320624d5b121fdc9d78ee0a6/main.bend",
+      "description": "bend-ml-tensor-gpu: tensor-array's products on the GPU, with tensor-array's bits.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x454d8eb5320624d5b121fdc9d78ee0a6/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-44cf1401",
+      "name": "bend-osdev-word64",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x44cf1401f78136bfc15c4c5be1cd20f0/package.bend",
+      "description": "bend-osdev-word64: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x44cf1401f78136bfc15c4c5be1cd20f0/package.bend as Package",
       "discovered": true
     }
   ]
