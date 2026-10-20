@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T07:03:21.374Z",
+  "generated_at": "2026-10-20T06:49:31.508Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -2079,6 +2079,138 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x44cf1401f78136bfc15c4c5be1cd20f0/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-eaa58f99",
+      "name": "bend-osdev-gf",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xeaa58f996c50eb57673f63c368c1de92/package.bend",
+      "description": "bend-osdev-gf: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xeaa58f996c50eb57673f63c368c1de92/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-d04c3185",
+      "name": "bend-osdev-hashes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd04c3185dce130521497bf85ab03f249/package.bend",
+      "description": "bend-osdev-hashes: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd04c3185dce130521497bf85ab03f249/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-aca75f76",
+      "name": "bend-osdev-algo",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xaca75f7679c88e3442b04b98baf3b711/package.bend",
+      "description": "bend-osdev-algo: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xaca75f7679c88e3442b04b98baf3b711/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-4fcda21d",
+      "name": "bend-osdev-array",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4fcda21d38b51a2f03fa460c0b81cfc3/package.bend",
+      "description": "bend-osdev-array: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4fcda21d38b51a2f03fa460c0b81cfc3/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "aaaxn-bend-visgraph",
+      "name": "ts2vg",
+      "repo": "aaaxn/bend-visgraph",
+      "url": "https://github.com/aaaxn/bend-visgraph",
+      "description": "ts2vg's visibility graphs of time series in Bend2, on every CPU thread. On BendHub as bend-visgraph.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xe3a7f78ee5245da17fe27e3556f94e74/bend_visgraph.bend as BendVisgraph",
+      "discovered": true
+    },
+    {
+      "id": "hub-bc5ce171",
+      "name": "JPEG",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xbc5ce1714d35cca674c4b05a77ac392b/jpeg.bend",
+      "description": "JPEG decoder: baseline and progressive Huffman, subsampling, color transforms.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xbc5ce1714d35cca674c4b05a77ac392b/jpeg.bend as Jpeg",
+      "discovered": true
+    },
+    {
+      "id": "hub-4aebc9c3",
+      "name": "Font",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4aebc9c35d542fdd4ecdfb1af73440f8/font.bend",
+      "description": "Font book: glyph outlines, advances, kerning and metrics.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4aebc9c35d542fdd4ecdfb1af73440f8/font.bend as Font",
+      "discovered": true
+    },
+    {
+      "id": "hub-7a77d751",
+      "name": "bend-osdev-crc",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x7a77d751f1a239b5a366af461ab7f041/package.bend",
+      "description": "bend-osdev-crc: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x7a77d751f1a239b5a366af461ab7f041/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-168fe274",
+      "name": "CSS",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x168fe27434c48ca085336d8a0b5c31d0/css.bend",
+      "description": "CSS: stylesheets, selectors, specificity, media queries and the cascade onto an XML tree.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x168fe27434c48ca085336d8a0b5c31d0/css.bend as Css",
+      "discovered": true
+    },
+    {
+      "id": "hub-56e1ef7b",
+      "name": "PNG",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x56e1ef7bd140cbf61805307579bda290/png.bend",
+      "description": "PNG decoder: chunks, filters, interlacing, palettes and bit depths.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x56e1ef7bd140cbf61805307579bda290/png.bend as Png",
+      "discovered": true
+    },
+    {
+      "id": "hub-64fa56d7",
+      "name": "gralha-gzip-frame",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x64fa56d727e0f10ecea03da203932306/gzip.bend",
+      "description": "gralha-gzip-frame: the RFC 1952 gzip container around gralha-deflate.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x64fa56d727e0f10ecea03da203932306/gzip.bend as Gzip",
       "discovered": true
     }
   ]
