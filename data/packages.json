@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T06:49:31.508Z",
+  "generated_at": "2026-10-21T06:50:47.106Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -285,7 +285,7 @@
       "description": "Emacs major mode with Eglot formatting and Flymake diagnostics.",
       "category": "editors",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -949,7 +949,7 @@
       "description": "Checks full Bend and exports a typed Core.Program for backends.",
       "category": "tools",
       "source": "git",
-      "stars": 38,
+      "stars": 37,
       "import": null
     },
     {
@@ -1993,7 +1993,7 @@
       "description": "A PyTorch-like tensor library written in Bend2, with machine-checked laws",
       "category": "packages",
       "source": "hub",
-      "stars": 0,
+      "stars": 1,
       "import": "import 0x1689e5deb278c16abd3bd45eac101ef3/bendtorch.bend as Bendtorch",
       "discovered": true
     },
@@ -2211,6 +2211,42 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x64fa56d727e0f10ecea03da203932306/gzip.bend as Gzip",
+      "discovered": true
+    },
+    {
+      "id": "dearlordylord-bendvy",
+      "name": "Bendvy",
+      "repo": "dearlordylord/bendvy",
+      "url": "https://github.com/dearlordylord/bendvy",
+      "description": "Bend-native ECS ",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf435da9e535b3846d643dad16580e35f/bendvy.bend as Bendvy",
+      "discovered": true
+    },
+    {
+      "id": "hub-7f742f88",
+      "name": "SVG",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x7f742f88d400d7dfabd2906476966aa4/svg.bend",
+      "description": "SVG parsing, geometry, painting and rasterization. No foreign code.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x7f742f88d400d7dfabd2906476966aa4/svg.bend as Svg",
+      "discovered": true
+    },
+    {
+      "id": "hub-846aad52",
+      "name": "Purpose",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x846aad52831f8111f93a9c322d7de83c/cli.bend",
+      "description": "Purpose: the public IO shell: probes the host, runs Cli.eval, writes its",
+      "category": "tools",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x846aad52831f8111f93a9c322d7de83c/cli.bend as Cli",
       "discovered": true
     }
   ]
