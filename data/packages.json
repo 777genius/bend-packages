@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T06:50:47.106Z",
+  "generated_at": "2026-10-22T06:51:40.827Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -285,7 +285,7 @@
       "description": "Emacs major mode with Eglot formatting and Flymake diagnostics.",
       "category": "editors",
       "source": "git",
-      "stars": 1,
+      "stars": 3,
       "import": null
     },
     {
@@ -894,7 +894,7 @@
       "description": "Machine-checked Nat, Bool, List, and equality lemmas.",
       "category": "packages",
       "source": "hub",
-      "stars": 3,
+      "stars": 4,
       "import": "import 0xafc61ca8b7738a6df7f28eddf80168f8/nat.bend as Nat"
     },
     {
@@ -2247,6 +2247,78 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x846aad52831f8111f93a9c322d7de83c/cli.bend as Cli",
+      "discovered": true
+    },
+    {
+      "id": "hub-d6aaab85",
+      "name": "checkpoint_pickle",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd6aaab858a4fbd1461bd0fee27b97184/checkpoint_pickle.bend",
+      "description": "Stelliferous training: convolution, batch norm, activation and pool layers.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd6aaab858a4fbd1461bd0fee27b97184/checkpoint_pickle.bend as CheckpointPickle",
+      "discovered": true
+    },
+    {
+      "id": "adeerkhan-mlbend-datasets",
+      "name": "mlbend-datasets",
+      "repo": "adeerkhan/mlbend-datasets",
+      "url": "https://github.com/adeerkhan/mlbend-datasets",
+      "description": "The mlbend-datasets package for Bend 2, published to BendHub as mlbend-datasets.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x69412f1bc0bfab2689141f5caec128a5/datasets/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "adeerkhan-mlbend-metrics",
+      "name": "mlbend-metrics",
+      "repo": "adeerkhan/mlbend-metrics",
+      "url": "https://github.com/adeerkhan/mlbend-metrics",
+      "description": "The mlbend-metrics package for Bend 2, published to BendHub as mlbend-metrics.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9afaa60ee4d17706cb14d6ec20d1d4ae/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "adeerkhan-mlbend-huggingface",
+      "name": "mlbend-huggingface",
+      "repo": "adeerkhan/mlbend-huggingface",
+      "url": "https://github.com/adeerkhan/mlbend-huggingface",
+      "description": "The mlbend-huggingface package for Bend 2, published to BendHub as mlbend-huggingface.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x9f97047b6ffb57443a7a2a2f0adefcbd/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-eb7d1be9",
+      "name": "mlbend-hf",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xeb7d1be9a5e941fbb49616e152f5e5f1/main.bend",
+      "description": "mlbend-hf: a HuggingFace client for Bend 2.",
+      "category": "tools",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xeb7d1be9a5e941fbb49616e152f5e5f1/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-f2575416",
+      "name": "Temporary",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf25754162a4d6294dc96b9870e0997fa/main.bend",
+      "description": "Temporary loading-only exception: bend-ml-binary-read is foreign C/JavaScript. No file with laws imports this module.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf25754162a4d6294dc96b9870e0997fa/main.bend as Main",
       "discovered": true
     }
   ]
