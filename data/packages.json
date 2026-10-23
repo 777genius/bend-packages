@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T06:51:40.827Z",
+  "generated_at": "2026-10-23T06:50:54.530Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -2319,6 +2319,54 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xf25754162a4d6294dc96b9870e0997fa/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-a8182854",
+      "name": "mlbend-preprocess",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xa8182854f375cd61135ccd32993993cc/main.bend",
+      "description": "mlbend-preprocess: the transformers of scikit-learn, over bend-ml's matrix.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xa8182854f375cd61135ccd32993993cc/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-0c4fbc7d",
+      "name": "mlbend-cluster",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x0c4fbc7d44d2e3e47247a6c1f12c05e0/main.bend",
+      "description": "mlbend-cluster: k-means, functional.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x0c4fbc7d44d2e3e47247a6c1f12c05e0/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-e8b7953f",
+      "name": "mlbend-split",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xe8b7953f71ec5b441a90a08e0961269b/main.bend",
+      "description": "mlbend-split: a seeded, deterministic split of the rows, stratified by label.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xe8b7953f71ec5b441a90a08e0961269b/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-f6594aa2",
+      "name": "mlbend-select",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf6594aa2392363c8ab774bc81fb20b9d/main.bend",
+      "description": "mlbend-select: k-fold cross-validation on top of the split.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf6594aa2392363c8ab774bc81fb20b9d/main.bend as Main",
       "discovered": true
     }
   ]
