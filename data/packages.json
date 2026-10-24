@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T06:50:54.530Z",
+  "generated_at": "2026-10-24T06:46:40.651Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -285,7 +285,7 @@
       "description": "Emacs major mode with Eglot formatting and Flymake diagnostics.",
       "category": "editors",
       "source": "git",
-      "stars": 3,
+      "stars": 4,
       "import": null
     },
     {
@@ -307,7 +307,7 @@
       "description": "VS Code client with a standalone language server.",
       "category": "editors",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -791,7 +791,7 @@
       "description": "FP32 convolution with proofs and a pretrained YOLOv5n example.",
       "category": "packages",
       "source": "git",
-      "stars": 1,
+      "stars": 2,
       "import": null
     },
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 7,
+      "stars": 8,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 7,
+      "stars": 8,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -2367,6 +2367,90 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xf6594aa2392363c8ab774bc81fb20b9d/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-7d16ec09",
+      "name": "bend-osdev-legacy-ciphers",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x7d16ec09f99b830428c8e2852af315f6/package.bend",
+      "description": "bend-osdev-legacy-ciphers: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x7d16ec09f99b830428c8e2852af315f6/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-eb25eff3",
+      "name": "bend-osdev-asn1",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xeb25eff332574f4f1d48668b83cdda30/package.bend",
+      "description": "bend-osdev-asn1: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xeb25eff332574f4f1d48668b83cdda30/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-01313a4f",
+      "name": "bend-osdev-crypto",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x01313a4f070f7ffd2bd276fcd2143eda/package.bend",
+      "description": "bend-osdev-crypto: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x01313a4f070f7ffd2bd276fcd2143eda/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-f4b936e0",
+      "name": "bend-osdev-cipher-modes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xf4b936e0e6b2608080d2f02bb3ce9abe/package.bend",
+      "description": "bend-osdev-cipher-modes: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xf4b936e0e6b2608080d2f02bb3ce9abe/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-c44d6349",
+      "name": "Bendonnect",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xc44d63498d00973a6a41e91a42b58416/main.bend",
+      "description": "Bendonnect: the Connect RPC protocol (https://connectrpc.com/docs/protocol/) for Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xc44d63498d00973a6a41e91a42b58416/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-7fac88c9",
+      "name": "bend-osdev-aead",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x7fac88c9586171e58e205ceb355ebac1/package.bend",
+      "description": "bend-osdev-aead: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x7fac88c9586171e58e205ceb355ebac1/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-ea73a86e",
+      "name": "mlbend-pipeline",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xea73a86e2118529cadd597fb3727979b/main.bend",
+      "description": "mlbend-pipeline: fit on the training rows, transform both sides.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xea73a86e2118529cadd597fb3727979b/main.bend as Main",
       "discovered": true
     }
   ]
