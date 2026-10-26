@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T06:47:02.198Z",
+  "generated_at": "2026-10-26T07:05:02.174Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -1015,7 +1015,7 @@
       "description": "Bytes, encoding, JSON, zlib, URL, sockets, DNS, HTTP, and routing.",
       "category": "packages",
       "source": "hub",
-      "stars": 8,
+      "stars": 10,
       "import": "import 0x310b0480ce5b511ff8da9704b3d27ef3/http.bend as Http"
     },
     {
@@ -1201,7 +1201,7 @@
       "description": "DEFLATE, gzip, and zlib decoding (RFC 1951, 1952, 1950) over byte strings. Source: https://github.com/paymog/bend-net/tree/main/zlib",
       "category": "packages",
       "source": "hub",
-      "stars": 8,
+      "stars": 10,
       "import": "import 0x05a6d0cd384bf4ebc144f0bc1b2d2350/zlib.bend as Zlib",
       "discovered": true
     },
@@ -2463,6 +2463,102 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0xb6e6ecbad123cebebba6b71d5258ad0f/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-ab9c812d",
+      "name": "bend-osdev-u32",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xab9c812df432dacce3e8b343e9fd7ab7/package.bend",
+      "description": "bend-osdev-u32: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xab9c812df432dacce3e8b343e9fd7ab7/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-d84f91a0",
+      "name": "bend-osdev-aes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xd84f91a0afea422022cbb4f397ca1abb/package.bend",
+      "description": "bend-osdev-aes: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xd84f91a0afea422022cbb4f397ca1abb/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "davidawad-bend-toon",
+      "name": "bend-toon",
+      "repo": "davidawad/bend-toon",
+      "url": "https://github.com/davidawad/bend-toon",
+      "description": "TOON (Token-Oriented Object Notation, spec v3.3) encoder and decoder for Bend 2",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x12996a27cbeef5e5ba1e8cd909be0e05/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-17768ee6",
+      "name": "bend-osdev-pkcs7",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x17768ee6992327a9e94940296270eb23/package.bend",
+      "description": "bend-osdev-pkcs7: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x17768ee6992327a9e94940296270eb23/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-999adc34",
+      "name": "bend-osdev-mode-core",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x999adc34209a88c2495b3a5407a5ad25/package.bend",
+      "description": "bend-osdev-mode-core: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x999adc34209a88c2495b3a5407a5ad25/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "davidawad-bend-lint-rules",
+      "name": "bend-lint-rules",
+      "repo": "davidawad/bend-lint-rules",
+      "url": "https://github.com/davidawad/bend-lint-rules",
+      "description": "Bend 2 code-quality lint rules (dead/def, complexity, graph fan-in/out) for upstream bend-lint",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x7294c9a1db4be6346e88202032984e02/all.bend as All",
+      "discovered": true
+    },
+    {
+      "id": "hub-5c26418a",
+      "name": "bend-osdev-cipher-core",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5c26418ab13c9e565c5b1309d2f085a0/package.bend",
+      "description": "bend-osdev-cipher-core: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5c26418ab13c9e565c5b1309d2f085a0/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-4ff94cd9",
+      "name": "bend-osdev-cbc",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x4ff94cd9a03eee1d38142effbcc617fb/package.bend",
+      "description": "bend-osdev-cbc: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x4ff94cd9a03eee1d38142effbcc617fb/package.bend as Package",
       "discovered": true
     }
   ]
