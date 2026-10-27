@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T07:05:02.174Z",
+  "generated_at": "2026-10-27T06:57:20.755Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -949,7 +949,7 @@
       "description": "Checks full Bend and exports a typed Core.Program for backends.",
       "category": "tools",
       "source": "git",
-      "stars": 37,
+      "stars": 38,
       "import": null
     },
     {
@@ -2559,6 +2559,90 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x4ff94cd9a03eee1d38142effbcc617fb/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-95803fe5",
+      "name": "bend-osdev-aria",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x95803fe526050e79fb3df1e14165eb7c/package.bend",
+      "description": "bend-osdev-aria: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x95803fe526050e79fb3df1e14165eb7c/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-09727f2e",
+      "name": "bend-osdev-cast5",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x09727f2e3edd91028d60228469c8929b/package.bend",
+      "description": "bend-osdev-cast5: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x09727f2e3edd91028d60228469c8929b/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-a017fd0d",
+      "name": "bend-osdev-blowfish",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xa017fd0d7ab5be03e837cd7fd69dcdfd/package.bend",
+      "description": "bend-osdev-blowfish: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xa017fd0d7ab5be03e837cd7fd69dcdfd/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-da3b2fd4",
+      "name": "bend-osdev-camellia",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xda3b2fd4e59297519c52e7bd64cb55c5/package.bend",
+      "description": "bend-osdev-camellia: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xda3b2fd4e59297519c52e7bd64cb55c5/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-da0a7922",
+      "name": "bend-osdev-cast6",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xda0a79228db9e23e2b16a2d1327feab5/package.bend",
+      "description": "bend-osdev-cast6: every file of the package, so that bend --publish sends",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xda0a79228db9e23e2b16a2d1327feab5/package.bend as Package",
+      "discovered": true
+    },
+    {
+      "id": "hub-a51d4d9f",
+      "name": "mlbend-generative",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xa51d4d9fa3661462984f336054bbc146/main.bend",
+      "description": "mlbend-generative: the generative skeleton, natively in Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xa51d4d9fa3661462984f336054bbc146/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-97687e04",
+      "name": "mlbend-report",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x97687e0483c49ddb64fe1ee5f5244927/main.bend",
+      "description": "mlbend-report: the confusion matrix and the per-class report, natively in Bend 2.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x97687e0483c49ddb64fe1ee5f5244927/main.bend as Main",
       "discovered": true
     }
   ]
