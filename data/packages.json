@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T06:40:18.531Z",
+  "generated_at": "2026-10-29T06:40:27.334Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -2679,6 +2679,30 @@
       "source": "hub",
       "stars": 0,
       "import": "import 0x8abe7473e8854cc69c687ee77b7d72e3/main.bend as Main",
+      "discovered": true
+    },
+    {
+      "id": "hub-b78514d6",
+      "name": "Pipes",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0xb78514d61afc4e796fd06df1830e0f32/impl.bend",
+      "description": "Pipes to a started program, and this program's stdin, as Files of UTF-8 lines.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0xb78514d61afc4e796fd06df1830e0f32/impl.bend as Impl",
+      "discovered": true
+    },
+    {
+      "id": "hub-5c7c6b74",
+      "name": "Talks",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/0x5c7c6b74577e42dff11295308f4f8e90/impl.bend",
+      "description": "Talks in lines to a started program, over pipes, with or without a deadline.",
+      "category": "packages",
+      "source": "hub",
+      "stars": 0,
+      "import": "import 0x5c7c6b74577e42dff11295308f4f8e90/impl.bend as Impl",
       "discovered": true
     }
   ]
