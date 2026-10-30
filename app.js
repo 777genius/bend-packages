@@ -236,7 +236,7 @@ function card(pkg) {
   } else {
     const clone = el("a", "plugin-card__install-toggle",
       pkg.source === "hub" ? "View on Hub" : pkg.repo ? "View source" : "View resource");
-    clone.href = pkg.url;
+    clone.href = pkg.source === "hub" ? pkg.url : githubUrl || pkg.url;
     bottom.append(clone);
   }
 
