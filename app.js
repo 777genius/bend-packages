@@ -141,6 +141,20 @@ function syncFilters() {
   }
 }
 
+function importsFor(pkg) {
+  return [
+    ...(pkg.import ? [{ import: pkg.import, publication: pkg.publication }] : []),
+    ...(pkg.additional_imports ?? []),
+  ];
+}
+
+function searchText(pkg) {
+  const publications = [pkg.publication, ...(pkg.additional_imports ?? []).map((item) => item.publication)];
+  return [pkg.name, pkg.repo ?? "", pkg.description, ...importsFor(pkg).map((item) => item.import),
+    ...publications.flatMap((publication) => [publication?.package ?? "", publication?.owner ?? "",
+      ...(publication?.aliases ?? [])])].join(" ").toLowerCase();
+}
+
 function card(pkg) {
   const article = el("article", "plugin-card");
   const identity = el("div", "plugin-card__identity");
@@ -173,7 +187,7 @@ function card(pkg) {
 
   const stars = el("div", "plugin-card__popularity", `★ ${formatStars(pkg.stars ?? 0)}`);
   stars.title = "GitHub stars";
-  stars.hidden = !pkg.repo;
+  stars.hidden = !pkg.repo || !Number.isFinite(pkg.stars);
 
   const tags = el("ul", "tag-list");
   tags.append(el("li", "", CATEGORY_LABELS[pkg.category] ?? pkg.category));
@@ -181,26 +195,42 @@ function card(pkg) {
   tags.append(sourceTag);
 
   const bottom = el("div", "plugin-card__bottom");
-  if (pkg.import) {
-    const install = el("button", "plugin-card__install-toggle", "Copy import");
+  const imports = importsFor(pkg);
+  if (imports.length) {
+    const multiple = imports.length > 1;
+    const install = el("button", "plugin-card__install-toggle", multiple ? "Choose import" : "Copy import");
     install.type = "button";
     install.setAttribute("aria-expanded", "false");
-    const panel = el("div", "plugin-card__install-panel");
+    install.setAttribute("aria-label", multiple ? `Choose import for ${pkg.name}` : `Copy ${imports[0].import}`);
+    const panel = el("div", "plugin-card__install-panel" + (multiple ? " plugin-card__install-panel--multiple" : ""));
+    panel.id = `imports-${pkg.id}`;
     panel.hidden = true;
-    const snippet = el("div", "command-snippet command-snippet--inline command-snippet--add");
-    const pre = document.createElement("pre");
-    pre.append(el("code", "", pkg.import));
-    const header = el("div", "command-snippet__header");
-    const copyBtn = el("button", "", "Copy");
-    copyBtn.type = "button";
-    copyBtn.addEventListener("click", () => copyText(pkg.import));
-    header.append(copyBtn);
-    snippet.append(pre, header);
-    panel.append(snippet);
+    panel.setAttribute("role", "group");
+    panel.setAttribute("aria-label", `Imports for ${pkg.name}`);
+    install.setAttribute("aria-controls", panel.id);
+    for (const item of imports) {
+      const snippet = el("div", "command-snippet command-snippet--inline command-snippet--add");
+      const pre = document.createElement("pre");
+      pre.append(el("code", "", item.import));
+      const header = el("div", "command-snippet__header");
+      const copyBtn = el("button", "", "Copy");
+      copyBtn.type = "button";
+      copyBtn.setAttribute("aria-label", `Copy ${item.import}`);
+      copyBtn.addEventListener("click", () => copyText(item.import));
+      header.append(copyBtn);
+      snippet.append(pre, header);
+      panel.append(snippet);
+    }
     install.addEventListener("click", () => {
-      copyText(pkg.import);
-      panel.hidden = false;
-      install.setAttribute("aria-expanded", "true");
+      if (multiple) {
+        panel.hidden = !panel.hidden;
+        install.textContent = panel.hidden ? "Choose import" : "Hide imports";
+        install.setAttribute("aria-label", `${panel.hidden ? "Choose import" : "Hide imports"} for ${pkg.name}`);
+      } else {
+        copyText(imports[0].import);
+        panel.hidden = false;
+      }
+      install.setAttribute("aria-expanded", String(!panel.hidden));
     });
     bottom.append(install, panel);
   } else {
@@ -244,7 +274,7 @@ function render() {
   clearSearch.hidden = !state.query;
   if (state.status !== "ready") return;
   let rows = state.packages.filter((pkg) => {
-    const hay = `${pkg.name} ${pkg.repo ?? ""} ${pkg.description} ${pkg.import ?? ""} ${pkg.publication?.package ?? ""}`.toLowerCase();
+    const hay = searchText(pkg);
     return (
       (!query || hay.includes(query)) &&
       (state.category === "all" || pkg.category === state.category) &&

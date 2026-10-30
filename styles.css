@@ -893,6 +893,12 @@ code,
   display: none;
 }
 
+.plugin-card__install-panel--multiple .command-snippet pre {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 .empty-state {
   grid-column: 1 / -1;
   padding: 65px 20px;

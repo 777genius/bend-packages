@@ -6,7 +6,7 @@ Live: https://777genius.github.io/bend-packages/
 
 Find libraries, tools, demos, and learning resources by project, Hub name, owner, or capability. The default view shows Hub publications; choose **Source only** for other projects and resources, or **All listings** to see both. The official [BendHub](https://hub.bend-lang.com/packages) also has names and search. This site is an independent community catalog.
 
-Use **Copy import** to copy a complete, pinned import, including its module alias. A publication without a documented entrypoint has **View on Hub** so you can inspect its files before choosing an import. Other listings offer **View source** for repositories or **View resource** for websites. Follow each project's compiler requirements and setup instructions.
+Use **Copy import** to copy a complete, pinned import, including its module alias. For projects with several published modules, use **Choose import** and copy the specific module you need. A publication without a documented entrypoint has **View on Hub** so you can inspect its files before choosing an import. Other listings offer **View source** for repositories or **View resource** for websites. Follow each project's compiler requirements and setup instructions.
 
 ## Local
 

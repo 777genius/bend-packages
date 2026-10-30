@@ -1,0 +1,49 @@
+name: Catalog checks
+
+on:
+  pull_request:
+    paths:
+      - app.js
+      - index.html
+      - styles.css
+      - data/**
+      - scripts/**
+      - tests/**
+      - .github/workflows/ci.yml
+      - .github/workflows/refresh.yml
+  push:
+    branches: [main]
+    paths:
+      - app.js
+      - index.html
+      - styles.css
+      - data/**
+      - scripts/**
+      - tests/**
+      - .github/workflows/ci.yml
+      - .github/workflows/refresh.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalog-checks-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalog:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+      - name: Check site JavaScript
+        run: node --check app.js
+      - name: Test refresh, integrity, and failure handling offline
+        run: node --test tests/*.test.mjs
+      - name: Validate the saved catalog offline
+        run: node scripts/scan.mjs --check

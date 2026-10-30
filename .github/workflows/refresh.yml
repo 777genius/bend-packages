@@ -4,30 +4,58 @@ on:
   schedule:
     - cron: "20 6 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/**
+      - .github/workflows/refresh.yml
+
+permissions:
+  contents: read
+
+# A second refresh must not race another data commit.
+concurrency:
+  group: refresh-catalog-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: "22"
-      - name: Refresh GitHub stars
+          node-version: "24"
+      - name: Test the refresh without network access
+        run: node --test tests/*.test.mjs
+      - name: Refresh and verify catalog publications
+        id: catalog
+        run: |
+          refresh_status=0
+          node scripts/scan.mjs || refresh_status=$?
+          if [[ "$refresh_status" -eq 3 ]]; then
+            echo "Catalog refresh is incomplete; the published snapshot and its update date are unchanged. Retry later."
+            echo "complete=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ "$refresh_status" -ne 0 ]]; then
+            exit "$refresh_status"
+          fi
+          echo "complete=true" >> "$GITHUB_OUTPUT"
+      - name: Refresh optional GitHub stars
+        if: steps.catalog.outputs.complete == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/refresh-stars.mjs
-      - name: Discover packages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/scan.mjs
-      - name: Commit if the catalog changed
+      - name: Commit a completely checked catalog
+        if: steps.catalog.outputs.complete == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/packages.json
           git diff --cached --quiet && exit 0
-          git commit -m "Refresh GitHub star counts."
+          git commit -m "Refresh verified catalog data."
           git push
