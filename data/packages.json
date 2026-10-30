@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T13:09:42.760Z",
+  "generated_at": "2026-10-30T13:16:38.858Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -559,7 +559,7 @@
       "description": "Version-controlled data on MyLSM with certified merges, on the hub as import ber-core-store@0.1.2.0/ber.bend.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 0,
       "import": "import ber-core-store@0.1.2.0/ber.bend as Ber",
       "publication": {
         "package": "ber-core-store@0.1.2.0",
@@ -576,7 +576,7 @@
       "description": "Parallel prefix sums, histograms, and a stable counting sort, on the hub as import bend-parallel@0.1.0.0/scan.bend.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 0,
       "import": "import bend-parallel@0.1.0.0/scan.bend as Scan",
       "publication": {
         "package": "bend-parallel@0.1.0.0",
@@ -627,7 +627,7 @@
       "description": "SQLite and JavaScript interop with native, Bun, and browser examples. SQLite import bend-over-sqlite@0.1.0.1/sqlite.bend.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 2,
       "import": "import bend-over-sqlite@0.1.0.1/sqlite.bend as Sqlite",
       "publication": {
         "package": "bend-over-sqlite@0.1.0.1",
@@ -661,7 +661,7 @@
       "description": "CSV parser with quoted and multiline fields, custom separators, a TypeScript bridge, and machine-checked core laws. Hub import bend-csv-parser@0.1.0.1/core.bend; requires Bend 2.0.35.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 0,
       "import": "import bend-csv-parser@0.1.0.1/core.bend as Core",
       "publication": {
         "package": "bend-csv-parser@0.1.0.1",
@@ -678,7 +678,7 @@
       "description": "RFC 6330 RaptorQ encoder and decoder with parallel multi-block object support and Rust reference vectors.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -689,7 +689,7 @@
       "description": "Hash-generic, capacity-bounded Merkle trees with SHA-256 and independent golden vectors; requires Bend 2.0.34.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -700,7 +700,7 @@
       "description": "Shape-typed tensors over flat arrays with proved shape laws, parallel CPU and GPU products, byte-level BPE with a proved round trip, and a binary weights reader (foreign C and JavaScript), with CPU MNIST and GPT-2 demos; requires Bend 2.0.39. Tensor import bend-ml-tensor-array@0.1.18.0/main.bend; the hub packages also include import bend-ml-tensor-gpu@0.1.5.0/main.bend and import bend-ml-binary-read@0.2.0.0/main.bend, and the list-based tensor and autograd packages are frozen.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 21,
       "import": "import bend-ml-tensor-array@0.1.18.0/main.bend as Main",
       "additional_imports": [
         {
@@ -754,7 +754,7 @@
       "description": "HTTP/1.1 and HTTPS client and CLI with a proved pure codec; uses the sibling bender-dns checkout and is tested on Linux with Bend 2.0.32 and OpenSSL 3.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -765,7 +765,7 @@
       "description": "TCP DNS stub resolver, OS resolver delegation, and a CLI, with proved codec laws; tested on Linux with Bend 2.0.32.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -776,7 +776,7 @@
       "description": "Proved parameterized BLAKE2b with a C library and Rust blake2b_simd adapter; incremental buffering and host glue are tested, not proved.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -787,7 +787,7 @@
       "description": "Geometric algebra with generated kernels proved against a multivector specification, geometric APIs, and a ray-tracing demo; uses Bend 2.0.35, with GPU experiments on the upstream HIP branch.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -815,7 +815,7 @@
       "description": "Experimental AMAGE 2D renderer with a CPU reference, retained frames, and a Vulkan GPU path through Voltra; tested on Bend 2.0.37 with Linux X11/XWayland.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -826,7 +826,7 @@
       "description": "Experimental exact mathematics with checked rational ordered-field, polynomial-identity, and inequality-certificate laws; its general Cauchy-real model remains incomplete.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -837,7 +837,7 @@
       "description": "Experimental Redis-compatible RESP2/RESP3 key-value server with proved command, storage, and session laws; implements a Redis subset and requires a dedicated patched Bend 2.0.35. Licensed Apache-2.0.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -887,7 +887,7 @@
       "description": "Experimental Edlib-style edit distance and alignment library and CLI, on the hub as import bend-edit-distance@0.2.2.0/lib.bend; requires Bend 2.0.37+ and implements only part of Edlib.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 0,
       "import": "import bend-edit-distance@0.2.2.0/lib.bend as Lib",
       "publication": {
         "package": "bend-edit-distance@0.2.2.0",
@@ -904,7 +904,7 @@
       "description": "Experimental SAT solver with watched literals, first-UIP learning, and a proved result checker with DPLL fallback; validated on a pinned Bend 2.0.37 macOS arm64 setup. No license file is provided.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -932,7 +932,7 @@
       "description": "MIT-licensed operating-system libraries: file systems, archives, compression, ELF, partition tables, network headers, capability and LSM policy models, and kernel data structures, each with laws, --verdict-accepted proofs, and differential tests; pinned to Bend 2.0.39 and published incrementally on the hub as bend-osdev-<package> (for example import bend-osdev-bytes@0.1.1.1/bytes.bend).",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 1,
       "import": "import bend-osdev-bytes@0.1.1.1/bytes.bend as Bytes",
       "publication": {
         "package": "bend-osdev-bytes@0.1.1.1",
@@ -949,7 +949,7 @@
       "description": "Text, XML, CSS, PNG, JPEG, TrueType, SVG-render, byte, and archive libraries unpacked from nicolas-abril's demos onto the hub under the gralha- prefix (for example import gralha-text-scan@0.1.0.1/scan.bend and import gralha-ustar@0.1.0.0/ustar.bend); requires Bend 2.0.37+.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 1,
       "import": "import gralha-text-scan@0.1.0.1/scan.bend as Scan",
       "additional_imports": [
         {
@@ -977,7 +977,7 @@
       "description": "VCDIFF (RFC 3284) delta encoder and decoder compatible with xdelta3, with a machine-checked round-trip law covering targets under 2 GiB less 1 MiB; no license file is provided.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -988,7 +988,7 @@
       "description": "IMAP/SMTP connector for AI agents with a CLI and MCP server; its mail-safety rules are proved laws, a Rust helper handles TLS, and it pins Bend 2.0.35.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1084,7 +1084,7 @@
       "description": "Project and environment manager: a manifest, lockfile, and pinned package environment resolved and verified against BendHub; no package-hub release of its own.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1095,7 +1095,7 @@
       "description": "Pre-alpha Hono-style web framework with routing, parsing, JSON, and validation proved in LAWS.bend, plus a typed TypeScript client; pins Bend 2.0.38 and is not published on the hub.",
       "category": "packages",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -1106,7 +1106,7 @@
       "description": "Typed layers with forward and backward passes, losses, optimizers and checkpoints over bend-ml's tensors, trained step for step against PyTorch twins on MNIST, a two-layer Llama and SmolLM2 (135M to 1.7B), with structural laws checked by --verdict and parallel CPU and GPU builds of the same layers, on the hub as import bendtorch@1.2.0.0/main.bend; requires Bend 2.0.39.",
       "category": "packages",
       "source": "hub",
-      "stars": null,
+      "stars": 18,
       "import": "import bendtorch@1.2.0.0/main.bend as Main",
       "publication": {
         "package": "bendtorch@1.2.0.0",
@@ -1162,7 +1162,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -1427,7 +1427,7 @@
       "description": "Web3Signer-compatible Ethereum consensus remote signer, with slashing-protection laws.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1438,7 +1438,7 @@
       "description": "JavaScript package manager, TypeScript transformer, and bundler written in Bend 2. Published as @matheusbbarni/knot; test runner still planned.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -1449,7 +1449,7 @@
       "description": "Native process orchestration with bounded logs and typed Jev decisions, preserving provider JSON, refusals, and provenance, with opt-in image references and long context; version 0.8.1 requires Bend 2.0.38 when building from source.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1460,7 +1460,7 @@
       "description": "Agent skill for law-driven Bend 2: state laws, falsify them, prove them, then mutate the core.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1471,7 +1471,7 @@
       "description": "Falsifies Bend 2 laws on literal instances and checks each proof against a mutant, with optional bounded parallel mutation checks.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1482,7 +1482,7 @@
       "description": "Compiles a pure Bend core to a typed ES module with named exports and TypeScript declarations; version 0.4.3 requires Bun and exactly Bend 2.0.39.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 3,
       "import": null
     },
     {
@@ -1493,7 +1493,7 @@
       "description": "Proof-carrying compiler optimisation: a Lean-checked equivalence proof before any benchmark.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1504,7 +1504,7 @@
       "description": "VS Code highlighting, live diagnostics, hover, and formatting, with bend2-lsp bundled.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1532,7 +1532,7 @@
       "description": "Hub package type-checking matrix across Bend releases; records errors, timeouts, and missing dependencies.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1543,7 +1543,7 @@
       "description": "Nightly Hub compatibility matrix for recent releases and upstream main, with checker timings and CPU/JS lane comparisons.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1554,7 +1554,7 @@
       "description": "Neovim completion, navigation, diagnostics, formatting, and a compiler-backed Proof Explorer.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1565,7 +1565,7 @@
       "description": "Zed development extension with Bend 2 highlighting and the Rust bend2-lsp-rs language server, pinned to v0.6.2 with import completion and indexed symbol auto-import.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1576,7 +1576,7 @@
       "description": "Zed development extension with Tree-sitter highlighting and a bundled compiler-backed language server.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1587,7 +1587,7 @@
       "description": "Read-only Git object reachability, missing-object, and retention queries with a proved set-algebra core.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1598,7 +1598,7 @@
       "description": "Reproducible probes for Bend 2.0.32's checker and BendTT kernel, including a reported mismatch that the kernel rejects.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1609,7 +1609,7 @@
       "description": "Rust language server with navigation, completion, diagnostics, and formatting; version 0.6.2 supports multiple compiler diagnostics on verified Bend 2.0.37 builds across macOS, Linux, and Windows on x86_64 and ARM64. Windows needs the documented native source build; other compiler builds use CLI diagnostics, and Bend is installed separately.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -1620,7 +1620,7 @@
       "description": "Hermes plugin for Bend proof verification with hashed receipts and offline replay; requires Bend 2.0.32+ and Lean 4.34.0.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1642,7 +1642,7 @@
       "description": "Experimental cached, parallel native C build helper for the AMAGE ecosystem; supports official Bend 2.0.37.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1653,7 +1653,7 @@
       "description": "Checker-backed linter and formatter with Bend rule programs and performance diagnostics; uses Bun and an automatically downloaded tested compiler. Windows uses a Bend fork; most fixes need --fix-dangerously.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 3,
       "import": null
     },
     {
@@ -1664,7 +1664,7 @@
       "description": "Shell and Python helpers for emitted-C reference counts, per-law checks, proof diagnostics, and native benchmarks; pinned to Bend 2.0.36.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1675,7 +1675,7 @@
       "description": "Command-line coordinator for native Claude Code, Codex, DeepSeek Harness, Muse, and OMP sessions, with agent teams, Git worktrees, and shared knowledge, written in Bend 2.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1686,7 +1686,7 @@
       "description": "Experimental CPython extensions from Bend 2, with laws checked during the build; published on PyPI, tested on Linux x86_64, and pinned to Bend 2.0.28.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1697,7 +1697,7 @@
       "description": "Forge CLI for Gitea, Forgejo, and GitHub with issue, pull-request, and run commands, written in Bend 2 with proved laws; source builds require Bend 2.0.39.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1708,7 +1708,7 @@
       "description": "Command-line client for reading and posting to X, rewritten in Bend 2 with a pure law-proved core and shell/network effects at the edge.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1719,7 +1719,7 @@
       "description": "Mac menu-bar and phone companion for monitoring and routing terminal coding-agent sessions, with a Bend 2 routing core and proved safety laws; requires Apple Silicon and Bend 2.0.37.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 9,
       "import": null
     },
     {
@@ -1730,7 +1730,7 @@
       "description": "Experimental CAD sketch-solver design with Bend source for geometry and constraint solving, machine-checked with a PROOF.bend gate against a local Bend checkout.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1741,7 +1741,7 @@
       "description": "Helix language entry, highlight queries, and install script for the pinned Bend 2 grammar; Helix has no plugin system, so it is configuration rather than a plugin.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1752,7 +1752,7 @@
       "description": "Vim and Neovim plugin with a classic syntax layer and optional Tree-sitter highlighting built from the pinned tree-sitter-bend2 grammar.",
       "category": "editors",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1763,7 +1763,7 @@
       "description": "Command-line interface library: one declaration yields help, typed argument decoding, shell completions, and man pages, with the behavior stated as Bend laws; on the hub as import cli@0.2.0.0/cli.bend, requires Bend 2.0.39+.",
       "category": "tools",
       "source": "hub",
-      "stars": null,
+      "stars": 3,
       "import": "import cli@0.2.0.0/cli.bend as Cli",
       "publication": {
         "package": "cli@0.2.0.0",
@@ -1780,7 +1780,7 @@
       "description": "Pure IPP (RFC 8010/8011) codec over byte lists, tested against Bend 2.0.38; not published on the hub.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1791,7 +1791,7 @@
       "description": "Proof-oriented infrastructure-as-code planner for Cloudflare that returns an authorized, ordered plan or a blocked explanation, with three safety laws checked by PROOF.bend; uses a pinned Bend checkout.",
       "category": "tools",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1841,7 +1841,7 @@
       "description": "Unofficial Nix flake tracking Bend 2 main, with NixOS and Home Manager modules, an overlay, and optional CUDA support.",
       "category": "packaging",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1852,7 +1852,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -1863,7 +1863,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -1896,7 +1896,7 @@
       "description": "Interactive beginner explainer of parallelism, laws, and proofs (repo).",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 1,
       "import": null
     },
     {
@@ -1918,7 +1918,7 @@
       "description": "Small executable example of symbolic differentiation and forward-mode automatic differentiation, with a machine-checked agreement proof.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -1929,7 +1929,7 @@
       "description": "Independent browser workshop with the checker, compiler, proof-hole goals, and proof tools in one page, including a phone interface (repo); uses a pinned compiler checkout.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1940,7 +1940,7 @@
       "description": "Bend hands-on tutorial for beginners coming from Python.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -1951,7 +1951,7 @@
       "description": "Japanese beginner's book that teaches Bend 2 by building a Game of Life, with downloadable PDF and sample code.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1962,7 +1962,7 @@
       "description": "Japanese Bend 2 verification notes: a small proved HTTP server, language probes, benchmark data, and slides covering Bend 2.0.34-2.0.36.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 8,
       "import": null
     },
     {
@@ -1973,7 +1973,7 @@
       "description": "Single-file list of Bend 2 language and compiler pitfalls found in real projects, each entry tagged with the compiler version it was seen with.",
       "category": "learning",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -1984,7 +1984,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -1995,7 +1995,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -2006,7 +2006,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 24557,
       "import": null
     },
     {
@@ -2182,7 +2182,7 @@
       "description": "RollerCoaster Tycoon-style park sim with sixteen machine-checked laws.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2193,7 +2193,7 @@
       "description": "Luanti terrain ported to Bend, with a CPU voxel world and a live race against C++.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2204,7 +2204,7 @@
       "description": "Java 8 class-file interpreter in Bend, with bounded reflection, annotations, and interface proxies, differentially tested against java.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 3,
       "import": null
     },
     {
@@ -2215,7 +2215,7 @@
       "description": "Fixed-point voxel game with generated terrain and first-person interaction. GPU measurements use an experimental CUDA-over-HIP compiler fork.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 2,
       "import": null
     },
     {
@@ -2226,7 +2226,7 @@
       "description": "Procedural peg-board generator with a proof that every requested cell produces exactly one target peg.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2237,7 +2237,7 @@
       "description": "Browser preview of a Bend-rendered chess experiment; source and proofs remain in the main Rift Chess repository.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2248,7 +2248,7 @@
       "description": "Walkable voxel world with weather, flowing water, and proofs; currently needs its dedicated Bend compiler branch for the documented performance and features.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 4,
       "import": null
     },
     {
@@ -2259,7 +2259,7 @@
       "description": "Interactive gravitational simulation with software binary64 physics, GPU rendering, and a checker-verified theorem for a fixed figure-8 integration run; requires Bend 2.0.34+.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 7,
       "import": null
     },
     {
@@ -2270,7 +2270,7 @@
       "description": "Doom and Doom II with menus, saves, OPL and General MIDI music, and PWADs, whose demos play tic for tic as in Chocolate Doom; native build, or in the browser at kbrianps.com/bendoom; tested with Bend 2.0.36.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 5,
       "import": null
     },
     {
@@ -2281,7 +2281,7 @@
       "description": "Native HTTP backend with auth, WAL storage, REST, and MCP; current source targets Bend 2.0.35.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2292,7 +2292,7 @@
       "description": "Desktop shell with rendering and UI state in Bend and native effects; documented macOS arm64 build uses Bend 2.0.35.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2303,7 +2303,7 @@
       "description": "SmolLM2 inference (135M, 360M, 1.7B) with shape-typed weights and cache laws, read from the downloaded model.safetensors and tested against Transformers, on the CPU and the GPU; on the hub as import bend-ml-llama@0.2.0.0/main.bend; requires Bend 2.0.39.",
       "category": "demos",
       "source": "hub",
-      "stars": null,
+      "stars": 16,
       "import": "import bend-ml-llama@0.2.0.0/main.bend as Main",
       "publication": {
         "package": "bend-ml-llama@0.2.0.0",
@@ -2320,7 +2320,7 @@
       "description": "3×3 Rubik's cube solver written in Bend 2 with proved cube rules and pruning-table generators, plus a Three.js workbench; requires Nix and Bend 2.0.37.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 0,
       "import": null
     },
     {
@@ -2331,7 +2331,7 @@
       "description": "Bounded Bend 2 to Solana SBF compiler and SDK exercised by token, vesting, exchange, and AMM applications with proved laws; requires a pinned Bend checkout and platform-tools.",
       "category": "demos",
       "source": "git",
-      "stars": null,
+      "stars": 3,
       "import": null
     },
     {
