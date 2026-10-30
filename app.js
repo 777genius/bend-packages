@@ -6,6 +6,7 @@ const clearSearch = document.getElementById("clear-search");
 const chips = document.getElementById("chips");
 const filtersHost = document.getElementById("catalog-advanced-filters");
 const filterToggle = document.getElementById("filter-toggle");
+const catalogUpdated = document.getElementById("catalog-updated");
 
 const CATEGORY_LABELS = {
   packages: "Libraries",
@@ -27,8 +28,8 @@ const FILTERS = {
   ],
   source: [
     { value: "hub", label: "Hub", icon: "source" },
-    { value: "git", label: "Git", icon: "source" },
-    { value: "all", label: "Hub + Git", icon: "source" },
+    { value: "git", label: "Source only", icon: "source" },
+    { value: "all", label: "All listings", icon: "source" },
   ],
   sort: [
     { value: "stars", label: "Most stars", icon: "trust" },
@@ -36,7 +37,7 @@ const FILTERS = {
   ],
 };
 
-const state = { packages: [], query: "", category: "all", source: "hub", sort: "stars" };
+const state = { packages: [], query: "", category: "all", source: "hub", sort: "stars", status: "loading" };
 
 const ICONS = {
   category:
@@ -75,6 +76,7 @@ async function copyText(text) {
     showToast("Copied");
     return;
   } catch {
+    const focused = document.activeElement;
     const area = document.createElement("textarea");
     area.value = text;
     area.setAttribute("readonly", "");
@@ -82,9 +84,16 @@ async function copyText(text) {
     area.style.left = "-9999px";
     document.body.append(area);
     area.select();
-    const ok = document.execCommand("copy");
-    area.remove();
-    showToast(ok ? "Copied" : "Copy failed");
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+      // The visible import remains available for manual selection.
+    } finally {
+      area.remove();
+      focused?.focus?.();
+    }
+    showToast(copied ? "Copied" : "Could not copy. Select the text to copy it.");
   }
 }
 
@@ -104,59 +113,32 @@ function optionLabel(key, value) {
   return FILTERS[key].find((item) => item.value === value)?.label ?? value;
 }
 
-function closeSelects(except) {
-  document.querySelectorAll(".app-select").forEach((select) => {
-    if (select === except) return;
-    const trigger = select.querySelector(".app-select__trigger");
-    const content = select.querySelector(".app-select__content");
-    trigger.dataset.state = "closed";
-    content.hidden = true;
-  });
-}
-
 function mountSelect(key) {
   const wrap = el("div", "app-select");
   wrap.dataset.filter = key;
-  const trigger = el("button", "app-select__trigger");
-  trigger.type = "button";
-  trigger.dataset.state = "closed";
-  trigger.setAttribute("aria-haspopup", "listbox");
-  const value = el("span", "app-select__value");
-  value.append(svg(FILTERS[key][0].icon, "filter-icon"), el("span", "", optionLabel(key, state[key])));
-  trigger.append(value, svg("chevron", "app-select__chevron"));
-  const content = el("div", "app-select__content");
-  content.hidden = true;
-  content.setAttribute("role", "listbox");
-
-  function paint() {
-    value.lastChild.textContent = optionLabel(key, state[key]);
-    content.replaceChildren(
-      ...FILTERS[key].map((option) => {
-        const item = el("button", "app-select__item", option.label);
-        item.type = "button";
-        item.dataset.state = option.value === state[key] ? "checked" : "";
-        if (option.value === state[key]) item.append(el("span", "app-select__indicator", "✓"));
-        item.addEventListener("click", () => {
-          state[key] = option.value;
-          closeSelects();
-          paint();
-          render();
-        });
-        return item;
-      }),
-    );
+  const label = el("label", "sr-only", { category: "Category", source: "Source", sort: "Sort" }[key]);
+  label.htmlFor = `filter-${key}`;
+  const select = el("select", "app-select__native");
+  select.id = label.htmlFor;
+  select.name = key;
+  for (const option of FILTERS[key]) {
+    const item = el("option", "", option.label);
+    item.value = option.value;
+    select.append(item);
   }
-
-  trigger.addEventListener("click", () => {
-    const open = trigger.dataset.state !== "open";
-    closeSelects(wrap);
-    trigger.dataset.state = open ? "open" : "closed";
-    content.hidden = !open;
+  select.value = state[key];
+  select.addEventListener("change", () => {
+    state[key] = select.value;
+    render();
   });
-
-  wrap.append(trigger, content);
-  paint();
+  wrap.append(label, svg(FILTERS[key][0].icon, "filter-icon"), select, svg("chevron", "app-select__chevron"));
   return wrap;
+}
+
+function syncFilters() {
+  for (const key of Object.keys(FILTERS)) {
+    document.getElementById(`filter-${key}`).value = state[key];
+  }
 }
 
 function card(pkg) {
@@ -184,23 +166,25 @@ function card(pkg) {
   if (githubUrl) {
     repoLink.append(svg("github", "plugin-card__github-icon"), document.createTextNode(pkg.repo));
   } else {
-    repoLink.textContent = "hub";
+    repoLink.textContent = pkg.source === "hub" ? "Hub" : "Resource";
   }
   copy.append(h3, repoLink);
   identity.append(icon, copy);
 
   const stars = el("div", "plugin-card__popularity", `★ ${formatStars(pkg.stars ?? 0)}`);
   stars.title = "GitHub stars";
+  stars.hidden = !pkg.repo;
 
   const tags = el("ul", "tag-list");
   tags.append(el("li", "", CATEGORY_LABELS[pkg.category] ?? pkg.category));
-  const sourceTag = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "Hub" : "Git");
+  const sourceTag = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "Hub" : "Source");
   tags.append(sourceTag);
 
   const bottom = el("div", "plugin-card__bottom");
   if (pkg.import) {
     const install = el("button", "plugin-card__install-toggle", "Copy import");
     install.type = "button";
+    install.setAttribute("aria-expanded", "false");
     const panel = el("div", "plugin-card__install-panel");
     panel.hidden = true;
     const snippet = el("div", "command-snippet command-snippet--inline command-snippet--add");
@@ -215,12 +199,13 @@ function card(pkg) {
     panel.append(snippet);
     install.addEventListener("click", () => {
       copyText(pkg.import);
-      panel.hidden = !panel.hidden;
-      install.setAttribute("aria-expanded", String(!panel.hidden));
+      panel.hidden = false;
+      install.setAttribute("aria-expanded", "true");
     });
     bottom.append(install, panel);
   } else {
-    const clone = el("a", "plugin-card__install-toggle", "Clone repo");
+    const clone = el("a", "plugin-card__install-toggle",
+      pkg.source === "hub" ? "View on Hub" : pkg.repo ? "View source" : "View resource");
     clone.href = pkg.url;
     bottom.append(clone);
   }
@@ -250,16 +235,16 @@ function resetFilters() {
   state.source = "hub";
   state.sort = "stars";
   q.value = "";
-  closeSelects();
-  filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
+  syncFilters();
   render();
 }
 
 function render() {
   const query = state.query.trim().toLowerCase();
   clearSearch.hidden = !state.query;
+  if (state.status !== "ready") return;
   let rows = state.packages.filter((pkg) => {
-    const hay = `${pkg.name} ${pkg.repo} ${pkg.description}`.toLowerCase();
+    const hay = `${pkg.name} ${pkg.repo ?? ""} ${pkg.description} ${pkg.import ?? ""} ${pkg.publication?.package ?? ""}`.toLowerCase();
     return (
       (!query || hay.includes(query)) &&
       (state.category === "all" || pkg.category === state.category) &&
@@ -281,7 +266,7 @@ function render() {
         q.value = "";
       } else {
         state[chip.key] = chip.key === "sort" ? "stars" : chip.key === "source" ? "hub" : "all";
-        filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
+        syncFilters();
       }
       render();
     });
@@ -314,12 +299,8 @@ function render() {
 document.body.addEventListener("click", (event) => {
   const button = event.target.closest("[data-copy]");
   if (button) copyText(button.getAttribute("data-copy") ?? "");
-  if (!event.target.closest(".app-select")) closeSelects();
 });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeSelects();
-});
 
 q.addEventListener("input", () => {
   state.query = q.value;
@@ -329,6 +310,7 @@ clearSearch.addEventListener("click", () => {
   state.query = "";
   q.value = "";
   render();
+  q.focus();
 });
 filterToggle.addEventListener("click", () => {
   const open = filterToggle.getAttribute("aria-expanded") !== "true";
@@ -338,6 +320,50 @@ filterToggle.addEventListener("click", () => {
 
 filtersHost.replaceChildren(mountSelect("category"), mountSelect("source"), mountSelect("sort"));
 
-const catalog = await fetch("./data/packages.json?v=18").then((r) => r.json());
-state.packages = catalog.packages;
-render();
+async function loadCatalog() {
+  state.status = "loading";
+  summary.textContent = "Loading catalog…";
+  catalogUpdated.hidden = true;
+  grid.replaceChildren();
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 30000);
+  try {
+    const response = await fetch("./data/packages.json", { cache: "no-cache", signal: controller.signal });
+    if (!response.ok) throw new Error(`Catalog request returned HTTP ${response.status}`);
+    const catalog = await response.json();
+    if (!Array.isArray(catalog.packages) || !catalog.packages.every((pkg) =>
+      pkg && typeof pkg.name === "string" && typeof pkg.description === "string" &&
+      typeof pkg.url === "string" && typeof pkg.category === "string" &&
+      ["hub", "git"].includes(pkg.source))) {
+      throw new Error("Catalog listings are invalid");
+    }
+    state.packages = catalog.packages;
+    state.status = "ready";
+    const updated = new Date(typeof catalog.generated_at === "string" ? catalog.generated_at : "");
+    if (Number.isFinite(updated.getTime())) {
+      const time = el("time", "", updated.toLocaleDateString("en-GB", {
+        day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+      }));
+      time.dateTime = updated.toISOString();
+      time.title = updated.toUTCString();
+      catalogUpdated.replaceChildren(document.createTextNode("Catalog updated "), time);
+      catalogUpdated.hidden = false;
+    }
+    render();
+  } catch (error) {
+    state.status = "error";
+    summary.textContent = "Catalog unavailable";
+    const empty = el("div", "empty-state");
+    const retry = el("button", "button button--secondary", "Try again");
+    retry.type = "button";
+    retry.addEventListener("click", loadCatalog);
+    empty.append(el("h3", "", "Could not load the catalog"),
+      el("p", "", "Please try again in a moment."), retry);
+    grid.replaceChildren(empty);
+    console.error("Could not load the catalog", error);
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
+await loadCatalog();
