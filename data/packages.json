@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T06:40:27.334Z",
+  "generated_at": "2026-10-30T06:41:01.277Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Hub packages are content hashes; this site only indexes them.",
   "packages": [
     {
@@ -164,7 +164,7 @@
       "description": "Tree-sitter grammar with highlight, symbol, and indent queries.",
       "category": "editors",
       "source": "git",
-      "stars": 2,
+      "stars": 3,
       "import": null
     },
     {
