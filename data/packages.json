@@ -2567,17 +2567,6 @@
       "import": null
     },
     {
-      "id": "eserilev-bulkhead",
-      "name": "bulkhead",
-      "repo": "eserilev/bulkhead",
-      "url": "https://github.com/eserilev/bulkhead",
-      "description": "Web3Signer-compatible Ethereum consensus remote signer.",
-      "category": "tools",
-      "source": "git",
-      "stars": 1,
-      "import": null
-    },
-    {
       "id": "hub-da09635d",
       "name": "JSON",
       "repo": "",
