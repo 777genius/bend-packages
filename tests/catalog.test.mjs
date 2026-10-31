@@ -264,9 +264,16 @@ test("every reviewed module remains copyable on one card, with exact secondary p
   assert.equal(repeated.import, imports[0], "Repeated mentions must preserve the first import alias");
   assert.equal(repeated.additional_imports.length, 2);
   data.set(HUB + "/name/discovered@0.5.0.0", Buffer.from(otherHash));
+  const nextCode = Buffer.from("def main = 43\n");
+  const nextManifest = Buffer.from(digest(nextCode) + " other.bend\n");
+  const nextHash = "0x" + digest(nextManifest).slice(0, 32);
   const latest = JSON.parse(data.get(HUB + "/name/discovered"));
-  latest.latest.hash = "0x" + "a".repeat(32);
+  latest.latest.hash = nextHash;
+  latest.latest.entry = "other.bend";
   data.set(HUB + "/name/discovered", Buffer.from(JSON.stringify(latest)));
+  data.set(HUB + "/name/discovered@1.0.0.0", Buffer.from(nextHash));
+  data.set(HUB + "/" + nextHash + "/manifest", nextManifest);
+  data.set(HUB + "/" + nextHash + "/other.bend", nextCode);
   const result = await refreshCatalog(existing, source, request, "2026-10-30T00:00:00Z");
   const row = result.catalog.packages.find((item) => item.id === "reviewed");
   const offered = [row, ...row.additional_imports];
@@ -279,7 +286,8 @@ test("every reviewed module remains copyable on one card, with exact secondary p
   ]);
   assert.equal(offered.length, parseAwesome(source).references.length, "Every source reference needs a copyable import");
   assert.deepEqual(row.additional_imports[1].publication.aliases, ["reviewed@2.0.0.0"]);
-  assert.ok(!seen.includes(HUB + "/name/discovered@1.0.0.0"), "A reviewed secondary must not be replaced by latest");
+  assert.equal(row.additional_imports[0].latest_import, "import discovered@1.0.0.0/other.bend as Other");
+  assert.ok(seen.includes(HUB + "/name/discovered@1.0.0.0"), "Latest secondary should be verified without replacing the reviewed pin");
   const baseline = structuredClone(result.catalog);
   const second = await refreshCatalog(result.catalog, source, request, result.catalog.generated_at);
   assert.deepEqual(result.catalog, baseline, "Refresh must not mutate its baseline");
