@@ -6,7 +6,9 @@ Live: https://777genius.github.io/bend-packages/
 
 Find libraries, tools, demos, and learning resources by project, Hub name, owner, or capability. The default view shows Hub publications; choose **Source only** for other projects and resources, or **All listings** to see both. The official [BendHub](https://hub.bend-lang.com/packages) also has names and search. This site is an independent community catalog.
 
-Use **Copy import** to copy a complete, pinned import, including its module alias. For projects with several published modules, use **Choose import** and copy the specific module you need. A publication without a documented entrypoint has **View on Hub** so you can inspect its files before choosing an import. Other listings offer **View source** for repositories or **View resource** for websites. Follow each project's compiler requirements and setup instructions.
+Use **Copy latest** when a named Hub package has a newer version that still contains the reviewed module path. The daily refresh resolves the latest official version, verifies the immutable package hash, checks the manifest, and checks the exact `.bend` file before the site offers that import. The reviewed compatibility pin remains available as **Reviewed**. If a new release removed or renamed that module, the site keeps the reviewed pin and links to the latest Hub package instead of guessing. Hash-only publications stay pinned because a content hash is immutable and has no concept of “latest”.
+
+For projects with several published modules, use **Choose import** and copy the module you need. A publication without a documented entrypoint has **View on Hub** so you can inspect its files before choosing an import. Other listings offer **View source** for repositories or **View resource** for websites. Follow each project's compiler requirements and setup instructions.
 
 ## Local
 
@@ -20,8 +22,8 @@ Open http://127.0.0.1:4173. The site uses static HTML, CSS, JavaScript, and `dat
 
 ## Where the listings come from
 
-- **Awesome Bend:** relevant entries from the [reviewed list](https://github.com/777genius/awesome-bend) supply curated project names, descriptions, compiler requirements, and documented imports. These reviewed pins take precedence over a newer Hub version of the same package.
-- **Official Hub:** named publications add the latest version and description from the Hub's own metadata. These entries link to the Hub; a GitHub repository is attached only when the curated source establishes that connection.
+- **Awesome Bend:** relevant entries from the [reviewed list](https://github.com/777genius/awesome-bend) supply curated project names, descriptions, compiler requirements, module paths, and compatibility pins.
+- **Official Hub:** the refresh uses BendHub's public package inventory (`/packages.json`), name metadata (`/name/<name>`), immutable name-version resolution (`/name/<name>@<version>`), package manifests, and file bytes. Named packages expose the official latest version and description. When the reviewed module path still exists in that latest package, it becomes the default copy action; otherwise the reviewed pin remains the safe default.
 - **Existing hash-only publications:** useful catalog entries can remain after verification. A content hash is immutable and has no version ordering.
 
 Curated review and automatic publication discovery are different kinds of evidence. Hub verification confirms publication and file integrity; check compiler compatibility in the project's documentation and with your own program. A published package is not automatically a recommendation to upgrade a working pin.
@@ -30,7 +32,7 @@ Curated review and automatic publication discovery are different kinds of eviden
 
 The daily **Refresh catalog** workflow syncs the sources and verifies the catalog before publishing its data. The site's **Catalog updated** date records the last successful full refresh. A failed refresh preserves the previous catalog; updating GitHub stars alone does not advance that date.
 
-For a Hub listing, the refresh resolves its exact named version or hash and verifies the package manifest. When an entrypoint is documented, it also checks that the file is present and that its SHA-256 matches the manifest. Only then does the card offer **Copy import**. If no entrypoint is documented, the card opens the publication on the Hub. Packages are not installed, compiled, or executed by this process.
+For a Hub listing, the refresh resolves its exact named version or hash and verifies the package manifest. For named packages it also reads the official latest metadata. A **Copy latest** action appears only when the same reviewed module path exists in the latest immutable package and its SHA-256 matches that package's manifest. The older reviewed import remains available for compatibility. If no entrypoint is documented, the card opens the publication on the Hub. Packages are not installed, compiled, or executed by this process.
 
 Run a full refresh with Node.js:
 
