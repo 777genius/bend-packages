@@ -85,6 +85,24 @@ function validatePublication(item, label) {
     const parsed = parseImport(item.import);
     need(/\sas\s/.test(item.import) && parsed.package === publication.package && parsed.entry === publication.entry, "Import disagrees with its publication: " + label);
   }
+  if (item.hub !== undefined) {
+    const latest = item.hub?.latest;
+    need(item.hub && NAME.test(item.hub.name) && typeof item.hub.owner === "string" &&
+      latest && VERSION.test(latest.version) && HASH.test(latest.hash) &&
+      (latest.entry === null || ENTRY.test(latest.entry)) && typeof latest.description === "string",
+      "Invalid Hub metadata: " + label);
+    need(!HASH.test(publication.package) && publication.package.split("@")[0] === item.hub.name,
+      "Hub metadata disagrees with its publication: " + label);
+    if (item.latest_import !== undefined) {
+      need(typeof item.latest_import === "string" && item.latest_import, "Invalid latest import: " + label);
+      const latestImport = parseImport(item.latest_import);
+      need(latestImport.package === item.hub.name + "@" + latest.version &&
+        latestImport.entry === publication.entry,
+        "Latest import disagrees with Hub metadata: " + label);
+    }
+  } else {
+    need(item.latest_import === undefined, "Latest import requires Hub metadata: " + label);
+  }
 }
 
 export function validateCatalog(catalog) {
@@ -202,26 +220,41 @@ export async function loadRegistry(request) {
   return packages;
 }
 
+function manifestRecords(manifest, packageName) {
+  const records = new Map();
+  const lines = manifest.toString("utf8").split(/\r?\n/);
+  if (lines.at(-1) === "") lines.pop();
+  for (const line of lines) {
+    const m = /^([0-9a-f]{64}) (.+)$/.exec(line);
+    need(m && m[2].split("/").every((part) => /^[A-Za-z0-9_.-]+$/.test(part) && ![".", ".."].includes(part)) && !records.has(m[2]), "Invalid manifest: " + packageName);
+    records.set(m[2], m[1]);
+  }
+  need(records.size > 0, "Empty manifest: " + packageName);
+  return records;
+}
+
 export async function verifyPublication(ref, request, expectedHash) {
   need(isPackage(ref.package) && (ref.entry === null || ENTRY.test(ref.entry)), "Invalid publication reference");
   const packageHash = HASH.test(ref.package) ? ref.package : (await request(HUB + "/name/" + ref.package)).toString("utf8").trim();
   need(HASH.test(packageHash) && (!expectedHash || expectedHash === packageHash), "Invalid or inconsistent published hash: " + ref.package);
   const manifest = await request(HUB + "/" + packageHash + "/manifest");
   need(sha(manifest).slice(0, 32) === packageHash.slice(2), "Manifest checksum mismatch: " + ref.package);
-  const records = new Map();
-  const lines = manifest.toString("utf8").split(/\r?\n/);
-  if (lines.at(-1) === "") lines.pop();
-  for (const line of lines) {
-    const m = /^([0-9a-f]{64}) (.+)$/.exec(line);
-    need(m && m[2].split("/").every((part) => /^[A-Za-z0-9_.-]+$/.test(part) && ![".", ".."].includes(part)) && !records.has(m[2]), "Invalid manifest: " + ref.package);
-    records.set(m[2], m[1]);
-  }
-  need(records.size > 0, "Empty manifest: " + ref.package);
+  const records = manifestRecords(manifest, ref.package);
   if (ref.entry !== null) {
     need(ENTRY.test(ref.entry) && records.has(ref.entry), "Entry is absent from the published manifest: " + ref.package + "/" + ref.entry);
     need(sha(await request(HUB + "/" + packageHash + "/" + ref.entry)) === records.get(ref.entry), "File checksum mismatch: " + ref.package + "/" + ref.entry);
   }
   return { package: ref.package, hash: packageHash, entry: ref.entry };
+}
+
+async function latestImportFor(ref, meta, request) {
+  const latestPackage = meta.name + "@" + meta.version;
+  await verifyPublication({ package: latestPackage, entry: meta.entry }, request, meta.hash);
+  const manifest = await request(HUB + "/" + meta.hash + "/manifest");
+  const records = manifestRecords(manifest, latestPackage);
+  if (!records.has(ref.entry)) return null;
+  await verifyPublication({ package: latestPackage, entry: ref.entry }, request, meta.hash);
+  return importLine({ package: latestPackage, entry: ref.entry, alias: ref.alias });
 }
 
 async function collect(items, task, failures) {
@@ -260,7 +293,14 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     const latest = result?.latest;
     need(result?.name === name && latest && VERSION.test(latest.version) && HASH.test(latest.hash) && typeof latest.desc === "string" && typeof latest.entry === "string", "Invalid latest publication: " + name);
     need(latest.entry === "" || ENTRY.test(latest.entry), "Invalid published entry: " + name);
-    return { name, ...latest, owner: result.owner_login ?? "" };
+    return {
+      name,
+      version: latest.version,
+      hash: latest.hash,
+      desc: latest.desc,
+      entry: latest.entry || null,
+      owner: result.owner_login ?? "",
+    };
   }, failures);
   requireComplete(failures);
   const publications = await collect(curated.references, (ref) => verifyPublication(ref, request), failures);
@@ -269,14 +309,37 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   const usedHashes = new Set(publications.map((publication) => publication.hash));
   const usedNames = new Set(curated.references.filter((ref) => !HASH.test(ref.package)).map((ref) => ref.package.split("@")[0]));
   const byName = new Map(metadata.map((item) => [item.name, item]));
-  const attachReviewedPublication = (item) => {
-    const ref = parseImport(item.import);
-    return { ...item, publication: { ...verified.get(target(ref)), owner: byName.get(ref.package.split("@")[0])?.owner ?? "" } };
-  };
-  const rows = curated.packages.map((row) => !row.import ? row : {
-    ...attachReviewedPublication(row),
-    ...(row.additional_imports ? { additional_imports: row.additional_imports.map(attachReviewedPublication) } : {}),
+  const hubOf = (meta) => ({
+    name: meta.name,
+    owner: meta.owner,
+    latest: {
+      version: meta.version,
+      hash: meta.hash,
+      entry: meta.entry,
+      description: meta.desc,
+    },
   });
+  const attachReviewedPublication = async (item) => {
+    const ref = parseImport(item.import);
+    const name = HASH.test(ref.package) ? "" : ref.package.split("@")[0];
+    const meta = name ? byName.get(name) : null;
+    const base = {
+      ...item,
+      publication: { ...verified.get(target(ref)), owner: meta?.owner ?? "" },
+    };
+    if (!meta) return base;
+    const latestImport = await latestImportFor(ref, meta, request);
+    return {
+      ...base,
+      hub: hubOf(meta),
+      ...(latestImport && latestImport !== item.import ? { latest_import: latestImport } : {}),
+    };
+  };
+  const rows = await collect(curated.packages, async (row) => !row.import ? row : {
+    ...(await attachReviewedPublication(row)),
+    ...(row.additional_imports ? { additional_imports: await parallel(row.additional_imports, attachReviewedPublication) } : {}),
+  }, failures);
+  requireComplete(failures);
   const curatedUrls = new Set(rows.map(key));
   let kept = 0;
   const previousNamed = new Map();
@@ -314,6 +377,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       category: previous?.category ?? "packages", source: "hub", stars: previous?.stars ?? null,
       import: item.entry ? "import " + publication.package + "/" + item.entry + " as " + alias(item.entry) : null,
       publication: { ...publication, owner: item.owner },
+      hub: hubOf(item),
     };
   }, failures);
   requireComplete(failures);
@@ -345,7 +409,8 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     packages: rows,
   };
   validateCatalog(result);
-  return { catalog: result, summary: curated.packages.length + " Awesome entries with " + curated.references.length + " reviewed imports; " + uniqueNamed.size + " named Hub listings; " + kept + " other reviewed listings retained; " + inventory.length + " Hub publications inspected." };
+  const latestImports = rows.flatMap(allPublications).filter((item) => item.latest_import).length;
+  return { catalog: result, summary: curated.packages.length + " Awesome entries with " + curated.references.length + " reviewed imports; " + latestImports + " safe latest-version upgrades; " + uniqueNamed.size + " named Hub listings; " + kept + " other reviewed listings retained; " + inventory.length + " Hub publications inspected." };
 }
 
 export function writeCatalog(path, catalog) {

@@ -143,16 +143,88 @@ function syncFilters() {
 
 function importsFor(pkg) {
   return [
-    ...(pkg.import ? [{ import: pkg.import, publication: pkg.publication }] : []),
+    ...(pkg.import ? [{
+      import: pkg.import,
+      publication: pkg.publication,
+      latest_import: pkg.latest_import,
+      hub: pkg.hub,
+    }] : []),
+    ...(pkg.additional_imports ?? []),
+  ];
+}
+
+function searchRecords(pkg) {
+  return [
+    {
+      import: pkg.import ?? "",
+      publication: pkg.publication,
+      latest_import: pkg.latest_import,
+      hub: pkg.hub,
+    },
     ...(pkg.additional_imports ?? []),
   ];
 }
 
 function searchText(pkg) {
-  const publications = [pkg.publication, ...(pkg.additional_imports ?? []).map((item) => item.publication)];
-  return [pkg.name, pkg.repo ?? "", pkg.description, ...importsFor(pkg).map((item) => item.import),
-    ...publications.flatMap((publication) => [publication?.package ?? "", publication?.owner ?? "",
-      ...(publication?.aliases ?? [])])].join(" ").toLowerCase();
+  const modules = searchRecords(pkg);
+  const publications = modules.map((item) => item.publication);
+  const hubs = modules.map((item) => item.hub).filter(Boolean);
+  return [
+    pkg.name,
+    pkg.repo ?? "",
+    pkg.description,
+    ...modules.flatMap((item) => [item.import, item.latest_import ?? ""]),
+    ...publications.flatMap((publication) => [
+      publication?.package ?? "",
+      publication?.owner ?? "",
+      ...(publication?.aliases ?? []),
+    ]),
+    ...hubs.flatMap((hub) => [
+      hub.name,
+      hub.owner,
+      hub.latest?.version ?? "",
+      hub.latest?.description ?? "",
+    ]),
+  ].join(" ").toLowerCase();
+}
+
+function searchScore(pkg, query) {
+  const needle = query.trim().toLowerCase();
+  if (!needle) return 0;
+  const tokens = needle.split(/\s+/).filter(Boolean);
+  const haystack = searchText(pkg);
+  if (!tokens.every((token) => haystack.includes(token))) return -1;
+
+  const modules = searchRecords(pkg);
+  const names = [...new Set([
+    pkg.name,
+    ...modules.flatMap((item) => [
+      item.hub?.name ?? "",
+      item.publication?.package?.split("@")[0] ?? "",
+      ...(item.publication?.aliases ?? []).map((value) => value.split("@")[0]),
+    ]),
+  ].map((value) => value.toLowerCase()).filter(Boolean))];
+  const owners = [...new Set([
+    pkg.repo?.split("/")[0] ?? "",
+    ...modules.map((item) => item.hub?.owner ?? item.publication?.owner ?? ""),
+  ].map((value) => value.toLowerCase()).filter(Boolean))];
+
+  let score = haystack.includes(needle) ? 120 : 0;
+  for (const name of names) {
+    if (name === needle) score += 1200;
+    else if (name.startsWith(needle)) score += 650;
+    else if (name.includes(needle)) score += 300;
+    for (const token of tokens) {
+      if (name === token) score += 220;
+      else if (name.startsWith(token)) score += 110;
+      else if (name.includes(token)) score += 55;
+    }
+  }
+  for (const owner of owners) {
+    if (owner === needle) score += 260;
+    else if (owner.includes(needle)) score += 90;
+  }
+  return score;
 }
 
 function card(pkg) {
@@ -191,17 +263,27 @@ function card(pkg) {
 
   const tags = el("ul", "tag-list");
   tags.append(el("li", "", CATEGORY_LABELS[pkg.category] ?? pkg.category));
-  const sourceTag = el("li", pkg.source === "hub" ? "hub" : "", pkg.source === "hub" ? "Hub" : "Source");
+  const latestVersion = pkg.hub?.latest?.version;
+  const sourceTag = el("li", pkg.source === "hub" ? "hub" : "",
+    pkg.source === "hub" ? (latestVersion ? `Hub · latest ${latestVersion}` : "Hub") : "Source");
   tags.append(sourceTag);
 
   const bottom = el("div", "plugin-card__bottom");
   const imports = importsFor(pkg);
+  const preferredImport = (item) => item.latest_import ?? item.import;
+  const latestPackage = (item) => item.hub ? item.hub.name + "@" + item.hub.latest.version : "";
+  const hasNewerHubVersion = (item) => Boolean(item.hub && item.publication && latestPackage(item) !== item.publication.package);
   if (imports.length) {
     const multiple = imports.length > 1;
-    const install = el("button", "plugin-card__install-toggle", multiple ? "Choose import" : "Copy import");
+    const first = imports[0];
+    const firstHasLatest = Boolean(first.latest_import);
+    const install = el("button", "plugin-card__install-toggle",
+      multiple ? "Choose import" : firstHasLatest ? "Copy latest" : hasNewerHubVersion(first) ? "Copy reviewed" : "Copy import");
     install.type = "button";
     install.setAttribute("aria-expanded", "false");
-    install.setAttribute("aria-label", multiple ? `Choose import for ${pkg.name}` : `Copy ${imports[0].import}`);
+    install.setAttribute("aria-label", multiple
+      ? `Choose import for ${pkg.name}`
+      : `Copy ${preferredImport(first)}`);
     const panel = el("div", "plugin-card__install-panel" + (multiple ? " plugin-card__install-panel--multiple" : ""));
     panel.id = `imports-${pkg.id}`;
     panel.hidden = true;
@@ -209,17 +291,35 @@ function card(pkg) {
     panel.setAttribute("aria-label", `Imports for ${pkg.name}`);
     install.setAttribute("aria-controls", panel.id);
     for (const item of imports) {
+      const shown = preferredImport(item);
       const snippet = el("div", "command-snippet command-snippet--inline command-snippet--add");
       const pre = document.createElement("pre");
-      pre.append(el("code", "", item.import));
+      pre.append(el("code", "", shown));
+      pre.title = item.latest_import ? "Latest verified version from BendHub" : "Reviewed pinned import";
       const header = el("div", "command-snippet__header");
-      const copyBtn = el("button", "", "Copy");
+      const copyBtn = el("button", "", item.latest_import ? "Latest" : "Copy");
       copyBtn.type = "button";
-      copyBtn.setAttribute("aria-label", `Copy ${item.import}`);
-      copyBtn.addEventListener("click", () => copyText(item.import));
+      copyBtn.setAttribute("aria-label", `Copy ${shown}`);
+      copyBtn.addEventListener("click", () => copyText(shown));
       header.append(copyBtn);
+      if (item.latest_import) {
+        const reviewedBtn = el("button", "", "Reviewed");
+        reviewedBtn.type = "button";
+        reviewedBtn.title = "Copy the reviewed compatibility pin";
+        reviewedBtn.setAttribute("aria-label", `Copy reviewed pin ${item.import}`);
+        reviewedBtn.addEventListener("click", () => copyText(item.import));
+        header.append(reviewedBtn);
+      }
       snippet.append(pre, header);
       panel.append(snippet);
+      if (!item.latest_import && hasNewerHubVersion(item)) {
+        const note = el("a", "plugin-card__source-label",
+          `Latest ${item.hub.latest.version} changed this module path · inspect on Hub`);
+        note.href = `https://hub.bend-lang.com/n/${item.hub.name}`;
+        note.target = "_blank";
+        note.rel = "noopener noreferrer";
+        panel.append(note);
+      }
     }
     install.addEventListener("click", () => {
       if (multiple) {
@@ -227,7 +327,7 @@ function card(pkg) {
         install.textContent = panel.hidden ? "Choose import" : "Hide imports";
         install.setAttribute("aria-label", `${panel.hidden ? "Choose import" : "Hide imports"} for ${pkg.name}`);
       } else {
-        copyText(imports[0].import);
+        copyText(preferredImport(first));
         panel.hidden = false;
       }
       install.setAttribute("aria-expanded", String(!panel.hidden));
@@ -273,17 +373,18 @@ function render() {
   const query = state.query.trim().toLowerCase();
   clearSearch.hidden = !state.query;
   if (state.status !== "ready") return;
-  let rows = state.packages.filter((pkg) => {
-    const hay = searchText(pkg);
-    return (
-      (!query || hay.includes(query)) &&
-      (state.category === "all" || pkg.category === state.category) &&
-      (state.source === "all" || pkg.source === state.source)
-    );
+  let scored = state.packages.map((pkg) => ({ pkg, score: searchScore(pkg, query) })).filter(({ pkg, score }) => (
+    (!query || score >= 0) &&
+    (state.category === "all" || pkg.category === state.category) &&
+    (state.source === "all" || pkg.source === state.source)
+  ));
+  scored.sort((a, b) => {
+    if (query && b.score !== a.score) return b.score - a.score;
+    return state.sort === "name"
+      ? a.pkg.name.localeCompare(b.pkg.name)
+      : (b.pkg.stars ?? 0) - (a.pkg.stars ?? 0);
   });
-  rows = [...rows].sort((a, b) =>
-    state.sort === "name" ? a.name.localeCompare(b.name) : (b.stars ?? 0) - (a.stars ?? 0),
-  );
+  const rows = scored.map(({ pkg }) => pkg);
 
   chips.replaceChildren();
   const active = activeChips();

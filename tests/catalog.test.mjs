@@ -36,6 +36,7 @@ function fixture() {
     [HUB + "/name/reviewed", Buffer.from(JSON.stringify({ name: "reviewed", owner_login: "owner", latest: { version: "2.0.0.0", hash, desc: "Newer unreviewed version.", entry: "main.bend" } }))],
     [HUB + "/name/discovered", Buffer.from(JSON.stringify({ name: "discovered", owner_login: "owner", latest: { version: "1.0.0.0", hash: otherHash, desc: "Official description.", entry: "" } }))],
     [HUB + "/name/reviewed@1.0.0.0", Buffer.from(hash)],
+    [HUB + "/name/reviewed@2.0.0.0", Buffer.from(hash)],
     [HUB + "/name/discovered@1.0.0.0", Buffer.from(otherHash)],
     [HUB + "/" + hash + "/manifest", manifest],
     [HUB + "/" + hash + "/main.bend", code],
@@ -77,6 +78,10 @@ test("full refresh preserves a reviewed older pin and does not invent a missing 
   assert.equal(result.catalog.generated_at, "2026-10-30T00:00:00Z");
   const reviewed = result.catalog.packages.find((row) => row.name === "reviewed");
   assert.equal(reviewed.publication.package, "reviewed@1.0.0.0");
+  assert.equal(reviewed.latest_import, "import reviewed@2.0.0.0/main.bend as Main");
+  assert.equal(reviewed.hub.name, "reviewed");
+  assert.equal(reviewed.hub.latest.version, "2.0.0.0");
+  assert.equal(reviewed.hub.latest.hash, hash);
   assert.equal(result.catalog.packages.filter((row) => row.name === "reviewed").length, 1);
   const found = result.catalog.packages.find((row) => row.name === "discovered");
   assert.equal(found.import, null);
@@ -87,6 +92,21 @@ test("full refresh preserves a reviewed older pin and does not invent a missing 
   const second = await refreshCatalog(result.catalog, awesome(), request, result.catalog.generated_at);
   assert.deepEqual(second.catalog, result.catalog, "A second refresh must preserve the same inventory");
   assert.throws(() => validateCatalog({ ...result.catalog, packages: [{ ...found, import: "import discovered@1.0.0.0/other.bend as Other" }] }), /without an entry/);
+});
+
+test("a newer official version is not copied when the reviewed module path disappeared", async () => {
+  const { request, data } = fixture();
+  const latest = JSON.parse(data.get(HUB + "/name/reviewed"));
+  latest.latest = { version: "2.0.0.0", hash: otherHash, desc: "New layout.", entry: "other.bend" };
+  data.set(HUB + "/name/reviewed", Buffer.from(JSON.stringify(latest)));
+  data.set(HUB + "/name/reviewed@2.0.0.0", Buffer.from(otherHash));
+  const result = await refreshCatalog(existing, awesome(), request);
+  const reviewed = result.catalog.packages.find((row) => row.name === "reviewed");
+  assert.equal(reviewed.latest_import, undefined);
+  assert.equal(reviewed.hub.latest.version, "2.0.0.0");
+  assert.equal(reviewed.hub.latest.entry, "other.bend");
+  assert.equal(reviewed.import, "import reviewed@1.0.0.0/main.bend as Main");
+  validateCatalog(result.catalog);
 });
 
 test("standalone reviewed hash packages survive without inferring identity from display names", async () => {
@@ -244,9 +264,16 @@ test("every reviewed module remains copyable on one card, with exact secondary p
   assert.equal(repeated.import, imports[0], "Repeated mentions must preserve the first import alias");
   assert.equal(repeated.additional_imports.length, 2);
   data.set(HUB + "/name/discovered@0.5.0.0", Buffer.from(otherHash));
+  const nextCode = Buffer.from("def main = 43\n");
+  const nextManifest = Buffer.from(digest(nextCode) + " other.bend\n");
+  const nextHash = "0x" + digest(nextManifest).slice(0, 32);
   const latest = JSON.parse(data.get(HUB + "/name/discovered"));
-  latest.latest.hash = "0x" + "a".repeat(32);
+  latest.latest.hash = nextHash;
+  latest.latest.entry = "other.bend";
   data.set(HUB + "/name/discovered", Buffer.from(JSON.stringify(latest)));
+  data.set(HUB + "/name/discovered@1.0.0.0", Buffer.from(nextHash));
+  data.set(HUB + "/" + nextHash + "/manifest", nextManifest);
+  data.set(HUB + "/" + nextHash + "/other.bend", nextCode);
   const result = await refreshCatalog(existing, source, request, "2026-10-30T00:00:00Z");
   const row = result.catalog.packages.find((item) => item.id === "reviewed");
   const offered = [row, ...row.additional_imports];
@@ -259,7 +286,8 @@ test("every reviewed module remains copyable on one card, with exact secondary p
   ]);
   assert.equal(offered.length, parseAwesome(source).references.length, "Every source reference needs a copyable import");
   assert.deepEqual(row.additional_imports[1].publication.aliases, ["reviewed@2.0.0.0"]);
-  assert.ok(!seen.includes(HUB + "/name/discovered@1.0.0.0"), "A reviewed secondary must not be replaced by latest");
+  assert.equal(row.additional_imports[0].latest_import, "import discovered@1.0.0.0/other.bend as Other");
+  assert.ok(seen.includes(HUB + "/name/discovered@1.0.0.0"), "Latest secondary should be verified without replacing the reviewed pin");
   const baseline = structuredClone(result.catalog);
   const second = await refreshCatalog(result.catalog, source, request, result.catalog.generated_at);
   assert.deepEqual(result.catalog, baseline, "Refresh must not mutate its baseline");
@@ -279,7 +307,7 @@ test("secondary imports require consistent publication metadata and unique copya
   assert.throws(() => check({ additional_imports: [{ ...secondary, publication: { ...secondary.publication, entry: "main.bend" } }] }), /disagrees/);
   assert.throws(() => check({ additional_imports: [{ ...secondary, publication: { ...secondary.publication, entry: null } }] }), /without an entry/);
   assert.throws(() => check({ additional_imports: [{ import: row.import, publication: row.publication }] }), /Duplicate import/);
-  assert.throws(() => check({ import: null, publication: { ...row.publication, entry: null } }), /need a primary import/);
+  assert.throws(() => check({ import: null, latest_import: undefined, publication: { ...row.publication, entry: null } }), /need a primary import/);
   assert.throws(() => check({ source: "git", import: null, publication: undefined }), /Source-only/);
 });
 
