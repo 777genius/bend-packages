@@ -36,6 +36,7 @@ function fixture() {
     [HUB + "/name/reviewed", Buffer.from(JSON.stringify({ name: "reviewed", owner_login: "owner", latest: { version: "2.0.0.0", hash, desc: "Newer unreviewed version.", entry: "main.bend" } }))],
     [HUB + "/name/discovered", Buffer.from(JSON.stringify({ name: "discovered", owner_login: "owner", latest: { version: "1.0.0.0", hash: otherHash, desc: "Official description.", entry: "" } }))],
     [HUB + "/name/reviewed@1.0.0.0", Buffer.from(hash)],
+    [HUB + "/name/reviewed@2.0.0.0", Buffer.from(hash)],
     [HUB + "/name/discovered@1.0.0.0", Buffer.from(otherHash)],
     [HUB + "/" + hash + "/manifest", manifest],
     [HUB + "/" + hash + "/main.bend", code],
@@ -77,6 +78,10 @@ test("full refresh preserves a reviewed older pin and does not invent a missing 
   assert.equal(result.catalog.generated_at, "2026-10-30T00:00:00Z");
   const reviewed = result.catalog.packages.find((row) => row.name === "reviewed");
   assert.equal(reviewed.publication.package, "reviewed@1.0.0.0");
+  assert.equal(reviewed.latest_import, "import reviewed@2.0.0.0/main.bend as Main");
+  assert.equal(reviewed.hub.name, "reviewed");
+  assert.equal(reviewed.hub.latest.version, "2.0.0.0");
+  assert.equal(reviewed.hub.latest.hash, hash);
   assert.equal(result.catalog.packages.filter((row) => row.name === "reviewed").length, 1);
   const found = result.catalog.packages.find((row) => row.name === "discovered");
   assert.equal(found.import, null);
@@ -87,6 +92,21 @@ test("full refresh preserves a reviewed older pin and does not invent a missing 
   const second = await refreshCatalog(result.catalog, awesome(), request, result.catalog.generated_at);
   assert.deepEqual(second.catalog, result.catalog, "A second refresh must preserve the same inventory");
   assert.throws(() => validateCatalog({ ...result.catalog, packages: [{ ...found, import: "import discovered@1.0.0.0/other.bend as Other" }] }), /without an entry/);
+});
+
+test("a newer official version is not copied when the reviewed module path disappeared", async () => {
+  const { request, data } = fixture();
+  const latest = JSON.parse(data.get(HUB + "/name/reviewed"));
+  latest.latest = { version: "2.0.0.0", hash: otherHash, desc: "New layout.", entry: "other.bend" };
+  data.set(HUB + "/name/reviewed", Buffer.from(JSON.stringify(latest)));
+  data.set(HUB + "/name/reviewed@2.0.0.0", Buffer.from(otherHash));
+  const result = await refreshCatalog(existing, awesome(), request);
+  const reviewed = result.catalog.packages.find((row) => row.name === "reviewed");
+  assert.equal(reviewed.latest_import, undefined);
+  assert.equal(reviewed.hub.latest.version, "2.0.0.0");
+  assert.equal(reviewed.hub.latest.entry, "other.bend");
+  assert.equal(reviewed.import, "import reviewed@1.0.0.0/main.bend as Main");
+  validateCatalog(result.catalog);
 });
 
 test("standalone reviewed hash packages survive without inferring identity from display names", async () => {
