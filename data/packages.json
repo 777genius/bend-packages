@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T06:28:54.641Z",
+  "generated_at": "2026-10-31T10:39:04.057Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -28,6 +28,16 @@
         "hash": "0xd1de66b5d9157913a654c39186289f3d",
         "entry": "lib.bend",
         "owner": "jkbennitt"
+      },
+      "hub": {
+        "name": "unified-nsga-iii",
+        "owner": "jkbennitt",
+        "latest": {
+          "version": "0.2.2.0",
+          "hash": "0xd1de66b5d9157913a654c39186289f3d",
+          "entry": null,
+          "description": "Unsga3Algorithm.Run — C# Unsga3.Algorithm.Unsga3Algorithm."
+        }
       }
     },
     {
@@ -78,6 +88,16 @@
         "hash": "0xbfb6718181103ac566eb0ff5308d47ac",
         "entry": "openai.bend",
         "owner": "gouveags"
+      },
+      "hub": {
+        "name": "bend-openai-sdk",
+        "owner": "gouveags",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xbfb6718181103ac566eb0ff5308d47ac",
+          "entry": null,
+          "description": "An unofficial OpenAI SDK for Bend, with typed requests, streaming, and tool calling."
+        }
       }
     },
     {
@@ -95,6 +115,16 @@
         "hash": "0xd2e0b2819dcc854bda21f542b308ada3",
         "entry": "anthropic.bend",
         "owner": "gouveags"
+      },
+      "hub": {
+        "name": "bend-anthropic-sdk",
+        "owner": "gouveags",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xd2e0b2819dcc854bda21f542b308ada3",
+          "entry": null,
+          "description": "An unofficial Anthropic SDK for Bend, with typed requests, streaming, and tool calling."
+        }
       }
     },
     {
@@ -112,6 +142,16 @@
         "hash": "0x888714bde93f46c139372bb9fdc57a19",
         "entry": "hex.bend",
         "owner": "777genius"
+      },
+      "hub": {
+        "name": "bend-encoding",
+        "owner": "777genius",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x888714bde93f46c139372bb9fdc57a19",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -129,6 +169,16 @@
         "hash": "0xe49a3e6521e1b71e55654a885f27bcc1",
         "entry": "parse.bend",
         "owner": "777genius"
+      },
+      "hub": {
+        "name": "bend-scanner",
+        "owner": "777genius",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xe49a3e6521e1b71e55654a885f27bcc1",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -160,6 +210,16 @@
         "aliases": [
           "bend-time-lib@0.4.0.1"
         ]
+      },
+      "hub": {
+        "name": "bend-datetime",
+        "owner": "777genius",
+        "latest": {
+          "version": "0.4.0.1",
+          "hash": "0x5d092e40b48ee431bc4b160e8797f9d5",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -177,6 +237,16 @@
         "hash": "0x5a44d8a54be79db966199d0fa91fe8e6",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "shake",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.8.0.0",
+          "hash": "0x5a44d8a54be79db966199d0fa91fe8e6",
+          "entry": "main.bend",
+          "description": "shake: a proven command-line argument parser for Bend 2, with subcommands and help."
+        }
       }
     },
     {
@@ -245,6 +315,16 @@
         "hash": "0xc5d9d3e28b79ea98be22eb42c7e37802",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "emerging-eztoml",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.10.0.0",
+          "hash": "0xc5d9d3e28b79ea98be22eb42c7e37802",
+          "entry": "main.bend",
+          "description": "eztoml: TOML for Bend 2, a proven parser and renderer for TOML documents."
+        }
       }
     },
     {
@@ -265,6 +345,16 @@
         "aliases": [
           "emerging-ezjson@1.4.0.0"
         ]
+      },
+      "hub": {
+        "name": "ezjson",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "1.4.0.0",
+          "hash": "0xdab377b48b4edd8247427c10e2120805",
+          "entry": "main.bend",
+          "description": "ezjson: JSON for Bend 2, with a parser, a printer and a pull cursor"
+        }
       }
     },
     {
@@ -282,6 +372,16 @@
         "hash": "0x4fcd94fa965aa1443134557fd075a483",
         "entry": "mylsm.bend",
         "owner": "FabianVegaA"
+      },
+      "hub": {
+        "name": "mylsm-lsm-store",
+        "owner": "FabianVegaA",
+        "latest": {
+          "version": "0.5.0.0",
+          "hash": "0x4fcd94fa965aa1443134557fd075a483",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -324,6 +424,16 @@
         "aliases": [
           "emerging-ezhttp@0.22.0.0"
         ]
+      },
+      "hub": {
+        "name": "ezhttp",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.22.0.0",
+          "hash": "0xedb2120a04a47dc18c3a756ec7c62750",
+          "entry": "main.bend",
+          "description": "ezhttp: HTTP/1.1 client and server for Bend 2, with auth, cookie and CORS helpers."
+        }
       }
     },
     {
@@ -341,6 +451,16 @@
         "hash": "0xd2dab0fbc9db2e9ba3da65dae724eb41",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "emerging-ezaudio",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.5.0.0",
+          "hash": "0xd2dab0fbc9db2e9ba3da65dae724eb41",
+          "entry": null,
+          "description": "ezaudio: audio for Bend 2, reading and writing WAV (RIFF PCM) and MP3 (MPEG-1 Layer III)."
+        }
       }
     },
     {
@@ -358,6 +478,16 @@
         "hash": "0x57618559b9b26dd8415f821176a3e692",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "emerging-ezimg",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "1.3.0.0",
+          "hash": "0x57618559b9b26dd8415f821176a3e692",
+          "entry": null,
+          "description": "ezimg: images for Bend 2, with PNG and baseline JPEG decode and encode"
+        }
       }
     },
     {
@@ -375,6 +505,16 @@
         "hash": "0xd9a2fae439ac7ff9e21e0853948f94fe",
         "entry": "src/containers/hash_table.bend",
         "owner": "Giulio2002"
+      },
+      "hub": {
+        "name": "bend-collections",
+        "owner": "Giulio2002",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0xd9a2fae439ac7ff9e21e0853948f94fe",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -392,7 +532,18 @@
         "hash": "0x78e347bf8d0582a322c01b02c727566f",
         "entry": "nat.bend",
         "owner": "MuhDur"
-      }
+      },
+      "hub": {
+        "name": "bend-mathlib",
+        "owner": "MuhDur",
+        "latest": {
+          "version": "0.8.1.0",
+          "hash": "0x8ae61ec3a6615abd35f196c07232ad28",
+          "entry": "all.bend",
+          "description": "bend-mathlib: machine-checked lemmas for Bend 2 (Nat, Bool, List, String, Maybe, equality, order, algebra, permutations, sorting, machine words); import one module, e.g. bend-mathlib@0.8.1.0/nat.bend."
+        }
+      },
+      "latest_import": "import bend-mathlib@0.8.1.0/nat.bend as Nat"
     },
     {
       "id": "k3ybladewielder-bendsr",
@@ -426,6 +577,16 @@
         "hash": "0x39d8166231e68361eb37e8bef9287b8a",
         "entry": "bend_tensors.bend",
         "owner": "Lorenzobattistela"
+      },
+      "hub": {
+        "name": "bend-tensors",
+        "owner": "Lorenzobattistela",
+        "latest": {
+          "version": "0.0.0.2",
+          "hash": "0x39d8166231e68361eb37e8bef9287b8a",
+          "entry": null,
+          "description": "bend_tensors: dense linear algebra with shapes in the types."
+        }
       }
     },
     {
@@ -485,6 +646,16 @@
             "hash": "0x8d023d286743ed45e417bf6c88051634",
             "entry": "http.bend",
             "owner": "paymog"
+          },
+          "hub": {
+            "name": "bend-kit-http",
+            "owner": "paymog",
+            "latest": {
+              "version": "0.38.2.0",
+              "hash": "0x8d023d286743ed45e417bf6c88051634",
+              "entry": "http.bend",
+              "description": "HTTP/1.1 and HTTP/2 client, with an HTTP/1.1 server. Source: https://github.com/paymog/bend-kit/tree/main/http"
+            }
           }
         }
       ],
@@ -493,6 +664,16 @@
         "hash": "0x632652e3c1c0183f12728faf3870bb68",
         "entry": "bytes.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-bytes",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.3.0",
+          "hash": "0x632652e3c1c0183f12728faf3870bb68",
+          "entry": "bytes.bend",
+          "description": "Byte buffers packed four bytes to a U32, with bounds-checked access. Source: https://github.com/paymog/bend-kit/tree/main/bytes"
+        }
       }
     },
     {
@@ -513,6 +694,16 @@
             "hash": "0x1fc67b41fabeabde819cdaa647758be1",
             "entry": "v.bend",
             "owner": "PedroAVJ"
+          },
+          "hub": {
+            "name": "near-v-framework",
+            "owner": "PedroAVJ",
+            "latest": {
+              "version": "0.7.0.0",
+              "hash": "0x1fc67b41fabeabde819cdaa647758be1",
+              "entry": null,
+              "description": ""
+            }
           }
         }
       ],
@@ -521,6 +712,16 @@
         "hash": "0x7bd24d368ebfcad9cc9e619cb6e740cd",
         "entry": "arc.bend",
         "owner": "PedroAVJ"
+      },
+      "hub": {
+        "name": "near-architecture",
+        "owner": "PedroAVJ",
+        "latest": {
+          "version": "0.9.1.0",
+          "hash": "0x7bd24d368ebfcad9cc9e619cb6e740cd",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -549,6 +750,16 @@
         "hash": "0x5f97f469d15c04a181dae0e4e64e1d3d",
         "entry": "src/class.bend",
         "owner": "nbardy"
+      },
+      "hub": {
+        "name": "bend-lawful-stdlib",
+        "owner": "nbardy",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x5f97f469d15c04a181dae0e4e64e1d3d",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -566,6 +777,16 @@
         "hash": "0x785d1b078f7f99a4ee2b9c7798398bc9",
         "entry": "ber.bend",
         "owner": "FabianVegaA"
+      },
+      "hub": {
+        "name": "ber-core-store",
+        "owner": "FabianVegaA",
+        "latest": {
+          "version": "0.1.2.0",
+          "hash": "0x785d1b078f7f99a4ee2b9c7798398bc9",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -583,6 +804,16 @@
         "hash": "0xeef3a8486d410ea6f25709aac90dbf40",
         "entry": "scan.bend",
         "owner": "costamatheus97"
+      },
+      "hub": {
+        "name": "bend-parallel",
+        "owner": "costamatheus97",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xeef3a8486d410ea6f25709aac90dbf40",
+          "entry": null,
+          "description": "histogram.bend: a parallel histogram of U32 keys into K buckets, with no"
+        }
       }
     },
     {
@@ -600,6 +831,16 @@
         "hash": "0x7a52b371e038cf76c1fc2e721c75bc4e",
         "entry": "core.bend",
         "owner": "nohzafk"
+      },
+      "hub": {
+        "name": "bend-schema-lib",
+        "owner": "nohzafk",
+        "latest": {
+          "version": "0.4.1.0",
+          "hash": "0x7a52b371e038cf76c1fc2e721c75bc4e",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -634,6 +875,16 @@
         "hash": "0xb840f3eebe5e51739a9b3b4be210b968",
         "entry": "sqlite.bend",
         "owner": "subtleGradient"
+      },
+      "hub": {
+        "name": "bend-over-sqlite",
+        "owner": "subtleGradient",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xb840f3eebe5e51739a9b3b4be210b968",
+          "entry": null,
+          "description": "SQLite connections, typed values, prepared statements and transactions for C and Wasm."
+        }
       }
     },
     {
@@ -651,6 +902,16 @@
         "hash": "0x665ae73e3f32ce98f72c7cf6844cfd3f",
         "entry": "trace_context.bend",
         "owner": "LucasGois1"
+      },
+      "hub": {
+        "name": "bend-trace-context",
+        "owner": "LucasGois1",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x665ae73e3f32ce98f72c7cf6844cfd3f",
+          "entry": null,
+          "description": "W3C Trace Context Level 2 propagation, with its rules proved as laws. Source: https://github.com/LucasGois1/bend-trace-context"
+        }
       }
     },
     {
@@ -668,6 +929,16 @@
         "hash": "0x64aa7934c3659ee6a818595494b38921",
         "entry": "core.bend",
         "owner": "nohzafk"
+      },
+      "hub": {
+        "name": "bend-csv-parser",
+        "owner": "nohzafk",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x64aa7934c3659ee6a818595494b38921",
+          "entry": null,
+          "description": "Fast CSV parser with proofs"
+        }
       }
     },
     {
@@ -710,6 +981,16 @@
             "hash": "0x6538b6a56d11b5a4d65ef7d8b18c1f9f",
             "entry": "main.bend",
             "owner": "nuxyel"
+          },
+          "hub": {
+            "name": "bend-ml-tensor-gpu",
+            "owner": "nuxyel",
+            "latest": {
+              "version": "0.1.5.0",
+              "hash": "0x6538b6a56d11b5a4d65ef7d8b18c1f9f",
+              "entry": "main.bend",
+              "description": "bend-ml-tensor-gpu: tensor-array's products on the GPU, with tensor-array's bits."
+            }
           }
         },
         {
@@ -719,6 +1000,16 @@
             "hash": "0x5240900a1da5d0b346237e15fbea87a9",
             "entry": "main.bend",
             "owner": "nuxyel"
+          },
+          "hub": {
+            "name": "bend-ml-binary-read",
+            "owner": "nuxyel",
+            "latest": {
+              "version": "0.2.0.0",
+              "hash": "0x5240900a1da5d0b346237e15fbea87a9",
+              "entry": "main.bend",
+              "description": "bend-ml-binary-read: little-endian F32 numbers from a file, read straight into an Array<F32>."
+            }
           }
         }
       ],
@@ -727,6 +1018,16 @@
         "hash": "0xf4dfe0b415f12cd7b6b3e20aa7cc5aa0",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-tensor-array",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.18.0",
+          "hash": "0xf4dfe0b415f12cd7b6b3e20aa7cc5aa0",
+          "entry": "main.bend",
+          "description": "bend-ml-tensor-array: tensors over a flat Array<F32>, with the shape in the type."
+        }
       }
     },
     {
@@ -869,6 +1170,16 @@
             "hash": "0xd6aaab858a4fbd1461bd0fee27b97184",
             "entry": "tensor_training.bend",
             "owner": "Kaz9487"
+          },
+          "hub": {
+            "name": "stelliferous",
+            "owner": "Kaz9487",
+            "latest": {
+              "version": "0.0.3.0",
+              "hash": "0xd6aaab858a4fbd1461bd0fee27b97184",
+              "entry": "tensor_training.bend",
+              "description": "Stelliferous training: convolution, batch norm, activation and pool layers."
+            }
           }
         }
       ],
@@ -877,6 +1188,16 @@
         "hash": "0xd6aaab858a4fbd1461bd0fee27b97184",
         "entry": "tensor_f32.bend",
         "owner": "Kaz9487"
+      },
+      "hub": {
+        "name": "stelliferous",
+        "owner": "Kaz9487",
+        "latest": {
+          "version": "0.0.3.0",
+          "hash": "0xd6aaab858a4fbd1461bd0fee27b97184",
+          "entry": "tensor_training.bend",
+          "description": "Stelliferous training: convolution, batch norm, activation and pool layers."
+        }
       }
     },
     {
@@ -894,6 +1215,16 @@
         "hash": "0xd65851cd1dee629f72e346cda168bc1d",
         "entry": "lib.bend",
         "owner": "Genarito"
+      },
+      "hub": {
+        "name": "bend-edit-distance",
+        "owner": "Genarito",
+        "latest": {
+          "version": "0.2.2.0",
+          "hash": "0xd65851cd1dee629f72e346cda168bc1d",
+          "entry": "lib.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -922,6 +1253,16 @@
         "hash": "0x1689e5deb278c16abd3bd45eac101ef3",
         "entry": "src/tensor/core.bend",
         "owner": "aaaxn"
+      },
+      "hub": {
+        "name": "bendtorch-core",
+        "owner": "aaaxn",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x1689e5deb278c16abd3bd45eac101ef3",
+          "entry": "bendtorch.bend",
+          "description": "bendtorch: a PyTorch-like tensor library in Bend (F32 tensors, matmul, autograd tape, losses, SGD), with its laws and proofs; import one module, e.g. bendtorch-core@0.1.0.0/src/tensor/core.bend."
+        }
       }
     },
     {
@@ -939,6 +1280,16 @@
         "hash": "0x15cc157649e26d54c7c549cb80d4a2a9",
         "entry": "bytes.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-bytes",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.1.1",
+          "hash": "0x15cc157649e26d54c7c549cb80d4a2a9",
+          "entry": "package.bend",
+          "description": "bend-osdev-bytes: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -959,6 +1310,16 @@
             "hash": "0x9ba47907befd07cbb90e20f7807542f3",
             "entry": "ustar.bend",
             "owner": "nicolas-abril"
+          },
+          "hub": {
+            "name": "gralha-ustar",
+            "owner": "nicolas-abril",
+            "latest": {
+              "version": "0.1.0.0",
+              "hash": "0x9ba47907befd07cbb90e20f7807542f3",
+              "entry": "ustar.bend",
+              "description": "gralha-ustar: POSIX ustar archives over gralha-byte-words. header builds"
+            }
           }
         }
       ],
@@ -967,6 +1328,16 @@
         "hash": "0x2370002bb215388f2e71cae632c87c34",
         "entry": "scan.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-text-scan",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x2370002bb215388f2e71cae632c87c34",
+          "entry": "scan.bend",
+          "description": "Text scanning, number parsing (the SVG/CSS number grammar, units, hex) and"
+        }
       }
     },
     {
@@ -1023,6 +1394,16 @@
         "hash": "0xe3a7f78ee5245da17fe27e3556f94e74",
         "entry": "visgraph.bend",
         "owner": "aaaxn"
+      },
+      "hub": {
+        "name": "bend-visgraph",
+        "owner": "aaaxn",
+        "latest": {
+          "version": "2.0.0.0",
+          "hash": "0xe3a7f78ee5245da17fe27e3556f94e74",
+          "entry": "bend_visgraph.bend",
+          "description": "ts2vg's visibility graphs of time series, in Bend2, on every CPU thread."
+        }
       }
     },
     {
@@ -1040,6 +1421,16 @@
         "hash": "0x9f97047b6ffb57443a7a2a2f0adefcbd",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-huggingface",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0x9f97047b6ffb57443a7a2a2f0adefcbd",
+          "entry": "main.bend",
+          "description": "mlbend-huggingface: a HuggingFace client for Bend 2."
+        }
       }
     },
     {
@@ -1057,6 +1448,16 @@
         "hash": "0xf3d145d639153c61b826e4f60d3c0dcd",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-datasets",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.6.0",
+          "hash": "0xf3d145d639153c61b826e4f60d3c0dcd",
+          "entry": "main.bend",
+          "description": "mlbend-datasets: the datasets of scikit-learn, fetched from the hub."
+        }
       }
     },
     {
@@ -1074,6 +1475,16 @@
         "hash": "0x9afaa60ee4d17706cb14d6ec20d1d4ae",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-metrics",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x9afaa60ee4d17706cb14d6ec20d1d4ae",
+          "entry": "main.bend",
+          "description": "mlbend-metrics: the evaluation surface of machine learning, natively in Bend 2."
+        }
       }
     },
     {
@@ -1113,6 +1524,16 @@
         "hash": "0xea477ac4399d6f3f46b9d25d99c1900c",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bendtorch",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "1.2.0.0",
+          "hash": "0xea477ac4399d6f3f46b9d25d99c1900c",
+          "entry": "package.bend",
+          "description": "The entry to publish: `bend package.bend --publish <name>@<version>` sends this file and everything it imports, so"
+        }
       }
     },
     {
@@ -1130,6 +1551,16 @@
         "hash": "0xcb00b2b8895301b86fb365a9ceb6e119",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "bolt",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "1.21.0.0",
+          "hash": "0xcb00b2b8895301b86fb365a9ceb6e119",
+          "entry": "main.bend",
+          "description": "bolt: a linter, checker and language server for Bend 2."
+        }
       }
     },
     {
@@ -1162,7 +1593,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -1224,6 +1655,16 @@
         "hash": "0x8e26a6f8c31689519e618374376ee3dd",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "snap",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "1.5.0.0",
+          "hash": "0x8e26a6f8c31689519e618374376ee3dd",
+          "entry": "main.bend",
+          "description": "snap: run programs from Bend 2 with argv as a list of strings, no shell."
+        }
       }
     },
     {
@@ -1770,6 +2211,16 @@
         "hash": "0xa67b4e5d151887b6bff62a913c86b60d",
         "entry": "cli.bend",
         "owner": "viridale"
+      },
+      "hub": {
+        "name": "cli",
+        "owner": "viridale",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0xa67b4e5d151887b6bff62a913c86b60d",
+          "entry": "run.bend",
+          "description": "Purpose: the public IO shell: probes the host, runs Cli.eval, writes its"
+        }
       }
     },
     {
@@ -1831,6 +2282,16 @@
         "hash": "0x8d817ff76bee5f8a754f0b8cceb7d07a",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "ezx",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "1.13.0.0",
+          "hash": "0x8d817ff76bee5f8a754f0b8cceb7d07a",
+          "entry": "main.bend",
+          "description": "ezx: ez, the package manager for Bend 2."
+        }
       }
     },
     {
@@ -1852,7 +2313,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -1863,7 +2324,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -1984,7 +2445,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -1995,7 +2456,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -2006,7 +2467,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": 24576,
+      "stars": 24578,
       "import": null
     },
     {
@@ -2310,6 +2771,16 @@
         "hash": "0x7ac61588953ec1faa925002b4f879bcf",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-llama",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x7ac61588953ec1faa925002b4f879bcf",
+          "entry": "main.bend",
+          "description": "bend-ml-llama: Llama-architecture language models (SmolLM2 and the rest of the family) in Bend 2, with the"
+        }
       }
     },
     {
@@ -2941,6 +3412,16 @@
         "hash": "0xf090bec5d73bd2d01f26c93f586673b1",
         "entry": null,
         "owner": "Lorenzobattistela"
+      },
+      "hub": {
+        "name": "bend-blas-lapack",
+        "owner": "Lorenzobattistela",
+        "latest": {
+          "version": "0.0.0.1",
+          "hash": "0xf090bec5d73bd2d01f26c93f586673b1",
+          "entry": null,
+          "description": "bend-blas: BLAS, LAPACK and cuBLAS for Bend 2, as one def per routine"
+        }
       }
     },
     {
@@ -2958,6 +3439,16 @@
         "hash": "0x993b989cb899a5e5c6facb3d6fbccf8f",
         "entry": null,
         "owner": "Giulio2002"
+      },
+      "hub": {
+        "name": "bend-collections-laws",
+        "owner": "Giulio2002",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0x993b989cb899a5e5c6facb3d6fbccf8f",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -2975,6 +3466,16 @@
         "hash": "0x5c489f5d9646d7cc9aa3dd8137e9dc07",
         "entry": null,
         "owner": "Giulio2002"
+      },
+      "hub": {
+        "name": "bend-collections-laws-containers",
+        "owner": "Giulio2002",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0x5c489f5d9646d7cc9aa3dd8137e9dc07",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -2992,6 +3493,16 @@
         "hash": "0xa7e654f9780078ca65bf9e187da99d3e",
         "entry": null,
         "owner": "Giulio2002"
+      },
+      "hub": {
+        "name": "bend-collections-laws-crypto",
+        "owner": "Giulio2002",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0xa7e654f9780078ca65bf9e187da99d3e",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -3009,6 +3520,16 @@
         "hash": "0xf86f5f1d9a594d5a5cff999100e01d03",
         "entry": null,
         "owner": "Giulio2002"
+      },
+      "hub": {
+        "name": "bend-collections-laws-math",
+        "owner": "Giulio2002",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0xf86f5f1d9a594d5a5cff999100e01d03",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -3026,6 +3547,16 @@
         "hash": "0xb03a6159aa2131a6271ae6f2503d02f4",
         "entry": "archive.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-archive",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.5.1.0",
+          "hash": "0xb03a6159aa2131a6271ae6f2503d02f4",
+          "entry": "archive.bend",
+          "description": "ZIP archives read over Bytes: stored and DEFLATE entries, checked against their CRC-32 and sizes. Source: https://github.com/paymog/bend-kit/tree/main/archive"
+        }
       }
     },
     {
@@ -3043,6 +3574,16 @@
         "hash": "0xdb1e37671e3c0872f3bf78d730b5b176",
         "entry": "authz.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-authz",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xdb1e37671e3c0872f3bf78d730b5b176",
+          "entry": "authz.bend",
+          "description": "Pure authorization policies: deny-overrides, default deny, intersection, and fail-closed missing context."
+        }
       }
     },
     {
@@ -3060,6 +3601,16 @@
         "hash": "0xbf5d8bf07d7411858acb5142889fc4d7",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-bignum",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xbf5d8bf07d7411858acb5142889fc4d7",
+          "entry": null,
+          "description": "Arbitrary-precision signed integers: add, sub, mul, divmod, pow, modpow, gcd and decimal text."
+        }
       }
     },
     {
@@ -3077,6 +3628,16 @@
         "hash": "0xeffdf0a43b147136e34069ec484dac5e",
         "entry": "bits.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-bits",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xeffdf0a43b147136e34069ec484dac5e",
+          "entry": "bits.bend",
+          "description": "Bit readers and writers over Bytes, LSB-first (DEFLATE) or MSB-first (JPEG), and canonical Huffman decode tables. Source: https://github.com/paymog/bend-kit/tree/main/bits"
+        }
       }
     },
     {
@@ -3094,6 +3655,16 @@
         "hash": "0x1afe27789226a57428f7ceb2621e112e",
         "entry": "cache.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-cache",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x1afe27789226a57428f7ceb2621e112e",
+          "entry": "cache.bend",
+          "description": "Cache validity: expiry, negative results, invalidation, and generation-safe fetch completion. Source: https://github.com/paymog/bend-kit/tree/main/cache"
+        }
       }
     },
     {
@@ -3111,6 +3682,16 @@
         "hash": "0xc9876729a38230f04be099f93dc1236d",
         "entry": "camber.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-camber",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.15.0.1",
+          "hash": "0xc9876729a38230f04be099f93dc1236d",
+          "entry": "camber.bend",
+          "description": "Fixed prepared HTTP applications and bounded affine dependency bundles."
+        }
       }
     },
     {
@@ -3128,6 +3709,16 @@
         "hash": "0xce226e215fd8376197a24b17bdc4cb2b",
         "entry": "cbor.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-cbor",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0xce226e215fd8376197a24b17bdc4cb2b",
+          "entry": "cbor.bend",
+          "description": "CBOR (RFC 8949) values encoded and decoded over Bytes. Source: https://github.com/paymog/bend-kit/tree/main/cbor"
+        }
       }
     },
     {
@@ -3145,6 +3736,16 @@
         "hash": "0x2e75a06e0acd57f098569f07516e8aae",
         "entry": "collections.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-collections",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.4.1",
+          "hash": "0x2e75a06e0acd57f098569f07516e8aae",
+          "entry": "collections.bend",
+          "description": "Generic collections: maps, a vector, a deque and a priority queue. Source: https://github.com/paymog/bend-kit/tree/main/collections"
+        }
       }
     },
     {
@@ -3162,6 +3763,16 @@
         "hash": "0x44a014634a1ce42bf4fee9edf6084000",
         "entry": "commands.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-commands",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0x44a014634a1ce42bf4fee9edf6084000",
+          "entry": "commands.bend",
+          "description": "Retry-safe commands: deduplicate by command id, replay recorded results, and commit keyed rows, record, and outbox in one SQLite transaction. Source: https://github.com/paymog/bend-kit/tree/main/commands"
+        }
       }
     },
     {
@@ -3179,6 +3790,16 @@
         "hash": "0x67bc295335339eaf9387ddb5aa34190a",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-concurrency",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x67bc295335339eaf9387ddb5aa34190a",
+          "entry": null,
+          "description": "Parallel map and reduce over lists and arrays, a worker pool, select over channels, and timeouts."
+        }
       }
     },
     {
@@ -3196,6 +3817,16 @@
         "hash": "0x509ae92f1a46e8598177a2eea991493f",
         "entry": "crdt.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-crdt",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x509ae92f1a46e8598177a2eea991493f",
+          "entry": "crdt.bend",
+          "description": "Replicated data types: grow-only counters with proved merges. Source: https://github.com/paymog/bend-kit/tree/main/crdt"
+        }
       }
     },
     {
@@ -3213,6 +3844,16 @@
         "hash": "0xcf01954bfd429a5caf3bc264b85d149c",
         "entry": "crypto.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-crypto",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.2.2",
+          "hash": "0xcf01954bfd429a5caf3bc264b85d149c",
+          "entry": "crypto.bend",
+          "description": "Digests, HMAC, HKDF, PBKDF2, scrypt, AEAD, and RSA and ECDSA signatures through OpenSSL 3 libcrypto, plus OS secure random bytes. Source: https://github.com/paymog/bend-kit/tree/main/crypto"
+        }
       }
     },
     {
@@ -3230,6 +3871,16 @@
         "hash": "0x5a0c8a3aeaac23c8e192c48890b1d961",
         "entry": "csv.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-csv",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x5a0c8a3aeaac23c8e192c48890b1d961",
+          "entry": "csv.bend",
+          "description": "CSV (RFC 4180) over bytes: a record cursor, a whole-document parse, and an encoder. Source: https://github.com/paymog/bend-kit/tree/main/csv"
+        }
       }
     },
     {
@@ -3247,6 +3898,16 @@
         "hash": "0xdbc01a0099d30ce4f89d905b5f1c9e76",
         "entry": "dns.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-dns",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.7.0.0",
+          "hash": "0xdbc01a0099d30ce4f89d905b5f1c9e76",
+          "entry": "dns.bend",
+          "description": "DNS codec and host lookup. Source: https://github.com/paymog/bend-kit/tree/main/dns"
+        }
       }
     },
     {
@@ -3264,6 +3925,16 @@
         "hash": "0xd467fe9d46bdf49ca4040e12ad976043",
         "entry": "encoding.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-encoding",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.5.0.0",
+          "hash": "0xd467fe9d46bdf49ca4040e12ad976043",
+          "entry": "encoding.bend",
+          "description": "UTF-8 encoding and decoding between text and Bytes. Source: https://github.com/paymog/bend-kit/tree/main/encoding"
+        }
       }
     },
     {
@@ -3281,6 +3952,16 @@
         "hash": "0x737bc789819508f0aebd4ad15d19e26f",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-f64",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x737bc789819508f0aebd4ad15d19e26f",
+          "entry": null,
+          "description": "IEEE 754 binary64 add, sub, mul, and div. Source: https://github.com/paymog/bend-kit/tree/main/f64"
+        }
       }
     },
     {
@@ -3298,6 +3979,16 @@
         "hash": "0xc022f29d7abb4bf4d2f497d0b5159f5a",
         "entry": "files.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-files",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.1.0",
+          "hash": "0xc022f29d7abb4bf4d2f497d0b5159f5a",
+          "entry": "files.bend",
+          "description": "POSIX paths plus directory and metadata effects. Source: https://github.com/paymog/bend-kit/tree/main/files"
+        }
       }
     },
     {
@@ -3315,6 +4006,16 @@
         "hash": "0xea2956cd4e05ac318643319cb7fb3c29",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-fmt",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xea2956cd4e05ac318643319cb7fb3c29",
+          "entry": null,
+          "description": "Text formatting: a string builder, format, padding, and shortest F32 printing."
+        }
       }
     },
     {
@@ -3332,6 +4033,16 @@
         "hash": "0x3157e95854f8621cff1d5c072e645c5a",
         "entry": "gateway.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-gateway",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x3157e95854f8621cff1d5c072e645c5a",
+          "entry": "gateway.bend",
+          "description": "A guarded read-through gateway: authorize, admit, serve from cache, and fetch on a miss. Source: https://github.com/paymog/bend-kit/tree/main/gateway"
+        }
       }
     },
     {
@@ -3349,6 +4060,16 @@
         "hash": "0xcebeb1685c5a25d66eb140be2a7d5270",
         "entry": "hairpin.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-hairpin",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.13.0.1",
+          "hash": "0xcebeb1685c5a25d66eb140be2a7d5270",
+          "entry": "hairpin.bend",
+          "description": "Hairpin: an HTTP client with a base URL, default headers, a pool, cookies, mTLS, redirects, and proven retries. Source: https://github.com/paymog/bend-kit/tree/main/hairpin"
+        }
       }
     },
     {
@@ -3366,6 +4087,16 @@
         "hash": "0x5b6ad04bca944115c062500008ac429e",
         "entry": "hash.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-hash",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.2",
+          "hash": "0x5b6ad04bca944115c062500008ac429e",
+          "entry": "hash.bend",
+          "description": "Non-cryptographic hashes over Bytes: FNV-1a, xxHash, SipHash-1-3, CRC-32, and Adler-32. Source: https://github.com/paymog/bend-kit/tree/main/hash"
+        }
       }
     },
     {
@@ -3383,6 +4114,16 @@
         "hash": "0xcab783baa57a7e43851a978aef74e98c",
         "entry": "http2.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-http2",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0xcab783baa57a7e43851a978aef74e98c",
+          "entry": "http2.bend",
+          "description": "RFC 9113 HTTP/2 client and frames, with RFC 7541 HPACK over packed Bytes."
+        }
       }
     },
     {
@@ -3400,6 +4141,16 @@
         "hash": "0x4eed9d7ac6ece61523d747a9d804e4f0",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-int",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x4eed9d7ac6ece61523d747a9d804e4f0",
+          "entry": null,
+          "description": "Fixed-width integers U8, U16, U64, I32 and I64: wrapping, checked and saturating arithmetic, and text in radix 2 to 36."
+        }
       }
     },
     {
@@ -3417,6 +4168,16 @@
         "hash": "0xaffc49d02c2d4450c3672c0c80f393fd",
         "entry": "journal.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-journal",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.1.0",
+          "hash": "0xaffc49d02c2d4450c3672c0c80f393fd",
+          "entry": "journal.bend",
+          "description": "Append-only journal: checksummed frames, fsync'd appends, and crash recovery of the committed prefix. Source: https://github.com/paymog/bend-kit/tree/main/journal"
+        }
       }
     },
     {
@@ -3434,6 +4195,16 @@
         "hash": "0x37aacddc1dcb57464b8b5ac6c397bd64",
         "entry": "json.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-json",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.7.0.0",
+          "hash": "0x37aacddc1dcb57464b8b5ac6c397bd64",
+          "entry": "json.bend",
+          "description": "JSON values, parsed and encoded as RFC 8259. Source: https://github.com/paymog/bend-kit/tree/main/json"
+        }
       }
     },
     {
@@ -3451,6 +4222,16 @@
         "hash": "0x9ed0050acb7e380a471cbeb97c648c0e",
         "entry": "jwt.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-jwt",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.11.0.1",
+          "hash": "0x9ed0050acb7e380a471cbeb97c648c0e",
+          "entry": "jwt.bend",
+          "description": "JSON Web Tokens: HS256/384/512, RS256, and ES256 compact JWS sign and verify, claim checks, and JWKS keys over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/jwt"
+        }
       }
     },
     {
@@ -3468,6 +4249,16 @@
         "hash": "0x917f5ed79ae87f89944206ae34045b4e",
         "entry": "lemmas.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-lemmas",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0x917f5ed79ae87f89944206ae34045b4e",
+          "entry": "lemmas.bend",
+          "description": "Proved laws that relate Word and U32 arithmetic to Nat. Source: https://github.com/paymog/bend-kit/tree/main/lemmas"
+        }
       }
     },
     {
@@ -3485,6 +4276,16 @@
         "hash": "0x4241bd59e0fba0c2cb4ad0636e5bce89",
         "entry": "llm.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-llm",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.13.0.1",
+          "hash": "0x4241bd59e0fba0c2cb4ad0636e5bce89",
+          "entry": "llm.bend",
+          "description": "LLM client for the Anthropic Messages and OpenAI Chat Completions APIs, with SSE streaming. Source: https://github.com/paymog/bend-kit/tree/main/llm"
+        }
       }
     },
     {
@@ -3502,6 +4303,16 @@
         "hash": "0xc0d27ed88527f11fd9706ba756b69e38",
         "entry": "migrate.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-migrate",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0xc0d27ed88527f11fd9706ba756b69e38",
+          "entry": "migrate.bend",
+          "description": "Versioned subscription records: validated JSON decode, proved migrations, and encode. Source: https://github.com/paymog/bend-kit/tree/main/migrate"
+        }
       }
     },
     {
@@ -3519,6 +4330,16 @@
         "hash": "0x39fdf1600978e53d86e47fb711ba28b3",
         "entry": "multipart.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-multipart",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x39fdf1600978e53d86e47fb711ba28b3",
+          "entry": "multipart.bend",
+          "description": "multipart/form-data (RFC 7578): an encoder with a secure random boundary and a streaming decoder over Bytes. Source: https://github.com/paymog/bend-kit/tree/main/multipart"
+        }
       }
     },
     {
@@ -3536,6 +4357,16 @@
         "hash": "0x2997b34519267605d9e11af48ae387c7",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-netip",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x2997b34519267605d9e11af48ae387c7",
+          "entry": null,
+          "description": "IPv4 and IPv6 address values: strict parsing, RFC 5952 text, and CIDR prefixes. Source: https://github.com/paymog/bend-kit/tree/main/netip"
+        }
       }
     },
     {
@@ -3553,6 +4384,16 @@
         "hash": "0xf0e23e9c9480f1483369504991b64bfc",
         "entry": "notch.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-notch",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0xf0e23e9c9480f1483369504991b64bfc",
+          "entry": "notch.bend",
+          "description": "Leveled, structured logging: a logger value, key-value fields, and logfmt or JSON-lines output. Source: https://github.com/paymog/bend-kit/tree/main/notch"
+        }
       }
     },
     {
@@ -3570,6 +4411,16 @@
         "hash": "0xe5e42278c17e49602dedb920b82e4180",
         "entry": "oauth2.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-oauth2",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.11.0.1",
+          "hash": "0xe5e42278c17e49602dedb920b82e4180",
+          "entry": "oauth2.bend",
+          "description": "OAuth 2.0 client credentials, refresh, and authorization code with PKCE over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/oauth2"
+        }
       }
     },
     {
@@ -3587,6 +4438,16 @@
         "hash": "0x154e0a68ef9a0223bacaacefc589cad8",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-parse",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x154e0a68ef9a0223bacaacefc589cad8",
+          "entry": null,
+          "description": "Parser combinators over text, with positioned errors. Source: https://github.com/paymog/bend-kit/tree/main/parse"
+        }
       }
     },
     {
@@ -3604,6 +4465,16 @@
         "hash": "0xe72feeb9a371f3cb7046962c7f395d75",
         "entry": "postgres.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-postgres",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0xe72feeb9a371f3cb7046962c7f395d75",
+          "entry": "postgres.bend",
+          "description": "Postgres client: protocol 3.0 over TCP or TLS, SCRAM-SHA-256, prepared queries, and a pool. Source: https://github.com/paymog/bend-kit/tree/main/postgres"
+        }
       }
     },
     {
@@ -3621,6 +4492,16 @@
         "hash": "0x14774f6925088c71c8ef80532af4b4ea",
         "entry": "process.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-process",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.5.0.0",
+          "hash": "0x14774f6925088c71c8ef80532af4b4ea",
+          "entry": "process.bend",
+          "description": "Subprocesses and process-level OS access, with byte-exact input and output."
+        }
       }
     },
     {
@@ -3638,6 +4519,16 @@
         "hash": "0x8505247e2ece13e96984c45de190878c",
         "entry": "property.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-property",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0x8505247e2ece13e96984c45de190878c",
+          "entry": "property.bend",
+          "description": "Reproducible property checks with generated inputs and greedy shrinking."
+        }
       }
     },
     {
@@ -3655,6 +4546,16 @@
         "hash": "0xde6cf0d1fc0b3a3ad4eeb8380d10f3c7",
         "entry": "protobuf.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-protobuf",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0xde6cf0d1fc0b3a3ad4eeb8380d10f3c7",
+          "entry": "protobuf.bend",
+          "description": "Pure bounded protobuf wire codec over Bytes. https://github.com/paymog/bend-kit/tree/main/protobuf"
+        }
       }
     },
     {
@@ -3672,6 +4573,16 @@
         "hash": "0x46b9429cbffa7a8c1111ce19c60a3d6a",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-random",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x46b9429cbffa7a8c1111ce19c60a3d6a",
+          "entry": null,
+          "description": "Seeded pseudo-random numbers: xoshiro128**, unbiased ranges, floats and shuffles. Not for cryptography."
+        }
       }
     },
     {
@@ -3689,6 +4600,16 @@
         "hash": "0x722298938e2241d314783699716672cb",
         "entry": "redis.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-redis",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x722298938e2241d314783699716672cb",
+          "entry": "redis.bend",
+          "description": "Redis and Valkey client: RESP3 over TCP or TLS, with pipelining and a pool. Source: https://github.com/paymog/bend-kit/tree/main/redis"
+        }
       }
     },
     {
@@ -3706,6 +4627,16 @@
         "hash": "0x1eb8d12d796afc9ee9a52f5812d014a8",
         "entry": "regex.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-regex",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.8.0.0",
+          "hash": "0x1eb8d12d796afc9ee9a52f5812d014a8",
+          "entry": "regex.bend",
+          "description": "Linear-time regular expressions: RE2 syntax, Pike VM, capture groups. Source: https://github.com/paymog/bend-kit/tree/main/regex"
+        }
       }
     },
     {
@@ -3723,6 +4654,16 @@
         "hash": "0x8ef64648a1ae4481382be5e5ce2a9fc8",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-resources",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x8ef64648a1ae4481382be5e5ce2a9fc8",
+          "entry": null,
+          "description": "Bounded capacity pools with affine reservations: reserve, release, split, and combine."
+        }
       }
     },
     {
@@ -3740,6 +4681,16 @@
         "hash": "0x14e48621ef66156b0eb652524b8594d4",
         "entry": "retry.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-retry",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x14e48621ef66156b0eb652524b8594d4",
+          "entry": "retry.bend",
+          "description": "Retry policy: a shared attempt budget, an operation deadline, bounded backoff, and a circuit breaker."
+        }
       }
     },
     {
@@ -3757,6 +4708,16 @@
         "hash": "0x9606cc4b1afb0de13a7da7c0f6fc3a82",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-router",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x9606cc4b1afb0de13a7da7c0f6fc3a82",
+          "entry": null,
+          "description": "Prepared HTTP routes with exact paths, validated registration, and path-first method selection. Source: https://github.com/paymog/bend-kit/tree/main/router"
+        }
       }
     },
     {
@@ -3774,6 +4735,16 @@
         "hash": "0x0b6e7368cef7f567455568708dcf376e",
         "entry": "runner.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-runner",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.13.0.1",
+          "hash": "0x0b6e7368cef7f567455568708dcf376e",
+          "entry": "runner.bend",
+          "description": "Durable job runner: a journaled scheduler queue, bounded by a resources pool, with retry and a breaker per target. Source: https://github.com/paymog/bend-kit/tree/main/runner"
+        }
       }
     },
     {
@@ -3791,6 +4762,16 @@
         "hash": "0xddf158a45b677a352eef521b11c25f57",
         "entry": "scheduler.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-scheduler",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.1.0",
+          "hash": "0xddf158a45b677a352eef521b11c25f57",
+          "entry": "scheduler.bend",
+          "description": "Pure deadline queues and bounded fixed-rate/fixed-delay recurrence over exact clock ticks."
+        }
       }
     },
     {
@@ -3808,6 +4789,16 @@
         "hash": "0x450da016e4b470c8debd79963b0d016c",
         "entry": "sigv4.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-sigv4",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.11.0.1",
+          "hash": "0x450da016e4b470c8debd79963b0d016c",
+          "entry": "sigv4.bend",
+          "description": "AWS Signature V4 signing and S3 object storage over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/sigv4"
+        }
       }
     },
     {
@@ -3825,6 +4816,16 @@
         "hash": "0x1dd647736fb09289bc1eed9825ef1113",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-sqlite",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x1dd647736fb09289bc1eed9825ef1113",
+          "entry": null,
+          "description": "Prepared SQLite statements through libsqlite3. Source: https://github.com/paymog/bend-kit/tree/main/sqlite"
+        }
       }
     },
     {
@@ -3842,6 +4843,16 @@
         "hash": "0xd69d0935f61b6b857f19d03d9f46fddc",
         "entry": "stream.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-stream",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.1.0",
+          "hash": "0xd69d0935f61b6b857f19d03d9f46fddc",
+          "entry": "stream.bend",
+          "description": "Bounded packed-byte transfers between files and TCP/TLS sockets."
+        }
       }
     },
     {
@@ -3859,6 +4870,16 @@
         "hash": "0x401945c8ec628601b75dd6a3de05ea12",
         "entry": "tar.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-tar",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x401945c8ec628601b75dd6a3de05ea12",
+          "entry": "tar.bend",
+          "description": "tar archives (POSIX ustar with PAX path and size records) of regular files and directories over Bytes. Source: https://github.com/paymog/bend-kit/tree/main/tar"
+        }
       }
     },
     {
@@ -3876,6 +4897,16 @@
         "hash": "0x598ff14fb52f715fcb963bfff69bb21a",
         "entry": "time.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-time",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x598ff14fb52f715fcb963bfff69bb21a",
+          "entry": "time.bend",
+          "description": "Clocks, Duration and Instant, Gregorian dates, RFC 3339 and HTTP-date text, and TZif time zones. Source: https://github.com/paymog/bend-kit/tree/main/time"
+        }
       }
     },
     {
@@ -3893,6 +4924,16 @@
         "hash": "0xbb2c503928ea15731255ec8c06e5564b",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-tty",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xbb2c503928ea15731255ec8c06e5564b",
+          "entry": null,
+          "description": "Pure terminal text: ANSI SGR styling and Unicode 17 display width."
+        }
       }
     },
     {
@@ -3910,6 +4951,16 @@
         "hash": "0x6c784a08486e2e02415e89c5249e9e8a",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-unicode",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x6c784a08486e2e02415e89c5249e9e8a",
+          "entry": null,
+          "description": "Generated by gen.py from UCD 17.0.0. Do not edit."
+        }
       }
     },
     {
@@ -3927,6 +4978,16 @@
         "hash": "0x1f2d80f53f971b16c6de6a65cb1918ae",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-url",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.1.0",
+          "hash": "0x1f2d80f53f971b16c6de6a65cb1918ae",
+          "entry": null,
+          "description": "URL parsing, resolution, and percent-encoding (RFC 3986). Source: https://github.com/paymog/bend-kit/tree/main/url"
+        }
       }
     },
     {
@@ -3944,6 +5005,16 @@
         "hash": "0x78015a10d993786d85ee4044e876ee92",
         "entry": "webhooks.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-webhooks",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.11.0.1",
+          "hash": "0x78015a10d993786d85ee4044e876ee92",
+          "entry": "webhooks.bend",
+          "description": "Webhook signatures: Standard Webhooks sign and verify, Stripe and GitHub verify, over the raw body. Source: https://github.com/paymog/bend-kit/tree/main/webhooks"
+        }
       }
     },
     {
@@ -3961,6 +5032,16 @@
         "hash": "0x17030e400bb458b9f30b76fb230026a8",
         "entry": "websocket.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-websocket",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0x17030e400bb458b9f30b76fb230026a8",
+          "entry": "websocket.bend",
+          "description": "RFC 6455 WebSocket client: opening handshake, frames over packed Bytes, and messages over Wire. Source: https://github.com/paymog/bend-kit/tree/main/websocket"
+        }
       }
     },
     {
@@ -3978,6 +5059,16 @@
         "hash": "0x7d605d40b8b76e859de71949db4d2a89",
         "entry": "wire.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-wire",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.8.0",
+          "hash": "0x7d605d40b8b76e859de71949db4d2a89",
+          "entry": "wire.bend",
+          "description": "Byte-exact TCP, UDP, and TLS sockets. Source: https://github.com/paymog/bend-kit/tree/main/wire"
+        }
       }
     },
     {
@@ -3995,6 +5086,16 @@
         "hash": "0x476832d338c78d06c0da54e8958c113f",
         "entry": "zlib.bend",
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-kit-zlib",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.5.1.0",
+          "hash": "0x476832d338c78d06c0da54e8958c113f",
+          "entry": "zlib.bend",
+          "description": "DEFLATE, gzip, and zlib encoding and decoding (RFC 1951, 1952, 1950) over Bytes, plus gzip, zstd, and brotli through the C libraries. Source: https://github.com/paymog/bend-kit/tree/main/zlib"
+        }
       }
     },
     {
@@ -4012,6 +5113,16 @@
         "hash": "0x3e7c8cdf5aa942d4279f8d34c4f1be54",
         "entry": "package.bend",
         "owner": "chenhunghan"
+      },
+      "hub": {
+        "name": "bend-kube-runtime",
+        "owner": "chenhunghan",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x3e7c8cdf5aa942d4279f8d34c4f1be54",
+          "entry": "package.bend",
+          "description": "The package entry: `bend package.bend --publish bend-kube-runtime@X.Y.Z.0`"
+        }
       }
     },
     {
@@ -4029,6 +5140,16 @@
         "hash": "0xd69a1e32f167d67a827d0d362dfcf729",
         "entry": "api.bend",
         "owner": "MattCozendey"
+      },
+      "hub": {
+        "name": "bend-lint-api",
+        "owner": "MattCozendey",
+        "latest": {
+          "version": "0.2.2.0",
+          "hash": "0xd69a1e32f167d67a827d0d362dfcf729",
+          "entry": "api.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -4046,6 +5167,16 @@
         "hash": "0x7294c9a1db4be6346e88202032984e02",
         "entry": "all.bend",
         "owner": "davidawad"
+      },
+      "hub": {
+        "name": "bend-lint-pack",
+        "owner": "davidawad",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0x7294c9a1db4be6346e88202032984e02",
+          "entry": "all.bend",
+          "description": "bend-lint-rules: BendHub entry. Importing this file publishes all five rules and their helpers"
+        }
       }
     },
     {
@@ -4063,6 +5194,16 @@
         "hash": "0xa8e971a3ca0e87fbac9a0efbc1306f8d",
         "entry": "rules.bend",
         "owner": "MattCozendey"
+      },
+      "hub": {
+        "name": "bend-lint-rules",
+        "owner": "MattCozendey",
+        "latest": {
+          "version": "0.2.2.0",
+          "hash": "0xa8e971a3ca0e87fbac9a0efbc1306f8d",
+          "entry": "rules.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -4080,6 +5221,16 @@
         "hash": "0x7205ddcee53cfdb6b62686553b824b13",
         "entry": null,
         "owner": "brasga-a"
+      },
+      "hub": {
+        "name": "bend-math-lib",
+        "owner": "brasga-a",
+        "latest": {
+          "version": "0.0.0.1",
+          "hash": "0x7205ddcee53cfdb6b62686553b824b13",
+          "entry": null,
+          "description": "Core module"
+        }
       }
     },
     {
@@ -4097,6 +5248,16 @@
         "hash": "0x0ed882696c6c048c64c66242a999a426",
         "entry": null,
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-autograd",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0x0ed882696c6c048c64c66242a999a426",
+          "entry": null,
+          "description": "bend-ml-autograd: automatic differentiation with a proved law."
+        }
       }
     },
     {
@@ -4114,6 +5275,16 @@
         "hash": "0x559a0abb492a951db15be435191b6d0a",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-bpe-tokenizer",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.3.0",
+          "hash": "0x559a0abb492a951db15be435191b6d0a",
+          "entry": "main.bend",
+          "description": "bend-ml-bpe-tokenizer: byte-level BPE with a proved roundtrip."
+        }
       }
     },
     {
@@ -4131,6 +5302,16 @@
         "hash": "0x09966385f3a8541fb22fd49450cdf477",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-nat-lemmas",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.2.0",
+          "hash": "0x09966385f3a8541fb22fd49450cdf477",
+          "entry": "main.bend",
+          "description": "bend-ml-nat-lemmas: Nat and List lemmas, proved, that Bend's Base does not have."
+        }
       }
     },
     {
@@ -4148,6 +5329,16 @@
         "hash": "0x48e80e20946abebea50e06561806a40d",
         "entry": null,
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-tensor",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.2.0",
+          "hash": "0x48e80e20946abebea50e06561806a40d",
+          "entry": null,
+          "description": "bend-ml-tensor: tensors with the shape in the TYPE. A shape error is a type error."
+        }
       }
     },
     {
@@ -4165,6 +5356,16 @@
         "hash": "0x236efa65086abc5955a9e74563e24668",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bend-ml-tensor-fork",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "0.1.5.0",
+          "hash": "0x236efa65086abc5955a9e74563e24668",
+          "entry": "main.bend",
+          "description": "bend-ml-tensor-fork: bend-ml-tensor-array's products, with the parallel blocks sharing their operands; and par1..par4,"
+        }
       }
     },
     {
@@ -4182,6 +5383,16 @@
         "hash": "0x2975cbb5ff2b1033bbbf3c4756c85fbf",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-net-bytes",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x2975cbb5ff2b1033bbbf3c4756c85fbf",
+          "entry": null,
+          "description": "Byte buffers packed four bytes to a U32, with bounds-checked access."
+        }
       }
     },
     {
@@ -4199,6 +5410,16 @@
         "hash": "0xd32972012bf211e458b8725704c0a3d2",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-net-encoding",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.2.1.0",
+          "hash": "0xd32972012bf211e458b8725704c0a3d2",
+          "entry": null,
+          "description": "UTF-8 and hex encoding for byte strings."
+        }
       }
     },
     {
@@ -4216,6 +5437,16 @@
         "hash": "0x16458a2db4f36577294543ec2a6d420c",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-net-json",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.3.0.0",
+          "hash": "0x16458a2db4f36577294543ec2a6d420c",
+          "entry": null,
+          "description": "JSON values, parsed and encoded as RFC 8259."
+        }
       }
     },
     {
@@ -4233,6 +5464,16 @@
         "hash": "0x0aca9962d9b7dbca5790ded426f38379",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-net-url",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0x0aca9962d9b7dbca5790ded426f38379",
+          "entry": null,
+          "description": "URL parsing, resolution, and percent-encoding (RFC 3986)."
+        }
       }
     },
     {
@@ -4250,6 +5491,16 @@
         "hash": "0x651c6b43f6e58d958d0cc90d28371c50",
         "entry": null,
         "owner": "paymog"
+      },
+      "hub": {
+        "name": "bend-net-wire",
+        "owner": "paymog",
+        "latest": {
+          "version": "0.4.0.0",
+          "hash": "0x651c6b43f6e58d958d0cc90d28371c50",
+          "entry": null,
+          "description": "Byte-exact TCP, UDP, and TLS sockets."
+        }
       }
     },
     {
@@ -4267,6 +5518,16 @@
         "hash": "0x437a65a35fd0c02411bea19819f9b33f",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-acpi",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.2.0",
+          "hash": "0x437a65a35fd0c02411bea19819f9b33f",
+          "entry": "package.bend",
+          "description": "bend-osdev-acpi: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4284,6 +5545,16 @@
         "hash": "0x7fac88c9586171e58e205ceb355ebac1",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-aead",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x7fac88c9586171e58e205ceb355ebac1",
+          "entry": "package.bend",
+          "description": "bend-osdev-aead: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4301,6 +5572,16 @@
         "hash": "0xd84f91a0afea422022cbb4f397ca1abb",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-aes",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xd84f91a0afea422022cbb4f397ca1abb",
+          "entry": "package.bend",
+          "description": "bend-osdev-aes: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4318,6 +5599,16 @@
         "hash": "0xaca75f7679c88e3442b04b98baf3b711",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-algo",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xaca75f7679c88e3442b04b98baf3b711",
+          "entry": "package.bend",
+          "description": "bend-osdev-algo: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4335,6 +5626,16 @@
         "hash": "0x2b280a281d356b8e5cd7b338ab267df1",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-apparmor",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x2b280a281d356b8e5cd7b338ab267df1",
+          "entry": "package.bend",
+          "description": "bend-osdev-apparmor: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4352,6 +5653,16 @@
         "hash": "0x95803fe526050e79fb3df1e14165eb7c",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-aria",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x95803fe526050e79fb3df1e14165eb7c",
+          "entry": "package.bend",
+          "description": "bend-osdev-aria: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4369,6 +5680,16 @@
         "hash": "0xf8d2948fe25df08ae8d37c3c80a363ba",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-array",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xf8d2948fe25df08ae8d37c3c80a363ba",
+          "entry": "package.bend",
+          "description": "bend-osdev-array: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4386,6 +5707,16 @@
         "hash": "0xa017fd0d7ab5be03e837cd7fd69dcdfd",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-blowfish",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xa017fd0d7ab5be03e837cd7fd69dcdfd",
+          "entry": "package.bend",
+          "description": "bend-osdev-blowfish: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4403,6 +5734,16 @@
         "hash": "0x9fae2d11be141cc220d6a37e498b4020",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-bpf",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x9fae2d11be141cc220d6a37e498b4020",
+          "entry": "package.bend",
+          "description": "bend-osdev-bpf: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4420,6 +5761,16 @@
         "hash": "0xda3b2fd4e59297519c52e7bd64cb55c5",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-camellia",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xda3b2fd4e59297519c52e7bd64cb55c5",
+          "entry": "package.bend",
+          "description": "bend-osdev-camellia: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4437,6 +5788,16 @@
         "hash": "0xaedcbedcbe1c3df31795343ff6f64678",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-caps",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xaedcbedcbe1c3df31795343ff6f64678",
+          "entry": "package.bend",
+          "description": "bend-osdev-caps: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4454,6 +5815,16 @@
         "hash": "0x09727f2e3edd91028d60228469c8929b",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-cast5",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x09727f2e3edd91028d60228469c8929b",
+          "entry": "package.bend",
+          "description": "bend-osdev-cast5: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4471,6 +5842,16 @@
         "hash": "0x4ff94cd9a03eee1d38142effbcc617fb",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-cbc",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x4ff94cd9a03eee1d38142effbcc617fb",
+          "entry": "package.bend",
+          "description": "bend-osdev-cbc: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4488,6 +5869,16 @@
         "hash": "0x5c26418ab13c9e565c5b1309d2f085a0",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-cipher-core",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x5c26418ab13c9e565c5b1309d2f085a0",
+          "entry": "package.bend",
+          "description": "bend-osdev-cipher-core: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4505,6 +5896,16 @@
         "hash": "0xf4b936e0e6b2608080d2f02bb3ce9abe",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-cipher-modes",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xf4b936e0e6b2608080d2f02bb3ce9abe",
+          "entry": "package.bend",
+          "description": "bend-osdev-cipher-modes: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4522,6 +5923,16 @@
         "hash": "0x7a77d751f1a239b5a366af461ab7f041",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-crc",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x7a77d751f1a239b5a366af461ab7f041",
+          "entry": "package.bend",
+          "description": "bend-osdev-crc: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4539,6 +5950,16 @@
         "hash": "0x01313a4f070f7ffd2bd276fcd2143eda",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-crypto",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x01313a4f070f7ffd2bd276fcd2143eda",
+          "entry": "package.bend",
+          "description": "bend-osdev-crypto: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4556,6 +5977,16 @@
         "hash": "0x7a66255b2e354c73838e88d45f7d1593",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-gf",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.2.0",
+          "hash": "0x7a66255b2e354c73838e88d45f7d1593",
+          "entry": "package.bend",
+          "description": "bend-osdev-gf: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4573,6 +6004,16 @@
         "hash": "0xd04c3185dce130521497bf85ab03f249",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-hashes",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xd04c3185dce130521497bf85ab03f249",
+          "entry": "package.bend",
+          "description": "bend-osdev-hashes: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4590,6 +6031,16 @@
         "hash": "0x7d16ec09f99b830428c8e2852af315f6",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-legacy-ciphers",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x7d16ec09f99b830428c8e2852af315f6",
+          "entry": "package.bend",
+          "description": "bend-osdev-legacy-ciphers: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4607,6 +6058,16 @@
         "hash": "0x999adc34209a88c2495b3a5407a5ad25",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-mode-core",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x999adc34209a88c2495b3a5407a5ad25",
+          "entry": "package.bend",
+          "description": "bend-osdev-mode-core: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4624,6 +6085,16 @@
         "hash": "0x17768ee6992327a9e94940296270eb23",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-pkcs7",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x17768ee6992327a9e94940296270eb23",
+          "entry": "package.bend",
+          "description": "bend-osdev-pkcs7: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4641,6 +6112,16 @@
         "hash": "0xab9c812df432dacce3e8b343e9fd7ab7",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-u32",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xab9c812df432dacce3e8b343e9fd7ab7",
+          "entry": "package.bend",
+          "description": "bend-osdev-u32: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4658,6 +6139,16 @@
         "hash": "0xea9c6e6209a3ac3fb21596f70f09f650",
         "entry": "package.bend",
         "owner": "ScottMoore0"
+      },
+      "hub": {
+        "name": "bend-osdev-word64",
+        "owner": "ScottMoore0",
+        "latest": {
+          "version": "0.1.1.1",
+          "hash": "0xea9c6e6209a3ac3fb21596f70f09f650",
+          "entry": "package.bend",
+          "description": "bend-osdev-word64: every file of the package, so that bend --publish sends"
+        }
       }
     },
     {
@@ -4675,6 +6166,16 @@
         "hash": "0x646b2235ccfcef3a8f09e7c110d7ed14",
         "entry": null,
         "owner": "subtleGradient"
+      },
+      "hub": {
+        "name": "bend-over-js-eval",
+        "owner": "subtleGradient",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x646b2235ccfcef3a8f09e7c110d7ed14",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -4692,6 +6193,16 @@
         "hash": "0x5c7c6b74577e42dff11295308f4f8e90",
         "entry": "impl.bend",
         "owner": "MattCozendey"
+      },
+      "hub": {
+        "name": "bend-pipe-session",
+        "owner": "MattCozendey",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0x5c7c6b74577e42dff11295308f4f8e90",
+          "entry": "impl.bend",
+          "description": "Talks in lines to a started program, over pipes, with or without a deadline."
+        }
       }
     },
     {
@@ -4709,6 +6220,16 @@
         "hash": "0xdf198d67659100c90a58ecd6b01d034d",
         "entry": null,
         "owner": "Danialgharaie"
+      },
+      "hub": {
+        "name": "bend-prot",
+        "owner": "Danialgharaie",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xdf198d67659100c90a58ecd6b01d034d",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -4726,6 +6247,16 @@
         "hash": "0xb6e6ecbad123cebebba6b71d5258ad0f",
         "entry": "main.bend",
         "owner": "davidawad"
+      },
+      "hub": {
+        "name": "bend-semver-checks",
+        "owner": "davidawad",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xb6e6ecbad123cebebba6b71d5258ad0f",
+          "entry": "main.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -4743,6 +6274,16 @@
         "hash": "0xb78514d61afc4e796fd06df1830e0f32",
         "entry": "impl.bend",
         "owner": "MattCozendey"
+      },
+      "hub": {
+        "name": "bend-stdio-pipes",
+        "owner": "MattCozendey",
+        "latest": {
+          "version": "0.2.0.0",
+          "hash": "0xb78514d61afc4e796fd06df1830e0f32",
+          "entry": "impl.bend",
+          "description": "Pipes to a started program, and this program's stdin, as Files of UTF-8 lines."
+        }
       }
     },
     {
@@ -4760,6 +6301,16 @@
         "hash": "0x12996a27cbeef5e5ba1e8cd909be0e05",
         "entry": "main.bend",
         "owner": "davidawad"
+      },
+      "hub": {
+        "name": "bend-toon-codec",
+        "owner": "davidawad",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x12996a27cbeef5e5ba1e8cd909be0e05",
+          "entry": "main.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -4777,6 +6328,16 @@
         "hash": "0x493e83fed22415cb35e84da752fefdef",
         "entry": "capture.bend",
         "owner": "aivv73"
+      },
+      "hub": {
+        "name": "bend-window-capture",
+        "owner": "aivv73",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x493e83fed22415cb35e84da752fefdef",
+          "entry": "capture.bend",
+          "description": "Read a Bend-owned X11 window's client pixels into an affine RGB array."
+        }
       }
     },
     {
@@ -4794,6 +6355,16 @@
         "hash": "0x3d4f2512cce00e5099d03d9e1b3b9ae1",
         "entry": "winref.bend",
         "owner": "aivv73"
+      },
+      "hub": {
+        "name": "bend-window-ref",
+        "owner": "aivv73",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x3d4f2512cce00e5099d03d9e1b3b9ae1",
+          "entry": "winref.bend",
+          "description": "Export a Bend-owned window's X11 display name and resource ID without transferring ownership."
+        }
       }
     },
     {
@@ -4811,6 +6382,16 @@
         "hash": "0xb5c8145e53a6a127d611f45f602666ec",
         "entry": null,
         "owner": "MuhDur"
+      },
+      "hub": {
+        "name": "bendlib-kernel-list",
+        "owner": "MuhDur",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0xb5c8145e53a6a127d611f45f602666ec",
+          "entry": null,
+          "description": "bendlib-kernel-list: frozen step-list permutations over List, generic over -A: Data."
+        }
       }
     },
     {
@@ -4828,6 +6409,16 @@
         "hash": "0xc44d63498d00973a6a41e91a42b58416",
         "entry": "main.bend",
         "owner": "calderbit"
+      },
+      "hub": {
+        "name": "bendonnect-rpc",
+        "owner": "calderbit",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xc44d63498d00973a6a41e91a42b58416",
+          "entry": "main.bend",
+          "description": "Bendonnect: the Connect RPC protocol (https://connectrpc.com/docs/protocol/) for Bend 2."
+        }
       }
     },
     {
@@ -4845,6 +6436,16 @@
         "hash": "0x89b3380e86f5a59734944cc2f327badb",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bendtorch-fast",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "1.2.0.0",
+          "hash": "0x89b3380e86f5a59734944cc2f327badb",
+          "entry": "main.bend",
+          "description": "BendTorch's layers over bend-ml-tensor-fork: the same layers, types and bits as torch/main.bend's, faster where the"
+        }
       }
     },
     {
@@ -4862,6 +6463,16 @@
         "hash": "0x2687dd9704f52182e1ea4e66472c6fcd",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bendtorch-gpu",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "1.2.0.0",
+          "hash": "0x2687dd9704f52182e1ea4e66472c6fcd",
+          "entry": "main.bend",
+          "description": "BendTorch's layers with their work on the GPU (bend-ml-tensor-gpu): the same layers, types and bits as"
+        }
       }
     },
     {
@@ -4879,6 +6490,16 @@
         "hash": "0xa6af449466db11bf10f3a82bbeddb622",
         "entry": "main.bend",
         "owner": "nuxyel"
+      },
+      "hub": {
+        "name": "bendtorch-load",
+        "owner": "nuxyel",
+        "latest": {
+          "version": "1.2.0.0",
+          "hash": "0xa6af449466db11bf10f3a82bbeddb622",
+          "entry": "main.bend",
+          "description": "Temporary loading-only exception: bend-ml-binary-read is foreign C/JavaScript. No file with laws imports this module."
+        }
       }
     },
     {
@@ -4896,6 +6517,16 @@
         "hash": "0xb2b0f04555daca474f0f77d0966945c9",
         "entry": "bendvy.bend",
         "owner": "dearlordylord"
+      },
+      "hub": {
+        "name": "bendvy-ecs-core",
+        "owner": "dearlordylord",
+        "latest": {
+          "version": "0.1.0.2",
+          "hash": "0xb2b0f04555daca474f0f77d0966945c9",
+          "entry": "bendvy.bend",
+          "description": "Bendvy 0.1.0.1: typed ECS, events, schedules, inspection and persistence."
+        }
       }
     },
     {
@@ -4913,6 +6544,16 @@
         "hash": "0x0717344745a30ebad1f19045228e8f18",
         "entry": "main.bend",
         "owner": "davidawad"
+      },
+      "hub": {
+        "name": "cswap-bend-cli",
+        "owner": "davidawad",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x0717344745a30ebad1f19045228e8f18",
+          "entry": "main.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -4930,6 +6571,16 @@
         "hash": "0xe8a45a5d2dbc02504d10df4cabf172ea",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "ezmcp",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xe8a45a5d2dbc02504d10df4cabf172ea",
+          "entry": "main.bend",
+          "description": "ezmcp: Model Context Protocol servers and clients for Bend 2, revisions"
+        }
       }
     },
     {
@@ -4947,6 +6598,16 @@
         "hash": "0x8abe7473e8854cc69c687ee77b7d72e3",
         "entry": "main.bend",
         "owner": "noah-emp"
+      },
+      "hub": {
+        "name": "ezsys",
+        "owner": "noah-emp",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x8abe7473e8854cc69c687ee77b7d72e3",
+          "entry": "main.bend",
+          "description": "ezsys: system helpers for Bend 2: whole-file reads and atomic saves,"
+        }
       }
     },
     {
@@ -4964,6 +6625,16 @@
         "hash": "0x6f51b0319916bc200dd5f3949f31668e",
         "entry": "kernel.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-bendquest",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x6f51b0319916bc200dd5f3949f31668e",
+          "entry": "kernel.bend",
+          "description": "gralha-bendquest: the proof-carrying rules kernel of BendQuest, a"
+        }
       }
     },
     {
@@ -4981,6 +6652,16 @@
         "hash": "0x365c60316ea66a6c80658fc03b4eeac5",
         "entry": "words.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-byte-words",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x365c60316ea66a6c80658fc03b4eeac5",
+          "entry": "words.bend",
+          "description": "gralha-byte-words: bytes packed four to a U32 word, little-endian, in an"
+        }
       }
     },
     {
@@ -4998,6 +6679,16 @@
         "hash": "0xb55e70f19b053017c63b38dc937ac6e6",
         "entry": "bytes.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-bytes",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xb55e70f19b053017c63b38dc937ac6e6",
+          "entry": "bytes.bend",
+          "description": "Bytes, bit streams, Huffman codes, DEFLATE/zlib, checksums, base64 and percent decoding."
+        }
       }
     },
     {
@@ -5015,6 +6706,16 @@
         "hash": "0xe732782c490292c188a9095f67f89d02",
         "entry": "cover.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-coverage",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xe732782c490292c188a9095f67f89d02",
+          "entry": "cover.bend",
+          "description": "Analytic coverage: line lists in pixel space are scan-converted with a winding"
+        }
       }
     },
     {
@@ -5032,6 +6733,16 @@
         "hash": "0x64ec50e0e95dc751f989341bb3e39c4a",
         "entry": "crc32.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-crc32",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x64ec50e0e95dc751f989341bb3e39c4a",
+          "entry": "crc32.bend",
+          "description": "gralha-crc32: the IEEE CRC-32 (gzip's, zip's, PNG's) over bytes packed"
+        }
       }
     },
     {
@@ -5049,6 +6760,16 @@
         "hash": "0xcb1037dffa3f9df9a6eb28d07cb17072",
         "entry": "css.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-css-style",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xcb1037dffa3f9df9a6eb28d07cb17072",
+          "entry": "css.bend",
+          "description": "CSS: stylesheets, selectors, specificity, media queries and the cascade onto an XML tree."
+        }
       }
     },
     {
@@ -5066,6 +6787,16 @@
         "hash": "0x867d2f2af29ba5bf6de13bf733d2397c",
         "entry": "deflate.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-deflate",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x867d2f2af29ba5bf6de13bf733d2397c",
+          "entry": "deflate.bend",
+          "description": "gralha-deflate: RFC 1951 DEFLATE over gralha-byte-words packed arrays."
+        }
       }
     },
     {
@@ -5083,6 +6814,16 @@
         "hash": "0x64fa56d727e0f10ecea03da203932306",
         "entry": "gzip.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-gzip-frame",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x64fa56d727e0f10ecea03da203932306",
+          "entry": "gzip.bend",
+          "description": "gralha-gzip-frame: the RFC 1952 gzip container around gralha-deflate."
+        }
       }
     },
     {
@@ -5100,6 +6841,16 @@
         "hash": "0x59279b68893c8c86cbcf854fcfc9db2f",
         "entry": "http.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-http-core",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x59279b68893c8c86cbcf854fcfc9db2f",
+          "entry": "http.bend",
+          "description": "HTTP/1.1 messages: requests parsed from text, responses serialized to it."
+        }
       }
     },
     {
@@ -5117,6 +6868,16 @@
         "hash": "0xfbae09b27ff064ae28a2dd82f08f4391",
         "entry": "server.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-http-server",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xfbae09b27ff064ae28a2dd82f08f4391",
+          "entry": "server.bend",
+          "description": "An HTTP/1.1 server over Base's TCP: one request per connection, answered"
+        }
       }
     },
     {
@@ -5134,6 +6895,16 @@
         "hash": "0x2c63b99c875a43494881cedcbf2f440f",
         "entry": "image.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-image",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x2c63b99c875a43494881cedcbf2f440f",
+          "entry": "image.bend",
+          "description": "Premultiplied colors and quadtree pixel buffers shared by the decoders and the renderer."
+        }
       }
     },
     {
@@ -5151,6 +6922,16 @@
         "hash": "0x9fc02d2d396c1f8a4b0d87b5fba17c5f",
         "entry": "jpeg.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-jpeg-decode",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x9fc02d2d396c1f8a4b0d87b5fba17c5f",
+          "entry": "jpeg.bend",
+          "description": "JPEG decoder: baseline and progressive Huffman, subsampling, color transforms."
+        }
       }
     },
     {
@@ -5168,6 +6949,16 @@
         "hash": "0x0991d016599aa987991ea598de6d2a81",
         "entry": "png.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-png-decode",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x0991d016599aa987991ea598de6d2a81",
+          "entry": "png.bend",
+          "description": "PNG decoder: chunks, filters, interlacing, palettes and bit depths."
+        }
       }
     },
     {
@@ -5185,6 +6976,16 @@
         "hash": "0x33e0e44d7df77b6181b6b022ee4d6634",
         "entry": "raylib.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-raylib",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x33e0e44d7df77b6181b6b022ee4d6634",
+          "entry": "raylib.bend",
+          "description": "gralha-raylib: a raylib window for Bend programs, driven by command lists."
+        }
       }
     },
     {
@@ -5202,6 +7003,16 @@
         "hash": "0xa695057c6a3562ac094940eedd9649df",
         "entry": "svg.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-svg-render",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xa695057c6a3562ac094940eedd9649df",
+          "entry": "svg.bend",
+          "description": "SVG parsing, geometry, painting and rasterization. No foreign code."
+        }
       }
     },
     {
@@ -5219,6 +7030,16 @@
         "hash": "0xfda746bab180ec022a2db21d512cc32c",
         "entry": "font.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-truetype",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0xfda746bab180ec022a2db21d512cc32c",
+          "entry": "font.bend",
+          "description": "Font book: glyph outlines, advances, kerning and metrics."
+        }
       }
     },
     {
@@ -5236,6 +7057,16 @@
         "hash": "0x083872843a8a55fa2adcfae9f7ed7d1e",
         "entry": "xml.bend",
         "owner": "nicolas-abril"
+      },
+      "hub": {
+        "name": "gralha-xml-doc",
+        "owner": "nicolas-abril",
+        "latest": {
+          "version": "0.1.0.1",
+          "hash": "0x083872843a8a55fa2adcfae9f7ed7d1e",
+          "entry": "xml.bend",
+          "description": "XML: tokens, element tree, entities, attributes and serialization."
+        }
       }
     },
     {
@@ -5253,6 +7084,16 @@
         "hash": "0x13527df86b638e4649c15a58682c998e",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "lawful-arrays",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x13527df86b638e4649c15a58682c998e",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5270,6 +7111,16 @@
         "hash": "0xc018b2b7a70e32edf065f462beb7dcfd",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "lawful-bytes",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xc018b2b7a70e32edf065f462beb7dcfd",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5287,6 +7138,16 @@
         "hash": "0x7c3e9469664fbd34c188709d61f7e109",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "lawful-fields",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x7c3e9469664fbd34c188709d61f7e109",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5304,6 +7165,16 @@
         "hash": "0x4491e44095d47e1e063354e32a033566",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "lawful-halves",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x4491e44095d47e1e063354e32a033566",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5321,6 +7192,16 @@
         "hash": "0x5845906e4d684390fe5255aea46f9808",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "lawful-words",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x5845906e4d684390fe5255aea46f9808",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5338,6 +7219,16 @@
         "hash": "0x581b7b5abb55b3363cb439c0fb72d761",
         "entry": "PROOF.bend",
         "owner": "luiscleto"
+      },
+      "hub": {
+        "name": "minebender-game",
+        "owner": "luiscleto",
+        "latest": {
+          "version": "1.0.0.0",
+          "hash": "0x581b7b5abb55b3363cb439c0fb72d761",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
       }
     },
     {
@@ -5355,6 +7246,16 @@
         "hash": "0x0c4fbc7d44d2e3e47247a6c1f12c05e0",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-cluster",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x0c4fbc7d44d2e3e47247a6c1f12c05e0",
+          "entry": "main.bend",
+          "description": "mlbend-cluster: k-means, functional."
+        }
       }
     },
     {
@@ -5372,6 +7273,16 @@
         "hash": "0xd48e7ce018b6fa7dc613b629e4260a23",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-generative",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0xd48e7ce018b6fa7dc613b629e4260a23",
+          "entry": "main.bend",
+          "description": "mlbend-generative: the generative skeleton, natively in Bend 2."
+        }
       }
     },
     {
@@ -5389,6 +7300,16 @@
         "hash": "0xea73a86e2118529cadd597fb3727979b",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-pipeline",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xea73a86e2118529cadd597fb3727979b",
+          "entry": "main.bend",
+          "description": "mlbend-pipeline: fit on the training rows, transform both sides."
+        }
       }
     },
     {
@@ -5406,6 +7327,16 @@
         "hash": "0xa8182854f375cd61135ccd32993993cc",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-preprocess",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xa8182854f375cd61135ccd32993993cc",
+          "entry": "main.bend",
+          "description": "mlbend-preprocess: the transformers of scikit-learn, over bend-ml's matrix."
+        }
       }
     },
     {
@@ -5423,6 +7354,16 @@
         "hash": "0x97687e0483c49ddb64fe1ee5f5244927",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-report",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x97687e0483c49ddb64fe1ee5f5244927",
+          "entry": "main.bend",
+          "description": "mlbend-report: the confusion matrix and the per-class report, natively in Bend 2."
+        }
       }
     },
     {
@@ -5440,6 +7381,16 @@
         "hash": "0xf6594aa2392363c8ab774bc81fb20b9d",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-select",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xf6594aa2392363c8ab774bc81fb20b9d",
+          "entry": "main.bend",
+          "description": "mlbend-select: k-fold cross-validation on top of the split."
+        }
       }
     },
     {
@@ -5457,6 +7408,16 @@
         "hash": "0xe8b7953f71ec5b441a90a08e0961269b",
         "entry": "main.bend",
         "owner": "adeerkhan"
+      },
+      "hub": {
+        "name": "mlbend-split",
+        "owner": "adeerkhan",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0xe8b7953f71ec5b441a90a08e0961269b",
+          "entry": "main.bend",
+          "description": "mlbend-split: a seeded, deterministic split of the rows, stratified by label."
+        }
       }
     },
     {
@@ -5474,6 +7435,16 @@
         "hash": "0xd29b5061c68e1be166e0476f4daf7ff8",
         "entry": null,
         "owner": "PedroAVJ"
+      },
+      "hub": {
+        "name": "near-n-checker",
+        "owner": "PedroAVJ",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xd29b5061c68e1be166e0476f4daf7ff8",
+          "entry": null,
+          "description": ""
+        }
       }
     },
     {
@@ -5491,6 +7462,16 @@
         "hash": "0xaca801afcf3e822677fd6d06895d2c71",
         "entry": null,
         "owner": "qasimkamran"
+      },
+      "hub": {
+        "name": "qasim-bend-kit",
+        "owner": "qasimkamran",
+        "latest": {
+          "version": "0.1.0.2",
+          "hash": "0xaca801afcf3e822677fd6d06895d2c71",
+          "entry": null,
+          "description": "Library correctness laws and integration obligations.\r"
+        }
       }
     },
     {
@@ -5508,6 +7489,16 @@
         "hash": "0x856d414a32087762da315b6efc605eaa",
         "entry": "yaml.bend",
         "owner": "jpcamara"
+      },
+      "hub": {
+        "name": "yaml-for-bend",
+        "owner": "jpcamara",
+        "latest": {
+          "version": "0.1.1.0",
+          "hash": "0x856d414a32087762da315b6efc605eaa",
+          "entry": "yaml.bend",
+          "description": "YAML for Bend: read YAML text into values and write values back as YAML."
+        }
       }
     }
   ]
