@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T13:16:38.858Z",
+  "generated_at": "2026-10-31T06:28:54.641Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -932,7 +932,7 @@
       "description": "MIT-licensed operating-system libraries: file systems, archives, compression, ELF, partition tables, network headers, capability and LSM policy models, and kernel data structures, each with laws, --verdict-accepted proofs, and differential tests; pinned to Bend 2.0.39 and published incrementally on the hub as bend-osdev-<package> (for example import bend-osdev-bytes@0.1.1.1/bytes.bend).",
       "category": "packages",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import bend-osdev-bytes@0.1.1.1/bytes.bend as Bytes",
       "publication": {
         "package": "bend-osdev-bytes@0.1.1.1",
@@ -1162,7 +1162,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -1852,7 +1852,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -1863,7 +1863,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -1984,7 +1984,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -1995,7 +1995,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -2006,7 +2006,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": 24557,
+      "stars": 24576,
       "import": null
     },
     {
@@ -3020,10 +3020,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-archive@0.5.0.2/archive.bend as Archive",
+      "import": "import bend-kit-archive@0.5.1.0/archive.bend as Archive",
       "publication": {
-        "package": "bend-kit-archive@0.5.0.2",
-        "hash": "0x598a1293fb2cca49a1f1ad2f1a06d1ef",
+        "package": "bend-kit-archive@0.5.1.0",
+        "hash": "0xb03a6159aa2131a6271ae6f2503d02f4",
         "entry": "archive.bend",
         "owner": "paymog"
       }
@@ -3071,10 +3071,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-bits@0.1.0.0/bits.bend as Bits",
+      "import": "import bend-kit-bits@0.1.0.1/bits.bend as Bits",
       "publication": {
-        "package": "bend-kit-bits@0.1.0.0",
-        "hash": "0xa5b0f53eaf9c9d7c9694e326ca453a91",
+        "package": "bend-kit-bits@0.1.0.1",
+        "hash": "0xeffdf0a43b147136e34069ec484dac5e",
         "entry": "bits.bend",
         "owner": "paymog"
       }
@@ -3411,10 +3411,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-journal@0.3.0.1/journal.bend as Journal",
+      "import": "import bend-kit-journal@0.3.1.0/journal.bend as Journal",
       "publication": {
-        "package": "bend-kit-journal@0.3.0.1",
-        "hash": "0x5ea9815b576b1e930ae6bea0244356b4",
+        "package": "bend-kit-journal@0.3.1.0",
+        "hash": "0xaffc49d02c2d4450c3672c0c80f393fd",
         "entry": "journal.bend",
         "owner": "paymog"
       }
@@ -3836,10 +3836,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-stream@0.3.0.0/stream.bend as Stream",
+      "import": "import bend-kit-stream@0.3.1.0/stream.bend as Stream",
       "publication": {
-        "package": "bend-kit-stream@0.3.0.0",
-        "hash": "0x8338b7df8e858de1d2d771d98f79add5",
+        "package": "bend-kit-stream@0.3.1.0",
+        "hash": "0xd69d0935f61b6b857f19d03d9f46fddc",
         "entry": "stream.bend",
         "owner": "paymog"
       }
@@ -3972,10 +3972,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-wire@0.4.7.0/wire.bend as Wire",
+      "import": "import bend-kit-wire@0.4.8.0/wire.bend as Wire",
       "publication": {
-        "package": "bend-kit-wire@0.4.7.0",
-        "hash": "0x20ad1e903f7e4d23c18051594e10a4f2",
+        "package": "bend-kit-wire@0.4.8.0",
+        "hash": "0x7d605d40b8b76e859de71949db4d2a89",
         "entry": "wire.bend",
         "owner": "paymog"
       }
@@ -3989,10 +3989,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-zlib@0.5.0.0/zlib.bend as Zlib",
+      "import": "import bend-kit-zlib@0.5.1.0/zlib.bend as Zlib",
       "publication": {
-        "package": "bend-kit-zlib@0.5.0.0",
-        "hash": "0xa3cff66158b5b1820363721823ad9877",
+        "package": "bend-kit-zlib@0.5.1.0",
+        "hash": "0x476832d338c78d06c0da54e8958c113f",
         "entry": "zlib.bend",
         "owner": "paymog"
       }
@@ -4159,10 +4159,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-ml-tensor-fork@0.1.4.0/main.bend as Main",
+      "import": "import bend-ml-tensor-fork@0.1.5.0/main.bend as Main",
       "publication": {
-        "package": "bend-ml-tensor-fork@0.1.4.0",
-        "hash": "0xd13098b0f80022977b3ddb83a57e3c50",
+        "package": "bend-ml-tensor-fork@0.1.5.0",
+        "hash": "0x236efa65086abc5955a9e74563e24668",
         "entry": "main.bend",
         "owner": "nuxyel"
       }
