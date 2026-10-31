@@ -153,8 +153,20 @@ function importsFor(pkg) {
   ];
 }
 
+function searchRecords(pkg) {
+  return [
+    {
+      import: pkg.import ?? "",
+      publication: pkg.publication,
+      latest_import: pkg.latest_import,
+      hub: pkg.hub,
+    },
+    ...(pkg.additional_imports ?? []),
+  ];
+}
+
 function searchText(pkg) {
-  const modules = importsFor(pkg);
+  const modules = searchRecords(pkg);
   const publications = modules.map((item) => item.publication);
   const hubs = modules.map((item) => item.hub).filter(Boolean);
   return [
@@ -183,19 +195,19 @@ function searchScore(pkg, query) {
   const haystack = searchText(pkg);
   if (!tokens.every((token) => haystack.includes(token))) return -1;
 
-  const modules = importsFor(pkg);
-  const names = [
+  const modules = searchRecords(pkg);
+  const names = [...new Set([
     pkg.name,
     ...modules.flatMap((item) => [
       item.hub?.name ?? "",
       item.publication?.package?.split("@")[0] ?? "",
       ...(item.publication?.aliases ?? []).map((value) => value.split("@")[0]),
     ]),
-  ].map((value) => value.toLowerCase()).filter(Boolean);
-  const owners = [
+  ].map((value) => value.toLowerCase()).filter(Boolean))];
+  const owners = [...new Set([
     pkg.repo?.split("/")[0] ?? "",
     ...modules.map((item) => item.hub?.owner ?? item.publication?.owner ?? ""),
-  ].map((value) => value.toLowerCase()).filter(Boolean);
+  ].map((value) => value.toLowerCase()).filter(Boolean))];
 
   let score = haystack.includes(needle) ? 120 : 0;
   for (const name of names) {
