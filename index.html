@@ -167,7 +167,7 @@
           <div class="registry-faq__list">
             <details open>
               <summary>How do I use a package?<span aria-hidden="true">+</span></summary>
-              <p>Use <strong>Copy import</strong> on a package card and paste the complete line into your Bend file, including the <span class="mono">as Lib</span> module alias. The line pins a published version or content hash. If a project offers several modules, use <strong>Choose import</strong> and then <strong>Copy</strong> beside the module you need. When a publication has no documented entrypoint, use <strong>View on Hub</strong> to inspect its files before choosing an import. The <a href="https://hub.bend-lang.com/guide">official Hub guide</a> explains publishing and named packages.</p>
+              <p>For named Hub packages, <strong>Copy latest</strong> uses the newest official version only after the catalog has verified that the reviewed module path still exists and matches the package manifest. The older compatibility pin is available as <strong>Reviewed</strong>. If the latest release changed that module path, the site keeps the reviewed pin and links you to the Hub instead of guessing. Hash-only imports stay pinned because hashes are immutable. For projects with several modules, use <strong>Choose import</strong>. The <a href="https://hub.bend-lang.com/guide">official Hub guide</a> explains names, versions, and publishing.</p>
             </details>
             <details>
               <summary>Is this the official Bend registry?<span aria-hidden="true">+</span></summary>
@@ -175,7 +175,7 @@
             </details>
             <details>
               <summary>How does a package get listed?<span aria-hidden="true">+</span></summary>
-              <p>The catalog combines curated entries from <a href="https://github.com/777genius/awesome-bend">Awesome Bend</a> with named publications from the official Hub. Daily refreshes sync descriptions, reviewed imports, and Hub metadata. Use <strong>Add package</strong> to suggest a missing project.</p>
+              <p>The catalog combines curated entries from <a href="https://github.com/777genius/awesome-bend">Awesome Bend</a> with official BendHub inventory, name metadata, versions, manifests, and file checksums. Daily refreshes keep the latest named versions searchable while preserving reviewed compatibility pins. Use <strong>Add package</strong> to suggest a missing project.</p>
             </details>
             <details>
               <summary>Will a package work with my Bend version?<span aria-hidden="true">+</span></summary>
@@ -205,6 +205,6 @@
       </footer>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <script src="./app.js?v=20" type="module"></script>
+    <script src="./app.js?v=21" type="module"></script>
   </body>
 </html>
