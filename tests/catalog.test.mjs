@@ -307,7 +307,7 @@ test("secondary imports require consistent publication metadata and unique copya
   assert.throws(() => check({ additional_imports: [{ ...secondary, publication: { ...secondary.publication, entry: "main.bend" } }] }), /disagrees/);
   assert.throws(() => check({ additional_imports: [{ ...secondary, publication: { ...secondary.publication, entry: null } }] }), /without an entry/);
   assert.throws(() => check({ additional_imports: [{ import: row.import, publication: row.publication }] }), /Duplicate import/);
-  assert.throws(() => check({ import: null, publication: { ...row.publication, entry: null } }), /need a primary import/);
+  assert.throws(() => check({ import: null, latest_import: undefined, publication: { ...row.publication, entry: null } }), /need a primary import/);
   assert.throws(() => check({ source: "git", import: null, publication: undefined }), /Source-only/);
 });
 
