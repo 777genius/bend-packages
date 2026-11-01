@@ -291,10 +291,13 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   const byHash = new Map(inventory.map((row) => [row.hash, row]));
   const recencyRank = new Map(inventory.map((row, index) => [row.hash, index + 1]));
   const popularityRank = new Map(popularity.map((row, index) => [row.hash, index + 1]));
-  const statsFor = (hash) => ({
-    popularity_rank: popularityRank.get(hash),
-    recency_rank: recencyRank.get(hash),
-  });
+  const statsFor = (hash) => {
+    const popularity_rank = popularityRank.get(hash);
+    const recency_rank = recencyRank.get(hash);
+    return Number.isSafeInteger(popularity_rank) && Number.isSafeInteger(recency_rank)
+      ? { popularity_rank, recency_rank }
+      : null;
+  };
   const names = new Set(inventory.map((row) => row.name).filter(Boolean));
   for (const ref of curated.references) if (!HASH.test(ref.package)) names.add(ref.package.split("@")[0]);
   for (const row of catalog.packages) for (const item of allPublications(row)) {
@@ -341,10 +344,11 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     const name = HASH.test(ref.package) ? "" : ref.package.split("@")[0];
     const meta = name ? byName.get(name) : null;
     const publication = verified.get(target(ref));
+    const stats = statsFor(meta?.hash ?? publication.hash);
     const base = {
       ...item,
       publication: { ...publication, owner: meta?.owner ?? "" },
-      hub_stats: statsFor(meta?.hash ?? publication.hash),
+      ...(stats ? { hub_stats: stats } : {}),
     };
     if (!meta) return base;
     const latestImport = await latestImportFor(ref, meta, request);
@@ -374,10 +378,11 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       const retained = await collect(allPublications(row), async (item) => {
         const ref = parseImport(item.import);
         const publication = await verifyPublication(ref, request);
+        const stats = statsFor(publication.hash);
         return {
           import: item.import,
           publication: { ...publication, owner: byName.get(ref.package.split("@")[0])?.owner ?? "" },
-          hub_stats: statsFor(publication.hash),
+          ...(stats ? { hub_stats: stats } : {}),
         };
       }, failures);
       if (retained.every(Boolean)) {
@@ -401,7 +406,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       import: item.entry ? "import " + publication.package + "/" + item.entry + " as " + alias(item.entry) : null,
       publication: { ...publication, owner: item.owner },
       hub: hubOf(item),
-      hub_stats: statsFor(item.hash),
+      ...(statsFor(item.hash) ? { hub_stats: statsFor(item.hash) } : {}),
     };
   }, failures);
   requireComplete(failures);
