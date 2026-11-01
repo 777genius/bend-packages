@@ -134,6 +134,17 @@ test("official new and hot rankings must describe the same Hub inventory", async
   );
 });
 
+test("a named latest hash published after the ranking snapshots defers the refresh", async () => {
+  const { request, data } = fixture();
+  const latest = JSON.parse(data.get(HUB + "/name/reviewed"));
+  latest.latest.hash = "0x" + "e".repeat(32);
+  data.set(HUB + "/name/reviewed", Buffer.from(JSON.stringify(latest)));
+  await assert.rejects(
+    () => refreshCatalog(existing, awesome(), request),
+    (error) => error instanceof RefreshError && error.temporary && /publication changed during refresh/.test(error.message),
+  );
+});
+
 test("complete manifest and referenced file hashes are required", async () => {
   const { request, data } = fixture();
   assert.equal((await verifyPublication({ package: "reviewed@1.0.0.0", entry: "src/lib.bend" }, request)).hash, hash);
