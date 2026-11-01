@@ -399,6 +399,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   const named = await collect(candidates, async (item) => {
     const publication = await verifyPublication({ package: item.name + "@" + item.version, entry: item.entry || null }, request, item.hash);
     const previous = previousNamed.get(item.name);
+    const stats = statsFor(item.hash);
     return {
       id: previous?.id ?? "hub-" + item.name, name: item.name, repo: previous?.repo ?? "", url: previous?.url ?? HUB + "/n/" + item.name,
       description: item.desc.trim() || "Named package published on BendHub. Check its documentation and compiler requirements on the Hub.",
@@ -406,7 +407,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       import: item.entry ? "import " + publication.package + "/" + item.entry + " as " + alias(item.entry) : null,
       publication: { ...publication, owner: item.owner },
       hub: hubOf(item),
-      ...(statsFor(item.hash) ? { hub_stats: statsFor(item.hash) } : {}),
+      ...(stats ? { hub_stats: stats } : {}),
     };
   }, failures);
   requireComplete(failures);
