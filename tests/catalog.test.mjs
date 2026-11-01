@@ -141,7 +141,8 @@ test("a named latest hash published after the ranking snapshots defers the refre
   data.set(HUB + "/name/reviewed", Buffer.from(JSON.stringify(latest)));
   await assert.rejects(
     () => refreshCatalog(existing, awesome(), request),
-    (error) => error instanceof RefreshError && error.temporary && /publication changed during refresh/.test(error.message),
+    (error) => error instanceof RefreshError && error.temporary &&
+      error.details?.some((detail) => /publication changed during refresh/.test(detail)),
   );
 });
 
@@ -308,6 +309,9 @@ test("every reviewed module remains copyable on one card, with exact secondary p
   data.set(HUB + "/name/discovered@1.0.0.0", Buffer.from(nextHash));
   data.set(HUB + "/" + nextHash + "/manifest", nextManifest);
   data.set(HUB + "/" + nextHash + "/other.bend", nextCode);
+  const ranked = [{ hash, name: "reviewed" }, { hash: nextHash, name: "discovered" }];
+  data.set(HUB + "/packages.json?sort=new&limit=100&after=0", Buffer.from(JSON.stringify({ total: 2, packages: ranked })));
+  data.set(HUB + "/packages.json?sort=hot&limit=100&after=0", Buffer.from(JSON.stringify({ total: 2, packages: [...ranked].reverse() })));
   const result = await refreshCatalog(existing, source, request, "2026-10-30T00:00:00Z");
   const row = result.catalog.packages.find((item) => item.id === "reviewed");
   const offered = [row, ...row.additional_imports];
