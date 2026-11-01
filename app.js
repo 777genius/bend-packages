@@ -249,7 +249,14 @@ function compareResults(a, b, query, sort) {
 
   const aStats = hubStatsFor(a.pkg);
   const bStats = hubStatsFor(b.pkg);
-  const compareRank = (key) => aStats[key] - bStats[key];
+  const compareRank = (key) => {
+    const left = aStats[key];
+    const right = bStats[key];
+    if (left === right) return 0;
+    if (!Number.isFinite(left)) return 1;
+    if (!Number.isFinite(right)) return -1;
+    return left - right;
+  };
 
   if (sort === "relevance" || sort === "hub") {
     const ranked = compareRank("popularity_rank");
