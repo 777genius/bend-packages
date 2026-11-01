@@ -123,7 +123,8 @@ export function validateCatalog(catalog) {
     need(typeof row.repo === "string" && (!row.repo || /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repo)), "Invalid repository: " + row.id);
     need(row.stars === null || Number.isSafeInteger(row.stars) && row.stars >= 0, "Invalid stars: " + row.id);
     if (row.source === "git") {
-      need(row.import === null && row.publication === undefined && row.additional_imports === undefined, "Source-only row must not claim a publication: " + row.id);
+      need(row.import === null && row.publication === undefined && row.additional_imports === undefined && row.hub_stats === undefined,
+        "Source-only row must not claim Hub publication or ranking metadata: " + row.id);
       continue;
     }
     validatePublication(row, row.id);

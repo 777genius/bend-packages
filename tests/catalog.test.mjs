@@ -348,6 +348,7 @@ test("secondary imports require consistent publication metadata and unique copya
   assert.throws(() => check({ import: null, latest_import: undefined, publication: { ...row.publication, entry: null } }), /need a primary import/);
   assert.throws(() => check({ hub_stats: { popularity_rank: 0, recency_rank: 1 } }), /Invalid Hub ranking metadata/);
   assert.throws(() => check({ hub_stats: { popularity_rank: 1, recency_rank: null } }), /Invalid Hub ranking metadata/);
+  assert.throws(() => validateCatalog({ ...catalog, packages: [{ ...entry("source-only"), hub_stats: { popularity_rank: 1, recency_rank: 1 } }] }), /Source-only/);
   assert.throws(() => check({ source: "git", import: null, publication: undefined }), /Source-only/);
 });
 
