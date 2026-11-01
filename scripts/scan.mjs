@@ -285,8 +285,9 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   const inventory = await loadRegistry(request, "new");
   const popularity = await loadRegistry(request, "hot");
   const inventoryHashes = new Set(inventory.map((row) => row.hash));
-  need(popularity.length === inventory.length && popularity.every((row) => inventoryHashes.has(row.hash)),
-    "Hub inventory changed between new and hot rankings; retry the refresh");
+  if (popularity.length !== inventory.length || !popularity.every((row) => inventoryHashes.has(row.hash))) {
+    throw new RefreshError("Hub inventory changed between new and hot rankings; retry the refresh", true);
+  }
   const byHash = new Map(inventory.map((row) => [row.hash, row]));
   const recencyRank = new Map(inventory.map((row, index) => [row.hash, index + 1]));
   const popularityRank = new Map(popularity.map((row, index) => [row.hash, index + 1]));
