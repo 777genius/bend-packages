@@ -313,6 +313,9 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     const latest = result?.latest;
     need(result?.name === name && latest && VERSION.test(latest.version) && HASH.test(latest.hash) && typeof latest.desc === "string" && typeof latest.entry === "string", "Invalid latest publication: " + name);
     need(latest.entry === "" || ENTRY.test(latest.entry), "Invalid published entry: " + name);
+    if (!popularityRank.has(latest.hash) || !recencyRank.has(latest.hash)) {
+      throw new RefreshError("Hub publication changed during refresh; retry the refresh", true);
+    }
     return {
       name,
       version: latest.version,
