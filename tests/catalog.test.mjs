@@ -33,6 +33,7 @@ const awesome = (primary = "import reviewed@1.0.0.0/main.bend") => [
 function fixture() {
   const data = new Map([
     [HUB + "/packages.json?sort=new&limit=100&after=0", Buffer.from(JSON.stringify({ total: 2, packages: [{ hash, name: "reviewed" }, { hash: otherHash, name: "discovered" }] }))],
+    [HUB + "/packages.json?sort=hot&limit=100&after=0", Buffer.from(JSON.stringify({ total: 2, packages: [{ hash: otherHash, name: "discovered" }, { hash, name: "reviewed" }] }))],
     [HUB + "/name/reviewed", Buffer.from(JSON.stringify({ name: "reviewed", owner_login: "owner", latest: { version: "2.0.0.0", hash, desc: "Newer unreviewed version.", entry: "main.bend" } }))],
     [HUB + "/name/discovered", Buffer.from(JSON.stringify({ name: "discovered", owner_login: "owner", latest: { version: "1.0.0.0", hash: otherHash, desc: "Official description.", entry: "" } }))],
     [HUB + "/name/reviewed@1.0.0.0", Buffer.from(hash)],
@@ -82,11 +83,13 @@ test("full refresh preserves a reviewed older pin and does not invent a missing 
   assert.equal(reviewed.hub.name, "reviewed");
   assert.equal(reviewed.hub.latest.version, "2.0.0.0");
   assert.equal(reviewed.hub.latest.hash, hash);
+  assert.deepEqual(reviewed.hub_stats, { popularity_rank: 2, recency_rank: 1 });
   assert.equal(result.catalog.packages.filter((row) => row.name === "reviewed").length, 1);
   const found = result.catalog.packages.find((row) => row.name === "discovered");
   assert.equal(found.import, null);
   assert.equal(found.publication.entry, null);
   assert.equal(found.publication.hash, otherHash);
+  assert.deepEqual(found.hub_stats, { popularity_rank: 1, recency_rank: 2 });
   assert.ok(!seen.includes(HUB + "/" + otherHash + "/other.bend"));
   validateCatalog(result.catalog);
   const second = await refreshCatalog(result.catalog, awesome(), request, result.catalog.generated_at);
@@ -117,6 +120,15 @@ test("standalone reviewed hash packages survive without inferring identity from 
   assert.ok(result.catalog.packages.some((item) => item.id === "standalone" && item.publication.hash === otherHash));
 });
 
+test("official new and hot rankings must describe the same Hub inventory", async () => {
+  const { request, data } = fixture();
+  data.set(HUB + "/packages.json?sort=hot&limit=100&after=0", Buffer.from(JSON.stringify({
+    total: 2,
+    packages: [{ hash, name: "reviewed" }, { hash: "0x" + "f".repeat(32), name: "other" }],
+  })));
+  await assert.rejects(() => refreshCatalog(existing, awesome(), request), /inventory changed between new and hot rankings/);
+});
+
 test("complete manifest and referenced file hashes are required", async () => {
   const { request, data } = fixture();
   assert.equal((await verifyPublication({ package: "reviewed@1.0.0.0", entry: "src/lib.bend" }, request)).hash, hash);
@@ -131,6 +143,8 @@ test("pagination never treats an incomplete or changing inventory as complete", 
   const rows = Array.from({ length: 100 }, (_, index) => ({ hash: "0x" + index.toString(16).padStart(32, "0") }));
   const good = async (url) => Buffer.from(JSON.stringify(url.endsWith("after=0") ? { total: 101, packages: rows } : { total: 101, packages: [{ hash }] }));
   assert.equal((await loadRegistry(good)).length, 101);
+  assert.equal((await loadRegistry(good, "hot")).length, 101);
+  await assert.rejects(() => loadRegistry(good, "stars"), /Unsupported Hub package sort/);
   for (const second of [{ total: 101, packages: [] }, { total: 101, packages: [rows[0]] }, { total: 102, packages: [{ hash }] }]) {
     await assert.rejects(() => loadRegistry(async (url) => url.endsWith("after=0") ? good(url) : Buffer.from(JSON.stringify(second))), RefreshError);
   }
@@ -233,7 +247,9 @@ test("a separate unnamed module is retained alongside a curated project in the s
 
 test("aliases of the same latest publication share one card and remain discoverable", async () => {
   const { request, data } = fixture();
-  data.set(HUB + "/packages.json?sort=new&limit=100&after=0", Buffer.from(JSON.stringify({ total: 3, packages: [{ hash, name: "reviewed" }, { hash: otherHash, name: "discovered" }, { hash: "0x" + "3".repeat(32), name: "also-discovered" }] })));
+  const aliasInventory = [{ hash, name: "reviewed" }, { hash: otherHash, name: "discovered" }, { hash: "0x" + "3".repeat(32), name: "also-discovered" }];
+  data.set(HUB + "/packages.json?sort=new&limit=100&after=0", Buffer.from(JSON.stringify({ total: 3, packages: aliasInventory })));
+  data.set(HUB + "/packages.json?sort=hot&limit=100&after=0", Buffer.from(JSON.stringify({ total: 3, packages: [...aliasInventory].reverse() })));
   data.set(HUB + "/name/also-discovered", Buffer.from(JSON.stringify({ name: "also-discovered", owner_login: "owner", latest: { version: "1.0.0.0", hash: otherHash, desc: "Another alias.", entry: "" } })));
   data.set(HUB + "/name/also-discovered@1.0.0.0", Buffer.from(otherHash));
   const result = await refreshCatalog(existing, awesome(), request);
