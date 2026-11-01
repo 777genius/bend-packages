@@ -126,7 +126,10 @@ test("official new and hot rankings must describe the same Hub inventory", async
     total: 2,
     packages: [{ hash, name: "reviewed" }, { hash: "0x" + "f".repeat(32), name: "other" }],
   })));
-  await assert.rejects(() => refreshCatalog(existing, awesome(), request), /inventory changed between new and hot rankings/);
+  await assert.rejects(
+    () => refreshCatalog(existing, awesome(), request),
+    (error) => error instanceof RefreshError && error.temporary && /inventory changed between new and hot rankings/.test(error.message),
+  );
 });
 
 test("complete manifest and referenced file hashes are required", async () => {
@@ -324,6 +327,8 @@ test("secondary imports require consistent publication metadata and unique copya
   assert.throws(() => check({ additional_imports: [{ ...secondary, publication: { ...secondary.publication, entry: null } }] }), /without an entry/);
   assert.throws(() => check({ additional_imports: [{ import: row.import, publication: row.publication }] }), /Duplicate import/);
   assert.throws(() => check({ import: null, latest_import: undefined, publication: { ...row.publication, entry: null } }), /need a primary import/);
+  assert.throws(() => check({ hub_stats: { popularity_rank: 0, recency_rank: 1 } }), /Invalid Hub ranking metadata/);
+  assert.throws(() => check({ hub_stats: { popularity_rank: 1, recency_rank: null } }), /Invalid Hub ranking metadata/);
   assert.throws(() => check({ source: "git", import: null, publication: undefined }), /Source-only/);
 });
 
