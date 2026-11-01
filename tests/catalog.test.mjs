@@ -117,7 +117,9 @@ test("standalone reviewed hash packages survive without inferring identity from 
   const row = { ...entry("standalone"), name: "reviewed", source: "hub", import: "import " + otherHash + "/other.bend as Other" };
   const calls = async (url) => url.includes("/packages.json?") ? Buffer.from(JSON.stringify({ total: 1, packages: [{ hash, name: "reviewed" }] })) : request(url);
   const result = await refreshCatalog({ ...existing, packages: [...existing.packages, row] }, awesome(), calls);
-  assert.ok(result.catalog.packages.some((item) => item.id === "standalone" && item.publication.hash === otherHash));
+  const retained = result.catalog.packages.find((item) => item.id === "standalone" && item.publication.hash === otherHash);
+  assert.ok(retained);
+  assert.equal(retained.hub_stats, undefined, "A verified package absent from the current ranking inventory stays usable without fake ranks");
 });
 
 test("official new and hot rankings must describe the same Hub inventory", async () => {
@@ -245,7 +247,9 @@ test("a separate unnamed module is retained alongside a curated project in the s
   const row = { ...entry("second-module", "https://github.com/owner/reviewed/tree/main/second"), repo: "owner/reviewed", source: "hub", import: "import " + otherHash + "/other.bend as Other" };
   const calls = async (url) => url.includes("/packages.json?") ? Buffer.from(JSON.stringify({ total: 1, packages: [{ hash, name: "reviewed" }] })) : request(url);
   const result = await refreshCatalog({ ...existing, packages: [...existing.packages, row] }, awesome(), calls);
-  assert.ok(result.catalog.packages.some((item) => item.id === "second-module" && item.publication.hash === otherHash));
+  const retained = result.catalog.packages.find((item) => item.id === "second-module" && item.publication.hash === otherHash);
+  assert.ok(retained);
+  assert.equal(retained.hub_stats, undefined);
 });
 
 test("aliases of the same latest publication share one card and remain discoverable", async () => {
