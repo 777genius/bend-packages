@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T10:39:04.057Z",
+  "generated_at": "2026-11-01T06:30:29.690Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -291,7 +291,7 @@
       "description": "HTTP/1.1, HTTP/2, HTTPS, DNS, TLS, and WebSockets, on the hub as import 0xd66ee682d4ce8c656782ca9e0e4634cb/http.bend.",
       "category": "packages",
       "source": "hub",
-      "stars": 1,
+      "stars": 2,
       "import": "import 0xd66ee682d4ce8c656782ca9e0e4634cb/http.bend as Http",
       "publication": {
         "package": "0xd66ee682d4ce8c656782ca9e0e4634cb",
@@ -636,7 +636,7 @@
       "description": "Independently published Bend 2 packages for codecs, collections, networking, storage, cryptography, services, proto3 codecs with typed protoc generation, and binary64 soft-float. Bytes import bend-kit-bytes@0.3.3.0/bytes.bend; HTTP import bend-kit-http@0.38.2.0/http.bend. The project currently requires Bend 2.0.38 or newer.",
       "category": "packages",
       "source": "hub",
-      "stars": 11,
+      "stars": 12,
       "import": "import bend-kit-bytes@0.3.3.0/bytes.bend as Bytes",
       "additional_imports": [
         {
@@ -1055,7 +1055,7 @@
       "description": "HTTP/1.1 and HTTPS client and CLI with a proved pure codec; uses the sibling bender-dns checkout and is tested on Linux with Bend 2.0.32 and OpenSSL 3.",
       "category": "packages",
       "source": "git",
-      "stars": 0,
+      "stars": 1,
       "import": null
     },
     {
@@ -1556,12 +1556,13 @@
         "name": "bolt",
         "owner": "noah-emp",
         "latest": {
-          "version": "1.21.0.0",
-          "hash": "0xcb00b2b8895301b86fb365a9ceb6e119",
+          "version": "1.24.0.0",
+          "hash": "0x1d907092a452cd105e95df09b21f0aaf",
           "entry": "main.bend",
           "description": "bolt: a linter, checker and language server for Bend 2."
         }
-      }
+      },
+      "latest_import": "import bolt@1.24.0.0/main.bend as Main"
     },
     {
       "id": "tree-sitter-bend2",
@@ -1593,7 +1594,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -2204,7 +2205,7 @@
       "description": "Command-line interface library: one declaration yields help, typed argument decoding, shell completions, and man pages, with the behavior stated as Bend laws; on the hub as import cli@0.2.0.0/cli.bend, requires Bend 2.0.39+.",
       "category": "tools",
       "source": "hub",
-      "stars": 3,
+      "stars": 4,
       "import": "import cli@0.2.0.0/cli.bend as Cli",
       "publication": {
         "package": "cli@0.2.0.0",
@@ -2313,7 +2314,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -2324,7 +2325,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -2445,7 +2446,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -2456,7 +2457,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -2467,7 +2468,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": 24578,
+      "stars": 24600,
       "import": null
     },
     {
@@ -6507,14 +6508,14 @@
       "name": "bendvy-ecs-core",
       "repo": "",
       "url": "https://hub.bend-lang.com/n/bendvy-ecs-core",
-      "description": "Bendvy 0.1.0.1: typed ECS, events, schedules, inspection and persistence.",
+      "description": "Bendvy 0.1.0.1 replacement execution entry.",
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bendvy-ecs-core@0.1.0.2/bendvy.bend as Bendvy",
+      "import": "import bendvy-ecs-core@0.1.0.3/bendvy.bend as Bendvy",
       "publication": {
-        "package": "bendvy-ecs-core@0.1.0.2",
-        "hash": "0xb2b0f04555daca474f0f77d0966945c9",
+        "package": "bendvy-ecs-core@0.1.0.3",
+        "hash": "0x704c77730661eff4309838fc738ef615",
         "entry": "bendvy.bend",
         "owner": "dearlordylord"
       },
@@ -6522,10 +6523,10 @@
         "name": "bendvy-ecs-core",
         "owner": "dearlordylord",
         "latest": {
-          "version": "0.1.0.2",
-          "hash": "0xb2b0f04555daca474f0f77d0966945c9",
+          "version": "0.1.0.3",
+          "hash": "0x704c77730661eff4309838fc738ef615",
           "entry": "bendvy.bend",
-          "description": "Bendvy 0.1.0.1: typed ECS, events, schedules, inspection and persistence."
+          "description": "Bendvy 0.1.0.1 replacement execution entry."
         }
       }
     },
