@@ -103,6 +103,11 @@ function validatePublication(item, label) {
   } else {
     need(item.latest_import === undefined, "Latest import requires Hub metadata: " + label);
   }
+  if (item.hub_stats !== undefined) {
+    need(item.hub_stats && Number.isSafeInteger(item.hub_stats.popularity_rank) && item.hub_stats.popularity_rank >= 1 &&
+      Number.isSafeInteger(item.hub_stats.recency_rank) && item.hub_stats.recency_rank >= 1,
+      "Invalid Hub ranking metadata: " + label);
+  }
 }
 
 export function validateCatalog(catalog) {
@@ -201,12 +206,13 @@ export async function parallel(items, task) {
   return results;
 }
 
-export async function loadRegistry(request) {
+export async function loadRegistry(request, sort = "new") {
+  need(["new", "hot"].includes(sort), "Unsupported Hub package sort: " + sort);
   const packages = [];
   const hashes = new Set();
   let total;
   for (let after = 0; total === undefined || after < total; after += 100) {
-    const page = json(await request(HUB + "/packages.json?sort=new&limit=100&after=" + after), "Hub package page");
+    const page = json(await request(HUB + "/packages.json?sort=" + sort + "&limit=100&after=" + after), "Hub package page");
     need(Number.isSafeInteger(page.total) && page.total > 0 && Array.isArray(page.packages), "Malformed Hub package page");
     if (total === undefined) total = page.total;
     if (page.total !== total) throw new RefreshError("Hub inventory changed during pagination; retry the refresh", true);
@@ -276,8 +282,22 @@ function requireComplete(failures) {
 
 export async function refreshCatalog(catalog, awesomeText, request, now = new Date().toISOString()) {
   const curated = parseAwesome(awesomeText, catalog.packages);
-  const inventory = await loadRegistry(request);
+  const inventory = await loadRegistry(request, "new");
+  const popularity = await loadRegistry(request, "hot");
+  const inventoryHashes = new Set(inventory.map((row) => row.hash));
+  if (popularity.length !== inventory.length || !popularity.every((row) => inventoryHashes.has(row.hash))) {
+    throw new RefreshError("Hub inventory changed between new and hot rankings; retry the refresh", true);
+  }
   const byHash = new Map(inventory.map((row) => [row.hash, row]));
+  const recencyRank = new Map(inventory.map((row, index) => [row.hash, index + 1]));
+  const popularityRank = new Map(popularity.map((row, index) => [row.hash, index + 1]));
+  const statsFor = (hash) => {
+    const popularity_rank = popularityRank.get(hash);
+    const recency_rank = recencyRank.get(hash);
+    return Number.isSafeInteger(popularity_rank) && Number.isSafeInteger(recency_rank)
+      ? { popularity_rank, recency_rank }
+      : null;
+  };
   const names = new Set(inventory.map((row) => row.name).filter(Boolean));
   for (const ref of curated.references) if (!HASH.test(ref.package)) names.add(ref.package.split("@")[0]);
   for (const row of catalog.packages) for (const item of allPublications(row)) {
@@ -293,6 +313,9 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     const latest = result?.latest;
     need(result?.name === name && latest && VERSION.test(latest.version) && HASH.test(latest.hash) && typeof latest.desc === "string" && typeof latest.entry === "string", "Invalid latest publication: " + name);
     need(latest.entry === "" || ENTRY.test(latest.entry), "Invalid published entry: " + name);
+    if (!popularityRank.has(latest.hash) || !recencyRank.has(latest.hash)) {
+      throw new RefreshError("Hub publication changed during refresh; retry the refresh", true);
+    }
     return {
       name,
       version: latest.version,
@@ -323,9 +346,12 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
     const ref = parseImport(item.import);
     const name = HASH.test(ref.package) ? "" : ref.package.split("@")[0];
     const meta = name ? byName.get(name) : null;
+    const publication = verified.get(target(ref));
+    const stats = statsFor(meta?.hash ?? publication.hash);
     const base = {
       ...item,
-      publication: { ...verified.get(target(ref)), owner: meta?.owner ?? "" },
+      publication: { ...publication, owner: meta?.owner ?? "" },
+      ...(stats ? { hub_stats: stats } : {}),
     };
     if (!meta) return base;
     const latestImport = await latestImportFor(ref, meta, request);
@@ -355,7 +381,12 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       const retained = await collect(allPublications(row), async (item) => {
         const ref = parseImport(item.import);
         const publication = await verifyPublication(ref, request);
-        return { import: item.import, publication: { ...publication, owner: byName.get(ref.package.split("@")[0])?.owner ?? "" } };
+        const stats = statsFor(publication.hash);
+        return {
+          import: item.import,
+          publication: { ...publication, owner: byName.get(ref.package.split("@")[0])?.owner ?? "" },
+          ...(stats ? { hub_stats: stats } : {}),
+        };
       }, failures);
       if (retained.every(Boolean)) {
         rows.push({ ...row, ...retained[0], ...(retained.length > 1 ? { additional_imports: retained.slice(1) } : {}) });
@@ -371,6 +402,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   const named = await collect(candidates, async (item) => {
     const publication = await verifyPublication({ package: item.name + "@" + item.version, entry: item.entry || null }, request, item.hash);
     const previous = previousNamed.get(item.name);
+    const stats = statsFor(item.hash);
     return {
       id: previous?.id ?? "hub-" + item.name, name: item.name, repo: previous?.repo ?? "", url: previous?.url ?? HUB + "/n/" + item.name,
       description: item.desc.trim() || "Named package published on BendHub. Check its documentation and compiler requirements on the Hub.",
@@ -378,6 +410,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
       import: item.entry ? "import " + publication.package + "/" + item.entry + " as " + alias(item.entry) : null,
       publication: { ...publication, owner: item.owner },
       hub: hubOf(item),
+      ...(stats ? { hub_stats: stats } : {}),
     };
   }, failures);
   requireComplete(failures);
@@ -410,7 +443,7 @@ export async function refreshCatalog(catalog, awesomeText, request, now = new Da
   };
   validateCatalog(result);
   const latestImports = rows.flatMap(allPublications).filter((item) => item.latest_import).length;
-  return { catalog: result, summary: curated.packages.length + " Awesome entries with " + curated.references.length + " reviewed imports; " + latestImports + " safe latest-version upgrades; " + uniqueNamed.size + " named Hub listings; " + kept + " other reviewed listings retained; " + inventory.length + " Hub publications inspected." };
+  return { catalog: result, summary: curated.packages.length + " Awesome entries with " + curated.references.length + " reviewed imports; " + latestImports + " safe latest-version upgrades; " + uniqueNamed.size + " named Hub listings; " + kept + " other reviewed listings retained; " + inventory.length + " Hub publications inspected with official new/hot rankings." };
 }
 
 export function writeCatalog(path, catalog) {

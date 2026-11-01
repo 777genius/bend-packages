@@ -32,12 +32,15 @@ const FILTERS = {
     { value: "all", label: "All listings", icon: "source" },
   ],
   sort: [
-    { value: "stars", label: "Most stars", icon: "trust" },
+    { value: "relevance", label: "Relevance", icon: "trust" },
+    { value: "hub", label: "Hub popularity", icon: "trust" },
+    { value: "recent", label: "Recently updated", icon: "source" },
+    { value: "stars", label: "GitHub stars", icon: "trust" },
     { value: "name", label: "Name", icon: "owner" },
   ],
 };
 
-const state = { packages: [], query: "", category: "all", source: "hub", sort: "stars", status: "loading" };
+const state = { packages: [], query: "", category: "all", source: "hub", sort: "relevance", status: "loading" };
 
 const ICONS = {
   category:
@@ -148,6 +151,7 @@ function importsFor(pkg) {
       publication: pkg.publication,
       latest_import: pkg.latest_import,
       hub: pkg.hub,
+      hub_stats: pkg.hub_stats,
     }] : []),
     ...(pkg.additional_imports ?? []),
   ];
@@ -160,6 +164,7 @@ function searchRecords(pkg) {
       publication: pkg.publication,
       latest_import: pkg.latest_import,
       hub: pkg.hub,
+      hub_stats: pkg.hub_stats,
     },
     ...(pkg.additional_imports ?? []),
   ];
@@ -225,6 +230,54 @@ function searchScore(pkg, query) {
     else if (owner.includes(needle)) score += 90;
   }
   return score;
+}
+
+function hubStatsFor(pkg) {
+  const stats = searchRecords(pkg).map((item) => item.hub_stats).filter(Boolean);
+  const rank = (key) => {
+    const values = stats.map((item) => item[key]).filter(Number.isSafeInteger);
+    return values.length ? Math.min(...values) : Number.POSITIVE_INFINITY;
+  };
+  return {
+    popularity_rank: rank("popularity_rank"),
+    recency_rank: rank("recency_rank"),
+  };
+}
+
+function compareResults(a, b, query, sort) {
+  if (sort === "relevance" && query && b.score !== a.score) return b.score - a.score;
+
+  const aStats = hubStatsFor(a.pkg);
+  const bStats = hubStatsFor(b.pkg);
+  const compareRank = (key) => {
+    const left = aStats[key];
+    const right = bStats[key];
+    if (left === right) return 0;
+    if (!Number.isFinite(left)) return 1;
+    if (!Number.isFinite(right)) return -1;
+    return left - right;
+  };
+
+  if (sort === "relevance" || sort === "hub") {
+    const ranked = compareRank("popularity_rank");
+    if (ranked) return ranked;
+  } else if (sort === "recent") {
+    const recent = compareRank("recency_rank");
+    if (recent) return recent;
+  } else if (sort === "stars") {
+    const stars = (b.pkg.stars ?? -1) - (a.pkg.stars ?? -1);
+    if (stars) return stars;
+  }
+
+  if (sort !== "recent") {
+    const recent = compareRank("recency_rank");
+    if (recent) return recent;
+  }
+  if (sort !== "stars") {
+    const stars = (b.pkg.stars ?? -1) - (a.pkg.stars ?? -1);
+    if (stars) return stars;
+  }
+  return a.pkg.name.localeCompare(b.pkg.name);
 }
 
 function card(pkg) {
@@ -355,7 +408,7 @@ function activeChips() {
   if (state.query.trim()) items.push({ key: "query", label: `Search: ${state.query.trim()}` });
   if (state.category !== "all") items.push({ key: "category", label: `Category: ${optionLabel("category", state.category)}` });
   if (state.source !== "hub") items.push({ key: "source", label: `Source: ${optionLabel("source", state.source)}` });
-  if (state.sort !== "stars") items.push({ key: "sort", label: `Sort: ${optionLabel("sort", state.sort)}` });
+  if (state.sort !== "relevance") items.push({ key: "sort", label: `Sort: ${optionLabel("sort", state.sort)}` });
   return items;
 }
 
@@ -363,7 +416,7 @@ function resetFilters() {
   state.query = "";
   state.category = "all";
   state.source = "hub";
-  state.sort = "stars";
+  state.sort = "relevance";
   q.value = "";
   syncFilters();
   render();
@@ -378,12 +431,9 @@ function render() {
     (state.category === "all" || pkg.category === state.category) &&
     (state.source === "all" || pkg.source === state.source)
   ));
-  scored.sort((a, b) => {
-    if (query && b.score !== a.score) return b.score - a.score;
-    return state.sort === "name"
-      ? a.pkg.name.localeCompare(b.pkg.name)
-      : (b.pkg.stars ?? 0) - (a.pkg.stars ?? 0);
-  });
+  scored.sort((a, b) => state.sort === "name"
+    ? a.pkg.name.localeCompare(b.pkg.name)
+    : compareResults(a, b, query, state.sort));
   const rows = scored.map(({ pkg }) => pkg);
 
   chips.replaceChildren();
@@ -396,7 +446,7 @@ function render() {
         state.query = "";
         q.value = "";
       } else {
-        state[chip.key] = chip.key === "sort" ? "stars" : chip.key === "source" ? "hub" : "all";
+        state[chip.key] = chip.key === "sort" ? "relevance" : chip.key === "source" ? "hub" : "all";
         syncFilters();
       }
       render();
