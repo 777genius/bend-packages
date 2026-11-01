@@ -134,7 +134,7 @@
                 <span aria-hidden="true">＋</span><span>Add package</span>
               </a>
             </div>
-            <p>Search by project, Hub name, owner, or capability. The default view shows Hub publications; choose Source only for other projects and resources, or All listings to see both.</p>
+            <p>Search by project, Hub name, owner, or capability. Exact names and aliases rank first. Relevance uses the official Hub popularity order when browsing; More filters also offers Hub popularity, Recently updated, GitHub stars, and Name. The default view shows Hub publications; choose Source only for other projects and resources, or All listings to see both.</p>
           </div>
 
           <div class="catalog-controls" role="search" aria-label="Filter packages">
@@ -178,6 +178,10 @@
               <p>The catalog combines curated entries from <a href="https://github.com/777genius/awesome-bend">Awesome Bend</a> with official BendHub inventory, name metadata, versions, manifests, and file checksums. Daily refreshes keep the latest named versions searchable while preserving reviewed compatibility pins. Use <strong>Add package</strong> to suggest a missing project.</p>
             </details>
             <details>
+              <summary>How are packages ranked?<span aria-hidden="true">+</span></summary>
+              <p><strong>Relevance</strong> prioritizes exact project, Hub-name, alias, and owner matches; with no search query it falls back to BendHub’s official popular ordering. <strong>Hub popularity</strong> and <strong>Recently updated</strong> come from the Hub’s own <span class="mono">hot</span> and <span class="mono">new</span> inventories captured during the last successful refresh. <strong>GitHub stars</strong> is only available for listings tied to a GitHub repository. Source-only projects without Hub data naturally sort after Hub-ranked packages.</p>
+            </details>
+            <details>
               <summary>Will a package work with my Bend version?<span aria-hidden="true">+</span></summary>
               <p>Check the project’s README and compiler requirements before changing a working pin. Copyable imports are checked against published file checksums. Compiler compatibility comes from the package’s documentation and your own checks.</p>
             </details>
@@ -205,6 +209,6 @@
       </footer>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <script src="./app.js?v=21" type="module"></script>
+    <script src="./app.js?v=22" type="module"></script>
   </body>
 </html>
