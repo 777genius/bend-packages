@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T06:32:07.079Z",
+  "generated_at": "2026-11-05T06:32:24.675Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -1449,7 +1449,7 @@
       "description": "MIT-licensed operating-system libraries: file systems, archives, compression, ELF, partition tables, network headers, capability and LSM policy models, and kernel data structures, each with laws, --verdict-accepted proofs, and differential tests; pinned to Bend 2.0.39 and published incrementally on the hub as bend-osdev-<package> (for example import bend-osdev-bytes@0.1.1.1/bytes.bend).",
       "category": "packages",
       "source": "hub",
-      "stars": 2,
+      "stars": 3,
       "import": "import bend-osdev-bytes@0.1.1.1/bytes.bend as Bytes",
       "publication": {
         "package": "bend-osdev-bytes@0.1.1.1",
@@ -1811,7 +1811,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
@@ -2551,7 +2551,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
@@ -2562,7 +2562,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
@@ -2683,7 +2683,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
@@ -2694,7 +2694,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
@@ -2705,7 +2705,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": 24705,
+      "stars": 24742,
       "import": null
     },
     {
