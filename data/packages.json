@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:28:59.838Z",
+  "generated_at": "2026-11-26T17:06:16.569Z",
   "disclaimer": "Community catalog. Not affiliated with bendlang. Publication and file integrity do not establish compiler compatibility.",
   "packages": [
     {
@@ -30,8 +30,8 @@
         "owner": "jkbennitt"
       },
       "hub_stats": {
-        "popularity_rank": 1180,
-        "recency_rank": 1106
+        "popularity_rank": 1245,
+        "recency_rank": 1170
       },
       "hub": {
         "name": "unified-nsga-iii",
@@ -60,7 +60,7 @@
       "name": "bend-tty",
       "repo": "caiodomingues/bend-tty",
       "url": "https://github.com/caiodomingues/bend-tty",
-      "description": "Raw-mode terminal effects, escapes, and a proof-checked key decoder.",
+      "description": "Terminal raw mode, key decoding, colour detection, and Unicode display-width operations, with proved pure laws and native and Bun lanes; requires Bend 2.0.40.",
       "category": "packages",
       "source": "git",
       "stars": 0,
@@ -94,8 +94,8 @@
         "owner": "gouveags"
       },
       "hub_stats": {
-        "popularity_rank": 1185,
-        "recency_rank": 1110
+        "popularity_rank": 1250,
+        "recency_rank": 1174
       },
       "hub": {
         "name": "bend-openai-sdk",
@@ -125,8 +125,8 @@
         "owner": "gouveags"
       },
       "hub_stats": {
-        "popularity_rank": 1132,
-        "recency_rank": 1109
+        "popularity_rank": 1196,
+        "recency_rank": 1173
       },
       "hub": {
         "name": "bend-anthropic-sdk",
@@ -156,8 +156,8 @@
         "owner": "777genius"
       },
       "hub_stats": {
-        "popularity_rank": 1110,
-        "recency_rank": 1461
+        "popularity_rank": 1174,
+        "recency_rank": 1525
       },
       "hub": {
         "name": "bend-encoding",
@@ -187,8 +187,8 @@
         "owner": "777genius"
       },
       "hub_stats": {
-        "popularity_rank": 1102,
-        "recency_rank": 1464
+        "popularity_rank": 1166,
+        "recency_rank": 1528
       },
       "hub": {
         "name": "bend-scanner",
@@ -221,8 +221,8 @@
             "owner": ""
           },
           "hub_stats": {
-            "popularity_rank": 1438,
-            "recency_rank": 1433
+            "popularity_rank": 1502,
+            "recency_rank": 1497
           }
         }
       ],
@@ -236,8 +236,8 @@
         ]
       },
       "hub_stats": {
-        "popularity_rank": 1181,
-        "recency_rank": 1107
+        "popularity_rank": 1246,
+        "recency_rank": 1171
       },
       "hub": {
         "name": "bend-datetime",
@@ -267,8 +267,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 120,
-        "recency_rank": 269
+        "popularity_rank": 185,
+        "recency_rank": 333
       },
       "hub": {
         "name": "shake",
@@ -299,8 +299,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1463,
-        "recency_rank": 1459
+        "popularity_rank": 1527,
+        "recency_rank": 1523
       }
     },
     {
@@ -320,8 +320,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1381,
-        "recency_rank": 1350
+        "popularity_rank": 1445,
+        "recency_rank": 1414
       }
     },
     {
@@ -341,8 +341,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1453,
-        "recency_rank": 1449
+        "popularity_rank": 1517,
+        "recency_rank": 1513
       }
     },
     {
@@ -362,8 +362,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 201,
-        "recency_rank": 260
+        "popularity_rank": 265,
+        "recency_rank": 324
       },
       "hub": {
         "name": "emerging-eztoml",
@@ -397,8 +397,8 @@
         ]
       },
       "hub_stats": {
-        "popularity_rank": 116,
-        "recency_rank": 261
+        "popularity_rank": 181,
+        "recency_rank": 325
       },
       "hub": {
         "name": "ezjson",
@@ -429,8 +429,8 @@
         "owner": "FabianVegaA"
       },
       "hub_stats": {
-        "popularity_rank": 479,
-        "recency_rank": 422
+        "popularity_rank": 543,
+        "recency_rank": 486
       },
       "hub": {
         "name": "mylsm-lsm-store",
@@ -448,7 +448,7 @@
       "name": "bend-tui",
       "repo": "caiodomingues/bend-tui",
       "url": "https://github.com/caiodomingues/bend-tui",
-      "description": "Terminal views, a proof-checked frame shape, and a Tui.run loop on bend-tty.",
+      "description": "Terminal widgets, full-screen and inline CLI loops, with proved frame-shape and redraw laws; requires Bend 2.0.40 and bend-tty at f57032b or later.",
       "category": "packages",
       "source": "git",
       "stars": 0,
@@ -482,8 +482,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 112,
-        "recency_rank": 264
+        "popularity_rank": 177,
+        "recency_rank": 328
       },
       "hub": {
         "name": "ezhttp",
@@ -514,8 +514,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 300,
-        "recency_rank": 266
+        "popularity_rank": 364,
+        "recency_rank": 330
       },
       "hub": {
         "name": "emerging-ezaudio",
@@ -546,8 +546,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 298,
-        "recency_rank": 263
+        "popularity_rank": 362,
+        "recency_rank": 327
       },
       "hub": {
         "name": "emerging-ezimg",
@@ -578,8 +578,8 @@
         "owner": "Giulio2002"
       },
       "hub_stats": {
-        "popularity_rank": 1109,
-        "recency_rank": 1117
+        "popularity_rank": 1173,
+        "recency_rank": 1181
       },
       "hub": {
         "name": "bend-collections",
@@ -609,8 +609,8 @@
         "owner": "MuhDur"
       },
       "hub_stats": {
-        "popularity_rank": 74,
-        "recency_rank": 10
+        "popularity_rank": 141,
+        "recency_rank": 74
       },
       "hub": {
         "name": "bend-mathlib",
@@ -641,8 +641,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1325,
-        "recency_rank": 1276
+        "popularity_rank": 1389,
+        "recency_rank": 1340
       }
     },
     {
@@ -662,8 +662,8 @@
         "owner": "Lorenzobattistela"
       },
       "hub_stats": {
-        "popularity_rank": 1404,
-        "recency_rank": 1398
+        "popularity_rank": 1468,
+        "recency_rank": 1462
       },
       "hub": {
         "name": "bend-tensors",
@@ -715,8 +715,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1405,
-        "recency_rank": 1400
+        "popularity_rank": 1469,
+        "recency_rank": 1464
       }
     },
     {
@@ -724,7 +724,7 @@
       "name": "bend-kit",
       "repo": "paymog/bend-kit",
       "url": "https://github.com/paymog/bend-kit",
-      "description": "Independently published Bend 2 packages for codecs, collections, networking, storage, cryptography, services, proto3 codecs with typed protoc generation, and binary64 soft-float. Bytes import bend-kit-bytes@0.3.3.0/bytes.bend; HTTP import bend-kit-http@0.38.5.0/http.bend. The project currently requires Bend 2.0.38 or newer.",
+      "description": "Independently published Bend 2 packages for codecs, collections, networking, storage, cryptography, services, proto3 codecs with typed protoc generation, and binary64 soft-float. Bytes import bend-kit-bytes@0.3.3.0/bytes.bend; HTTP import bend-kit-http@0.38.5.0/http.bend. The alpha project requires Bend 2.0.38 or newer and Bun 1.4.2 on macOS or Linux (including WSL); use the dependency pins of the receiving package when passing typed values.",
       "category": "packages",
       "source": "hub",
       "stars": 16,
@@ -739,20 +739,20 @@
             "owner": "paymog"
           },
           "hub_stats": {
-            "popularity_rank": 73,
-            "recency_rank": 9
+            "popularity_rank": 9,
+            "recency_rank": 19
           },
           "hub": {
             "name": "bend-kit-http",
             "owner": "paymog",
             "latest": {
-              "version": "0.43.0.0",
-              "hash": "0x4c5a2376995f5238ac64e3300bc7aa95",
+              "version": "0.45.0.0",
+              "hash": "0x4d75a4c849d23a41c6b8dab4e9d823b1",
               "entry": "http.bend",
               "description": "HTTP/1.1 and HTTP/2 client, with an HTTP/1.1 server. Source: https://github.com/paymog/bend-kit/tree/main/http"
             }
           },
-          "latest_import": "import bend-kit-http@0.43.0.0/http.bend as Http"
+          "latest_import": "import bend-kit-http@0.45.0.0/http.bend as Http"
         }
       ],
       "publication": {
@@ -763,7 +763,7 @@
       },
       "hub_stats": {
         "popularity_rank": 1,
-        "recency_rank": 183
+        "recency_rank": 247
       },
       "hub": {
         "name": "bend-kit-bytes",
@@ -797,8 +797,8 @@
             "owner": "PedroAVJ"
           },
           "hub_stats": {
-            "popularity_rank": 1289,
-            "recency_rank": 1227
+            "popularity_rank": 1353,
+            "recency_rank": 1291
           },
           "hub": {
             "name": "near-v-framework",
@@ -819,8 +819,8 @@
         "owner": "PedroAVJ"
       },
       "hub_stats": {
-        "popularity_rank": 1189,
-        "recency_rank": 1326
+        "popularity_rank": 1254,
+        "recency_rank": 1390
       },
       "hub": {
         "name": "near-architecture",
@@ -861,8 +861,8 @@
         "owner": "nbardy"
       },
       "hub_stats": {
-        "popularity_rank": 1400,
-        "recency_rank": 1392
+        "popularity_rank": 1464,
+        "recency_rank": 1456
       },
       "hub": {
         "name": "bend-lawful-stdlib",
@@ -892,8 +892,8 @@
         "owner": "FabianVegaA"
       },
       "hub_stats": {
-        "popularity_rank": 1311,
-        "recency_rank": 1258
+        "popularity_rank": 1375,
+        "recency_rank": 1322
       },
       "hub": {
         "name": "ber-core-store",
@@ -923,8 +923,8 @@
         "owner": "costamatheus97"
       },
       "hub_stats": {
-        "popularity_rank": 1350,
-        "recency_rank": 1305
+        "popularity_rank": 1414,
+        "recency_rank": 1369
       },
       "hub": {
         "name": "bend-parallel",
@@ -954,8 +954,8 @@
         "owner": "nohzafk"
       },
       "hub_stats": {
-        "popularity_rank": 1101,
-        "recency_rank": 1041
+        "popularity_rank": 1165,
+        "recency_rank": 1105
       },
       "hub": {
         "name": "bend-schema-lib",
@@ -985,8 +985,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1344,
-        "recency_rank": 1301
+        "popularity_rank": 1408,
+        "recency_rank": 1365
       }
     },
     {
@@ -1006,8 +1006,8 @@
         "owner": "subtleGradient"
       },
       "hub_stats": {
-        "popularity_rank": 1092,
-        "recency_rank": 1273
+        "popularity_rank": 1156,
+        "recency_rank": 1337
       },
       "hub": {
         "name": "bend-over-sqlite",
@@ -1037,8 +1037,8 @@
         "owner": "LucasGois1"
       },
       "hub_stats": {
-        "popularity_rank": 1179,
-        "recency_rank": 1105
+        "popularity_rank": 1244,
+        "recency_rank": 1169
       },
       "hub": {
         "name": "bend-trace-context",
@@ -1068,8 +1068,8 @@
         "owner": "nohzafk"
       },
       "hub_stats": {
-        "popularity_rank": 1194,
-        "recency_rank": 1118
+        "popularity_rank": 1259,
+        "recency_rank": 1182
       },
       "hub": {
         "name": "bend-csv-parser",
@@ -1124,8 +1124,8 @@
             "owner": "nuxyel"
           },
           "hub_stats": {
-            "popularity_rank": 88,
-            "recency_rank": 24
+            "popularity_rank": 154,
+            "recency_rank": 88
           },
           "hub": {
             "name": "bend-ml-tensor-gpu",
@@ -1148,8 +1148,8 @@
             "owner": "nuxyel"
           },
           "hub_stats": {
-            "popularity_rank": 321,
-            "recency_rank": 485
+            "popularity_rank": 385,
+            "recency_rank": 549
           },
           "hub": {
             "name": "bend-ml-binary-read",
@@ -1170,8 +1170,8 @@
         "owner": "nuxyel"
       },
       "hub_stats": {
-        "popularity_rank": 32,
-        "recency_rank": 25
+        "popularity_rank": 48,
+        "recency_rank": 89
       },
       "hub": {
         "name": "bend-ml-tensor-array",
@@ -1202,8 +1202,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1111,
-        "recency_rank": 1047
+        "popularity_rank": 1175,
+        "recency_rank": 1111
       }
     },
     {
@@ -1267,8 +1267,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1112,
-        "recency_rank": 1048
+        "popularity_rank": 1176,
+        "recency_rank": 1112
       }
     },
     {
@@ -1335,8 +1335,8 @@
             "owner": "Kaz9487"
           },
           "hub_stats": {
-            "popularity_rank": 200,
-            "recency_rank": 165
+            "popularity_rank": 264,
+            "recency_rank": 229
           },
           "hub": {
             "name": "stelliferous",
@@ -1358,8 +1358,8 @@
         "owner": "Kaz9487"
       },
       "hub_stats": {
-        "popularity_rank": 200,
-        "recency_rank": 165
+        "popularity_rank": 264,
+        "recency_rank": 229
       },
       "hub": {
         "name": "stelliferous",
@@ -1390,8 +1390,8 @@
         "owner": "Genarito"
       },
       "hub_stats": {
-        "popularity_rank": 992,
-        "recency_rank": 926
+        "popularity_rank": 1056,
+        "recency_rank": 990
       },
       "hub": {
         "name": "bend-edit-distance",
@@ -1432,8 +1432,8 @@
         "owner": "aaaxn"
       },
       "hub_stats": {
-        "popularity_rank": 966,
-        "recency_rank": 903
+        "popularity_rank": 1030,
+        "recency_rank": 967
       },
       "hub": {
         "name": "bendtorch-core",
@@ -1463,8 +1463,8 @@
         "owner": "ScottMoore0"
       },
       "hub_stats": {
-        "popularity_rank": 570,
-        "recency_rank": 611
+        "popularity_rank": 634,
+        "recency_rank": 675
       },
       "hub": {
         "name": "bend-osdev-bytes",
@@ -1482,7 +1482,7 @@
       "name": "bend2-libs",
       "repo": "nicolas-abril/bend2-libs",
       "url": "https://github.com/nicolas-abril/bend2-libs",
-      "description": "Text, XML, CSS, PNG, JPEG, TrueType, SVG-render, byte, and archive libraries unpacked from nicolas-abril's demos onto the hub under the gralha- prefix (for example import gralha-text-scan@0.1.0.1/scan.bend and import gralha-ustar@0.1.0.0/ustar.bend); requires Bend 2.0.37+.",
+      "description": "Text, XML, CSS, PNG, JPEG, TrueType, SVG-render, byte, archive, and HTTP/1.1 libraries from nicolas-abril's demos onto the hub under the gralha- prefix (for example import gralha-text-scan@0.1.0.1/scan.bend and import gralha-ustar@0.1.0.0/ustar.bend); requires Bend 2.0.37+.",
       "category": "packages",
       "source": "hub",
       "stars": 1,
@@ -1497,8 +1497,8 @@
             "owner": "nicolas-abril"
           },
           "hub_stats": {
-            "popularity_rank": 927,
-            "recency_rank": 908
+            "popularity_rank": 991,
+            "recency_rank": 972
           },
           "hub": {
             "name": "gralha-ustar",
@@ -1519,8 +1519,8 @@
         "owner": "nicolas-abril"
       },
       "hub_stats": {
-        "popularity_rank": 452,
-        "recency_rank": 655
+        "popularity_rank": 516,
+        "recency_rank": 719
       },
       "hub": {
         "name": "gralha-text-scan",
@@ -1572,8 +1572,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1462,
-        "recency_rank": 1458
+        "popularity_rank": 1526,
+        "recency_rank": 1522
       }
     },
     {
@@ -1593,8 +1593,8 @@
         "owner": "aaaxn"
       },
       "hub_stats": {
-        "popularity_rank": 790,
-        "recency_rank": 840
+        "popularity_rank": 855,
+        "recency_rank": 904
       },
       "hub": {
         "name": "bend-visgraph",
@@ -1624,8 +1624,8 @@
         "owner": "adeerkhan"
       },
       "hub_stats": {
-        "popularity_rank": 604,
-        "recency_rank": 826
+        "popularity_rank": 668,
+        "recency_rank": 890
       },
       "hub": {
         "name": "mlbend-huggingface",
@@ -1655,8 +1655,8 @@
         "owner": "adeerkhan"
       },
       "hub_stats": {
-        "popularity_rank": 791,
-        "recency_rank": 710
+        "popularity_rank": 856,
+        "recency_rank": 774
       },
       "hub": {
         "name": "mlbend-datasets",
@@ -1686,8 +1686,8 @@
         "owner": "adeerkhan"
       },
       "hub_stats": {
-        "popularity_rank": 756,
-        "recency_rank": 827
+        "popularity_rank": 820,
+        "recency_rank": 891
       },
       "hub": {
         "name": "mlbend-metrics",
@@ -1739,8 +1739,8 @@
         "owner": "nuxyel"
       },
       "hub_stats": {
-        "popularity_rank": 202,
-        "recency_rank": 388
+        "popularity_rank": 266,
+        "recency_rank": 452
       },
       "hub": {
         "name": "bendtorch",
@@ -1781,8 +1781,8 @@
         "owner": "jonasporto"
       },
       "hub_stats": {
-        "popularity_rank": 539,
-        "recency_rank": 476
+        "popularity_rank": 603,
+        "recency_rank": 540
       },
       "hub": {
         "name": "element-html",
@@ -1807,6 +1807,17 @@
       "import": null
     },
     {
+      "id": "awesome-bend-html-1de45850",
+      "name": "bend_html",
+      "repo": "gramrconsulting/bend_html",
+      "url": "https://github.com/gramrconsulting/bend_html",
+      "description": "Pure typed HTML construction and rendering with proved escaping and list and table shape laws; raw markup is an explicit escape hatch, and the separate kernel verdict has not been run.",
+      "category": "packages",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
       "id": "bolt",
       "name": "bolt",
       "repo": "Emerging-Patterns/bolt",
@@ -1823,8 +1834,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 295,
-        "recency_rank": 258
+        "popularity_rank": 359,
+        "recency_rank": 322
       },
       "hub": {
         "name": "bolt",
@@ -1868,7 +1879,7 @@
       "description": "Official formatting-only language server (full document, no diagnostics).",
       "category": "editors",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -1932,8 +1943,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 203,
-        "recency_rank": 267
+        "popularity_rank": 267,
+        "recency_rank": 331
       },
       "hub": {
         "name": "snap",
@@ -1964,8 +1975,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1456,
-        "recency_rank": 1452
+        "popularity_rank": 1520,
+        "recency_rank": 1516
       }
     },
     {
@@ -2249,8 +2260,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1345,
-        "recency_rank": 1302
+        "popularity_rank": 1409,
+        "recency_rank": 1366
       }
     },
     {
@@ -2501,8 +2512,8 @@
         "owner": "viridale"
       },
       "hub_stats": {
-        "popularity_rank": 487,
-        "recency_rank": 430
+        "popularity_rank": 551,
+        "recency_rank": 494
       },
       "hub": {
         "name": "cli",
@@ -2556,7 +2567,7 @@
       "description": "Official development-only proof cache for --check-only using Bun; run the uncached compiler and --verdict before submission or merge.",
       "category": "tools",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -2588,6 +2599,39 @@
       "url": "https://github.com/Josephur/RustyBends",
       "description": "Cargo build helper that checks Bend 2 laws, locks and mutation-tests them, and emits a subset of pure functions and data types as Rust; the generated Rust is tested separately and kernel checking is configurable.",
       "category": "tools",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "awesome-cata-9e271db6",
+      "name": "cata",
+      "repo": "hhefesto/cata",
+      "url": "https://github.com/hhefesto/cata",
+      "description": "Rule-based Haskell-to-Bend translation using GHC's typed syntax, with checker-gated output, a ledger of unsupported definitions, and example laws generated from GHC results; requires Nix and a companion checkout.",
+      "category": "tools",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "awesome-bendsidecar-81c6a4a3",
+      "name": "bendsidecar",
+      "repo": "Gwushor/bendsidecar",
+      "url": "https://github.com/Gwushor/bendsidecar",
+      "description": "Go library for running Bend 2 programs in separate processes, with cached or prebuilt binaries, timeouts, and file transport; experimental Unix support with Go 1.27 and Bend 2.0.40.",
+      "category": "tools",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
+      "id": "awesome-bend-syntax-for-terminalcode-ae523dca",
+      "name": "Bend syntax for TerminalCode",
+      "repo": "Tim-kieboom/trcode-plugin-bend-syntax",
+      "url": "https://github.com/Tim-kieboom/trcode-plugin-bend-syntax",
+      "description": "Syntax highlighting plugin using a WebAssembly Tree-sitter grammar for Bend 2.0.36; requires TerminalCode 0.11.0 or newer.",
+      "category": "editors",
       "source": "git",
       "stars": 0,
       "import": null
@@ -2631,8 +2675,8 @@
         "owner": "noah-emp"
       },
       "hub_stats": {
-        "popularity_rank": 293,
-        "recency_rank": 256
+        "popularity_rank": 357,
+        "recency_rank": 320
       },
       "hub": {
         "name": "ezx",
@@ -2665,7 +2709,7 @@
       "description": "Installs verified Bend release archives on Linux and macOS (nix profile install github:bendlang/bend).",
       "category": "packaging",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -2676,7 +2720,7 @@
       "description": "Language guide, also printed by bend guide.",
       "category": "learning",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -2808,7 +2852,7 @@
       "description": "2D game plus a proof the player cannot win.",
       "category": "demos",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -2819,7 +2863,7 @@
       "description": "3D boss-fight demo.",
       "category": "demos",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -2830,7 +2874,7 @@
       "description": "Deterministic multiplayer networking example.",
       "category": "demos",
       "source": "git",
-      "stars": 25875,
+      "stars": 25913,
       "import": null
     },
     {
@@ -3147,8 +3191,8 @@
         "owner": "nuxyel"
       },
       "hub_stats": {
-        "popularity_rank": 409,
-        "recency_rank": 373
+        "popularity_rank": 473,
+        "recency_rank": 437
       },
       "hub": {
         "name": "bend-ml-llama",
@@ -3250,6 +3294,17 @@
       "import": null
     },
     {
+      "id": "awesome-cl-cordis-c8a3cf50",
+      "name": "cl-cordis",
+      "repo": "nohzafk/cl-cordis",
+      "url": "https://github.com/nohzafk/cl-cordis",
+      "description": "SBCL component framework with Bend 2.0.40 decision cores for activation, dependency changes, and reversible effect ledgers; the emitted Lisp runs without Bend and proofs cover the decision cores, not all host effects.",
+      "category": "demos",
+      "source": "git",
+      "stars": 0,
+      "import": null
+    },
+    {
       "id": "bend-i64",
       "name": "bend-i64",
       "repo": "phenomenon0/bend-i64",
@@ -3266,8 +3321,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1457,
-        "recency_rank": 1453
+        "popularity_rank": 1521,
+        "recency_rank": 1517
       }
     },
     {
@@ -3287,8 +3342,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1458,
-        "recency_rank": 1454
+        "popularity_rank": 1522,
+        "recency_rank": 1518
       }
     },
     {
@@ -3308,8 +3363,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1495,
-        "recency_rank": 1493
+        "popularity_rank": 1559,
+        "recency_rank": 1557
       }
     },
     {
@@ -3329,8 +3384,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1454,
-        "recency_rank": 1450
+        "popularity_rank": 1518,
+        "recency_rank": 1514
       }
     },
     {
@@ -3350,8 +3405,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1523,
-        "recency_rank": 1523
+        "popularity_rank": 1587,
+        "recency_rank": 1587
       }
     },
     {
@@ -3371,8 +3426,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1501,
-        "recency_rank": 1499
+        "popularity_rank": 1565,
+        "recency_rank": 1563
       }
     },
     {
@@ -3392,8 +3447,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1468,
-        "recency_rank": 1466
+        "popularity_rank": 1532,
+        "recency_rank": 1530
       }
     },
     {
@@ -3413,8 +3468,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1481,
-        "recency_rank": 1479
+        "popularity_rank": 1545,
+        "recency_rank": 1543
       }
     },
     {
@@ -3434,8 +3489,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1485,
-        "recency_rank": 1483
+        "popularity_rank": 1549,
+        "recency_rank": 1547
       }
     },
     {
@@ -3455,8 +3510,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1546,
-        "recency_rank": 1546
+        "popularity_rank": 1610,
+        "recency_rank": 1610
       }
     },
     {
@@ -3476,8 +3531,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1540,
-        "recency_rank": 1540
+        "popularity_rank": 1604,
+        "recency_rank": 1604
       }
     },
     {
@@ -3497,8 +3552,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1437,
-        "recency_rank": 1511
+        "popularity_rank": 1501,
+        "recency_rank": 1575
       }
     },
     {
@@ -3518,8 +3573,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1494,
-        "recency_rank": 1492
+        "popularity_rank": 1558,
+        "recency_rank": 1556
       }
     },
     {
@@ -3551,8 +3606,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1391,
-        "recency_rank": 1379
+        "popularity_rank": 1455,
+        "recency_rank": 1443
       }
     },
     {
@@ -3573,8 +3628,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1336,
-        "recency_rank": 1289
+        "popularity_rank": 1400,
+        "recency_rank": 1353
       }
     },
     {
@@ -3595,8 +3650,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1327,
-        "recency_rank": 1278
+        "popularity_rank": 1391,
+        "recency_rank": 1342
       }
     },
     {
@@ -3617,8 +3672,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1329,
-        "recency_rank": 1280
+        "popularity_rank": 1393,
+        "recency_rank": 1344
       }
     },
     {
@@ -3639,8 +3694,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1124,
-        "recency_rank": 1282
+        "popularity_rank": 1188,
+        "recency_rank": 1346
       }
     },
     {
@@ -3661,8 +3716,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1331,
-        "recency_rank": 1284
+        "popularity_rank": 1395,
+        "recency_rank": 1348
       }
     },
     {
@@ -3683,8 +3738,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1299,
-        "recency_rank": 1246
+        "popularity_rank": 1363,
+        "recency_rank": 1310
       }
     },
     {
@@ -3705,8 +3760,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1300,
-        "recency_rank": 1247
+        "popularity_rank": 1364,
+        "recency_rank": 1311
       }
     },
     {
@@ -3727,8 +3782,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1307,
-        "recency_rank": 1254
+        "popularity_rank": 1371,
+        "recency_rank": 1318
       }
     },
     {
@@ -3749,8 +3804,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1305,
-        "recency_rank": 1252
+        "popularity_rank": 1369,
+        "recency_rank": 1316
       }
     },
     {
@@ -3771,8 +3826,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1308,
-        "recency_rank": 1255
+        "popularity_rank": 1372,
+        "recency_rank": 1319
       }
     },
     {
@@ -3793,8 +3848,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1278,
-        "recency_rank": 1213
+        "popularity_rank": 1342,
+        "recency_rank": 1277
       }
     },
     {
@@ -3815,8 +3870,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1277,
-        "recency_rank": 1212
+        "popularity_rank": 1341,
+        "recency_rank": 1276
       }
     },
     {
@@ -3837,8 +3892,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1174,
-        "recency_rank": 1102
+        "popularity_rank": 1238,
+        "recency_rank": 1166
       }
     },
     {
@@ -3859,8 +3914,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1178,
-        "recency_rank": 1104
+        "popularity_rank": 1243,
+        "recency_rank": 1168
       }
     },
     {
@@ -3881,8 +3936,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1129,
-        "recency_rank": 1061
+        "popularity_rank": 1193,
+        "recency_rank": 1125
       }
     },
     {
@@ -3903,8 +3958,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1121,
-        "recency_rank": 1055
+        "popularity_rank": 1185,
+        "recency_rank": 1119
       }
     },
     {
@@ -3925,8 +3980,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 1072,
-        "recency_rank": 1002
+        "popularity_rank": 1136,
+        "recency_rank": 1066
       }
     },
     {
@@ -3947,8 +4002,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 848,
-        "recency_rank": 760
+        "popularity_rank": 912,
+        "recency_rank": 824
       }
     },
     {
@@ -3969,8 +4024,8 @@
         "owner": ""
       },
       "hub_stats": {
-        "popularity_rank": 746,
-        "recency_rank": 658
+        "popularity_rank": 811,
+        "recency_rank": 722
       }
     },
     {
@@ -4000,8 +4055,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1162,
-        "recency_rank": 1179
+        "popularity_rank": 1226,
+        "recency_rank": 1243
       }
     },
     {
@@ -4031,8 +4086,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 421,
-        "recency_rank": 384
+        "popularity_rank": 485,
+        "recency_rank": 448
       }
     },
     {
@@ -4062,8 +4117,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1190,
-        "recency_rank": 1112
+        "popularity_rank": 1255,
+        "recency_rank": 1176
       }
     },
     {
@@ -4093,8 +4148,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1134,
-        "recency_rank": 1115
+        "popularity_rank": 1198,
+        "recency_rank": 1179
       }
     },
     {
@@ -4124,8 +4179,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1090,
-        "recency_rank": 1113
+        "popularity_rank": 1154,
+        "recency_rank": 1177
       }
     },
     {
@@ -4155,8 +4210,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1135,
-        "recency_rank": 1116
+        "popularity_rank": 1199,
+        "recency_rank": 1180
       }
     },
     {
@@ -4186,8 +4241,39 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 420,
-        "recency_rank": 389
+        "popularity_rank": 484,
+        "recency_rank": 453
+      }
+    },
+    {
+      "id": "hub-bend-data-duckdb",
+      "name": "bend-data-duckdb",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/n/bend-data-duckdb",
+      "description": "Native DuckDB driver for Bend via libduckdb (dlopen): numeric (F32Table, SQL NULL -> NaN) and text (TextTable) queries that open file databases with access_mode=READ_ONLY, plus read-write SQL execution (exec). Source: https://github.com/robinmarin/bend-data/tree/main/duckdb",
+      "category": "packages",
+      "source": "hub",
+      "stars": null,
+      "import": "import bend-data-duckdb@0.1.0.0/publish.bend as Publish",
+      "publication": {
+        "package": "bend-data-duckdb@0.1.0.0",
+        "hash": "0x9a90c3f252838bfc8ed2dedd37f63b1c",
+        "entry": "publish.bend",
+        "owner": "robinmarin"
+      },
+      "hub": {
+        "name": "bend-data-duckdb",
+        "owner": "robinmarin",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0x9a90c3f252838bfc8ed2dedd37f63b1c",
+          "entry": "publish.bend",
+          "description": "Native DuckDB driver for Bend via libduckdb (dlopen): numeric (F32Table, SQL NULL -> NaN) and text (TextTable) queries that open file databases with access_mode=READ_ONLY, plus read-write SQL execution (exec). Source: https://github.com/robinmarin/bend-data/tree/main/duckdb"
+        }
+      },
+      "hub_stats": {
+        "popularity_rank": 114,
+        "recency_rank": 44
       }
     },
     {
@@ -4217,8 +4303,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 269,
-        "recency_rank": 324
+        "popularity_rank": 333,
+        "recency_rank": 388
       }
     },
     {
@@ -4248,8 +4334,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 422,
-        "recency_rank": 381
+        "popularity_rank": 486,
+        "recency_rank": 445
       }
     },
     {
@@ -4279,8 +4365,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 418,
-        "recency_rank": 379
+        "popularity_rank": 482,
+        "recency_rank": 443
       }
     },
     {
@@ -4310,8 +4396,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 419,
-        "recency_rank": 380
+        "popularity_rank": 483,
+        "recency_rank": 444
       }
     },
     {
@@ -4341,8 +4427,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 441,
-        "recency_rank": 398
+        "popularity_rank": 505,
+        "recency_rank": 462
       }
     },
     {
@@ -4354,10 +4440,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-archive@0.7.0.0/archive.bend as Archive",
+      "import": "import bend-kit-archive@0.7.0.1/archive.bend as Archive",
       "publication": {
-        "package": "bend-kit-archive@0.7.0.0",
-        "hash": "0x731b286e6ea1c88a2ae28ea025c01c32",
+        "package": "bend-kit-archive@0.7.0.1",
+        "hash": "0xf9861594a4830f2cb01c910178bc40c2",
         "entry": "archive.bend",
         "owner": "paymog"
       },
@@ -4365,15 +4451,15 @@
         "name": "bend-kit-archive",
         "owner": "paymog",
         "latest": {
-          "version": "0.7.0.0",
-          "hash": "0x731b286e6ea1c88a2ae28ea025c01c32",
+          "version": "0.7.0.1",
+          "hash": "0xf9861594a4830f2cb01c910178bc40c2",
           "entry": "archive.bend",
           "description": "ZIP archives read over Bytes: stored and DEFLATE entries, checked against their CRC-32 and sizes. Source: https://github.com/paymog/bend-kit/tree/main/archive"
         }
       },
       "hub_stats": {
-        "popularity_rank": 75,
-        "recency_rank": 11
+        "popularity_rank": 117,
+        "recency_rank": 49
       }
     },
     {
@@ -4403,8 +4489,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 823,
-        "recency_rank": 987
+        "popularity_rank": 888,
+        "recency_rank": 1051
       }
     },
     {
@@ -4434,8 +4520,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1232,
-        "recency_rank": 1155
+        "popularity_rank": 1297,
+        "recency_rank": 1219
       }
     },
     {
@@ -4465,8 +4551,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 35,
-        "recency_rank": 52
+        "popularity_rank": 49,
+        "recency_rank": 116
       }
     },
     {
@@ -4496,8 +4582,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 57,
-        "recency_rank": 134
+        "popularity_rank": 73,
+        "recency_rank": 198
       }
     },
     {
@@ -4509,10 +4595,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-camber@0.17.0.1/camber.bend as Camber",
+      "import": "import bend-kit-camber@0.19.0.0/camber.bend as Camber",
       "publication": {
-        "package": "bend-kit-camber@0.17.0.1",
-        "hash": "0x1a0bc5551eda75ed5865eb3b31e581bc",
+        "package": "bend-kit-camber@0.19.0.0",
+        "hash": "0xc9c99e5ff26fbc745a121c8172ad9560",
         "entry": "camber.bend",
         "owner": "paymog"
       },
@@ -4520,15 +4606,15 @@
         "name": "bend-kit-camber",
         "owner": "paymog",
         "latest": {
-          "version": "0.17.0.1",
-          "hash": "0x1a0bc5551eda75ed5865eb3b31e581bc",
+          "version": "0.19.0.0",
+          "hash": "0xc9c99e5ff26fbc745a121c8172ad9560",
           "entry": "camber.bend",
           "description": "Fixed prepared HTTP applications and bounded affine dependency bundles."
         }
       },
       "hub_stats": {
-        "popularity_rank": 137,
-        "recency_rank": 72
+        "popularity_rank": 90,
+        "recency_rank": 15
       }
     },
     {
@@ -4558,8 +4644,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 23,
-        "recency_rank": 142
+        "popularity_rank": 30,
+        "recency_rank": 206
       }
     },
     {
@@ -4589,8 +4675,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 7,
-        "recency_rank": 173
+        "popularity_rank": 6,
+        "recency_rank": 237
       }
     },
     {
@@ -4602,10 +4688,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-commands@0.6.0.0/commands.bend as Commands",
+      "import": "import bend-kit-commands@0.6.0.1/commands.bend as Commands",
       "publication": {
-        "package": "bend-kit-commands@0.6.0.0",
-        "hash": "0x5a4b2a10ab2eb33fd7645cb95f159b10",
+        "package": "bend-kit-commands@0.6.0.1",
+        "hash": "0x253982c3ad85dc273659a96692e9b45b",
         "entry": "commands.bend",
         "owner": "paymog"
       },
@@ -4613,15 +4699,15 @@
         "name": "bend-kit-commands",
         "owner": "paymog",
         "latest": {
-          "version": "0.6.0.0",
-          "hash": "0x5a4b2a10ab2eb33fd7645cb95f159b10",
+          "version": "0.6.0.1",
+          "hash": "0x253982c3ad85dc273659a96692e9b45b",
           "entry": "commands.bend",
           "description": "Retry-safe commands: deduplicate by command id, replay recorded results, and commit keyed rows, record, and outbox in one SQLite transaction. Source: https://github.com/paymog/bend-kit/tree/main/commands"
         }
       },
       "hub_stats": {
-        "popularity_rank": 77,
-        "recency_rank": 14
+        "popularity_rank": 95,
+        "recency_rank": 21
       }
     },
     {
@@ -4651,8 +4737,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 637,
-        "recency_rank": 1010
+        "popularity_rank": 680,
+        "recency_rank": 1074
       }
     },
     {
@@ -4664,10 +4750,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-crdt@0.2.3.1/crdt.bend as Crdt",
+      "import": "import bend-kit-crdt@0.2.3.3/crdt.bend as Crdt",
       "publication": {
-        "package": "bend-kit-crdt@0.2.3.1",
-        "hash": "0x9ccf690b3f20d7ff565c214bbdda4e61",
+        "package": "bend-kit-crdt@0.2.3.3",
+        "hash": "0xbea69512bab4070b44a9db9a0a44abc5",
         "entry": "crdt.bend",
         "owner": "paymog"
       },
@@ -4675,15 +4761,15 @@
         "name": "bend-kit-crdt",
         "owner": "paymog",
         "latest": {
-          "version": "0.2.3.1",
-          "hash": "0x9ccf690b3f20d7ff565c214bbdda4e61",
+          "version": "0.2.3.3",
+          "hash": "0xbea69512bab4070b44a9db9a0a44abc5",
           "entry": "crdt.bend",
           "description": "Replicated data types: grow-only and positive-negative counters with proved merges. Source: https://github.com/paymog/bend-kit/tree/main/crdt"
         }
       },
       "hub_stats": {
-        "popularity_rank": 84,
-        "recency_rank": 20
+        "popularity_rank": 97,
+        "recency_rank": 23
       }
     },
     {
@@ -4713,8 +4799,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 79,
-        "recency_rank": 585
+        "popularity_rank": 70,
+        "recency_rank": 649
       }
     },
     {
@@ -4744,8 +4830,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 182,
-        "recency_rank": 139
+        "popularity_rank": 246,
+        "recency_rank": 203
       }
     },
     {
@@ -4775,8 +4861,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 99,
-        "recency_rank": 38
+        "popularity_rank": 20,
+        "recency_rank": 102
       }
     },
     {
@@ -4806,8 +4892,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 6,
-        "recency_rank": 181
+        "popularity_rank": 3,
+        "recency_rank": 245
       }
     },
     {
@@ -4819,10 +4905,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-f32array@0.2.3.0/publish.bend as Publish",
+      "import": "import bend-kit-f32array@0.2.4.0/publish.bend as Publish",
       "publication": {
-        "package": "bend-kit-f32array@0.2.3.0",
-        "hash": "0x67c3b862888f326f31733da2a0aafb4d",
+        "package": "bend-kit-f32array@0.2.4.0",
+        "hash": "0xdd524dac68b18408f680d91b67780d66",
         "entry": "publish.bend",
         "owner": "paymog"
       },
@@ -4830,15 +4916,15 @@
         "name": "bend-kit-f32array",
         "owner": "paymog",
         "latest": {
-          "version": "0.2.3.0",
-          "hash": "0x67c3b862888f326f31733da2a0aafb4d",
+          "version": "0.2.4.0",
+          "hash": "0xdd524dac68b18408f680d91b67780d66",
           "entry": "publish.bend",
           "description": "Packed F32 arrays: get, set, slice, concat, map, fold, zip, dot, sum, max, and little- or big-endian Bytes and files. Source: https://github.com/paymog/bend-kit/tree/main/f32array"
         }
       },
       "hub_stats": {
-        "popularity_rank": 76,
-        "recency_rank": 13
+        "popularity_rank": 94,
+        "recency_rank": 20
       }
     },
     {
@@ -4868,8 +4954,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 38,
-        "recency_rank": 157
+        "popularity_rank": 51,
+        "recency_rank": 221
       }
     },
     {
@@ -4899,8 +4985,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 2,
-        "recency_rank": 137
+        "popularity_rank": 4,
+        "recency_rank": 201
       }
     },
     {
@@ -4930,8 +5016,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1012,
-        "recency_rank": 1242
+        "popularity_rank": 1066,
+        "recency_rank": 1306
       }
     },
     {
@@ -4961,8 +5047,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 162,
-        "recency_rank": 109
+        "popularity_rank": 226,
+        "recency_rank": 173
       }
     },
     {
@@ -4974,10 +5060,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-hairpin@0.16.0.1/hairpin.bend as Hairpin",
+      "import": "import bend-kit-hairpin@0.19.0.0/hairpin.bend as Hairpin",
       "publication": {
-        "package": "bend-kit-hairpin@0.16.0.1",
-        "hash": "0xd203401efed54307d469b1d5ad03842d",
+        "package": "bend-kit-hairpin@0.19.0.0",
+        "hash": "0x335131bcb1e55013272f7f1ce4c9d71d",
         "entry": "hairpin.bend",
         "owner": "paymog"
       },
@@ -4985,15 +5071,15 @@
         "name": "bend-kit-hairpin",
         "owner": "paymog",
         "latest": {
-          "version": "0.16.0.1",
-          "hash": "0xd203401efed54307d469b1d5ad03842d",
+          "version": "0.19.0.0",
+          "hash": "0x335131bcb1e55013272f7f1ce4c9d71d",
           "entry": "hairpin.bend",
           "description": "Hairpin: an HTTP client with a base URL, default headers, a pool, cookies, mTLS, redirects, and proven retries. Source: https://github.com/paymog/bend-kit/tree/main/hairpin"
         }
       },
       "hub_stats": {
-        "popularity_rank": 11,
-        "recency_rank": 71
+        "popularity_rank": 21,
+        "recency_rank": 7
       }
     },
     {
@@ -5023,8 +5109,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 10,
-        "recency_rank": 146
+        "popularity_rank": 16,
+        "recency_rank": 210
       }
     },
     {
@@ -5054,8 +5140,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 36,
-        "recency_rank": 55
+        "popularity_rank": 26,
+        "recency_rank": 119
       }
     },
     {
@@ -5085,8 +5171,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 670,
-        "recency_rank": 1241
+        "popularity_rank": 727,
+        "recency_rank": 1305
       }
     },
     {
@@ -5116,8 +5202,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 33,
-        "recency_rank": 37
+        "popularity_rank": 17,
+        "recency_rank": 101
       }
     },
     {
@@ -5147,8 +5233,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 5,
-        "recency_rank": 147
+        "popularity_rank": 2,
+        "recency_rank": 211
       }
     },
     {
@@ -5160,10 +5246,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-jwt@0.14.0.2/jwt.bend as Jwt",
+      "import": "import bend-kit-jwt@0.17.0.0/jwt.bend as Jwt",
       "publication": {
-        "package": "bend-kit-jwt@0.14.0.2",
-        "hash": "0x06d09e872a30e9a6537f8cc7f55bd936",
+        "package": "bend-kit-jwt@0.17.0.0",
+        "hash": "0xa68b287733e811dcdb9ebf1281840f91",
         "entry": "jwt.bend",
         "owner": "paymog"
       },
@@ -5171,15 +5257,15 @@
         "name": "bend-kit-jwt",
         "owner": "paymog",
         "latest": {
-          "version": "0.14.0.2",
-          "hash": "0x06d09e872a30e9a6537f8cc7f55bd936",
+          "version": "0.17.0.0",
+          "hash": "0xa68b287733e811dcdb9ebf1281840f91",
           "entry": "jwt.bend",
           "description": "JSON Web Tokens: HS256/384/512, RS256, and ES256 compact JWS sign and verify, claim checks, and JWKS keys over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/jwt"
         }
       },
       "hub_stats": {
-        "popularity_rank": 94,
-        "recency_rank": 32
+        "popularity_rank": 83,
+        "recency_rank": 6
       }
     },
     {
@@ -5209,8 +5295,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 71,
-        "recency_rank": 184
+        "popularity_rank": 139,
+        "recency_rank": 248
       }
     },
     {
@@ -5222,10 +5308,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-llm@0.16.0.2/llm.bend as Llm",
+      "import": "import bend-kit-llm@0.19.0.0/llm.bend as Llm",
       "publication": {
-        "package": "bend-kit-llm@0.16.0.2",
-        "hash": "0xf69817638833171f7ac950b104170ade",
+        "package": "bend-kit-llm@0.19.0.0",
+        "hash": "0x63b164be3814d7c18657e45dc5830f17",
         "entry": "llm.bend",
         "owner": "paymog"
       },
@@ -5233,15 +5319,15 @@
         "name": "bend-kit-llm",
         "owner": "paymog",
         "latest": {
-          "version": "0.16.0.2",
-          "hash": "0xf69817638833171f7ac950b104170ade",
+          "version": "0.19.0.0",
+          "hash": "0x63b164be3814d7c18657e45dc5830f17",
           "entry": "llm.bend",
           "description": "LLM client for the Anthropic Messages and OpenAI Chat Completions APIs, with SSE streaming. Source: https://github.com/paymog/bend-kit/tree/main/llm"
         }
       },
       "hub_stats": {
-        "popularity_rank": 93,
-        "recency_rank": 31
+        "popularity_rank": 82,
+        "recency_rank": 5
       }
     },
     {
@@ -5271,8 +5357,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 189,
-        "recency_rank": 153
+        "popularity_rank": 253,
+        "recency_rank": 217
       }
     },
     {
@@ -5302,8 +5388,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 180,
-        "recency_rank": 133
+        "popularity_rank": 244,
+        "recency_rank": 197
       }
     },
     {
@@ -5333,8 +5419,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 185,
-        "recency_rank": 145
+        "popularity_rank": 249,
+        "recency_rank": 209
       }
     },
     {
@@ -5364,8 +5450,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1235,
-        "recency_rank": 1160
+        "popularity_rank": 1300,
+        "recency_rank": 1224
       }
     },
     {
@@ -5377,10 +5463,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-notch@0.4.0.1/notch.bend as Notch",
+      "import": "import bend-kit-notch@0.4.0.3/notch.bend as Notch",
       "publication": {
-        "package": "bend-kit-notch@0.4.0.1",
-        "hash": "0x0ae6c8c83c9b954a208cb719871679b4",
+        "package": "bend-kit-notch@0.4.0.3",
+        "hash": "0x7ceabd3c3863e3d764ee5b1e8c2eddaa",
         "entry": "notch.bend",
         "owner": "paymog"
       },
@@ -5388,15 +5474,15 @@
         "name": "bend-kit-notch",
         "owner": "paymog",
         "latest": {
-          "version": "0.4.0.1",
-          "hash": "0x0ae6c8c83c9b954a208cb719871679b4",
+          "version": "0.4.0.3",
+          "hash": "0x7ceabd3c3863e3d764ee5b1e8c2eddaa",
           "entry": "notch.bend",
           "description": "Leveled, structured logging: a logger value, key-value fields, and logfmt or JSON-lines output. Source: https://github.com/paymog/bend-kit/tree/main/notch"
         }
       },
       "hub_stats": {
-        "popularity_rank": 26,
-        "recency_rank": 132
+        "popularity_rank": 40,
+        "recency_rank": 35
       }
     },
     {
@@ -5408,10 +5494,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-oauth2@0.14.0.2/oauth2.bend as Oauth2",
+      "import": "import bend-kit-oauth2@0.17.0.0/oauth2.bend as Oauth2",
       "publication": {
-        "package": "bend-kit-oauth2@0.14.0.2",
-        "hash": "0xcd3dd2c580e747a913a14883b4da826e",
+        "package": "bend-kit-oauth2@0.17.0.0",
+        "hash": "0x4f50c0ecdab7dfc68fcb3696f0527b06",
         "entry": "oauth2.bend",
         "owner": "paymog"
       },
@@ -5419,15 +5505,15 @@
         "name": "bend-kit-oauth2",
         "owner": "paymog",
         "latest": {
-          "version": "0.14.0.2",
-          "hash": "0xcd3dd2c580e747a913a14883b4da826e",
+          "version": "0.17.0.0",
+          "hash": "0x4f50c0ecdab7dfc68fcb3696f0527b06",
           "entry": "oauth2.bend",
           "description": "OAuth 2.0 client credentials, refresh, and authorization code with PKCE over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/oauth2"
         }
       },
       "hub_stats": {
-        "popularity_rank": 90,
-        "recency_rank": 27
+        "popularity_rank": 80,
+        "recency_rank": 3
       }
     },
     {
@@ -5457,8 +5543,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 800,
-        "recency_rank": 1267
+        "popularity_rank": 865,
+        "recency_rank": 1331
       }
     },
     {
@@ -5488,8 +5574,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 178,
-        "recency_rank": 129
+        "popularity_rank": 242,
+        "recency_rank": 193
       }
     },
     {
@@ -5501,10 +5587,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-postgres@0.3.1.2/postgres.bend as Postgres",
+      "import": "import bend-kit-postgres@0.4.0.0/postgres.bend as Postgres",
       "publication": {
-        "package": "bend-kit-postgres@0.3.1.2",
-        "hash": "0x95d5838687c5906af87cc000c5be662e",
+        "package": "bend-kit-postgres@0.4.0.0",
+        "hash": "0x087f7e990210ed979df86fde09a8ae8d",
         "entry": "postgres.bend",
         "owner": "paymog"
       },
@@ -5512,15 +5598,15 @@
         "name": "bend-kit-postgres",
         "owner": "paymog",
         "latest": {
-          "version": "0.3.1.2",
-          "hash": "0x95d5838687c5906af87cc000c5be662e",
+          "version": "0.4.0.0",
+          "hash": "0x087f7e990210ed979df86fde09a8ae8d",
           "entry": "postgres.bend",
           "description": "Postgres client: protocol 3.0 over TCP or TLS, SCRAM-SHA-256, prepared queries, and a pool. Source: https://github.com/paymog/bend-kit/tree/main/postgres"
         }
       },
       "hub_stats": {
-        "popularity_rank": 139,
-        "recency_rank": 75
+        "popularity_rank": 128,
+        "recency_rank": 63
       }
     },
     {
@@ -5550,8 +5636,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 58,
-        "recency_rank": 141
+        "popularity_rank": 74,
+        "recency_rank": 205
       }
     },
     {
@@ -5581,8 +5667,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 186,
-        "recency_rank": 148
+        "popularity_rank": 250,
+        "recency_rank": 212
       }
     },
     {
@@ -5612,8 +5698,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 175,
-        "recency_rank": 126
+        "popularity_rank": 239,
+        "recency_rank": 190
       }
     },
     {
@@ -5643,8 +5729,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 880,
-        "recency_rank": 1024
+        "popularity_rank": 944,
+        "recency_rank": 1088
       }
     },
     {
@@ -5656,10 +5742,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-redis@0.3.1.3/redis.bend as Redis",
+      "import": "import bend-kit-redis@0.5.0.0/redis.bend as Redis",
       "publication": {
-        "package": "bend-kit-redis@0.3.1.3",
-        "hash": "0x6e5c3ed33c4dd3684792e098b77b4449",
+        "package": "bend-kit-redis@0.5.0.0",
+        "hash": "0x26f819d6692c887c69b85bd29ea098e5",
         "entry": "redis.bend",
         "owner": "paymog"
       },
@@ -5667,15 +5753,15 @@
         "name": "bend-kit-redis",
         "owner": "paymog",
         "latest": {
-          "version": "0.3.1.3",
-          "hash": "0x6e5c3ed33c4dd3684792e098b77b4449",
+          "version": "0.5.0.0",
+          "hash": "0x26f819d6692c887c69b85bd29ea098e5",
           "entry": "redis.bend",
           "description": "Redis and Valkey client: RESP3 over TCP or TLS, with pipelining and a pool. Source: https://github.com/paymog/bend-kit/tree/main/redis"
         }
       },
       "hub_stats": {
-        "popularity_rank": 95,
-        "recency_rank": 33
+        "popularity_rank": 125,
+        "recency_rank": 60
       }
     },
     {
@@ -5705,8 +5791,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 174,
-        "recency_rank": 125
+        "popularity_rank": 238,
+        "recency_rank": 189
       }
     },
     {
@@ -5736,8 +5822,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 508,
-        "recency_rank": 1038
+        "popularity_rank": 557,
+        "recency_rank": 1102
       }
     },
     {
@@ -5767,8 +5853,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 122,
-        "recency_rank": 569
+        "popularity_rank": 76,
+        "recency_rank": 633
       }
     },
     {
@@ -5798,8 +5884,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 753,
-        "recency_rank": 1091
+        "popularity_rank": 803,
+        "recency_rank": 1155
       }
     },
     {
@@ -5811,10 +5897,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-runner@0.21.0.0/runner.bend as Runner",
+      "import": "import bend-kit-runner@0.22.0.4/runner.bend as Runner",
       "publication": {
-        "package": "bend-kit-runner@0.21.0.0",
-        "hash": "0x285f0b25d61d9b2ed7402a8b8e1a77f2",
+        "package": "bend-kit-runner@0.22.0.4",
+        "hash": "0x39d84a7dc2d4222693babef4f983387b",
         "entry": "runner.bend",
         "owner": "paymog"
       },
@@ -5822,15 +5908,15 @@
         "name": "bend-kit-runner",
         "owner": "paymog",
         "latest": {
-          "version": "0.21.0.0",
-          "hash": "0x285f0b25d61d9b2ed7402a8b8e1a77f2",
+          "version": "0.22.0.4",
+          "hash": "0x39d84a7dc2d4222693babef4f983387b",
           "entry": "runner.bend",
           "description": "Durable job runner: a journaled scheduler queue, bounded by a resources pool, with retry and a breaker per target. Source: https://github.com/paymog/bend-kit/tree/main/runner"
         }
       },
       "hub_stats": {
-        "popularity_rank": 70,
-        "recency_rank": 7
+        "popularity_rank": 78,
+        "recency_rank": 1
       }
     },
     {
@@ -5860,8 +5946,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 16,
-        "recency_rank": 124
+        "popularity_rank": 14,
+        "recency_rank": 188
       }
     },
     {
@@ -5873,10 +5959,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-sigv4@0.14.0.2/sigv4.bend as Sigv4",
+      "import": "import bend-kit-sigv4@0.17.0.0/sigv4.bend as Sigv4",
       "publication": {
-        "package": "bend-kit-sigv4@0.14.0.2",
-        "hash": "0x86415814bcbc92e3f61ee10129853dd1",
+        "package": "bend-kit-sigv4@0.17.0.0",
+        "hash": "0xb1b305c74b94c746de369ccbfa00161c",
         "entry": "sigv4.bend",
         "owner": "paymog"
       },
@@ -5884,15 +5970,15 @@
         "name": "bend-kit-sigv4",
         "owner": "paymog",
         "latest": {
-          "version": "0.14.0.2",
-          "hash": "0x86415814bcbc92e3f61ee10129853dd1",
+          "version": "0.17.0.0",
+          "hash": "0xb1b305c74b94c746de369ccbfa00161c",
           "entry": "sigv4.bend",
           "description": "AWS Signature V4 signing and S3 object storage over Hairpin. Source: https://github.com/paymog/bend-kit/tree/main/sigv4"
         }
       },
       "hub_stats": {
-        "popularity_rank": 92,
-        "recency_rank": 30
+        "popularity_rank": 81,
+        "recency_rank": 4
       }
     },
     {
@@ -5922,8 +6008,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 805,
-        "recency_rank": 1023
+        "popularity_rank": 843,
+        "recency_rank": 1087
       }
     },
     {
@@ -5953,8 +6039,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 184,
-        "recency_rank": 144
+        "popularity_rank": 248,
+        "recency_rank": 208
       }
     },
     {
@@ -5966,10 +6052,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-storage@0.9.2.0/publish.bend as Publish",
+      "import": "import bend-kit-storage@0.12.0.0/publish.bend as Publish",
       "publication": {
-        "package": "bend-kit-storage@0.9.2.0",
-        "hash": "0x46379b0a960941fa6ec07d728eb86d7e",
+        "package": "bend-kit-storage@0.12.0.0",
+        "hash": "0x03a6fc5c19cccec08b728ede01fad350",
         "entry": "publish.bend",
         "owner": "paymog"
       },
@@ -5977,15 +6063,15 @@
         "name": "bend-kit-storage",
         "owner": "paymog",
         "latest": {
-          "version": "0.9.2.0",
-          "hash": "0x46379b0a960941fa6ec07d728eb86d7e",
+          "version": "0.12.0.0",
+          "hash": "0x03a6fc5c19cccec08b728ede01fad350",
           "entry": "publish.bend",
           "description": "Content-addressed object store: Merkle trees, sync plans, and reachability GC with proved laws. Source: https://github.com/paymog/bend-kit/tree/main/storage"
         }
       },
       "hub_stats": {
-        "popularity_rank": 63,
-        "recency_rank": 1
+        "popularity_rank": 92,
+        "recency_rank": 17
       }
     },
     {
@@ -5997,10 +6083,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-stream@0.5.0.0/stream.bend as Stream",
+      "import": "import bend-kit-stream@0.5.0.1/stream.bend as Stream",
       "publication": {
-        "package": "bend-kit-stream@0.5.0.0",
-        "hash": "0x5ce698be23a73cf369b226bdbc532161",
+        "package": "bend-kit-stream@0.5.0.1",
+        "hash": "0x580bd54d8a8a1e46fab6849cedbb6ca3",
         "entry": "stream.bend",
         "owner": "paymog"
       },
@@ -6008,15 +6094,15 @@
         "name": "bend-kit-stream",
         "owner": "paymog",
         "latest": {
-          "version": "0.5.0.0",
-          "hash": "0x5ce698be23a73cf369b226bdbc532161",
+          "version": "0.5.0.1",
+          "hash": "0x580bd54d8a8a1e46fab6849cedbb6ca3",
           "entry": "stream.bend",
           "description": "Bounded packed-byte transfers between files and TCP/TLS sockets."
         }
       },
       "hub_stats": {
-        "popularity_rank": 97,
-        "recency_rank": 35
+        "popularity_rank": 126,
+        "recency_rank": 61
       }
     },
     {
@@ -6046,8 +6132,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 183,
-        "recency_rank": 140
+        "popularity_rank": 247,
+        "recency_rank": 204
       }
     },
     {
@@ -6077,8 +6163,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 105,
-        "recency_rank": 45
+        "popularity_rank": 170,
+        "recency_rank": 109
       }
     },
     {
@@ -6090,10 +6176,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-text@0.2.2.1/text.bend as Text",
+      "import": "import bend-kit-text@0.2.2.2/text.bend as Text",
       "publication": {
-        "package": "bend-kit-text@0.2.2.1",
-        "hash": "0x2eee4d97082a9216fb2ecc3a90e334ee",
+        "package": "bend-kit-text@0.2.2.2",
+        "hash": "0xe3464483c3062ad06248c9e7b239a88d",
         "entry": "text.bend",
         "owner": "paymog"
       },
@@ -6101,15 +6187,15 @@
         "name": "bend-kit-text",
         "owner": "paymog",
         "latest": {
-          "version": "0.2.2.1",
-          "hash": "0x2eee4d97082a9216fb2ecc3a90e334ee",
+          "version": "0.2.2.2",
+          "hash": "0xe3464483c3062ad06248c9e7b239a88d",
           "entry": "text.bend",
           "description": "Text utilities: Myers diff with unified output, Levenshtein distance, and word wrap by display width."
         }
       },
       "hub_stats": {
-        "popularity_rank": 66,
-        "recency_rank": 4
+        "popularity_rank": 91,
+        "recency_rank": 16
       }
     },
     {
@@ -6121,10 +6207,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-time@0.3.0.2/time.bend as Time",
+      "import": "import bend-kit-time@0.3.0.3/time.bend as Time",
       "publication": {
-        "package": "bend-kit-time@0.3.0.2",
-        "hash": "0xb11aca60dbb10f10d8f37cc3807477a2",
+        "package": "bend-kit-time@0.3.0.3",
+        "hash": "0xf6004ed2773adf12acc8863c4d424242",
         "entry": "time.bend",
         "owner": "paymog"
       },
@@ -6132,15 +6218,15 @@
         "name": "bend-kit-time",
         "owner": "paymog",
         "latest": {
-          "version": "0.3.0.2",
-          "hash": "0xb11aca60dbb10f10d8f37cc3807477a2",
+          "version": "0.3.0.3",
+          "hash": "0xf6004ed2773adf12acc8863c4d424242",
           "entry": "time.bend",
           "description": "Clocks, Duration and Instant, Gregorian dates, RFC 3339 and HTTP-date text, and TZif time zones. Source: https://github.com/paymog/bend-kit/tree/main/time"
         }
       },
       "hub_stats": {
-        "popularity_rank": 15,
-        "recency_rank": 29
+        "popularity_rank": 5,
+        "recency_rank": 38
       }
     },
     {
@@ -6170,8 +6256,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 825,
-        "recency_rank": 1028
+        "popularity_rank": 870,
+        "recency_rank": 1092
       }
     },
     {
@@ -6201,8 +6287,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 904,
-        "recency_rank": 1317
+        "popularity_rank": 956,
+        "recency_rank": 1381
       }
     },
     {
@@ -6232,8 +6318,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 644,
-        "recency_rank": 1222
+        "popularity_rank": 694,
+        "recency_rank": 1286
       }
     },
     {
@@ -6245,10 +6331,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kit-webhooks@0.14.0.2/webhooks.bend as Webhooks",
+      "import": "import bend-kit-webhooks@0.17.0.0/webhooks.bend as Webhooks",
       "publication": {
-        "package": "bend-kit-webhooks@0.14.0.2",
-        "hash": "0xd3d7f3facd178fbcbe68477636f7696b",
+        "package": "bend-kit-webhooks@0.17.0.0",
+        "hash": "0x8a293fb42fe31ec3906fdda6fd9c5844",
         "entry": "webhooks.bend",
         "owner": "paymog"
       },
@@ -6256,15 +6342,15 @@
         "name": "bend-kit-webhooks",
         "owner": "paymog",
         "latest": {
-          "version": "0.14.0.2",
-          "hash": "0xd3d7f3facd178fbcbe68477636f7696b",
+          "version": "0.17.0.0",
+          "hash": "0x8a293fb42fe31ec3906fdda6fd9c5844",
           "entry": "webhooks.bend",
           "description": "Webhook signatures: Standard Webhooks sign and verify, Stripe and GitHub verify, over the raw body. Source: https://github.com/paymog/bend-kit/tree/main/webhooks"
         }
       },
       "hub_stats": {
-        "popularity_rank": 89,
-        "recency_rank": 26
+        "popularity_rank": 79,
+        "recency_rank": 2
       }
     },
     {
@@ -6294,8 +6380,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 96,
-        "recency_rank": 34
+        "popularity_rank": 162,
+        "recency_rank": 98
       }
     },
     {
@@ -6325,8 +6411,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 8,
-        "recency_rank": 80
+        "popularity_rank": 10,
+        "recency_rank": 144
       }
     },
     {
@@ -6356,8 +6442,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 72,
-        "recency_rank": 8
+        "popularity_rank": 28,
+        "recency_rank": 72
       }
     },
     {
@@ -6369,10 +6455,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-kube-runtime@0.11.0.0/package.bend as Package",
+      "import": "import bend-kube-runtime@0.12.0.0/package.bend as Package",
       "publication": {
-        "package": "bend-kube-runtime@0.11.0.0",
-        "hash": "0x3b6cf044a15b0f294883035a8a89b794",
+        "package": "bend-kube-runtime@0.12.0.0",
+        "hash": "0x9e77ca668bf7a778a1520b32b67729c2",
         "entry": "package.bend",
         "owner": "chenhunghan"
       },
@@ -6380,15 +6466,15 @@
         "name": "bend-kube-runtime",
         "owner": "chenhunghan",
         "latest": {
-          "version": "0.11.0.0",
-          "hash": "0x3b6cf044a15b0f294883035a8a89b794",
+          "version": "0.12.0.0",
+          "hash": "0x9e77ca668bf7a778a1520b32b67729c2",
           "entry": "package.bend",
           "description": "The package entry: `bend package.bend --publish bend-kube-runtime@X.Y.Z.0`"
         }
       },
       "hub_stats": {
-        "popularity_rank": 102,
-        "recency_rank": 42
+        "popularity_rank": 123,
+        "recency_rank": 57
       }
     },
     {
@@ -6418,8 +6504,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 53,
-        "recency_rank": 238
+        "popularity_rank": 68,
+        "recency_rank": 302
       }
     },
     {
@@ -6449,8 +6535,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 758,
-        "recency_rank": 667
+        "popularity_rank": 822,
+        "recency_rank": 731
       }
     },
     {
@@ -6480,8 +6566,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 233,
-        "recency_rank": 205
+        "popularity_rank": 297,
+        "recency_rank": 269
       }
     },
     {
@@ -6511,8 +6597,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1402,
-        "recency_rank": 1395
+        "popularity_rank": 1466,
+        "recency_rank": 1459
       }
     },
     {
@@ -6542,8 +6628,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1142,
-        "recency_rank": 1073
+        "popularity_rank": 1206,
+        "recency_rank": 1137
       }
     },
     {
@@ -6573,8 +6659,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 910,
-        "recency_rank": 920
+        "popularity_rank": 974,
+        "recency_rank": 984
       }
     },
     {
@@ -6604,8 +6690,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 512,
-        "recency_rank": 705
+        "popularity_rank": 576,
+        "recency_rank": 769
       }
     },
     {
@@ -6635,8 +6721,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1062,
-        "recency_rank": 1075
+        "popularity_rank": 1126,
+        "recency_rank": 1139
       }
     },
     {
@@ -6666,8 +6752,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 87,
-        "recency_rank": 23
+        "popularity_rank": 153,
+        "recency_rank": 87
       }
     },
     {
@@ -6697,8 +6783,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 358,
-        "recency_rank": 318
+        "popularity_rank": 423,
+        "recency_rank": 382
       }
     },
     {
@@ -6728,8 +6814,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1223,
-        "recency_rank": 1381
+        "popularity_rank": 1288,
+        "recency_rank": 1445
       }
     },
     {
@@ -6759,8 +6845,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1222,
-        "recency_rank": 1371
+        "popularity_rank": 1287,
+        "recency_rank": 1435
       }
     },
     {
@@ -6790,8 +6876,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1048,
-        "recency_rank": 1385
+        "popularity_rank": 1112,
+        "recency_rank": 1449
       }
     },
     {
@@ -6821,8 +6907,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1049,
-        "recency_rank": 1372
+        "popularity_rank": 1113,
+        "recency_rank": 1436
       }
     },
     {
@@ -6852,8 +6938,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1171,
-        "recency_rank": 1382
+        "popularity_rank": 1235,
+        "recency_rank": 1446
       }
     },
     {
@@ -6883,8 +6969,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 715,
-        "recency_rank": 609
+        "popularity_rank": 779,
+        "recency_rank": 673
       }
     },
     {
@@ -6914,8 +7000,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 850,
-        "recency_rank": 761
+        "popularity_rank": 914,
+        "recency_rank": 825
       }
     },
     {
@@ -6945,8 +7031,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 777,
-        "recency_rank": 687
+        "popularity_rank": 841,
+        "recency_rank": 751
       }
     },
     {
@@ -6976,8 +7062,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 849,
-        "recency_rank": 845
+        "popularity_rank": 913,
+        "recency_rank": 909
       }
     },
     {
@@ -7007,8 +7093,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 962,
-        "recency_rank": 897
+        "popularity_rank": 1026,
+        "recency_rank": 961
       }
     },
     {
@@ -7038,8 +7124,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 749,
-        "recency_rank": 662
+        "popularity_rank": 814,
+        "recency_rank": 726
       }
     },
     {
@@ -7069,8 +7155,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 607,
-        "recency_rank": 690
+        "popularity_rank": 671,
+        "recency_rank": 754
       }
     },
     {
@@ -7100,8 +7186,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 748,
-        "recency_rank": 661
+        "popularity_rank": 813,
+        "recency_rank": 725
       }
     },
     {
@@ -7131,8 +7217,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 923,
-        "recency_rank": 896
+        "popularity_rank": 987,
+        "recency_rank": 960
       }
     },
     {
@@ -7162,8 +7248,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 747,
-        "recency_rank": 660
+        "popularity_rank": 812,
+        "recency_rank": 724
       }
     },
     {
@@ -7193,8 +7279,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 871,
-        "recency_rank": 898
+        "popularity_rank": 935,
+        "recency_rank": 962
       }
     },
     {
@@ -7224,8 +7310,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 645,
-        "recency_rank": 659
+        "popularity_rank": 709,
+        "recency_rank": 723
       }
     },
     {
@@ -7255,8 +7341,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 578,
-        "recency_rank": 685
+        "popularity_rank": 642,
+        "recency_rank": 749
       }
     },
     {
@@ -7286,8 +7372,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 518,
-        "recency_rank": 684
+        "popularity_rank": 582,
+        "recency_rank": 748
       }
     },
     {
@@ -7317,8 +7403,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 609,
-        "recency_rank": 764
+        "popularity_rank": 673,
+        "recency_rank": 828
       }
     },
     {
@@ -7348,8 +7434,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 811,
-        "recency_rank": 849
+        "popularity_rank": 876,
+        "recency_rank": 913
       }
     },
     {
@@ -7379,8 +7465,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 692,
-        "recency_rank": 762
+        "popularity_rank": 756,
+        "recency_rank": 826
       }
     },
     {
@@ -7410,8 +7496,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 714,
-        "recency_rank": 608
+        "popularity_rank": 778,
+        "recency_rank": 672
       }
     },
     {
@@ -7441,8 +7527,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 809,
-        "recency_rank": 847
+        "popularity_rank": 874,
+        "recency_rank": 911
       }
     },
     {
@@ -7472,8 +7558,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 693,
-        "recency_rank": 763
+        "popularity_rank": 757,
+        "recency_rank": 827
       }
     },
     {
@@ -7503,8 +7589,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 517,
-        "recency_rank": 688
+        "popularity_rank": 581,
+        "recency_rank": 752
       }
     },
     {
@@ -7534,8 +7620,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 661,
-        "recency_rank": 686
+        "popularity_rank": 725,
+        "recency_rank": 750
       }
     },
     {
@@ -7565,8 +7651,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 468,
-        "recency_rank": 694
+        "popularity_rank": 532,
+        "recency_rank": 758
       }
     },
     {
@@ -7596,8 +7682,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 470,
-        "recency_rank": 693
+        "popularity_rank": 534,
+        "recency_rank": 757
       }
     },
     {
@@ -7627,8 +7713,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1136,
-        "recency_rank": 1274
+        "popularity_rank": 1200,
+        "recency_rank": 1338
       }
     },
     {
@@ -7658,8 +7744,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 676,
-        "recency_rank": 558
+        "popularity_rank": 740,
+        "recency_rank": 622
       }
     },
     {
@@ -7689,8 +7775,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1051,
-        "recency_rank": 1066
+        "popularity_rank": 1115,
+        "recency_rank": 1130
       }
     },
     {
@@ -7702,10 +7788,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-quant-linalg@0.1.0.0/publish.bend as Publish",
+      "import": "import bend-quant-linalg@0.1.1.0/publish.bend as Publish",
       "publication": {
-        "package": "bend-quant-linalg@0.1.0.0",
-        "hash": "0xa0e1b674ac5289412017a9dd17825c31",
+        "package": "bend-quant-linalg@0.1.1.0",
+        "hash": "0x868deae626c42bd4c69da030be0090fc",
         "entry": "publish.bend",
         "owner": "robinmarin"
       },
@@ -7713,15 +7799,15 @@
         "name": "bend-quant-linalg",
         "owner": "robinmarin",
         "latest": {
-          "version": "0.1.0.0",
-          "hash": "0xa0e1b674ac5289412017a9dd17825c31",
+          "version": "0.1.1.0",
+          "hash": "0x868deae626c42bd4c69da030be0090fc",
           "entry": "publish.bend",
           "description": "Dense float32 linear algebra: Cholesky, triangular solves, Woodbury, thin Householder QR, least squares (OLS, WLS, constrained), cyclic Jacobi eigendecomposition, SPD powers, thin SVD, pseudoinverse, and Procrustes, with proved shape, transpose, symmetry, and triangular zero laws. Source: https://github.com/robinmarin/bend-quant/tree/main/linalg"
         }
       },
       "hub_stats": {
-        "popularity_rank": 39,
-        "recency_rank": 63
+        "popularity_rank": 42,
+        "recency_rank": 53
       }
     },
     {
@@ -7733,10 +7819,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-quant-portfolio@0.1.0.0/publish.bend as Publish",
+      "import": "import bend-quant-portfolio@0.1.1.0/publish.bend as Publish",
       "publication": {
-        "package": "bend-quant-portfolio@0.1.0.0",
-        "hash": "0x94e4b05af67d6c1408f568b7c9d84041",
+        "package": "bend-quant-portfolio@0.1.1.0",
+        "hash": "0x7296d81d7ba08bf4ba6940be380b5adf",
         "entry": "publish.bend",
         "owner": "robinmarin"
       },
@@ -7744,15 +7830,15 @@
         "name": "bend-quant-portfolio",
         "owner": "robinmarin",
         "latest": {
-          "version": "0.1.0.0",
-          "hash": "0x94e4b05af67d6c1408f568b7c9d84041",
+          "version": "0.1.1.0",
+          "hash": "0x7296d81d7ba08bf4ba6940be380b5adf",
           "entry": "publish.bend",
           "description": "Factor risk decomposition, analytical and constrained/turnover-aware MVO (Woodbury-preconditioned ADMM), hedging, dynamic Kelly/Grossman-Zhou risk sizing, and ex-post performance attribution with 33 proved structural, validation, parallel-equivalence, and causality laws. Source: https://github.com/robinmarin/bend-quant/tree/main/portfolio"
         }
       },
       "hub_stats": {
-        "popularity_rank": 46,
-        "recency_rank": 62
+        "popularity_rank": 53,
+        "recency_rank": 52
       }
     },
     {
@@ -7764,10 +7850,10 @@
       "category": "packages",
       "source": "hub",
       "stars": null,
-      "import": "import bend-quant-risk@0.1.0.0/publish.bend as Publish",
+      "import": "import bend-quant-risk@0.1.1.0/publish.bend as Publish",
       "publication": {
-        "package": "bend-quant-risk@0.1.0.0",
-        "hash": "0xb2b6c55e07e248b8b87bb6390981ffca",
+        "package": "bend-quant-risk@0.1.1.0",
+        "hash": "0xcb0ff1755a0a8548a14bd336933147b3",
         "entry": "publish.bend",
         "owner": "robinmarin"
       },
@@ -7775,15 +7861,15 @@
         "name": "bend-quant-risk",
         "owner": "robinmarin",
         "latest": {
-          "version": "0.1.0.0",
-          "hash": "0xb2b6c55e07e248b8b87bb6390981ffca",
+          "version": "0.1.1.0",
+          "hash": "0xcb0ff1755a0a8548a14bd336933147b3",
           "entry": "publish.bend",
           "description": "Factor model transformations, out-of-sample risk evaluation, fundamental factor models & covariance estimation (Ledoit-Wolf, DCC, STVU, Newey-West/Cohen HAC, Cai clustering, causal log-MAD winsorization, multi-region linking, currency rebasing), and statistical factor models (PCA/SVD, subspace iteration, PPCA, RMT shrinkage, Bai-Ng, Procrustes alignment) with 41 proved structural symmetry, strict causality, no-lookahead, parallel-equivalence, and dimension-guard laws. Source: https://github.com/robinmarin/bend-quant/tree/main/risk"
         }
       },
       "hub_stats": {
-        "popularity_rank": 124,
-        "recency_rank": 61
+        "popularity_rank": 118,
+        "recency_rank": 50
       }
     },
     {
@@ -7813,8 +7899,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 154,
-        "recency_rank": 96
+        "popularity_rank": 218,
+        "recency_rank": 160
       }
     },
     {
@@ -7844,8 +7930,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 303,
-        "recency_rank": 400
+        "popularity_rank": 367,
+        "recency_rank": 464
       }
     },
     {
@@ -7875,8 +7961,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 439,
-        "recency_rank": 396
+        "popularity_rank": 503,
+        "recency_rank": 460
       }
     },
     {
@@ -7906,8 +7992,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 759,
-        "recency_rank": 727
+        "popularity_rank": 823,
+        "recency_rank": 791
       }
     },
     {
@@ -7937,8 +8023,39 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 603,
-        "recency_rank": 559
+        "popularity_rank": 667,
+        "recency_rank": 623
+      }
+    },
+    {
+      "id": "hub-bend-ta",
+      "name": "bend-ta",
+      "repo": "",
+      "url": "https://hub.bend-lang.com/n/bend-ta",
+      "description": "Named package published on BendHub. Check its documentation and compiler requirements on the Hub.",
+      "category": "packages",
+      "source": "hub",
+      "stars": null,
+      "import": "import bend-ta@0.1.0.0/PROOF.bend as PROOF",
+      "publication": {
+        "package": "bend-ta@0.1.0.0",
+        "hash": "0xbb55196063fb99add8900a97dfe6ee2d",
+        "entry": "PROOF.bend",
+        "owner": "toprameen"
+      },
+      "hub": {
+        "name": "bend-ta",
+        "owner": "toprameen",
+        "latest": {
+          "version": "0.1.0.0",
+          "hash": "0xbb55196063fb99add8900a97dfe6ee2d",
+          "entry": "PROOF.bend",
+          "description": ""
+        }
+      },
+      "hub_stats": {
+        "popularity_rank": 55,
+        "recency_rank": 59
       }
     },
     {
@@ -7968,8 +8085,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 654,
-        "recency_rank": 666
+        "popularity_rank": 718,
+        "recency_rank": 730
       }
     },
     {
@@ -7999,8 +8116,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 509,
-        "recency_rank": 443
+        "popularity_rank": 573,
+        "recency_rank": 507
       }
     },
     {
@@ -8030,8 +8147,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 507,
-        "recency_rank": 442
+        "popularity_rank": 572,
+        "recency_rank": 506
       }
     },
     {
@@ -8061,8 +8178,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 443,
-        "recency_rank": 401
+        "popularity_rank": 507,
+        "recency_rank": 465
       }
     },
     {
@@ -8092,8 +8209,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 412,
-        "recency_rank": 444
+        "popularity_rank": 476,
+        "recency_rank": 508
       }
     },
     {
@@ -8123,8 +8240,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 999,
-        "recency_rank": 1333
+        "popularity_rank": 1063,
+        "recency_rank": 1397
       }
     },
     {
@@ -8154,8 +8271,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 836,
-        "recency_rank": 745
+        "popularity_rank": 900,
+        "recency_rank": 809
       }
     },
     {
@@ -8185,8 +8302,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 431,
-        "recency_rank": 387
+        "popularity_rank": 495,
+        "recency_rank": 451
       }
     },
     {
@@ -8216,8 +8333,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 430,
-        "recency_rank": 386
+        "popularity_rank": 494,
+        "recency_rank": 450
       }
     },
     {
@@ -8247,8 +8364,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 429,
-        "recency_rank": 385
+        "popularity_rank": 493,
+        "recency_rank": 449
       }
     },
     {
@@ -8278,8 +8395,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 150,
-        "recency_rank": 89
+        "popularity_rank": 214,
+        "recency_rank": 153
       }
     },
     {
@@ -8309,8 +8426,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 752,
-        "recency_rank": 665
+        "popularity_rank": 817,
+        "recency_rank": 729
       }
     },
     {
@@ -8340,8 +8457,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 404,
-        "recency_rank": 494
+        "popularity_rank": 469,
+        "recency_rank": 558
       }
     },
     {
@@ -8371,8 +8488,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 403,
-        "recency_rank": 489
+        "popularity_rank": 468,
+        "recency_rank": 553
       }
     },
     {
@@ -8402,8 +8519,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 286,
-        "recency_rank": 449
+        "popularity_rank": 350,
+        "recency_rank": 513
       }
     },
     {
@@ -8433,8 +8550,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 537,
-        "recency_rank": 473
+        "popularity_rank": 601,
+        "recency_rank": 537
       }
     },
     {
@@ -8464,8 +8581,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 445,
-        "recency_rank": 478
+        "popularity_rank": 509,
+        "recency_rank": 542
       }
     },
     {
@@ -8495,8 +8612,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 513,
-        "recency_rank": 446
+        "popularity_rank": 577,
+        "recency_rank": 510
       }
     },
     {
@@ -8526,8 +8643,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 557,
-        "recency_rank": 488
+        "popularity_rank": 621,
+        "recency_rank": 552
       }
     },
     {
@@ -8557,8 +8674,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 405,
-        "recency_rank": 495
+        "popularity_rank": 470,
+        "recency_rank": 559
       }
     },
     {
@@ -8588,8 +8705,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 348,
-        "recency_rank": 479
+        "popularity_rank": 412,
+        "recency_rank": 543
       }
     },
     {
@@ -8619,8 +8736,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 444,
-        "recency_rank": 474
+        "popularity_rank": 508,
+        "recency_rank": 538
       }
     },
     {
@@ -8650,8 +8767,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 335,
-        "recency_rank": 493
+        "popularity_rank": 399,
+        "recency_rank": 557
       }
     },
     {
@@ -8681,8 +8798,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 426,
-        "recency_rank": 447
+        "popularity_rank": 490,
+        "recency_rank": 511
       }
     },
     {
@@ -8712,8 +8829,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 334,
-        "recency_rank": 448
+        "popularity_rank": 398,
+        "recency_rank": 512
       }
     },
     {
@@ -8743,8 +8860,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 633,
-        "recency_rank": 746
+        "popularity_rank": 699,
+        "recency_rank": 810
       }
     },
     {
@@ -8774,8 +8891,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 294,
-        "recency_rank": 257
+        "popularity_rank": 358,
+        "recency_rank": 321
       }
     },
     {
@@ -8805,8 +8922,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 296,
-        "recency_rank": 259
+        "popularity_rank": 360,
+        "recency_rank": 323
       }
     },
     {
@@ -8836,8 +8953,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 977,
-        "recency_rank": 914
+        "popularity_rank": 1041,
+        "recency_rank": 978
       }
     },
     {
@@ -8867,8 +8984,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 675,
-        "recency_rank": 917
+        "popularity_rank": 739,
+        "recency_rank": 981
       }
     },
     {
@@ -8898,8 +9015,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 542,
-        "recency_rank": 653
+        "popularity_rank": 606,
+        "recency_rank": 717
       }
     },
     {
@@ -8929,8 +9046,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 642,
-        "recency_rank": 651
+        "popularity_rank": 707,
+        "recency_rank": 715
       }
     },
     {
@@ -8960,8 +9077,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 814,
-        "recency_rank": 916
+        "popularity_rank": 879,
+        "recency_rank": 980
       }
     },
     {
@@ -8991,8 +9108,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 641,
-        "recency_rank": 650
+        "popularity_rank": 706,
+        "recency_rank": 714
       }
     },
     {
@@ -9022,8 +9139,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 45,
-        "recency_rank": 40
+        "popularity_rank": 60,
+        "recency_rank": 104
       }
     },
     {
@@ -9053,8 +9170,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 100,
-        "recency_rank": 39
+        "popularity_rank": 165,
+        "recency_rank": 103
       }
     },
     {
@@ -9084,8 +9201,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 779,
-        "recency_rank": 837
+        "popularity_rank": 844,
+        "recency_rank": 901
       }
     },
     {
@@ -9115,8 +9232,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 915,
-        "recency_rank": 836
+        "popularity_rank": 979,
+        "recency_rank": 900
       }
     },
     {
@@ -9146,8 +9263,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 562,
-        "recency_rank": 652
+        "popularity_rank": 626,
+        "recency_rank": 716
       }
     },
     {
@@ -9177,8 +9294,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 639,
-        "recency_rank": 648
+        "popularity_rank": 704,
+        "recency_rank": 712
       }
     },
     {
@@ -9208,8 +9325,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 640,
-        "recency_rank": 649
+        "popularity_rank": 705,
+        "recency_rank": 713
       }
     },
     {
@@ -9239,8 +9356,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 978,
-        "recency_rank": 915
+        "popularity_rank": 1042,
+        "recency_rank": 979
       }
     },
     {
@@ -9270,8 +9387,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 743,
-        "recency_rank": 646
+        "popularity_rank": 808,
+        "recency_rank": 710
       }
     },
     {
@@ -9301,8 +9418,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 638,
-        "recency_rank": 647
+        "popularity_rank": 703,
+        "recency_rank": 711
       }
     },
     {
@@ -9332,8 +9449,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 583,
-        "recency_rank": 654
+        "popularity_rank": 647,
+        "recency_rank": 718
       }
     },
     {
@@ -9363,8 +9480,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 129,
-        "recency_rank": 101
+        "popularity_rank": 193,
+        "recency_rank": 165
       }
     },
     {
@@ -9394,8 +9511,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 128,
-        "recency_rank": 100
+        "popularity_rank": 192,
+        "recency_rank": 164
       }
     },
     {
@@ -9425,8 +9542,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 130,
-        "recency_rank": 102
+        "popularity_rank": 194,
+        "recency_rank": 166
       }
     },
     {
@@ -9456,8 +9573,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 55,
-        "recency_rank": 106
+        "popularity_rank": 71,
+        "recency_rank": 170
       }
     },
     {
@@ -9487,8 +9604,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 131,
-        "recency_rank": 95
+        "popularity_rank": 195,
+        "recency_rank": 159
       }
     },
     {
@@ -9518,8 +9635,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 159,
-        "recency_rank": 104
+        "popularity_rank": 223,
+        "recency_rank": 168
       }
     },
     {
@@ -9549,8 +9666,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 158,
-        "recency_rank": 103
+        "popularity_rank": 222,
+        "recency_rank": 167
       }
     },
     {
@@ -9580,8 +9697,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 56,
-        "recency_rank": 107
+        "popularity_rank": 72,
+        "recency_rank": 171
       }
     },
     {
@@ -9611,8 +9728,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 160,
-        "recency_rank": 105
+        "popularity_rank": 224,
+        "recency_rank": 169
       }
     },
     {
@@ -9642,8 +9759,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 49,
-        "recency_rank": 65
+        "popularity_rank": 64,
+        "recency_rank": 129
       }
     },
     {
@@ -9673,8 +9790,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 276,
-        "recency_rank": 428
+        "popularity_rank": 340,
+        "recency_rank": 492
       }
     },
     {
@@ -9704,8 +9821,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 340,
-        "recency_rank": 427
+        "popularity_rank": 404,
+        "recency_rank": 491
       }
     },
     {
@@ -9735,8 +9852,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 483,
-        "recency_rank": 425
+        "popularity_rank": 547,
+        "recency_rank": 489
       }
     },
     {
@@ -9766,8 +9883,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 484,
-        "recency_rank": 426
+        "popularity_rank": 548,
+        "recency_rank": 490
       }
     },
     {
@@ -9797,8 +9914,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 247,
-        "recency_rank": 429
+        "popularity_rank": 311,
+        "recency_rank": 493
       }
     },
     {
@@ -9828,8 +9945,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 701,
-        "recency_rank": 591
+        "popularity_rank": 765,
+        "recency_rank": 655
       }
     },
     {
@@ -9859,8 +9976,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 882,
-        "recency_rank": 798
+        "popularity_rank": 946,
+        "recency_rank": 862
       }
     },
     {
@@ -9890,8 +10007,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 730,
-        "recency_rank": 638
+        "popularity_rank": 794,
+        "recency_rank": 702
       }
     },
     {
@@ -9921,8 +10038,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 844,
-        "recency_rank": 755
+        "popularity_rank": 908,
+        "recency_rank": 819
       }
     },
     {
@@ -9952,8 +10069,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 885,
-        "recency_rank": 802
+        "popularity_rank": 949,
+        "recency_rank": 866
       }
     },
     {
@@ -9983,8 +10100,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 745,
-        "recency_rank": 657
+        "popularity_rank": 810,
+        "recency_rank": 721
       }
     },
     {
@@ -10014,8 +10131,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 883,
-        "recency_rank": 799
+        "popularity_rank": 947,
+        "recency_rank": 863
       }
     },
     {
@@ -10045,8 +10162,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 737,
-        "recency_rank": 800
+        "popularity_rank": 801,
+        "recency_rank": 864
       }
     },
     {
@@ -10076,8 +10193,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1356,
-        "recency_rank": 1312
+        "popularity_rank": 1420,
+        "recency_rank": 1376
       }
     },
     {
@@ -10107,8 +10224,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 1117,
-        "recency_rank": 1052
+        "popularity_rank": 1181,
+        "recency_rank": 1116
       }
     },
     {
@@ -10138,8 +10255,8 @@
         }
       },
       "hub_stats": {
-        "popularity_rank": 738,
-        "recency_rank": 643
+        "popularity_rank": 802,
+        "recency_rank": 707
       }
     }
   ]
